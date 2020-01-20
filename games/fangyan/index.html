@@ -803,8 +803,8 @@ var scoreArr = new Array(parseInt(total));
     scoreArr[5]['max'] = 100;
 var tScore = 0;
 var dataForWeixin={
-    img:    "https://foxjacob.gitee.io/gamestation/games/fangyan/20140725ywh1200.jpg",
-    url:    "https://foxjacob.gitee.io/gamestation/games/fangyan/index.html",
+    img:    "https://foxjacob.github.io/gamestation/games/fangyan/20140725ywh1200.jpg",
+    url:    "https://foxjacob.github.io/gamestation/games/fangyan/index.html",
     title:  "我在2014年最难新疆话专业八级考试中得了 ",
     desc:   "2014年新疆话专业八级考试",
 };
@@ -876,7 +876,7 @@ function report(link, action_type){
 	if(parse_link == null){ return; }
 	var query_obj = parseParams( parse_link['query_str'] );
 	query_obj['action_type'] = action_type;
-	query_obj['action_link'] = 'https://foxjacob.gitee.io/gamestation/games/fangyan/index.html';
+	query_obj['action_link'] = 'https://foxjacob.github.io/gamestation/games/fangyan/index.html';
 	var report_url = 'report.php?' + jQuery.param( query_obj );
 	$.ajax({ url: report_url, type: 'POST', timeout: 2000})
 }
