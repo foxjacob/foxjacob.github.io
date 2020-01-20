@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>微信红包整人之愚人节快乐</title>
+<link rel="stylesheet" href="./wxzr/fake.css?v=3">
+<script src="http://ku.zzfriend.com/js/ie.js"></script>
+<script type="text/javascript" src="./wxzr/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="./wxzr/jweixin-1.0.0.js"></script>
+</head>
+<style type="text/css">
+	.body{min-height:100%;}
+	.body::after{background:#000 url(./wxzr/bg.jpg) no-repeat center center;background-size:100% auto;}
+</style>
+<body>
+	
+	<div class="body">
+		<div class="crush"></div>
+		<dl class="main">
+			<dt>给你发了一个红包</dt>
+			<dd><img src="./wxzr/packet.png" /></dd>
+		</dl>
+	</div>
+	<!--百度联盟//-->
+<script type="text/javascript">
+    /*手机源码演示页面*/
+    var cpro_id = "u2160319";
+</script>
+
+
+<!--百度统计 //-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?cbf20f554ba43aeba396a009eb4ab5f7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'微信红包整人之愚人节快乐',
+  'link':'https://foxjacob.gitee.io/gamestation/games/yrjhb/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/yrjhb/icon.png'
+}
+window.shareFriendData={
+  'title':'微信红包整人之愚人节快乐',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/yrjhb/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/yrjhb/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+
+</body>
+<audio class="audio" src="./wxzr/wxzr.mp3" preload="auto"></audio>
+<audio class="audio" src="./wxzr/wxzr.mp3" preload="auto"></audio>
+<audio class="audio" src="./wxzr/wxzr.mp3" preload="auto"></audio>
+
+
+	<input type="hidden" id="urltype" value="1"/>
+	<input type="hidden" id="followurl" value=""/>
+
+</html>
+<script type="text/javascript">
+	var count = 0;
+	$('.crush').click(function(e){
+		$('.audio')[count%3].play();
+		$(this).attr("style","background:rgba(0,0,0,.5);");
+		$(this).append('<img style="left:'+e.pageX+'px;top:'+e.pageY+'px" src="./wxzr/crush'+(count%3)+'.png" />');
+		count ++;
+		if(count == 3){
+			setTimeout("prompt()",1000); 
+		}
+	});
+
+	function share(){
+		if($('#urltype').val() == '0'){
+			window.location.href = $('#followurl').val();
+			return;
+		}
+		$('body').append('<div class="share" onclick="remove(this)">\
+			<img src="./wxzr/share.png" />\
+			<div class="clear"></div>\
+			<p class="tr">点击右上角</p>\
+			<p class="tr">发给你要整蛊的人</p>\
+			<div class="copyright">由<a href="http://gc.veiying.cn">by 悠狐阁网络科技</a> 支持</div>\
+		</div>');
+	}
+
+	function prompt(){
+		$('body').append('<div class="prompt">\
+			<div class="cont">\
+				<div class="space_30"></div>\
+				<p>只是个玩笑，愚人节快乐!</p>\
+				<div class="space_30"></div>\
+				<a class="btn" onclick="share()">我也要整蛊</a>\
+			</div>\
+			<div class="bg"></div>\
+		</div>');
+	}
+
+	
+</script>

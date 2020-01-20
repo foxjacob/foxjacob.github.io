@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="icon.png" />
+<link rel="shortcut icon" href="icon.png" />
+<link rel="icon" href="icon.png" />
+<title>喵喵瑜伽</title>
+<meta name="keywords" content="喵喵瑜伽,喵喵瑜伽html5游戏" />
+<meta name="description" content="喵喵瑜伽html5游戏,喵喵瑜伽手机在线游戏" />
+<script type="text/javascript">
+var GID = "catflow";
+var SCORE_LIMIT = 50;
+var APP_LIST_URL = 'http://yx8.com/?f=maomaoyujia';
+</script>
+<script type="text/javascript" src="./index_files/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="./index_files/jquery.cookie.js"></script>
+<script type="text/javascript" src="./index_files/createjs-2013.12.12.min.js"></script>
+<script type="text/javascript" src="./index_files/qipa_app.js"></script>
+<script type="text/javascript" src="./index_files/qipa_stage.js"></script>
+<script type="text/javascript" src="./index_files/main.js"></script>
+<style type="text/css">
+html,body,canvas {
+margin: 0px;
+padding: 0px;
+border:none;
+text-align: center;
+background-color: black;
+}
+canvas {
+background-color: white;
+}
+</style>
+<style>
+html {
+-ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+}
+.sbgshow{z-index:10000;display:block;position:fixed;top:0;left:0;width:100%;height:100%;text-align:center;color:#fff;font-size:30px;line-height:1.7em;background:rgba(0,0,0,0.85);}
+.sbgshow .arron{z-index:10000; position:absolute;top:8px;right:8px;width:100px;height:100px;background:url(./img/arron.png) no-repeat; background-size:100px 100px;}
+.sbgshow p{z-index:10000; padding-top:78px;}
+.sbg{display:none; z-index:10000;  position:fixed;top:0;left:0;width:100%;height:100%;text-align:center;color:#fff;font-size:26px;line-height:1.7em;background:rgba(0,0,0,0.85);}
+.sbg .arron{ z-index:10001; position:absolute;top:8px;right:8px;width:100px;height:100px;background:url(./img/arron.png) no-repeat; background-size:100px 100px;}
+.sbg p{ z-index:10002; padding-top:78px;}
+</style>
+</head>
+<body>
+<script>(function(f,o){'callShare more statScore getRank'.replace(/\S+/g,function(a){o[a]=f});var a=o._sd={};o.updateData=function(b){for(var i in b)if(b.hasOwnProperty(i))a[i]=b[i]}})(function(){},LBShare={});document.write('<script src="/js/g_share.js"><\/script>')</script>
+<div id="sbg" class="sbg">
+<div class="arron"></div>
+<p id="msg">请点击右上角<br>点击【分享到朋友圈】<br>让你的小伙伴们也发泄一下吧！</p>
+</div>
+<canvas id="stage" width="640" height="960" style="width: 630.6666666666666px; height: 946px;">
+您的浏览器不支持html5, 请换用支持html5的浏览器。
+</canvas>
+<script type="text/javascript">
+function again(){//重来
+window.location.href=window.shareData.timeLineLink;
+}
+function rank(){//排行榜
+dp_Ranking();
+}
+</script>
+<script src="../js/stat.js"></script>
+</body></html>

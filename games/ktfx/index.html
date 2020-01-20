@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>卡通飞行</title>
+	
+	 <script type="text/javascript">
+	 (function (){
+			// updateShare(0);
+		})()
+	 </script>
+	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
+
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+ <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<meta name="HandheldFriendly" content="true" />
+	
+	<!-- Chrome for Android web app tags -->
+	<meta name="mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
+
+    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
+	<style type="text/css">
+	  #adblock_497727{
+			display:none;
+	  }
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		html, body {
+			background: #000;
+			color: #fff;
+			overflow: hidden;
+			touch-action: none;
+			-ms-touch-action: none;
+		}
+		canvas {
+			touch-action-delay: none;
+			touch-action: none;
+			-ms-touch-action: none;
+		}
+    </style>
+</head> 
+ 
+<body> 
+	<div id="fb-root"></div>
+	
+	<div id="c2canvasdiv">
+		<canvas id="c2canvas" width="428" height="640">
+			
+		</canvas>
+		
+	</div>
+	<script src="js/jquery-2.0.0.min.js"></script>
+
+	<script src="js/c2runtime.js"></script>
+    <script>
+		// Size the canvas to fill the browser viewport.
+		jQuery(window).resize(function() {
+			cr_sizeCanvas(jQuery(window).width(), jQuery(window).height());
+		});
+		
+		// Start the Construct 2 project running on window load.
+		jQuery(document).ready(function ()
+		{			
+			// Create new runtime using the c2canvas
+			cr_createRuntime("c2canvas");
+		});
+		
+		// Pause and resume on page becoming visible/invisible
+		function onVisibilityChanged() {
+			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
+				cr_setSuspended(true);
+			else
+				cr_setSuspended(false);
+		};
+		
+		document.addEventListener("visibilitychange", onVisibilityChanged, false);
+		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
+		
+    </script>
+     <script language=javascript>
+
+		function clickMore(){
+			 // Play68.goHome();
+		}
+		function dp_share(){
+			// play68_submitScore(window.myPlay68Score);
+		}
+		function dp_Ranking(){
+
+		}
+
+		function dp_submitScore(score){
+			window.myPlay68Score = score;
+			// updateShare(window.myPlay68Score);
+			// Play68.setRankingScoreDesc(window.myPlay68Score);
+			console.log("游戏结束！");
+		}
+	</script>
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'卡通飞行',
+  'link':'https://foxjacob.gitee.io/gamestation/games/ktfx/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/ktfx/icon.png'
+}
+window.shareFriendData={
+  'title':'卡通飞行',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/ktfx/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/ktfx/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+</body> 
+</html> 

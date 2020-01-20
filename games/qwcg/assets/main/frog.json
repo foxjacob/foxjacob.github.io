@@ -1,0 +1,59 @@
+{"frames": [
+
+{
+	"filename": "FrogDeathMc instance 10000",
+	"frame": {"x":1,"y":1,"w":251,"h":243},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":251,"h":243},
+	"sourceSize": {"w":251,"h":243}
+}
+,{
+	"filename": "FrogDeathMc instance 10001",
+	"frame": {"x":253,"y":1,"w":251,"h":243},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":251,"h":243},
+	"sourceSize": {"w":251,"h":243}
+}
+,{
+	"filename": "FrogDeathMc instance 10002",
+	"frame": {"x":1,"y":245,"w":251,"h":243},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":251,"h":243},
+	"sourceSize": {"w":251,"h":243}
+}
+,{
+	"filename": "FrogDeathMc instance 10003",
+	"frame": {"x":253,"y":245,"w":251,"h":243},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":251,"h":243},
+	"sourceSize": {"w":251,"h":243}
+}
+,{
+	"filename": "FrogDeathMc instance 10004",
+	"frame": {"x":1,"y":489,"w":251,"h":243},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":251,"h":243},
+	"sourceSize": {"w":251,"h":243}
+}
+,{
+	"filename": "FrogDeathMc instance 10005",
+	"frame": {"x":253,"y":489,"w":251,"h":243},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":251,"h":243},
+	"sourceSize": {"w":251,"h":243}
+}],
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "13.0.1.808",
+	"image": "frog.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":1024},
+	"scale": "1"
+}
+}

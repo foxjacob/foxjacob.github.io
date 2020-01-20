@@ -1,0 +1,100 @@
+{"frames": {
+
+"BearZombie_BrazoDer.png":
+{
+	"frame": {"x":138,"y":2,"w":36,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":27},
+	"sourceSize": {"w":36,"h":27}
+},
+"BearZombie_BrazoIzq.png":
+{
+	"frame": {"x":176,"y":2,"w":36,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":27},
+	"sourceSize": {"w":36,"h":27}
+},
+"BearZombie_Cabeza.png":
+{
+	"frame": {"x":147,"y":42,"w":94,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":80},
+	"sourceSize": {"w":94,"h":80}
+},
+"BearZombie_Cuerpo.png":
+{
+	"frame": {"x":2,"y":42,"w":48,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":48},
+	"sourceSize": {"w":48,"h":48}
+},
+"BearZombie_OrejaDer.png":
+{
+	"frame": {"x":214,"y":2,"w":36,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":38},
+	"sourceSize": {"w":36,"h":38}
+},
+"BearZombie_OrejaIzq.png":
+{
+	"frame": {"x":100,"y":2,"w":36,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":37},
+	"sourceSize": {"w":36,"h":37}
+},
+"BearZombie_PieDer.png":
+{
+	"frame": {"x":69,"y":2,"w":29,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":16},
+	"sourceSize": {"w":29,"h":16}
+},
+"BearZombie_PieIzq.png":
+{
+	"frame": {"x":39,"y":2,"w":28,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":16},
+	"sourceSize": {"w":28,"h":16}
+},
+"BearZombie_PiernaDer.png":
+{
+	"frame": {"x":20,"y":2,"w":17,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":23},
+	"sourceSize": {"w":17,"h":23}
+},
+"BearZombie_PiernaIzq.png":
+{
+	"frame": {"x":2,"y":2,"w":16,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":23},
+	"sourceSize": {"w":16,"h":23}
+},
+"BearZombie_Sombra.png":
+{
+	"frame": {"x":52,"y":42,"w":93,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":37},
+	"sourceSize": {"w":93,"h":37}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "BearZombie-hd.png",
+	"format": "RGBA5555",
+	"size": {"w":252,"h":124},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:47be2d5a83797fe1a467f6a0c5221c2a:2946ca67d6949ac0ff97c67d2d082e87:43eaecece20ab319275d09d38aad45ea$"
+}
+}

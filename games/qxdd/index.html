@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>七夕点花灯，祝福满人间！</title><meta name="x-share-desc" content="七夕放花灯了，我的祝福满人间！" data-custom="七夕放花灯，我一共放飞了{s}个祝福灯，天都亮了！你放了吗？"><meta name="x-share-title" content="七夕点花灯，灯灯祝福！"><meta name="x-author" content="HW0001"><meta name="x-key" content="61ec2bc2a44a7367b2a82ec4b66b5bc2">
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+	<script type="text/javascript" src="js/play68_sdk.js"></script>
+	<script language="javascript" type="text/javascript" src="js/play68.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+        div, canvas {
+            display:block;
+            position:absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+</head>
+<body><img id="wxsicon" src="54f6ae132eb3f_wx.jpg" width="0" height="0" style="position:absolute">
+<div style="position:relative;" id="gameDiv"></div>
+<script>var document_class = "Main";</script>
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script src="launcher/game-min.js?v2"></script>
+<script>
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+		updateShare(0);
+        setTimeout(egret_h5.startGame, 800);
+    }
+    else {
+        alert("不支持您当前的浏览器")
+    }
+</script>
+</body>
+</html>

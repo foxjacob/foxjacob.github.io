@@ -1,0 +1,50 @@
+﻿{
+	"en": {
+		"task_board": "Collect these candies to complete level",
+		"level": "Level ",
+		"pause": "Game\nPaused",
+		"level_complete": "Level\nComplete!",
+		"game_over": "Game Over",
+		"max_level": "Max Level",
+		"scores": "Scores",
+		"upgrades": "Upgrades",
+
+		"tutorial": [
+			"Help to collect candies for Santa.",
+			"Tap & hold to select candies. Release to collect them.",
+			"Each 6th candy will give a bonus.",
+			"Collect huge chains (more than 7 candies) to get a time bonus."
+		],
+
+		"text_fx_1": "Awesome!",
+		"text_fx_2": "Amazing!",
+		"text_fx_3": "Great!",
+		"text_fx_4": "MEGA CHAIN!",
+		"text_fx_5": "ULTRA CHAIN!"
+	},
+
+	"ru": {
+		"task_board": "Собери эти фрукты, чтобы пройти уровень",
+		"level": "Уровень ",
+		"pause": "Пауза",
+		"level_complete": "Уровень\nПройден!",
+		"game_over": "Игра закончена",
+		"max_level": "Макс уровень",
+		"scores": "Очки",
+		"upgrades": "Апгрейды",
+
+		"tutorial": [
+			"Собирай фрукты, чтобы накормить панду.",
+			"Тапни и держи, чтобы выделить фрукты. Отпусти, чтобы собрать их.",
+			"Каждый 6й фрукт даст бонус.",
+			"Собирай огромные цепочки, чтобы получить бонусное время."
+		],
+
+		"text_fx_1": "Круто!",
+		"text_fx_2": "Супер!",
+		"text_fx_3": "Отлично!",
+		"text_fx_4": "МЕГА КОМБО!",
+		"text_fx_5": "СУПЕР КОМБО!"
+	}
+
+}

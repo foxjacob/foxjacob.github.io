@@ -1,0 +1,29 @@
+{
+	"groups":[
+	{
+		"keys":"levels,over_number_fnt,over_number_png,texture_json",
+		"name":"preload"
+	}],
+	"resources":[
+	{
+		"name":"levels",
+		"type":"json",
+		"url":"data/levels.json"
+	},
+	{
+		"name":"over_number_fnt",
+		"type":"font",
+		"url":"data/over_number.fnt"
+	},
+	{
+		"name":"over_number_png",
+		"type":"image",
+		"url":"data/over_number.png"
+	},
+	{
+		"name":"texture_json",
+		"subkeys":"game-block1-love,game-level-label,game-intro-text3,game-intro-text1,conversation-5,game-intro,more-press,conversation-3,level-current,light,game-block1-move,conversation-4,level-passed,game-bg,game-block1,game-next,shareHint,next-press,game-innerbg,more,level-refer,share,level-dialog,bg,start-bg,game-previous,win,badge-level,conversation-1,game-intro-text2,start-title,conversation-bg,replay-press,level-home,game-level-button,share-press,game-replay,conversation-2,start-button,conversation-6,level-bg,dots,game-step,replay,next,badge-text,game-block5",
+		"type":"sheet",
+		"url":"assets/texture.json"
+	}]
+}

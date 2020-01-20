@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html>
+<head><meta name="x-key" content="e56d2d6a4bfe26a4fbdd4e05dc9785fb">
+    <meta charset="UTF-8">
+    <title>亡命射箭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="assets/css/main.css">
+	
+</head>
+<body>
+    <div class="grid" id="grid">
+        <div class="page" id="index">
+            <img class="logo" src="assets/img/logo.png" alt="亡命射箭">
+            <img class="start" id="btn-start" src="assets/img/start.png">
+            <img class="start" id="btn-more2" src="assets/img/more.png">
+            <div style="clear:both"></div>
+            <img class="copyright" src="assets/img/boyaa.png">
+        </div>
+        <div class="page" id="game">
+            <div class="view-wrap">
+                <div id="apple" class="apple"></div>
+                <div id="score"></div>
+                <div class="people"></div>
+                <div class="bow"></div>
+                <div class="arrow"></div>
+                <div class="bar">
+                    <div class="progress">
+                    </div>
+                    <div class="barLifes">
+                    </div>
+                </div>
+            </div>
+            <div id="control">
+            </div>
+        </div>
+        <div class="page hide" id="gameover">
+            <div class="info hide">
+            </div>
+            <div class="fail-one hide"></div>
+            <div class="fail-two hide"></div>
+            <div class="fail-three hide"></div>
+
+            <div class="btn-wrap">
+                <div class="btn" id="btn-restart"></div>
+                <div class="btn" id="btn-share"></div>
+                <div class="btn" id="btn-more"></div>
+            </div>
+        </div>
+        <div class="page hide" id="jd"></div>
+    </div>
+    <!-- js files start -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        var maxWidth = 640, maxHeight = 960;
+        var currWidth = document.body.clientWidth;
+        var currHeight = document.body.clientHeight;
+        var scale = Math.min(currWidth / maxWidth, currHeight / maxHeight); //固定比率 变尺寸
+        $("#grid").css({
+            "-webkit-transform": "scale(" + scale + "," + scale + ")",
+            "-moz-transform": "scale(" + scale + "," + scale + ")",
+            "transform": "scale(" + scale + "," + scale + ")"
+        });
+
+    </script>
+    <script src="assets/js/bar.js"></script>
+</body>
+</html>

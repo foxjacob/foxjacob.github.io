@@ -1,0 +1,44 @@
+{"frames": {
+
+"Logo_Cabeza1.png":
+{
+	"frame": {"x":2,"y":2,"w":151,"h":121},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":151,"h":121},
+	"sourceSize": {"w":151,"h":121}
+},
+"Logo_Cabeza2.png":
+{
+	"frame": {"x":155,"y":2,"w":151,"h":121},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":151,"h":121},
+	"sourceSize": {"w":151,"h":121}
+},
+"Logo_Teddy.png":
+{
+	"frame": {"x":2,"y":125,"w":363,"h":108},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":363,"h":108},
+	"sourceSize": {"w":363,"h":108}
+},
+"Logo_Zombies.png":
+{
+	"frame": {"x":2,"y":235,"w":506,"h":220},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":506,"h":220},
+	"sourceSize": {"w":506,"h":220}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "Logo-hd.png",
+	"format": "RGBA5555",
+	"size": {"w":510,"h":457},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:52abf248313557c09440d67fd5a73316:a6309fe220324c922b70d6062d5627f0:c935b54c39dd3b96ea89ab9be50bff07$"
+}
+}

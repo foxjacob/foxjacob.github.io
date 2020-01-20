@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>全民洗碗</title>
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0, minimal-ui" />
+
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			width: 100%;
+			background:#f6b7f1;
+		}	
+		canvas {
+			margin-left:0px;
+			margin-top:0px;
+			margin-right:0px;
+			margin-bottom:0px;
+			padding:0px;
+			border:0px;	
+			image-rendering: -o-crisp-edges;           
+			image-rendering: optimize-contrast;        
+			-ms-interpolation-mode: nearest-neighbor;  
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			-moz-tap-highlight-color: rgba(0,0,0,0);
+			tap-highlight-color: rgba(0,0,0,0);
+			user-select: none;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+		} 
+		
+			#spilgames-splash-screen{
+		    display:none;
+            width: 100%;
+            height: 100%;
+            background: url('images/Splash_Image_GGG.png') top center no-repeat; /* Change "A10" to "GGG" or "Zibbo" based on the brand your game matches */
+            position: absolute;
+            z-index: 10000; /* Make sure its on top of the game */
+            background-size: 90%;
+            background-color:#f6b7f1; /* Change to #FFF for GGG or Zibbo branded games */
+        }
+        .spilgames-splash-screen-gone{
+            display:none !important;
+        }
+	</style>
+	
+	<script src="viewporter.js"></script>
+	
+</head>
+	<body> 
+		<div id="spilgames-splash-screen" class="spilgames-splash-screen-gone"></div>
+		<div id="viewporter" style="margin-top:-10px;">
+		   <canvas id="canvas" moz-opaque></canvas>
+		</div>
+	</body>
+	<script src="TweenMax.min.js"></script>
+	<script src="howler.js"></script>
+	<script src="game.js"></script>
+	<script src="app.js"></script>
+	
+</html>

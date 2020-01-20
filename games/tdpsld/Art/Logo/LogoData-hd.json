@@ -1,0 +1,102 @@
+{
+"skeleton": { "spine": "1.9.11", "hash": "AUYC2WTwRwR5eHCALZDnxSnGm/g", "width": 517.76, "height": 325.5 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Cabeza", "parent": "root", "length": 63.18, "x": 166.01, "y": 177.93, "rotation": 89.09 },
+	{ "name": "Teddy", "parent": "root", "length": 271.68, "x": -200.52, "y": 190.96 },
+	{ "name": "Zombies", "parent": "root", "length": 223.24, "x": -117.33, "y": 75.13, "rotation": -0.45 }
+],
+"ik": [],
+"slots": [
+	{ "name": "Logo_Cabeza1", "bone": "Cabeza", "attachment": "Logo_Cabeza1" },
+	{ "name": "Logo_Teddy", "bone": "Teddy", "attachment": "Logo_Teddy" },
+	{ "name": "Logo_Zombies", "bone": "Zombies", "attachment": "Logo_Zombies" }
+],
+"skins": {
+	"default": {
+		"Logo_Teddy": {
+			"Logo_Teddy": { "x": 117.93, "width": 363, "height": 108 }
+		},
+		"Logo_Cabeza1": {
+			"Logo_Cabeza1": { "x": 46.15, "y": 0.7, "rotation": -89.09, "width": 151, "height": 121 },
+			"Logo_Cabeza2": { "x": 46.32, "y": 0.72, "rotation": -89.09, "width": 151, "height": 121 }
+		},
+		"Logo_Zombies": {
+			"Logo_Zombies": { "x": 118.03, "y": -13.81, "rotation": 0.45, "width": 506, "height": 220 }
+		}
+	}
+},
+"animations": {
+	"Idle": {
+		"slots": {
+			"Logo_Cabeza1": {
+				"attachment": [
+					{ "time": 0, "name": "Logo_Cabeza1" },
+					{ "time": 0.3, "name": "Logo_Cabeza2" },
+					{ "time": 0.4, "name": "Logo_Cabeza2" },
+					{ "time": 0.6666, "name": "Logo_Cabeza1" }
+				]
+			}
+		},
+		"bones": {
+			"Cabeza": {
+				"rotate": [
+					{ "time": 0, "angle": 5.36 },
+					{ "time": 0.3666, "angle": -4.56 },
+					{ "time": 0.7333, "angle": 5.36 },
+					{ "time": 1.0333, "angle": -2.26 },
+					{ "time": 1.3333, "angle": 5.36 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.301, 0.01, 0.75, 1 ]
+					},
+					{
+						"time": 0.4,
+						"x": 0.948,
+						"y": 1,
+						"curve": [ 0.301, 0.01, 0.75, 1 ]
+					},
+					{ "time": 0.6666, "x": 1, "y": 1 },
+					{ "time": 1.0333, "x": 0.948, "y": 1 },
+					{ "time": 1.3333, "x": 1, "y": 1 }
+				]
+			},
+			"Zombies": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.452, 0, 0.59, 0.95 ]
+					},
+					{
+						"time": 0.3,
+						"x": 1,
+						"y": 0.95,
+						"curve": [ 0.452, 0, 0.59, 0.95 ]
+					},
+					{ "time": 0.6666, "x": 1, "y": 1 },
+					{
+						"time": 1,
+						"x": 1,
+						"y": 0.95,
+						"curve": [ 0.452, 0, 0.59, 0.95 ]
+					},
+					{ "time": 1.3333, "x": 1, "y": 1 }
+				]
+			},
+			"Teddy": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.3333, "x": 1, "y": 0.886 },
+					{ "time": 0.6666, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

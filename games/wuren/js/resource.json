@@ -1,0 +1,19 @@
+{
+"resources":
+	[
+        {"name":"mmFont","type":"font","url":"css/mmFont.fnt"},
+        {"name":"bmmFont","type":"font","url":"css/bmmFont.fnt"},
+        {"name":"run_json","type":"json","url":"js/run.json"},
+        {"name":"run_png","type":"image","url":"img/run.png"},
+        {"name":"run_jsonReverse","type":"json","url":"js/runReverse.json"},
+        {"name":"run_pngReverse","type":"image","url":"img/runReverse.png"},
+        {"name":"gameTexture","type":"sheet","url":"js/gameTexture.json"}
+
+
+	],
+
+"groups":
+	[
+        {"name":"preload","keys":"gameTexture,run_pngReverse,run_jsonReverse,run_png,run_json,bmmFont,mmFont"}
+	]
+}

@@ -1,0 +1,108 @@
+{"frames": {
+
+"BearSkate_BrazoDer.png":
+{
+	"frame": {"x":146,"y":2,"w":36,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":28},
+	"sourceSize": {"w":36,"h":28}
+},
+"BearSkate_BrazoIzq.png":
+{
+	"frame": {"x":108,"y":2,"w":36,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":28},
+	"sourceSize": {"w":36,"h":28}
+},
+"BearSkate_Cabeza.png":
+{
+	"frame": {"x":201,"y":42,"w":95,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":95,"h":75},
+	"sourceSize": {"w":95,"h":75}
+},
+"BearSkate_Cuerpo.png":
+{
+	"frame": {"x":52,"y":42,"w":51,"h":49},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":49},
+	"sourceSize": {"w":51,"h":49}
+},
+"BearSkate_Gorro.png":
+{
+	"frame": {"x":105,"y":42,"w":94,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":55},
+	"sourceSize": {"w":94,"h":55}
+},
+"BearSkate_OrejaDer.png":
+{
+	"frame": {"x":2,"y":42,"w":48,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":39},
+	"sourceSize": {"w":48,"h":39}
+},
+"BearSkate_OrejaIzq.png":
+{
+	"frame": {"x":279,"y":2,"w":36,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":38},
+	"sourceSize": {"w":36,"h":38}
+},
+"BearSkate_PieDer.png":
+{
+	"frame": {"x":73,"y":2,"w":33,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":25},
+	"sourceSize": {"w":33,"h":25}
+},
+"BearSkate_PieIzq.png":
+{
+	"frame": {"x":38,"y":2,"w":33,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":25},
+	"sourceSize": {"w":33,"h":25}
+},
+"BearSkate_PiernaDer.png":
+{
+	"frame": {"x":2,"y":2,"w":16,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":23},
+	"sourceSize": {"w":16,"h":23}
+},
+"BearSkate_PiernaIzq.png":
+{
+	"frame": {"x":20,"y":2,"w":16,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":23},
+	"sourceSize": {"w":16,"h":23}
+},
+"BearSkate_Sombra.png":
+{
+	"frame": {"x":184,"y":2,"w":93,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":37},
+	"sourceSize": {"w":93,"h":37}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "BearSkate-hd.png",
+	"format": "RGBA5555",
+	"size": {"w":317,"h":119},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:d9171198fdc5610be7a62c512b0303a2:ea06e4b74145086648e7f0799b94e8c0:da7e5e3ed94c53bcab09be92a92dbed3$"
+}
+}

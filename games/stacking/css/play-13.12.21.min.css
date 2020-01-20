@@ -1,0 +1,127 @@
+.a10-playMenu {
+    position: absolute;
+    display: block!important;
+    top: 0;
+    left: 0;
+    text-align: left;
+    font-family: "Arial Black",Arial,Gadget,sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: normal;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    -webkit-transition: width .5s;
+    transition: width .5s;
+    overflow: hidden;
+    z-index: 999999;
+}
+
+.a10-playMenu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.a10-playMenu img {
+    border: 0;
+}
+
+.a10-playMenu a:hover {
+    text-decoration: underline;
+}
+
+.a10-playMenu .a10-playMenuHeader {
+    position: static;
+    background-color: #004060;
+    background-color: rgba(0,64,96,0.5);
+    -webkit-transition: background-color .5s;
+    transition: background-color .5s;
+    height: 60px;
+}
+
+.a10-playMenu .a10-playMenuButton {
+    position: absolute;
+    font-size: 40px;
+    padding: 0 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    top: 7px;
+}
+
+.a10-playMenu .a10-playMenuLogo {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 150px;
+    height: 50px;
+    margin-left: -8px;
+}
+
+.a10-playMenu .a10-playMenuBody {
+    position: static;
+    background-color: #0e93cb;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    width: 360px;
+}
+
+.a10-playMenu .a10-playMenuItems {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.a10-playMenu .a10-playMenuItems li {
+    border-top: 2px solid #000;
+    padding-left: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* .a10-playMenu .a10-playMenuItems i,img {
+    margin-right: 16px;
+} */
+
+.a10-playMenu .a10-playMenuItems img {
+    width: 32px;
+}
+
+.a10-playMenu.a10-open {
+    width: 360px;
+    height: auto;
+}
+
+.a10-playMenu.a10-open .a10-playMenuHeader {
+    background-color: #004060;
+}
+
+.a10-playMenu.a10-open .a10-playMenuBody {
+    opacity: 1;
+}
+
+.a10-playMenu.a10-loading,.a10-playMenu.a10-loading * {
+    -webkit-transition: none!important;
+    transition: none!important;
+}
+
+.a10-playMenu.a10-top {
+    // default;
+}
+
+.a10-playMenu.a10-bottom {
+    top: auto;
+    bottom: 0;
+}
+
+.a10-playMenu.a10-left {
+    // default;
+}
+
+.a10-playMenu.a10-right {
+    left: auto;
+    right: 0;
+}

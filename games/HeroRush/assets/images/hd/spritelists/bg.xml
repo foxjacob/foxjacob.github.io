@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:82d334b1f6da2116ed2328dda688b331:3220edde15a6e83c4fae6c4ca6673945:bc1a6eb80c3c5552dab205e690bf06f0$ -->
+<TextureAtlas imagePath="bg.png">
+    <SubTexture name="ZNAK_FOREST" x="638" y="465" width="108" height="100"/>
+    <SubTexture name="ZNAK_GOROD" x="2" y="258" width="108" height="100"/>
+    <SubTexture name="ZNAK_most" x="112" y="258" width="108" height="100"/>
+    <SubTexture name="bank_" x="534" y="2" width="249" height="175"/>
+    <SubTexture name="brevno" x="681" y="284" width="99" height="55"/>
+    <SubTexture name="build1" x="260" y="520" width="89" height="103"/>
+    <SubTexture name="dira" x="260" y="487" width="98" height="31"/>
+    <SubTexture name="dira2" x="390" y="344" width="73" height="23"/>
+    <SubTexture name="fire" x="183" y="775" width="48" height="21"/>
+    <SubTexture name="fonar" x="887" y="473" width="108" height="213"/>
+    <SubTexture name="fonar2" x="775" y="438" width="110" height="232" frameX="0" frameY="0" frameWidth="111" frameHeight="232"/>
+    <SubTexture name="fonar23th" x="919" y="279" width="74" height="192" frameX="0" frameY="0" frameWidth="110" frameHeight="192"/>
+    <SubTexture name="fonar3th" x="351" y="601" width="79" height="172"/>
+    <SubTexture name="fontan" x="463" y="410" width="58" height="76"/>
+    <SubTexture name="grass" x="995" y="216" width="23" height="15" frameX="0" frameY="0" frameWidth="25" frameHeight="15"/>
+    <SubTexture name="korma1" x="783" y="267" width="134" height="84"/>
+    <SubTexture name="korma2" x="2" y="436" width="101" height="95"/>
+    <SubTexture name="market2" x="785" y="2" width="220" height="169"/>
+    <SubTexture name="mart" x="2" y="2" width="265" height="166"/>
+    <SubTexture name="money1" x="52" y="965" width="44" height="40"/>
+    <SubTexture name="most_stoika" x="365" y="437" width="92" height="162"/>
+    <SubTexture name="most_stoika2" x="94" y="630" width="87" height="43"/>
+    <SubTexture name="ostrov1" x="269" y="2" width="263" height="72"/>
+    <SubTexture name="ostrov2" x="269" y="76" width="247" height="89"/>
+    <SubTexture name="ostrov3" x="105" y="479" width="97" height="33"/>
+    <SubTexture name="ostrov4" x="269" y="167" width="198" height="67"/>
+    <SubTexture name="palatka_1" x="2" y="170" width="128" height="86"/>
+    <SubTexture name="palatka_2" x="132" y="170" width="128" height="86"/>
+    <SubTexture name="palma1" x="112" y="360" width="107" height="117"/>
+    <SubTexture name="palma2" x="390" y="260" width="75" height="82"/>
+    <SubTexture name="phone" x="699" y="179" width="82" height="103"/>
+    <SubTexture name="plitka" x="148" y="675" width="33" height="14"/>
+    <SubTexture name="plot1" x="532" y="244" width="147" height="60"/>
+    <SubTexture name="plot2" x="523" y="457" width="113" height="41"/>
+    <SubTexture name="pogark" x="185" y="874" width="43" height="60"/>
+    <SubTexture name="pokrishki" x="148" y="691" width="32" height="38"/>
+    <SubTexture name="poljana2" x="783" y="222" width="142" height="43"/>
+    <SubTexture name="poljana_1" x="515" y="585" width="85" height="26"/>
+    <SubTexture name="post" x="98" y="950" width="47" height="70"/>
+    <SubTexture name="shark" x="657" y="341" width="117" height="49"/>
+    <SubTexture name="skameika" x="94" y="556" width="87" height="72"/>
+    <SubTexture name="sm10" x="995" y="307" width="18" height="48"/>
+    <SubTexture name="sm_1" x="222" y="258" width="38" height="63"/>
+    <SubTexture name="sm_11" x="222" y="323" width="38" height="63"/>
+    <SubTexture name="sm_2" x="2" y="740" width="50" height="68"/>
+    <SubTexture name="sm_3" x="390" y="369" width="71" height="66"/>
+    <SubTexture name="sm_4" x="602" y="558" width="33" height="67"/>
+    <SubTexture name="sm_5" x="183" y="623" width="66" height="42"/>
+    <SubTexture name="sm_7" x="602" y="500" width="34" height="56"/>
+    <SubTexture name="sm_8" x="94" y="675" width="52" height="63"/>
+    <SubTexture name="sm_9" x="145" y="740" width="36" height="63"/>
+    <SubTexture name="ss_1" x="188" y="798" width="41" height="37"/>
+    <SubTexture name="ss_10" x="101" y="875" width="45" height="70"/>
+    <SubTexture name="ss_11" x="2" y="810" width="50" height="64"/>
+    <SubTexture name="ss_12" x="467" y="272" width="60" height="61"/>
+    <SubTexture name="ss_13" x="657" y="392" width="116" height="71"/>
+    <SubTexture name="ss_14" x="532" y="179" width="165" height="63"/>
+    <SubTexture name="ss_15" x="785" y="173" width="208" height="47"/>
+    <SubTexture name="ss_16" x="995" y="233" width="22" height="72"/>
+    <SubTexture name="ss_17" x="2" y="678" width="51" height="60"/>
+    <SubTexture name="ss_18" x="54" y="745" width="36" height="49"/>
+    <SubTexture name="ss_19" x="515" y="613" width="81" height="48"/>
+    <SubTexture name="ss_2" x="776" y="353" width="126" height="83"/>
+    <SubTexture name="ss_20" x="148" y="874" width="35" height="64"/>
+    <SubTexture name="ss_21" x="2" y="876" width="49" height="87"/>
+    <SubTexture name="ss_22" x="467" y="335" width="59" height="73"/>
+    <SubTexture name="ss_23" x="54" y="796" width="35" height="66"/>
+    <SubTexture name="ss_24" x="147" y="947" width="44" height="65"/>
+    <SubTexture name="ss_25" x="2" y="965" width="48" height="40"/>
+    <SubTexture name="ss_26" x="53" y="876" width="46" height="72"/>
+    <SubTexture name="ss_3" x="91" y="807" width="47" height="66"/>
+    <SubTexture name="ss_4" x="55" y="678" width="36" height="65"/>
+    <SubTexture name="ss_5" x="221" y="388" width="39" height="57"/>
+    <SubTexture name="ss_6" x="140" y="807" width="46" height="65"/>
+    <SubTexture name="ss_7" x="221" y="447" width="37" height="63"/>
+    <SubTexture name="ss_8" x="105" y="514" width="91" height="40"/>
+    <SubTexture name="ss_9" x="93" y="740" width="50" height="65"/>
+    <SubTexture name="stena_1" x="262" y="411" width="101" height="74"/>
+    <SubTexture name="totem" x="251" y="625" width="65" height="104"/>
+    <SubTexture name="tree_1" x="262" y="236" width="126" height="173"/>
+    <SubTexture name="tree_2" x="529" y="306" width="126" height="149"/>
+    <SubTexture name="tree_3" x="2" y="533" width="90" height="143"/>
+    <SubTexture name="tree_4" x="469" y="167" width="61" height="103"/>
+    <SubTexture name="tree_5" x="995" y="173" width="27" height="41"/>
+    <SubTexture name="volna" x="390" y="236" width="76" height="22" frameX="-1" frameY="0" frameWidth="78" frameHeight="22"/>
+    <SubTexture name="zabor2" x="2" y="360" width="108" height="74"/>
+    <SubTexture name="zabor_1" x="927" y="222" width="66" height="55"/>
+    <SubTexture name="zabor_2" x="515" y="500" width="85" height="83"/>
+    <SubTexture name="znak_1" x="183" y="667" width="54" height="106"/>
+    <SubTexture name="znak_2" x="459" y="488" width="54" height="109"/>
+    <SubTexture name="znak_3" x="204" y="512" width="54" height="109"/>
+    <SubTexture name="znak_4" x="459" y="599" width="54" height="109"/>
+</TextureAtlas>

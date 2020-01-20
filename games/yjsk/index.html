@@ -1,0 +1,63 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title>眼疾手快</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="full-screen" content="true">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-fullscreen" content="true">
+<meta name="360-fullscreen" content="true">
+<style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+        div, canvas {
+            display:block;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+
+<script type="text/javascript">
+            window.gameLangs = ['en', 'de', 'es', 'fr', 'it', 'pt', 'ru', 'tr', 'nl', 'pl'];
+            window.gameJS = ['launcher/egret_require.js', 'launcher/egret_loader.js', 'launcher/game-min.js'];
+            window.gameOnLoadScript = "initialize()";
+        </script><script type="text/javascript" src="./assets/softgames-1.1.js"></script><script type="text/javascript" src="./assets/sg.hooks.js"></script>
+</head>
+<body>
+<div style="position:relative;" id="gameDiv"><canvas id="egretCanvas"></canvas></div>
+<script>var document_class = "Main";</script><script>
+function initialize() {
+    (function(){
+        //play68_init();
+        })();
+    var support = true; ///*[].map && */ document.createElement("canvas");
+    if (support) {
+        var canvas=document.getElementById("egretCanvas");
+        var _wpx=canvas.style.width;
+        var _w=_wpx.substr(0,_wpx.length-2);
+        console.log(_w);
+        canvas.style.marginLeft="-"+_w/2+"px";
+        egret_h5.startGame();
+    }
+    else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+}
+</script>
+</body>
+</html>

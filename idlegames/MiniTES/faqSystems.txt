@@ -1,0 +1,215 @@
+What do I do?
+
+There is a main storyline of sorts. Find the 8 maps, and then find the 8 seals
+to unlock the final boss. And then beating the final boss unlocks the postgame.
+But you can ignore all that if you want, this is based on TES after all.
+
+
+
+
+
+
+
+
+Where are the maps then?
+
+Not telling. Go out and explore!
+
+
+
+
+
+
+
+
+How does levelling work?
+
+Levelling up your skills gives you EXP towards your next level. When you level
+up, you gain stat points based on what skills you used the most, capped at 3
+stat points per level. So improving your SWORD skill gives you STR when you
+level up, and improving your SPEECH skill gives you CHA when you level up. To
+put it simply, each skill improves the stat which it's on the same horizontal
+line as.
+
+Also, skills are capped at the level of the stat they are affected by. The 
+SWORD skill is capped at your current STR, for example.
+
+
+
+
+
+
+How do I improve my skills then?
+
+By using them. Hit monsters while having a dagger equipped to improve DAGGER,
+walk around to improve ATHLETE, etc.
+
+
+
+
+
+
+
+
+How can I most efficiently improve each skill?
+	Combat skills:
+	AXE 	- Hit monsters with axes
+	SPEAR 	- Hit monsters with spears
+	SWORD 	- Hit monsters with swords
+	MACE 	- Hit monsters with maces
+	DAGGER 	- Hit monsters with daggers
+	FIST	- Hit monsters with fist weapons
+	H ARMOR - Take damage while wearing heavy armor
+	M ARMOR - Take damage while wearing medium armor
+	L ARMOR - Take damage while wearing light armor
+	DODGE   - Dodge an attack
+	BLOCK	- Equip a shield and block an attack
+	CRIT	- Land a critical hit
+
+	Quest Skills:
+	ENDURE 	- Find places to train outside of combat
+	SMASH 	- Find places to train outside of combat
+	CLIMB 	- Find places to train outside of combat
+	STEALTH - Find places to train outside of combat
+	SPEECH 	- Find places to train outside of combat
+	UNLOCK 	- Find places to train outside of combat
+
+	Other Skills:
+	ATHLETE - Find places to train outside of combat
+			- Travel on the world map
+	MEDIC	- Find places to train outside of combat
+			- Heal youself after combat
+
+
+
+
+
+
+
+
+What do skills do, themselves?
+
+There are 3 kinds of skills: Combat skills, quest skills, and other skills.
+Combat skills are used in combat. Quest skills are used to find key items, if
+your level in the required skill is high enough. Other skills are used to
+reduce wait times.
+
+
+
+
+
+
+
+
+			
+What does each skill affect, in detail?
+	Weapon skills - Improves chance to hit, if you have the weapon equipped
+		     	  - Small chance to dodge boost, if you have the weapon equipped
+	Armor skills  - Boosts AC of your armor pieces
+	Quest skills  - Allows you to get key items if the skill level is high enough
+	Other skills  - Affects waiting times
+
+
+
+
+
+
+
+
+More detail.
+	Combat skills:
+	AXE 	- Improves chance to hit with axes
+	SPEAR 	- Improves chance to hit with spears
+	SWORD 	- Improves chance to hit with swords
+	MACE 	- Improves chance to hit with maces
+	DAGGER 	- Improves chance to hit with daggers
+	FIST	- Improves chance to hit with fist weapons
+	H ARMOR - Boosts AC of your heavy armor pieces
+	M ARMOR - Boosts AC of your medium armor pieces
+	L ARMOR - Boosts AC of your light armor pieces
+	DODGE   - Improves chance to dodge
+	BLOCK	- Improves chance to block an attack
+	CRIT	- Improves chance to land a critical hit
+
+	Combat Skills, extra uses:
+	AXE 	- Small chance to dodge boost while using axes
+	SPEAR	- Small chance to dodge boost while using spears
+	SWORD	- Small chance to dodge boost while using swords
+	MACE	- Small chance to dodge boost while using maces
+	DAGGER	- Small chance to dodge boost while using daggers
+	FIST	- Small chance to dodge boost while using fist weapons
+	
+	Quest Skills:
+	ENDURE 	- Allows you to get key items if the skill level is high enough
+	SMASH 	- Allows you to get key items if the skill level is high enough
+	CLIMB 	- Allows you to get key items if the skill level is high enough
+	STEALTH - Allows you to get key items if the skill level is high enough
+	SPEECH 	- Allows you to get key items if the skill level is high enough
+	UNLOCK 	- Allows you to get key items if the skill level is high enough
+
+	Quest Skills, extra uses:
+	ENDURE  - Small boost to damage reduction
+	SMASH	- Small boost to attack damage
+	STEALTH - Small boost to your chance to dodge
+
+	Other Skills:
+	ATHLETE - Travel faster on the world map
+	MEDIC	- Heal yourself faster after combat
+
+
+
+
+
+
+
+
+What does each stat do then (DEF, STR, etc.)?
+	DEF - Improves damage when using axes and spears
+	STR - Improves damage when using swords and maces
+	AGI - Improves damage when using daggers
+	SPD - Improves damage when using fist weapons
+	    - Small boost to your chance to dodge
+	    - Small boost to your chance to hit
+	CHA - ...nothing, lol.
+	LUK - Improves everything in combat a tiny bit, including chance to crit
+
+
+
+
+
+
+
+
+Anything else I should know?
+
+You can unequip shields (but not any other of the armor pieces) by clicking on
+them a second time. You get a damage boost if you don't use a shield, but you
+give up the ability to block.
+
+This game is based on the systems from TES3 Morrowind. So when in doubt, you
+can probably assume that it works the same as Morrowind.
+
+
+
+
+
+
+
+
+Why not Oblivion or Skyrim?
+
+Because I haven't played them yet. Nothing personal, I'm sure they're both
+awesome, but I just don't know anything about how they work at the moment.
+
+
+
+
+
+
+
+
+Why not Arena or Daggerfall?
+
+Arena's too simplistic, and I haven't played Daggerfall either. I've skipped
+over it for now because I heard it was really really glitchy and that Morrowind
+was the best WRPG ever made.

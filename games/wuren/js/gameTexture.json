@@ -1,0 +1,343 @@
+{
+	"file": "gameTexture1.png",
+	"frames": {
+		"Lbar": {
+			"x": 184,
+			"y": 382,
+			"w": 170,
+			"h": 20
+		},
+		"Lbr": {
+			"x": 2,
+			"y": 2,
+			"w": 180,
+			"h": 400
+		},
+		"Mbar": {
+			"x": 356,
+			"y": 382,
+			"w": 80,
+			"h": 20
+		},
+		"Mbr": {
+			"x": 595,
+			"y": 281,
+			"w": 50,
+			"h": 50
+		},
+		"Sbar": {
+			"x": 438,
+			"y": 382,
+			"w": 30,
+			"h": 20
+		},
+		"Sbr": {
+			"x": 604,
+			"y": 56,
+			"w": 30,
+			"h": 60
+		},
+		"againBtn": {
+			"x": 49,
+			"y": 633,
+			"w": 184,
+			"h": 67,
+			"offX": 9,
+			"offY": 6,
+			"sourceW": 200,
+			"sourceH": 77
+		},
+		"xuanyao": {
+			"x": 279,
+			"y": 553,
+			"w": 184,
+			"h": 67,
+			"offX": 9,
+			"offY": 6,
+			"sourceW": 200,
+			"sourceH": 77
+		},
+		"gengduo": {
+			"x": 279,
+			"y": 633,
+			"w": 184,
+			"h": 67,
+			"offX": 9,
+			"offY": 6,
+			"sourceW": 200,
+			"sourceH": 77
+		},
+		"currentDistance": {
+			"x": 552,
+			"y": 482,
+			"w": 78,
+			"h": 15,
+			"offX": 2,
+			"offY": 3,
+			"sourceW": 88,
+			"sourceH": 23
+		},
+		"d1": {
+			"x": 184,
+			"y": 338,
+			"w": 289,
+			"h": 42,
+			"offX": 8,
+			"offY": 5,
+			"sourceW": 307,
+			"sourceH": 54
+		},
+		"d2": {
+			"x": 196,
+			"y": 454,
+			"w": 192,
+			"h": 38,
+			"offX": 3,
+			"offY": 10,
+			"sourceW": 208,
+			"sourceH": 54
+		},
+		"d3": {
+			"x": 2,
+			"y": 454,
+			"w": 192,
+			"h": 40,
+			"offX": 11,
+			"offY": 6,
+			"sourceW": 208,
+			"sourceH": 54
+		},
+		"deren": {
+			"x": 458,
+			"y": 514,
+			"w": 158,
+			"h": 28,
+			"offX": 9,
+			"offY": 4,
+			"sourceW": 158,
+			"sourceH": 31
+		},
+		"degou": {
+			"x": 554,
+			"y": 457,
+			"w": 72,
+			"h": 21,
+			"offX": 9,
+			"offY": 4,
+			"sourceW": 88,
+			"sourceH": 31
+		},
+		"end0": {
+			"x": 184,
+			"y": 2,
+			"w": 216,
+			"h": 262,
+			"offX": 5,
+			"offY": 3,
+			"sourceW": 230,
+			"sourceH": 270
+		},
+		"flying": {
+			"x": 588,
+			"y": 166,
+			"w": 56,
+			"h": 58,
+			"offX": 2,
+			"offY": 0,
+			"sourceW": 60,
+			"sourceH": 60
+		},
+		"flyingReverse": {
+			"x": 378,
+			"y": 266,
+			"w": 56,
+			"h": 58,
+			"offX": 1,
+			"offY": 0,
+			"sourceW": 60,
+			"sourceH": 60
+		},
+		"food": {
+			"x": 622,
+			"y": 333,
+			"w": 25,
+			"h": 25
+		},
+		"gesture": {
+			"x": 475,
+			"y": 263,
+			"w": 118,
+			"h": 118,
+			"offX": 0,
+			"offY": 2,
+			"sourceW": 120,
+			"sourceH": 120
+		},
+		"gongxi": {
+			"x": 474,
+			"y": 555,
+			"w": 152,
+			"h": 27,
+			"offX": 4,
+			"offY": 1,
+			"sourceW": 152,
+			"sourceH": 29
+		},
+		"jibai": {
+			"x": 364,
+			"y": 515,
+			"w": 90,
+			"h": 30,
+			"offX": 2,
+			"offY": 5,
+			"sourceW": 90,
+			"sourceH": 30
+		},
+		"jibaile": {
+			"x": 472,
+			"y": 457,
+			"w": 80,
+			"h": 23,
+			"offX": 2,
+			"offY": 5,
+			"sourceW": 88,
+			"sourceH": 31
+		},
+		"lace": {
+			"x": 2,
+			"y": 404,
+			"w": 480,
+			"h": 48,
+			"offX": 0,
+			"offY": 2,
+			"sourceW": 480,
+			"sourceH": 50
+		},
+		"maxDistance": {
+			"x": 472,
+			"y": 482,
+			"w": 78,
+			"h": 15,
+			"offX": 2,
+			"offY": 3,
+			"sourceW": 88,
+			"sourceH": 23
+		},
+		"minus": {
+			"x": 604,
+			"y": 142,
+			"w": 26,
+			"h": 22,
+			"offX": 6,
+			"offY": 8,
+			"sourceW": 40,
+			"sourceH": 40
+		},
+		"pause": {
+			"x": 560,
+			"y": 383,
+			"w": 74,
+			"h": 72,
+			"offX": 3,
+			"offY": 4,
+			"sourceW": 80,
+			"sourceH": 80
+		},
+		"play": {
+			"x": 484,
+			"y": 383,
+			"w": 74,
+			"h": 72,
+			"offX": 3,
+			"offY": 4,
+			"sourceW": 80,
+			"sourceH": 80
+		},
+		"plus": {
+			"x": 604,
+			"y": 118,
+			"w": 30,
+			"h": 22,
+			"offX": 2,
+			"offY": 8,
+			"sourceW": 40,
+			"sourceH": 40
+		},
+		"poison": {
+			"x": 434,
+			"y": 263,
+			"w": 28,
+			"h": 27,
+			"offX": 3,
+			"offY": 0,
+			"sourceW": 28,
+			"sourceH": 27
+		},
+		"ptr": {
+			"x": 604,
+			"y": 2,
+			"w": 45,
+			"h": 52,
+			"offX": 9,
+			"offY": 7,
+			"sourceW": 65,
+			"sourceH": 66
+		},
+		"rolling": {
+			"x": 595,
+			"y": 226,
+			"w": 52,
+			"h": 53,
+			"offX": 0,
+			"offY": 3,
+			"sourceW": 54,
+			"sourceH": 57
+		},
+		"runIcon": {
+			"x": 595,
+			"y": 333,
+			"w": 25,
+			"h": 25
+		},
+		"start0": {
+			"x": 402,
+			"y": 2,
+			"w": 200,
+			"h": 162,
+			"offX": 0,
+			"offY": 17,
+			"sourceW": 200,
+			"sourceH": 200
+		},
+		"desc": {
+			"x": 0,
+			"y": 500,
+			"w": 253,
+			"h": 30,
+			"offX": 0,
+			"offY": 17,
+			"sourceW": 253,
+			"sourceH": 30
+		},
+		"startbtn": {
+			"x": 184,
+			"y": 266,
+			"w": 192,
+			"h": 70,
+			"offX": 4,
+			"offY": 9,
+			"sourceW": 200,
+			"sourceH": 88
+		},
+		"timeLine": {
+			"x": 402,
+			"y": 235,
+			"w": 166,
+			"h": 26,
+			"offX": 3,
+			"offY": 7,
+			"sourceW": 178,
+			"sourceH": 38
+		}
+	}
+}

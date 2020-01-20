@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="mainSt.png">
+	<!--
+	Created with ShoeBox
+	http://renderhjs.net/shoebox/
+	-->
+	<SubTexture name="bgLr_1.png"	x="0"	y="313"	width="576"	height="68" frameX="-0" frameY="-0" frameWidth="576" frameHeight="68"/>
+	<SubTexture name="bgLr_2_1.png"	x="0"	y="0"	width="593"	height="241" frameX="-0" frameY="-0" frameWidth="593" frameHeight="241"/>
+	<SubTexture name="bgLr_2_2.png"	x="745"	y="0"	width="19"	height="601" frameX="-0" frameY="-0" frameWidth="19" frameHeight="601"/>
+	<SubTexture name="bgLr_2_3.png"	x="766"	y="0"	width="19"	height="601" frameX="-0" frameY="-0" frameWidth="19" frameHeight="601"/>
+	<SubTexture name="bgLr_3.png"	x="0"	y="243"	width="578"	height="68" frameX="-0" frameY="-0" frameWidth="578" frameHeight="68"/>
+	<SubTexture name="block_1.png"	x="630"	y="659"	width="70"	height="87" frameX="-0" frameY="-0" frameWidth="70" frameHeight="87"/>
+	<SubTexture name="block_2.png"	x="630"	y="571"	width="70"	height="86" frameX="-0" frameY="-0" frameWidth="70" frameHeight="87"/>
+	<SubTexture name="block_3.png"	x="667"	y="0"	width="70"	height="87" frameX="-0" frameY="-0" frameWidth="70" frameHeight="87"/>
+	<SubTexture name="block_4.png"	x="597"	y="340"	width="70"	height="87" frameX="-0" frameY="-0" frameWidth="70" frameHeight="87"/>
+	<SubTexture name="block_5.png"	x="667"	y="89"	width="70"	height="87" frameX="-0" frameY="-0" frameWidth="70" frameHeight="87"/>
+	<SubTexture name="block_6.png"	x="669"	y="340"	width="70"	height="87" frameX="-0" frameY="-0" frameWidth="70" frameHeight="87"/>
+	<SubTexture name="block_7_dn.png"	x="595"	y="0"	width="70"	height="87" frameX="-0" frameY="-0" frameWidth="70" frameHeight="87"/>
+	<SubTexture name="block_7_up.png"	x="595"	y="89"	width="70"	height="87" frameX="-0" frameY="-0" frameWidth="70" frameHeight="87"/>
+	<SubTexture name="clockAltFill.png"	x="0"	y="772"	width="105"	height="7" frameX="-0" frameY="-0" frameWidth="105" frameHeight="7"/>
+	<SubTexture name="clockBg.png"	x="580"	y="243"	width="92"	height="95" frameX="-0" frameY="-0" frameWidth="92" frameHeight="95"/>
+	<SubTexture name="clockBgAlt.png"	x="0"	y="737"	width="109"	height="33" frameX="-0" frameY="-0" frameWidth="109" frameHeight="33"/>
+	<SubTexture name="handBig.png"	x="168"	y="737"	width="10"	height="38" frameX="-0" frameY="-0" frameWidth="10" frameHeight="38"/>
+	<SubTexture name="handSmall.png"	x="155"	y="748"	width="11"	height="26" frameX="-0" frameY="-0" frameWidth="11" frameHeight="26"/>
+	<SubTexture name="logoBrainie.png"	x="0"	y="485"	width="441"	height="170" frameX="-0" frameY="-0" frameWidth="441" frameHeight="170"/>
+	<SubTexture name="menuBtnSml_dn.png"	x="443"	y="485"	width="130"	height="78" frameX="-0" frameY="-0" frameWidth="130" frameHeight="78"/>
+	<SubTexture name="menuBtnSml_up.png"	x="443"	y="565"	width="130"	height="78" frameX="-0" frameY="-0" frameWidth="130" frameHeight="78"/>
+	<SubTexture name="menuBtn_dn.png"	x="0"	y="657"	width="261"	height="78" frameX="-0" frameY="-0" frameWidth="261" frameHeight="78"/>
+	<SubTexture name="menuBtn_up.png"	x="263"	y="657"	width="261"	height="78" frameX="-0" frameY="-0" frameWidth="261" frameHeight="78"/>
+	<SubTexture name="menuDisabler.png"	x="575"	y="571"	width="50"	height="50" frameX="-0" frameY="-0" frameWidth="50" frameHeight="50"/>
+	<SubTexture name="menuFace.png"	x="0"	y="383"	width="474"	height="100" frameX="-0" frameY="-0" frameWidth="474" frameHeight="100"/>
+	<SubTexture name="numFldBg.png"	x="476"	y="383"	width="119"	height="95" frameX="-0" frameY="-0" frameWidth="119" frameHeight="95"/>
+	<SubTexture name="pauseBtn_dn.png"	x="674"	y="178"	width="69"	height="72" frameX="-0" frameY="-0" frameWidth="69" frameHeight="72"/>
+	<SubTexture name="pauseBtn_up.png"	x="674"	y="252"	width="69"	height="72" frameX="-0" frameY="-0" frameWidth="69" frameHeight="72"/>
+	<SubTexture name="resetSelBtn_dn.png"	x="526"	y="645"	width="102"	height="89" frameX="-0" frameY="-0" frameWidth="102" frameHeight="89"/>
+	<SubTexture name="resetSelBtn_up.png"	x="575"	y="480"	width="102"	height="89" frameX="-0" frameY="-0" frameWidth="102" frameHeight="89"/>
+	<SubTexture name="sndBtn_cross.png"	x="111"	y="737"	width="42"	height="38" frameX="-10" frameY="-9" frameWidth="60" frameHeight="65"/>
+	<SubTexture name="sndBtn_dn.png"	x="679"	y="496"	width="60"	height="65" frameX="-0" frameY="-0" frameWidth="60" frameHeight="65"/>
+	<SubTexture name="sndBtn_up.png"	x="679"	y="429"	width="60"	height="65" frameX="-0" frameY="-0" frameWidth="60" frameHeight="65"/>
+</TextureAtlas>

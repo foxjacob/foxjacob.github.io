@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="oupengmobile" content="fullscreen,portrait,game">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-startup-image" href="startup.png">
+
+    <script src="js/jsgamemin.js"></script>
+    <script src="js/touchmin.js"></script>
+    <script src="js/game.min.js"></script>
+
+    <title>让屋子飞</title>
+    <style>
+        body{margin:0px; background-color:#434243; color:#6A6A6A;}
+        .bandiv{float:left; width:100%; background-color:#DBD1BB;}
+        .bandiv div{padding:10px; text-align:left;}
+	    #tips {
+		  display: none;
+		  position: absolute;
+		  width: 45%;
+		  height: auto;
+		  top: 3.5%;
+		  left: 27%;
+		}
+        #tips span{
+        	font-family: '微软雅黑';
+        	font-size: 1.5em;
+        }
+    </style>
+	
+	<!--Analytics-->
+	
+</head>
+
+<body onload="main();">
+	
+<div style="text-align:center; background: black; overflow: hidden;">
+	<div id="tips"><span>点击暂停提交成绩</span></div>
+	<canvas id="jsGameScreen">		
+		<div class="bandiv" style="font-size:0px; height:2px; margin:2px 0px 2px 0px;"></div>
+		<div class="bandiv">
+			<div style="text-align:center;">
+				游戏规则
+			</div>
+		</div>
+		<div class="bandiv" style="font-size:0px; height:2px; margin:2px 0px 5px 0px;"></div>
+		<div class="bandiv">
+			<div>
+				游戏操作：点击炸弹，金币，气球，可以触发炸弹爆炸，收集金币和绑上气球。按住房子可以拖动。划屏出现保护。<br />
+				游戏规则：绑上气球，屋子升高。引爆炸弹，可以收集金币。最后积分是房子高度和金币的总和。
+			</div>
+		</div>
+		
+	</canvas>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+<title>果冻任务</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="keywords" content="果冻任务,果冻任务html5游戏" />
+<meta name="description" content="果冻任务html5游戏,果冻任务手机在线游戏" />
+<link rel="apple-touch-icon" href="icon.png" />
+<link rel="shortcut icon" href="icon.png" />
+<link rel="icon" href="icon.png" />
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+ <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script type="text/javascript" src="game.js"></script>
+<link href="css/gamestyles.css" rel="stylesheet" type="text/css" />
+<script src="js/game.min.js"></script>
+<script src="assets/config/config.js"></script>
+<script src="assets/config/levels.js"></script>
+<!--END-DEBUG-->
+<script>
+function init(apiInstance) {
+var canvas = document.getElementById("gameCanvas");
+var loader = document.getElementById("loader");
+// Retrieves the logo from Spil
+var logoData = apiInstance.Branding.getLogo();
+var logoSrc = logoData.image;
+var logoAction = logoData.action;
+var moreGamesButton = apiInstance.Branding.getLink('more_games');
+var moreGamesAction = moreGamesButton && moreGamesButton.action;
+var config = {
+// On iOS we cannot have music in main menu, before user interacts with the game.
+// If portal API already played sound in response to "Play" button, feel free to set it to true.
+soundUnMuted: false,
+// If portal does not want music in the game, set it to true. Music loading will be skipped.
+disableMusic: false,
+// Language code for the game UI
+language: 'en',
+portal: {
+logo: logoSrc,
+logoURL: logoAction,
+moreGamesURL: moreGamesAction
+},
+api: {
+gameLoadingComplete : function() {
+// Checks if splash screen is enabled and if it has an 'action' method
+apiInstance.Branding.displaySplashScreen( function() {
+});
+},
+gameStarted: function () {
+},
+gameLost: function (score, level) {
+},
+levelComplete: function (score, level) {
+},
+// Check orientation in the way most appropriate for your network, return true if you 
+// want to block the game and display rotation sign.
+// If you keep viewporter library import, this function is called as part of viewportchange event, 
+// if you like, feel free to check for window.orientation here.
+// Just return "false" if you don't want this functionality.
+orientationLock: function () {
+// Viewporter says it is desktop or older android device? Viewporter lib is removed alltogether? 
+// Better not do rotation check in that case IMO.
+if (!viewporter || !viewporter.ACTIVE) {
+return false;
+}
+// Looks like landscape on narrow device? Ask user to rotate! 
+var isLandscape = window.innerWidth > window.innerHeight && window.innerWidth <= 640;
+return isLandscape;
+}
+}
+};
+app.initialize(canvas, config);
+}
+</script>
+</head>
+<body>
+<div id="viewporter">
+<div id="canvasHolder" style="position: absolute; overflow: hidden"><canvas id="gameCanvas" style="position: absolute" width="640" height="960"></canvas></div>
+</div>
+<div id="spilgames-splash-screen" class="spilgames-splash-screen-gone"></div>
+<script type="text/javascript">
+var SpilData = {
+id: '576742227280292486' // You receive this value from Spil Games
+};
+GameAPI.loadAPI (function (apiInstance) {
+// The API is ready for use.
+if (window.console && window.console.log) {
+console.log('GameAPI version ' + apiInstance.version + ' loaded!');
+}
+init(apiInstance);
+}, SpilData);
+</script>
+
+
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'果冻任务',
+  'link':'https://foxjacob.gitee.io/gamestation/games/guodongrenwu/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/guodongrenwu/icon.png'
+}
+window.shareFriendData={
+  'title':'果冻任务',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/guodongrenwu/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/guodongrenwu/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+</body>
+</html>

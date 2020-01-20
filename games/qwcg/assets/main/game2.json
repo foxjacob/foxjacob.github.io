@@ -1,0 +1,123 @@
+{"frames": [
+
+{
+	"filename": "BallMc0000",
+	"frame": {"x":516,"y":361,"w":70,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":70},
+	"sourceSize": {"w":70,"h":70}
+}
+,{
+	"filename": "BarPowerMc0000",
+	"frame": {"x":410,"y":466,"w":190,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":190,"h":39},
+	"sourceSize": {"w":190,"h":39}
+}
+,{
+	"filename": "BarPowerMcBg0000",
+	"frame": {"x":731,"y":684,"w":204,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":204,"h":50},
+	"sourceSize": {"w":204,"h":50}
+}
+,{
+	"filename": "ballon0000",
+	"frame": {"x":2,"y":2,"w":301,"h":570},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":301,"h":570},
+	"sourceSize": {"w":301,"h":570}
+}
+,{
+	"filename": "fire0000",
+	"frame": {"x":841,"y":377,"w":30,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":72},
+	"sourceSize": {"w":30,"h":72}
+}
+,{
+	"filename": "goaltarget0000",
+	"frame": {"x":2,"y":573,"w":408,"h":286},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":408,"h":286},
+	"sourceSize": {"w":408,"h":286}
+}
+,{
+	"filename": "green_btn0000",
+	"frame": {"x":304,"y":361,"w":105,"h":104},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":105,"h":104},
+	"sourceSize": {"w":105,"h":104}
+}
+,{
+	"filename": "red_btn0000",
+	"frame": {"x":410,"y":361,"w":105,"h":104},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":105,"h":104},
+	"sourceSize": {"w":105,"h":104}
+}
+,{
+	"filename": "road_line0000",
+	"frame": {"x":516,"y":432,"w":76,"h":9},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":9},
+	"sourceSize": {"w":76,"h":9}
+}
+,{
+	"filename": "swing0000",
+	"frame": {"x":731,"y":2,"w":210,"h":374},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":210,"h":374},
+	"sourceSize": {"w":210,"h":374}
+}
+,{
+	"filename": "swing_back0000",
+	"frame": {"x":304,"y":2,"w":305,"h":358},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":305,"h":358},
+	"sourceSize": {"w":305,"h":358}
+}
+,{
+	"filename": "swing_seat0000",
+	"frame": {"x":731,"y":377,"w":109,"h":306},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":109,"h":306},
+	"sourceSize": {"w":109,"h":306}
+}
+,{
+	"filename": "wood0000",
+	"frame": {"x":610,"y":2,"w":120,"h":722},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":722},
+	"sourceSize": {"w":120,"h":722}
+}
+,{
+	"filename": "yellow_btn0000",
+	"frame": {"x":304,"y":466,"w":105,"h":104},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":105,"h":104},
+	"sourceSize": {"w":105,"h":104}
+}],
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "13.0.1.808",
+	"image": "game2.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":1024},
+	"scale": "1"
+}
+}

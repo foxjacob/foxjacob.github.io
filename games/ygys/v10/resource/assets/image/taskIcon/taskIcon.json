@@ -1,0 +1,17 @@
+{
+"file": "taskIcon.png"
+,
+"frames": {
+	"1": {"x":454, "y":0, "w":195, "h":219, "offX":25,"offY":8,"sourceW":240,"sourceH":240},
+	"10": {"x":654, "y":222, "w":167, "h":217, "offX":50,"offY":9,"sourceW":240,"sourceH":240},
+	"11": {"x":241, "y":0, "w":212, "h":201, "offX":16,"offY":21,"sourceW":240,"sourceH":240},
+	"2": {"x":0, "y":241, "w":240, "h":240, "offX":0,"offY":0,"sourceW":240,"sourceH":240},
+	"3": {"x":444, "y":419, "w":209, "h":208, "offX":26,"offY":14,"sourceW":240,"sourceH":240},
+	"4": {"x":231, "y":482, "w":212, "h":214, "offX":16,"offY":10,"sourceW":240,"sourceH":240},
+	"5": {"x":241, "y":202, "w":210, "h":216, "offX":17,"offY":7,"sourceW":240,"sourceH":240},
+	"6": {"x":0, "y":0, "w":240, "h":240, "offX":0,"offY":0,"sourceW":240,"sourceH":240},
+	"7": {"x":654, "y":440, "w":146, "h":220, "offX":45,"offY":8,"sourceW":240,"sourceH":240},
+	"8": {"x":0, "y":482, "w":230, "h":225, "offX":8,"offY":4,"sourceW":240,"sourceH":240},
+	"9": {"x":650, "y":0, "w":174, "h":221, "offX":23,"offY":6,"sourceW":240,"sourceH":240}
+
+}}

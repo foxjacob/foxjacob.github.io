@@ -1,0 +1,21 @@
+﻿/// <reference path="../../vs-doc.js" /> 
+/// <reference path="../game.js" /> 
+void function (window, undefiend) { /* 缓存核心对象 */
+ var content = game.content, renderer = game.renderer, touch = game.touch, mouse = game.mouse; 
+ // 实例化游戏状态对象 
+ var status1 = new Jyo.Status();
+ status1.load = function () { 
+ /// <summary>加载函数</summary> 
+ if (!isInit) { for (var i in textures) { 
+ if (!textures.isPrototypeOf(i)) { 
+ content.load(textures[i], baseUrl + "images/" + i + ".png"); } } 
+ isInit = true; status1.loadingScreen(); } else { status1.loadingScreen(300); } ih5game.setShare({ title: '明星投资人', desc: '！' }); 
+ score = 0; document.getElementById("startScreen").style.display = "block";
+ renderer.canvas.style.display = "none"; var faces = document.querySelectorAll("#startScreen .face"); for (var i = 0; i < faces.length; i++) { faces[i].addEventListener("touchstart", selectPerson); faces[i].addEventListener("mousedown", selectPerson); } document.querySelector("#startScreen .btnStart").addEventListener("touchstart", startGame, false); document.querySelector("#startScreen .btnStart").addEventListener("mousedown", startGame, false); document.querySelector("#startScreen .btnRanklist").addEventListener("touchstart", enterRanklist, false); document.querySelector("#startScreen .btnRanklist").addEventListener("mousedown", enterRanklist, false); var els = document.querySelectorAll("#startScreen *"); for (var i = 0; i < els.length; i++) { els[i].style.display = "none"; } document.querySelector("#startScreen .title").style.display = "block"; document.querySelector("#startScreen .loading").style.display = "block"; document.querySelector("#startScreen .copyright").style.display = "block"; document.querySelector("#startScreen .copyright .linkMiaopai").style.display = "block"; document.querySelector("#startScreen .copyright .linkHuowu").style.display = "block"; }; var loadingTimer = null; status1.loadingScreen = function (time) { 
+ // <summary>绘制加载中界面</summary>
+ if (!!loadingTimer) { clearTimeout(loadingTimer); } loadingTimer = setTimeout(function () { var els = document.querySelectorAll("#startScreen *"); for (var i = 0; i < els.length; i++) { els[i].style.display = "block"; } document.querySelector("#startScreen .loading").style.display = "none"; document.querySelector("#startScreen .copyright").style.display = "none"; }, time || 2000); var baifen = Math.floor(content.loadDoneNum / content.loadNum * 100); if (baifen >= 90) { document.querySelector("#startScreen .loading").innerHTML = "吼吼明星准备中，就要开始啦..."; } else { document.querySelector("#startScreen .loading").innerHTML = "游戏加载中，请稍后。。。" + baifen + "%"; } }; status1.unload = function () { 
+ // <summary>卸载函数</summary> 
+ 
+ var faces = document.querySelectorAll("#startScreen .face"); for (var i = 0; i < faces.length; i++) { faces[i].removeEventListener("touchstart", selectPerson); faces[i].removeEventListener("mousedown", selectPerson); } document.querySelector("#startScreen .btnStart").removeEventListener("touchstart", startGame, false); document.querySelector("#startScreen .btnStart").removeEventListener("mousedown", startGame, false); document.querySelector("#startScreen .btnRanklist").removeEventListener("touchstart", enterRanklist, false); document.querySelector("#startScreen .btnRanklist").removeEventListener("mousedown", enterRanklist, false); document.getElementById("startScreen").style.display = "none"; renderer.canvas.style.display = "blcok"; }; function selectPerson() { var faces = document.querySelectorAll("#startScreen .face"); for (var i = 0; i < faces.length; i++) { faces[i].style.borderColor = "#fff"; } this.style.borderColor = "#88d436"; currentSelectPerson = this.getAttribute("data-index") | 0; } function startGame() { status1.unload(); status1.unload = null; backgroundMusic.src = baseUrl + "#"; backgroundMusic.load(); backgroundMusic.play(); backgroundMusic.canplay = true; Jyo.importScript(baseUrl + "scripts/status/playing.js"); } function enterRanklist() {clickMore();} 
+ // 告诉游戏管理器要使用的游戏状态 
+ game.useStatus(status1); }(window);

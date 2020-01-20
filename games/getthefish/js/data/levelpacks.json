@@ -1,0 +1,315 @@
+{
+    "levelpacks":   [
+        {
+            "name":     "First Cold",
+            "icon":     "firstCold.png",
+            "graphicpack": "base",
+            "levels":   [
+                {
+                    "name": "1",
+                    "products": [
+                        {"name": "Fish", "x": 0, "y": 2}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 3, "y": 2},
+                        {"type": "base", "x": 4, "y": 2},
+                        {"type": "base", "x": 5, "y": 2}
+                    ],
+                    "tutorial":    {
+                        "speed": 1,
+                        "path": [
+                            {"x": 160, "y": 470},
+                            {"x": 600, "y": 470}
+                        ]
+                    }
+                },
+                {
+                    "name": "2",
+                    "products": [
+                        {"name": "Fish", "x": 0, "y": 2},
+                        {"name": "Ice", "x": 2,  "y": 2}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 3, "y": 2},
+                        {"type": "base", "x": 4, "y": 2},
+                        {"type": "base", "x": 5, "y": 2}
+                    ],
+                    "tutorial":    {
+                        "speed": 2,
+                        "path": [
+                            {"x": 160, "y": 470},
+                            {"x": 160, "y": 550},
+                            {"x": 400, "y": 550},
+                            {"x": 400, "y": 470},
+                            {"x": 600, "y": 470}
+                        ]
+                    }
+                },
+                {
+                    "name": "3",
+                    "products": [
+                        {"name": "Fish", "x": 0, "y": 2},
+                        {"name": "Tomato", "x": 5,  "y": 2}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 4, "y": 2},
+                        {"type": "base", "x": 2, "y": 2},
+                        {"type": "base", "x": 3, "y": 2}
+                    ],
+                    "tutorial":    {
+                        "speed": 1,
+                        "path":   [
+                            {"x": 500, "y": 470},
+                            {"x": 500, "y": 640}
+                        ],
+                        "offTriger":    {
+                            "type": "click",
+                            "cell": {"x": 5, "y": 2}
+                        }
+                    }
+                },
+                {
+                    "name": "4",
+                    "products": [
+                        {"name": "Fish", "x": 0, "y": 2},
+                        {"name": "LongLoafV", "x": 5, "y": 0},
+                        {"name": "CucumberH", "x": 4, "y": 5},
+                        {"name": "Cake", "x": 2, "y": 4},
+                        {"name": "Ice", "x": 2, "y": 3},
+                        {"name": "Ice", "x": 4, "y": 1},
+                        {"name": "Ice", "x": 4, "y": 4},
+                        {"name": "Ice", "x": 1, "y": 3}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 4, "y": 2},
+                        {"type": "base", "x": 5, "y": 2},
+                        {"type": "base", "x": 3, "y": 2}
+                    ]
+                },
+                {
+                    "name": "5",
+                    "products": [
+                        {"name": "Fish", "x": 4, "y": 5},
+                        {"name": "Ice", "x": 0, "y": 0},
+                        {"name": "Ice", "x": 1, "y": 2},
+                        {"name": "Ice", "x": 2, "y": 0},
+                        {"name": "Ice", "x": 2, "y": 4},
+                        {"name": "Ice", "x": 3, "y": 2},
+                        {"name": "Ice", "x": 4, "y": 0},
+                        {"name": "Ice", "x": 4, "y": 4},
+                        {"name": "CheeseV", "x": 0, "y": 1},
+                        {"name": "CucumberV", "x": 2, "y": 2},
+                        {"name": "CheeseV", "x": 3, "y": 4}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 0, "y": 1},
+                        {"type": "base", "x": 2, "y": 1},
+                        {"type": "base", "x": 4, "y": 1}
+                    ]
+                },
+                {
+                    "name": "6",
+                    "products": [
+                        {"name": "Fish", "x": 0, "y": 2},
+                        {"name": "SausageH", "x": 0, "y": 0},
+                        {"name": "LongLoafH", "x": 3, "y": 0},
+                        {"name": "Ice", "x": 5, "y": 1},
+                        {"name": "Ice", "x": 2, "y": 2},
+                        {"name": "Tomato", "x": 5, "y": 2},
+                        {"name": "Orange", "x": 2, "y": 3},
+                        {"name": "Ice", "x": 5, "y": 3},
+                        {"name": "Orange", "x": 1, "y": 4},
+                        {"name": "Tomato", "x": 3, "y": 4},
+                        {"name": "Orange", "x": 2, "y": 5}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 5, "y": 0},
+                        {"type": "base", "x": 5, "y": 2},
+                        {"type": "base", "x": 2, "y": 4}
+                    ]
+                },
+                {
+                    "name": "7",
+                    "products": [
+                        {"name": "Ice",     "x": 0, "y": 0},
+                        {"name": "Cake",    "x": 1, "y": 0},
+                        {"name": "Ice",     "x": 5, "y": 0},
+                        {"name": "Cake",    "x": 4, "y": 1},
+                        {"name": "Cake",    "x": 0, "y": 3},
+                        {"name": "Fish",    "x": 2, "y": 3},
+                        {"name": "Cake",    "x": 3, "y": 4},
+                        {"name": "Ice",     "x": 0, "y": 5},
+                        {"name": "Ice",     "x": 5, "y": 5}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 0, "y": 1},
+                        {"type": "base", "x": 4, "y": 0},
+                        {"type": "base", "x": 1, "y": 5}
+                    ]
+                },
+                {
+                    "name": "8",
+                    "products": [
+                        {"name": "Cake",    "x": 1, "y": 1},
+                        {"name": "CheeseV",  "x": 3, "y": 1},
+                        {"name": "Cake",    "x": 4, "y": 1},
+                        {"name": "CucumberH","x": 0, "y": 3},
+                        {"name": "Fish",    "x": 2, "y": 3},
+                        {"name": "Orange",  "x": 4, "y": 3},
+                        {"name": "Cake",    "x": 0, "y": 4},
+                        {"name": "Tomato",  "x": 2, "y": 4},
+                        {"name": "Cake",    "x": 3, "y": 4}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 0, "y": 0},
+                        {"type": "base", "x": 2, "y": 5},
+                        {"type": "base", "x": 5, "y": 5}
+                    ]
+                },
+                {
+                    "name": "9",
+                    "products": [
+                        {"name": "Ice",     "x": 1, "y": 0},
+                        {"name": "Fish",    "x": 4, "y": 0},
+                        {"name": "Ice",     "x": 0, "y": 1},
+                        {"name": "Tomato",  "x": 2, "y": 1},
+                        {"name": "Ice",     "x": 4, "y": 1},
+                        {"name": "Ice",     "x": 3, "y": 2},
+                        {"name": "Orange",  "x": 4, "y": 2},
+                        {"name": "CheeseV",  "x": 5, "y": 2},
+                        {"name": "LongLoafV","x": 2, "y": 3},
+                        {"name": "Ice",     "x": 3, "y": 3},
+                        {"name": "CucumberH","x": 4, "y": 4},
+                        {"name": "Ice",     "x": 4, "y": 5}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 0, "y": 5},
+                        {"type": "base", "x": 3, "y": 5},
+                        {"type": "base", "x": 2, "y": 3}
+                    ]
+                },
+                {
+                    "name": "10",
+                    "products": [
+                        {"name": "SausageV","x": 1, "y": 0},
+                        {"name": "LongLoafH", "x": 2, "y": 0},
+                        {"name": "Ice",     "x": 5, "y": 1},
+                        {"name": "Ice",     "x": 0, "y": 2},
+                        {"name": "SausageH", "x": 0, "y": 3},
+                        {"name": "Ice",     "x": 3, "y": 3},
+                        {"name": "CucumberH","x": 4, "y": 4},
+                        {"name": "Fish",    "x": 0, "y": 5},
+                        {"name": "Ice",     "x": 2, "y": 5}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 0, "y": 1},
+                        {"type": "base", "x": 5, "y": 0},
+                        {"type": "base", "x": 5, "y": 5}
+                    ]
+                },
+                {
+                    "name": "11",
+                    "products": [
+                        {"name": "Ice", "x": 2, "y": 0},
+                        {"name": "Ice", "x": 2, "y": 1},
+                        {"name": "Ice", "x": 3, "y": 1},
+                        {"name": "CheeseV", "x": 2, "y": 2},
+                        {"name": "LongLoafH", "x": 3, "y": 2},
+                        {"name": "Ice", "x": 3, "y": 3},
+                        {"name": "Fish", "x": 0, "y": 4},
+                        {"name": "Ice", "x": 2, "y": 4},
+                        {"name": "Ice", "x": 3, "y": 4},
+                        {"name": "SausageH", "x": 0, "y": 5},
+                        {"name": "CucumberH", "x": 3, "y": 5}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 3, "y": 2},
+                        {"type": "base", "x": 2, "y": 3},
+                        {"type": "base", "x": 2, "y": 5}
+                    ]
+                },
+                {
+                    "name": "12",
+                    "products": [
+                        {"name": "Fish",       "x": 0, "y": 0},
+                        {"name": "Ice",        "x": 2, "y": 0},
+                        {"name": "CucumberV",     "x": 4, "y": 0},
+                        {"name": "LongLoafH",    "x": 0, "y": 1},
+                        {"name": "Ice",        "x": 5, "y": 1},
+                        {"name": "Ice",        "x": 2, "y": 2},
+                        {"name": "SausageH",    "x": 0, "y": 3},
+                        {"name": "CheeseV",     "x": 3, "y": 3},
+                        {"name": "Ice",        "x": 5, "y": 3},
+                        {"name": "Ice",        "x": 2, "y": 4},
+                        {"name": "Ice",        "x": 5, "y": 5}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 5, "y": 0},
+                        {"type": "base", "x": 2, "y": 5},
+                        {"type": "base", "x": 5, "y": 4}
+                    ]
+                },
+                {
+                    "name": "13",
+                    "products": [
+                        {"name": "Ice",     "x": 2, "y": 0},
+                        {"name": "Cake",     "x": 0, "y": 0},
+                        {"name": "Ice",     "x": 3, "y": 2},
+                        {"name": "CucumberV","x": 1, "y": 3},
+                        {"name": "CheeseH", "x": 3, "y": 3},
+                        {"name": "Ice",     "x": 2, "y": 4},
+                        {"name": "Ice",     "x": 5, "y": 3},
+                        {"name": "CheeseV",  "x": 3, "y": 4},
+                        {"name": "Ice",     "x": 5, "y": 4},
+                        {"name": "Fish",    "x": 4, "y": 5}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 0, "y": 0},
+                        {"type": "base", "x": 0, "y": 5},
+                        {"type": "base", "x": 5, "y": 0}
+                    ]
+                },
+                {
+                    "name": "14",
+                    "products": [
+                        {"name": "Tomato",  "x": 0, "y": 0},
+                        {"name": "CucumberV",  "x": 3, "y": 0},
+                        {"name": "LongLoafV","x": 5, "y": 0},
+                        {"name": "Ice",     "x": 2, "y": 1},
+                        {"name": "Ice",     "x": 4, "y": 1},
+                        {"name": "Fish",    "x": 2, "y": 2},
+                        {"name": "CheeseV",  "x": 1, "y": 3},
+                        {"name": "Ice",     "x": 3, "y": 3},
+                        {"name": "Cake",    "x": 2, "y": 4},
+                        {"name": "Ice",     "x": 4, "y": 4},
+                        {"name": "Orange",  "x": 5, "y": 5}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 4, "y": 5},
+                        {"type": "base", "x": 0, "y": 5},
+                        {"type": "base", "x": 5, "y": 0}
+                    ]
+                },
+                {
+                    "name": "15",
+                    "products": [
+                        {"name": "LongLoafH", "x": 0, "y": 0},
+                        {"name": "CucumberV","x": 3, "y": 0},
+                        {"name": "Cake",    "x": 4, "y": 0},
+                        {"name": "Fish",    "x": 0, "y": 2},
+                        {"name": "Cake",    "x": 4, "y": 2},
+                        {"name": "CheeseV","x": 0, "y": 3},
+                        {"name": "SausageH", "x": 1, "y": 3},
+                        {"name": "Cake",    "x": 4, "y": 4},
+                        {"name": "SausageH", "x": 1, "y": 5}
+                    ],
+                    "stars":    [
+                        {"type": "base", "x": 5, "y": 0},
+                        {"type": "base", "x": 2, "y": 4},
+                        {"type": "base", "x": 5, "y": 5}
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html >
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=320, initial-scale=1, user-scalable=no">
+        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+
+		<title>忍者突袭</title>
+		
+            <style type="text/css">
+            	body,td,th {
+					font-family: Helvetica, sans-serif;
+					font-size: 11px;
+					line-height: 15px;
+					color: #c8c0c0;
+					background-color: #1d1d1d;
+					text-align: center;
+				}
+                
+                iframe {
+                    width: 320px;
+                    height: 50px;
+                    border: 0;
+                    position: absolute;
+                    left: 0;
+                    top: -50px;
+                    z-index: 9;
+                }
+            </style>
+
+			<script type="text/javascript" src="./js/engine.min.js"></script>
+            <script type="text/javascript" src="./js/game.min.js"></script>
+	
+            <script type="text/javascript">
+			  
+                if (navigator.userAgent.match(/MSIE/)) //suport IE9 Mango
+                {
+                    if (!window.console) {var console = {};}
+                    if (!console.log) {console.log = function() {};}
+                    window.addEventListener("load", init, true);
+                }
+                else
+                {
+                    window.onload = function()
+                    {
+                        init();
+                    }
+                }
+            </script>
+			
+<!--Google Analytics-->
+
+    </head>
+    
+    <body id="0">
+
+
+	
+        <canvas id="background" width="320" height="568" style="position: absolute; left: 480px; top: 0px; z-index: 0;">
+        </canvas>
+        <canvas id="fg_objects" width="320" height="568" style="position: absolute; left: 480px; top: 0px; z-index: 1;">
+        </canvas>
+        <canvas id="effects" width="320" height="568" style="position: absolute; left: 480px; top: 0px; z-index: 10;">
+        </canvas>
+
+     
+		
+</body></html>

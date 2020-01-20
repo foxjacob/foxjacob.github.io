@@ -1,0 +1,26 @@
+{ "mc": {
+  "kaikai": {
+    "frameRate":120,
+    "labels": [
+    ],
+    "frames": [
+      {"res":"kaikai1","x":-50,"y":-91.5,"duration":30},
+      {"res":"kaikai2","x":-49.5,"y":-92,"duration":30}
+    ]
+  },
+  "kaikai_back": {
+    "frameRate":120,
+    "labels": [
+    ],
+    "frames": [
+      {"res":"kaikai3","x":-50,"y":-92.5,"duration":30},
+      {"res":"kaikai4","x":-48,"y":-92,"duration":30}
+    ]
+  }
+},"res":{
+"kaikai1":{"x":103,"y":1,"w":100,"h":183,"offX":0,"offY":0,"sourceW":100,"sourceH":183},
+"kaikai2":{"x":205,"y":1,"w":99,"h":184,"offX":0,"offY":0,"sourceW":99,"sourceH":184},
+"kaikai3":{"x":1,"y":1,"w":100,"h":185,"offX":0,"offY":0,"sourceW":100,"sourceH":185},
+  "kaikai4":{"x":306,"y":1,"w":96,"h":184,"offX":0,"offY":0,"sourceW":96,"sourceH":184}
+}
+}

@@ -1,0 +1,24 @@
+{ "mc": {
+  "lanlan": {
+    "frameRate":120,
+    "labels": [
+    ],
+    "frames": [
+      {"res":"lanlan1","x":-59.5,"y":-93,"duration":30},
+      {"res":"lanlan2","x":-62.5,"y":-94.5,"duration":30}
+    ]
+  },
+  "lanlan_back": {
+    "frameRate":120,
+    "labels": [
+    ],
+    "frames": [
+      {"res":"lanlan3","x":-60.5,"y":-94,"duration":30},
+      {"res":"lanlan4","x":-59.5,"y":-93,"duration":30}
+    ]
+  }
+},"res":{
+"lanlan1":{"x":251,"y":1,"w":119,"h":186,"offX":0,"offY":0,"sourceW":119,"sourceH":186},
+"lanlan2":{"x":1,"y":1,"w":125,"h":189,"offX":0,"offY":0,"sourceW":125,"sourceH":189},
+"lanlan3":{"x":128,"y":1,"w":121,"h":188,"offX":0,"offY":0,"sourceW":121,"sourceH":188},
+"lanlan4":{"x":372,"y":1,"w":119,"h":186,"offX":0,"offY":0,"sourceW":119,"sourceH":186}}}

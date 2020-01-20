@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+ <html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta charset="UTF-8"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content="Hex FRVR">
+<meta name="theme-color" content="#202020">
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<title>六角碎片</title>
+<style>*{-webkit-touch-callout:none;s-webkit-user-select: none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}body{background-color:#000000;overflow:hidden;position:fixed;-webkit-font-smoothing:antialiased;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;border:0px;padding:0px;margin:0px;width:100%;height:100%;}canvas{position:fixed;top:0px;left:0px;width:100%;height:100%;background-color:#000000}#overlay{position:absolute;z-index:3;left:50%;margin-left:-50px;visibility:hidden;bottom:3px;overflow:hidden;}@-ms-viewport{width:100%}
+
+		content{
+			background-color:#ffffff;
+			display: block;
+			padding:20px;
+			height:100%;
+			overflow:scroll;
+		}
+
+		content metadata{
+			float:right;
+			margin-left:10px;
+			text-align:center;
+		}
+
+		h1{
+			margin:0px;
+			font-weight:100;
+			font-size:50px;
+		}
+		a{
+			line-height:2em;
+		}
+		h3{
+			margin-bottom:0px;
+		}
+
+		@-ms-keyframes w{0%{-ms-transform:rotate(3deg);}50%{-ms-transform:rotate(-3deg);}100%{-ms-transform:rotate(3deg);}}
+		@-moz-keyframes w{0%{-moz-transform:rotate(3deg);}50%{-moz-transform:rotate(-3deg);}100%{-moz-transform:rotate(3deg);}}
+		@-webkit-keyframes w{0%{-webkit-transform:rotate(3deg);}50%{-webkit-transform:rotate(-3deg);}100%{-webkit-transform:rotate(3deg);}}
+		@keyframes w{0%{transform:rotate(3deg);}50%{transform:rotate(-3deg);}100%{transform:rotate(3deg);}}
+		.w {-ms-animation:w .3s 2;-moz-animation:w .3s 2;-webkit-animation:w .3s 2;animation:w .3s 2;}
+
+
+	</style>
+	<style type="text/css">
+#player-ad,#p-bg-l,#p-bg-r {display:none!important;display:none}</style>
+</head>
+	<body>
+		
+		<canvas id="gameCanvas"></canvas>
+		<div id="overlay"></div>
+		<script>
+			// var shareUrl="";
+			// Play68.set_share_url(shareUrl);
+			// (function (){updateShare(0);})();
+			var version = "1.8.0"
+			var gaPath = '';
+ 			var initTime = 1*new Date();
+			window.onerror = function(errorMsg, url, lineNumber) {
+				if(window.ga){
+					var errMsg = errorMsg;
+					var errSrc = url + ': ' + lineNumber;
+					ga('send', 'event', 'Hex JavaScript Error', errMsg, errSrc, { 'nonInteraction': 1 });
+				}
+			}
+			window.initGoogle = function(){
+				ga('create', 'UA-54081731-1', 'auto');
+				ga('require', 'displayfeatures');
+				ga('send', 'pageview', gaPath + location.search);
+			}
+		</script>
+		<!-- ANALYTICS -->
+		<script language="javascript">
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();;a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script',' ','ga');
+			
+			ga(function() {
+				setTimeout(function(){
+					window.location.hash = ""
+					if (window.history && window.history.replaceState instanceof Function) {
+			  			window.history.replaceState({}, document.title,'./');
+					}
+				},5000)
+			});
+		</script>
+		<script>
+ 			window.initGoogle();
+		</script>
+		<script src="game.js"></script>
+
+
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'六角碎片',
+  'link':'https://foxjacob.gitee.io/gamestation/games/ljsp/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/ljsp/icon.png'
+}
+window.shareFriendData={
+  'title':'六角碎片',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/ljsp/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/ljsp/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+	</body>
+	
+</html>

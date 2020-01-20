@@ -1,0 +1,72 @@
+body {
+	background: #2F69C6;
+	color:#FFFFFF;
+	font-family: Courier, monospace;
+}
+
+
+
+
+
+
+
+
+button {									/* On a scale of Body#background to Body#color, ranges from 0-14 */
+	background: #5889D7;					/* 3 */
+	border:1px solid #C7D8F2;				/* 10 */
+	color:#FFFFFF;							/* 14 */
+}
+
+button:hover {
+	color:#FFFFFF;							/* 14 */
+	background: #78A0DF;					/* 5 */
+}
+
+button:disabled {
+	color:#457AD1;							/* 1 */
+	background: #2F69C6;					/* 0.5 */
+	border: 1px solid #5282D0;				/* 2 */
+}
+ 
+button:disabled:hover {
+	background: #316CC8;					/* 0.625 */
+}
+
+
+
+
+
+
+
+
+.fadedText4 {
+	color:#5889D7;
+}
+
+.fadedText3 {
+	color:#78A0DF;
+}
+
+.fadedText2 {
+	color:#98B6E7;
+}
+
+.fadedText1 {
+	color:#C7D8F2;
+}
+
+.fullBrightText {
+	color:#FFFFFF;
+}
+
+
+
+
+
+
+
+
+a:link    { color:#FFFFFF }  /* unvisited links */
+a:visited { color:#FFFFFF }  /* visited links   */
+a:hover   { color:#FFFFFF }  /* user hovers     */
+a:active  { color:#FFFFFF }  /* active links    */

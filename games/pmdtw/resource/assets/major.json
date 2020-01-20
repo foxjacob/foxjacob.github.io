@@ -1,0 +1,28 @@
+{
+"mc": {
+	"major": {
+		"frameRate":60,
+		"labels": [
+			{"name":"status1","frame":1},
+			{"name":"status2","frame":13},
+			{"name":"status3","frame":25}
+		],
+		"frames": [
+			{"res":"major0000","x":-23.4,"y":-17.9,"duration":6},
+			{"res":"major0006","x":-23.4,"y":-19.9,"duration":6},
+			{"res":"major0012","x":-23.4,"y":-17.9,"duration":6},
+			{"res":"major0018","x":-23.4,"y":-19.9,"duration":6},
+			{"res":"major0024","x":-24.4,"y":-18.9,"duration":3},
+			{"res":"major0027","x":-24.4,"y":-19.9,"duration":3}
+		]
+	}
+},
+"res": {
+	"major0000":{"x":0,"y":0,"w":50,"h":34},
+	"major0006":{"x":50,"y":0,"w":50,"h":34},
+	"major0012":{"x":0,"y":34,"w":50,"h":34},
+	"major0018":{"x":50,"y":34,"w":50,"h":34},
+	"major0024":{"x":0,"y":68,"w":51,"h":38},
+	"major0027":{"x":51,"y":68,"w":51,"h":38}
+}
+}

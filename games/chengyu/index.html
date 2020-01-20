@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>看图猜成语</title>
+    <link rel="icon" type="image/GIF" href="res/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true" />
+
+    <script type="text/javascript">
+        var currLevel=1;
+        var wxConfigData={};
+    </script>
+</head>
+<body>
+	<canvas id="gameCanvas"></canvas>
+	<script type="text/javascript" src="cocos2d-js-v3.5.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="main-min.js" charset="UTF-8"></script>
+</body>
+
+<script type="text/javascript" src="jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+	
+    function one(){
+		//百度广告悬浮样式修改
+        var cproIframe1Wrap_placeholder=document.getElementById('cproIframe1Wrap_placeholder');
+        if(cproIframe1Wrap_placeholder){
+            cproIframe1Wrap_placeholder.style.removeProperty("height");
+        }
+		//weixin-js
+		var url=location.href.split('#')[0];
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+				var resp = JSON.parse(xhr.responseText);
+				var httpStatus = xhr.statusText;
+				wxConfigData.nonceStr=resp.data.nonceStr;
+				wxConfigData.signature=resp.data.signature;
+				wxConfigData.timestamp=resp.data.timestamp;
+				wxData = {
+					'imgUrl': 'http://www.xmqchd.com/htmlgame/chengyu/res/icon.png',
+					'link' : 'http://www.xmqchd.com/htmlgame/chengyu/',
+					'desc' : '快来看图猜成语啊,我已经猜到第'+currLevel+'关了,你能超过我吗?',
+					'title' : '快来看图猜成语啊,我已经猜到第'+currLevel+'关了,你能超过我吗?'
+				};
+				wx.config({
+					debug: false,
+					appId: 'wxe991f7ef9b3fd966',
+					timestamp: parseInt(wxConfigData.timestamp),
+					nonceStr:  wxConfigData.nonceStr,
+					signature: wxConfigData.signature,
+					jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage']
+				});
+				
+				wx.ready(function(){
+					// config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+					wx.onMenuShareTimeline({
+						title: wxData.title, // 分享标题
+						link: wxData.link, // 分享链接
+						imgUrl: wxData.imgUrl, // 分享图标
+						success: function (a) {
+							// 用户确认分享后执行的回调函数
+							shareCallBackFun();
+						},
+						cancel: function () {
+							// 用户取消分享后执行的回调函数
+						}
+					});
+					wx.onMenuShareAppMessage({
+						desc:wxData.desc,
+						title: '', // 分享标题
+						link: wxData.link, // 分享链接
+						imgUrl: wxData.imgUrl, // 分享图标
+						success: function (a) {
+							// 用户确认分享后执行的回调函数
+							shareCallBackFun();
+						},
+						cancel: function () {
+							// 用户取消分享后执行的回调函数
+						}
+					});
+				});
+			}
+		}
+		xhr.open("GET", "http://www.xmqchd.com/gameadmin/api/getWeixinJsSign?url="+encodeURIComponent(url), true);
+		xhr.send();
+		
+		//dataeye 统计分析
+		var options = {
+            appId: '3A1BDBFC39E17AA387F30E94018143E4',
+            appVer: 'v2.0.0',
+            interval: 10,
+            // 排除指定脚本
+            excludes:[],
+            // 是否开启病毒传播功能，会修改页面的url（附加hash）
+            virus: true
+        }
+        DCAgent.init(options) ;
+    }
+    window.onload = one ;
+</script>
+</html>

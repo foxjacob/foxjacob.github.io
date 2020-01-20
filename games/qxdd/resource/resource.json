@@ -1,0 +1,46 @@
+{
+    "resources":
+        [
+            {"name":"numberText_png","type":"image",	"url":"assets/numberText.png"},
+            {"name":"numberText_json","type":"json",	"url":"assets/numberText.json"},
+
+            {"name":"deng_png","type":"image",	"url":"assets/deng.png"},
+            {"name":"deng_json","type":"json",	"url":"assets/deng.json"},
+
+            {"name":"homepage_jpg","type":"image","url":"assets/homepage.jpg"},
+            {"name":"bg_jpg","type":"image","url":"assets/bg.jpg"},
+            {"name":"loadBg_jpg","type":"image","url":"assets/loadBg.jpg"},
+
+            {"name":"start_btn_png","type":"image","url":"assets/start_btn.png"},
+            {"name":"gameOverPanel_png","type":"image","url":"assets/gameOverPanel.png"},
+            {"name":"startPanel_png","type":"image","url":"assets/startPanel.png"},
+
+            {"name":"title_png","type":"image","url":"assets/title.png"},
+            {"name":"logo_png","type":"image","url":"assets/logo.png"},
+            {"name":"homepageLight_png","type":"image","url":"assets/homepageLight.png"},
+
+            {"name":"tip_png","type":"image","url":"assets/tip.png"},
+            {"name":"timeTxt_png","type":"image","url":"assets/timeTxt.png"},
+            {"name":"scoreTxt_png","type":"image","url":"assets/scoreTxt.png"},
+
+            {"name":"bar1_png","type":"image","url":"assets/bar1.png"},
+            {"name":"bar2_png","type":"image","url":"assets/bar2.png"},
+
+            {"name":"bar11_png","type":"image","url":"assets/bar11.png"},
+            {"name":"bar22_png","type":"image","url":"assets/bar22.png"},
+
+            {"name":"p_png","type":"image","url":"assets/p.png"},
+
+            {"name":"bgSound","type":"sound"," soundType":"music",	"url":"assets/bgSound.mp3"},
+
+            {"name":"replay_btn_png","type":"image","url":"assets/replay_btn.png"},
+            {"name":"share_btn_png","type":"image","url":"assets/share_btn.png"},
+            {"name":"more_btn_png","type":"image","url":"assets/more_btn.png"}
+        ],
+
+    "groups":
+        [
+            {"name":"preload","keys":"bar11_png,bar22_png,homepage_jpg,loadBg_jpg"},
+            {"name":"loading","keys":"bgSound,p_png,deng_json,deng_png,bar1_png,bar2_png,timeTxt_png,scoreTxt_png,tip_png,homepageLight_png,title_png,logo_png,homepage_jpg,bg_jpg,gameOverPanel_png,startPanel_png,     share_btn_png,more_btn_png,replay_btn_png,start_btn_png,       numberText_json,numberText_png"}
+        ]
+}

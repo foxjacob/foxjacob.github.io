@@ -1,0 +1,56 @@
+﻿{
+"res":{
+	"blank0000": {"x":40,"y":40,"w":0,"h":0},
+	"playSmoke0000": {"x":80,"y":40,"w":180,"h":150},
+	"playSmoke0001": {"x":300,"y":40,"w":180,"h":150},
+	"playSmoke0002": {"x":520,"y":40,"w":180,"h":150},
+	"playSmoke0003": {"x":740,"y":40,"w":180,"h":150},
+	"playSmoke0004": {"x":40,"y":230,"w":180,"h":150},
+	"playSmoke0005": {"x":260,"y":230,"w":210,"h":160},
+	"playSmoke0006": {"x":510,"y":230,"w":210,"h":160},
+	"playSmoke0007": {"x":760,"y":230,"w":210,"h":160},
+	"playSmoke0008": {"x":40,"y":430,"w":180,"h":150},
+	"playSmoke0009": {"x":260,"y":430,"w":180,"h":150},
+	"playSmoke0010": {"x":480,"y":430,"w":180,"h":150},
+	"playSmoke0011": {"x":700,"y":430,"w":180,"h":150},
+	"playSmoke0012": {"x":40,"y":620,"w":180,"h":150},
+	"playSmoke0013": {"x":260,"y":620,"w":180,"h":150},
+	"playSmoke0014": {"x":480,"y":620,"w":180,"h":150},
+	"playSmoke0015": {"x":700,"y":620,"w":180,"h":150},
+	"playSmoke0016": {"x":40,"y":810,"w":180,"h":150},
+	"playSmoke0017": {"x":260,"y":810,"w":180,"h":150},
+	"playSmoke0018": {"x":480,"y":810,"w":0,"h":0}
+},
+"frames": {
+	"blank": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"blank0000","x":107374182,"y":107374182}
+		]
+	},
+	"playSmoke": {
+		"totalFrame": 19,
+		"childrenFrame": [
+			{"res":"playSmoke0000","x":-120,"y":-85},
+			{"res":"playSmoke0001","x":-120,"y":-85},
+			{"res":"playSmoke0002","x":-120,"y":-85},
+			{"res":"playSmoke0003","x":-120,"y":-85},
+			{"res":"playSmoke0004","x":-120,"y":-85},
+			{"res":"playSmoke0005","x":-120,"y":-85},
+			{"res":"playSmoke0006","x":-120,"y":-85},
+			{"res":"playSmoke0007","x":-120,"y":-85},
+			{"res":"playSmoke0008","x":-90,"y":-75},
+			{"res":"playSmoke0009","x":-90,"y":-75},
+			{"res":"playSmoke0010","x":-90,"y":-75},
+			{"res":"playSmoke0011","x":-90,"y":-75},
+			{"res":"playSmoke0012","x":-90,"y":-75},
+			{"res":"playSmoke0013","x":-90,"y":-75},
+			{"res":"playSmoke0014","x":-90,"y":-75},
+			{"res":"playSmoke0015","x":-90,"y":-75},
+			{"res":"playSmoke0016","x":-90,"y":-75},
+			{"res":"playSmoke0017","x":-90,"y":-75},
+			{"res":"playSmoke0018","x":0,"y":0}
+		]
+	}
+}
+}

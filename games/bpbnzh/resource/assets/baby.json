@@ -1,0 +1,28 @@
+{
+  "mc": {
+      "baby": {
+          "frameRate":120,
+          "labels": [
+          ],
+          "frames": [
+              {"res":"baby1","x":-83.5,"y":-76,"duration":30},
+              {"res":"baby2","x":-83.5,"y":-76,"duration":30}
+          ]
+      },
+      "baby_back": {
+          "frameRate":120,
+          "labels": [
+          ],
+          "frames": [
+              {"res":"baby3","x":-83.5,"y":-76,"duration":30},
+              {"res":"baby4","x":-83.5,"y":-76,"duration":30}
+          ]
+      }
+  },
+  "res": {
+      "baby1":{"x":1,"y":157,"w":167,"h":152},
+      "baby2":{"x":171,"y":1,"w":168,"h":154},
+      "baby3":{"x":341,"y":1,"w":168,"h":154},
+      "baby4":{"x":1,"y":1,"w":168,"h":154}
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html manifest="qici.appcache">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name='viewport' content='width=device-width,user-scalable=no'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-title' content='城市消消乐'>
+    <link rel='apple-touch-icon' href='http://engine.zuoyouxi.com/qici.png'>
+    <link rel='apple-touch-startup-image' href='http://engine.zuoyouxi.com/qici.png'>
+
+    <link rel="shortcut icon" href="http://engine.zuoyouxi.com/qici.ico" />
+    <title>城市消消乐</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./Assets/css/style.css"/>
+
+    <script>
+        // The game configuration
+        var qici = {};
+        qici.config = {
+            projectName: 'Subara',
+            gameName: '城市消消乐',
+            companyName: 'qcplay',
+            bundleIdentifier: 'com.qcplay',
+            gameInstance: 'qc_game',
+            frameRate: {"mobile":40,"desktop":60},
+            backgroundColor: 4210752,
+            runInBackground: true,
+            antialias: true,
+            transparent: false,
+            developerMode: false,
+            renderer: 'Canvas',
+            resolution : Math.min(2, devicePixelRatio),
+            loadingPrefab: '',
+            scene: {
+                
+            "SubaraCity" : "Assets/state/SubaraCity.bin"
+            },
+            entryScene : 'SubaraCity',
+            dirtyRectangles: true,
+            loading: {
+                loadingText: 'Loading, please wait...',
+                loadingInterval: 200,
+                brightingInterval: 10,
+                blinkingCount: 5,
+                blinkingInterval: 70,
+                fadingInInterval: 400,
+                fadingOutInterval: 600
+            }
+        };
+
+ 		_pluginVariables_={}
+
+        qici.scripts = [
+            './Assets/meta/globalUrlMap.js',
+            './xiaoxiaole/phaser.min.js',
+            './xiaoxiaole/webfontloader.js',
+            './xiaoxiaole/qc-core.js',
+            './xiaoxiaole/qc-webgl.js',
+            // External scripts for plugins
+
+            // User scripts
+            './js/game-scripts-mini-1.0.js'
+        ];
+
+		// Asset count that need preload in boot
+		qici.loadingAssetCount = 11;
+    </script>
+</head>
+
+<body onload="qici.init();">
+    <div style="overflow:hidden;padding:0;margin:0;width:100%;height:100%;">
+        <div id="gameDiv" style="position:relative;"></div>
+    </div>
+    <script src='./xiaoxiaole/qc-loading.js'></script>
+	<!-- cnzz 统计 -->
+	<div style="display:none;">
+		<script src="http://s95.cnzz.com/z_stat.php?id=1257126402&web_id=1257126402" language="JavaScript"></script>
+	</div>
+</body>
+
+</html>

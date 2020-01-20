@@ -1,0 +1,223 @@
+{
+    "frames": [
+        {
+            "filename": "branding_preloader",
+            "frame": {
+                "x": 0,
+                "y": 545,
+                "w": 350,
+                "h": 100
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 350,
+                "h": 100
+            },
+            "sourceSize": {
+                "w": 350,
+                "h": 100
+            }
+        },
+        {
+            "filename": "btn_preloader_play",
+            "frame": {
+                "x": 351,
+                "y": 545,
+                "w": 250,
+                "h": 65
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 250,
+                "h": 65
+            },
+            "sourceSize": {
+                "w": 250,
+                "h": 65
+            }
+        },
+        {
+            "filename": "btn_preloader_play_muted",
+            "frame": {
+                "x": 0,
+                "y": 646,
+                "w": 250,
+                "h": 65
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 250,
+                "h": 65
+            },
+            "sourceSize": {
+                "w": 250,
+                "h": 65
+            }
+        },
+        {
+            "filename": "store_download",
+            "frame": {
+                "x": 0,
+                "y": 106,
+                "w": 160,
+                "h": 52
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 160,
+                "h": 52
+            },
+            "sourceSize": {
+                "w": 160,
+                "h": 52
+            }
+        },
+        {
+            "filename": "preload_image",
+            "frame": {
+                "x": 0,
+                "y": 352,
+                "w": 648,
+                "h": 192
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 648,
+                "h": 192
+            },
+            "sourceSize": {
+                "w": 648,
+                "h": 192
+            }
+        },
+        {
+            "filename": "store_google",
+            "frame": {
+                "x": 251,
+                "y": 646,
+                "w": 160,
+                "h": 52
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 160,
+                "h": 52
+            },
+            "sourceSize": {
+                "w": 160,
+                "h": 52
+            }
+        },
+        {
+            "filename": "preload_image_old",
+            "frame": {
+                "x": 0,
+                "y": 159,
+                "w": 648,
+                "h": 192
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 648,
+                "h": 192
+            },
+            "sourceSize": {
+                "w": 648,
+                "h": 192
+            }
+        },
+        {
+            "filename": "store_ios",
+            "frame": {
+                "x": 0,
+                "y": 53,
+                "w": 160,
+                "h": 52
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 160,
+                "h": 52
+            },
+            "sourceSize": {
+                "w": 160,
+                "h": 52
+            }
+        },
+        {
+            "filename": "store_winphone",
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 160,
+                "h": 52
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 160,
+                "h": 52
+            },
+            "sourceSize": {
+                "w": 160,
+                "h": 52
+            }
+        },
+        {
+            "filename": "preloader_background",
+            "frame": {
+                "x": 649,
+                "y": 0,
+                "w": 480,
+                "h": 690
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 480,
+                "h": 690
+            },
+            "sourceSize": {
+                "w": 480,
+                "h": 690
+            }
+        }
+    ],
+    "meta": {
+        "app": "http://www.leshylabs.com/apps/sstool/",
+        "version": "Leshy SpriteSheet Tool v0.8.1",
+        "size": {
+            "w": 1129,
+            "h": 711
+        },
+        "scale": 1
+    }
+}

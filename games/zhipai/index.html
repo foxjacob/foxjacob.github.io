@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN">
+<html lang="zh-CN">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html" />
+<link rel="apple-touch-icon" href="icon.png" />
+<link rel="shortcut icon" href="icon.png" />
+<link rel="icon" href="icon.png" />
+<title>纸牌</title>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<meta name="keywords" content="纸牌,纸牌html5游戏" />
+<meta name="description" content="纸牌html5游戏,纸牌手机在线游戏" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link type="text/css" rel="stylesheet" href="./game.min.css">
+<meta name="viewport" content="width=device-width,user-scalable=no,minimal-ui">
+<script>
+var Env = {
+gameId:10010,
+appkey:"UVZ9oxNiPQG8XSQcGQZMigjy",
+baiduStatKey:"97e8c101ef8dd07e4bfdea831800aba9"
+};
+</script>
+<script src="./jjsdk.js"></script>
+</head>
+<body>
+<div class="loading_screen"></div>
+<div class="loader">
+<div id="loadercell" class="loadercell">
+<div id="loadermain">
+<p class="loadinggamelogo" style=" opacity: 1; padding-bottom: 0px;">
+<img width="192px" heihgt="132px" src="./big/media/StartScreenTexture1.png"></p>
+<p class="loadingtext">Loading...</p>
+<div class="outerloader" style="height: 14px; width: 80%;">
+<div class="innerloader animload" data-ng-style="loadingProgressStyle">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="game_screen" id="viewport" style="position:absolute; display: none; overflow:hidden">
+<canvas id="canvasBackground" oncontextmenu="return false;" onselectstart="return false;"></canvas>
+<div id="resizebtn"></div>
+</div>
+<script type="text/javascript" charset="utf-8" src="./game.min.js"></script>
+<script>
+TG_GamePage.initCalculations(null,null);
+TG_GamePage.delayedCheckCompatibility();
+TG_GamePage.delayedLoadCanvasses();
+</script>
+<div style="display:none">
+</div>
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'纸牌',
+  'link':'https://foxjacob.gitee.io/gamestation/games/zhipai/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/zhipai/icon.png'
+}
+window.shareFriendData={
+  'title':'纸牌',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/zhipai/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/zhipai/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+</body>
+</html>

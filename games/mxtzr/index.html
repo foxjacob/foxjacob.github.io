@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>明星投资人</title>
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon-precomposed" href="icon.png">
+ 
+    
+    <script src="js/api3rd.js"></script>
+    <script src="scripts/Jyo-min0.1.js"></script>
+    <script src="scripts/iscroll.js"></script>
+    <script src="scripts/game.js"></script>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <link href="styles/index.css" rel="stylesheet" />
+</head>
+<body  leftmargin="0" topmargin="0" oncontextmenu='return false' ondragstart='return false' onselectstart='return false' onbeforecopy='return false'>
+    <div id="game" style="width: 640px; height: 1136px;">
+        <div id="startScreen">
+            <div class="title"></div>
+            <div class="loading"></div>
+            <div class="tips"></div>
+            <div class="face face1" data-index="0">
+                <div class="name"></div>
+            </div>
+            <div class="face face2" data-index="1">
+                <div class="name"></div>
+            </div>
+            <div class="face face3" data-index="2">
+                <div class="name"></div>
+            </div>
+            <div class="btnStart"></div>
+            <div class="btnRanklist"></div>
+            <div class="copyright"><a class="linkMiaopai" href="#"></a><a class="linkHuowu" href="#"></a></div>
+        </div>
+        <div id="ranklistScreen">
+            <div class="background">
+                <div id="ranklistFrame">
+                    <ul id="ranklist"></ul>
+                </div>
+            </div>
+            <div class="btnStart1"></div>
+            <div class="btnAward"></div>
+        </div>
+        <div id="playingScreen">
+            <input id="score" style="background-color: transparent; border: none;" disabled="disabled" />
+        </div>
+        <div id="gameOverScreen">
+            <div class="title"></div>
+            <div class="background">
+                <div class="subTitle"></div>
+                <span class="text" id="score1" style="font-size: 39.78px;">812</span>
+                <div class="content"><span id="mxName">晓明</span>帮你获得了<span id="score2" class="text">56%</span>创业基金，击败了全国<span id="baifen">98</span>%的创业者，即将成为下一个马云！</div>
+            </div>
+            <div class="button btnContinue"></div>
+            <div class="button btnShare"></div>
+            <div class="button btnAward"></div>
+            <div class="banner"><a href="#">&nbsp;</a></div>
+        </div>
+        <div id="ruleScreen">
+            <div class="background"></div>
+            <input type="tel" id="txtTelphone" maxlength="11" />
+            <div class="btnOk"></div>
+            <div class="btnShare"></div>
+            <div class="btnBack"></div>
+        </div>
+    </div>
+    <div id="leftController">
+        <div class="tips"></div>
+    </div>
+    <div id="rightController">
+        <div class="tips"></div>
+    </div>
+    <script language=javascript>
+		function clickMore(){
+			
+			  // Play68.goHome();
+		}
+		function dp_share(){
+			   // play68_submitScore(window._playmyscore);
+		}
+		function dp_Ranking(){
+			
+		}
+		
+	</script>
+
+    <script  type="text/JavaScript">
+window.shareData={
+  'title':'是男人就啪啪啪！',
+  'link':'https://foxjacob.gitee.io/gamestation/games/kanshu/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/kanshu/icon.png'
+}
+window.shareFriendData={
+  'title':'是男人就啪啪啪！',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/kanshu/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/kanshu/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+</body>
+</html>

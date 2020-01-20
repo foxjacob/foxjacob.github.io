@@ -1,0 +1,10 @@
+{
+  "donateAmt": 0,
+
+  "telemetryUrl": "http://coldseat.me:9091/events/",
+  "telemetryAppId": "KG",
+
+  "showMotd": true,
+  "motdTitle": "消息",
+  "motdContent": "赞美太阳!"
+}

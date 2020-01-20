@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>进化史2048</title>
+<meta name="keywords" content="进化史2048,进化史2048html5游戏" />
+<meta name="description" content="进化史2048html5游戏,进化史2048手机在线游戏" />
+<link rel="apple-touch-icon" href="icon.png" />
+<link rel="shortcut icon" href="icon.png" />
+<link rel="icon" href="icon.png" />
+<meta name="MobileOptimized" content="960">
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="viewport" content="minimal-ui">
+<meta http-equiv="Content-Type" content="text/html, charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+
+<script type="text/javascript" src="game.js">
+</script>
+<meta name="description" content="Darwinism 2048 – online game about evolution!
+Darwinism 2048 is a free 2048-like game where you are to re-create the evolution link starting from primitive and ending with… well we won’t tell ‘cause it’s a secret you need to discover. But we can say that the human is not the last element you are to discover in this html5 game. 
+Just swipe or use your arrow keys to combine same elements and, as a result, to discover the next link of evolution. ">
+<link rel="kik-icon" href="thumbs4x/darwinism_2048.jpg">
+<link rel="canonical" href="http://playtomax.comhttp://playtomax.com/games/Darwinism-2048/">
+</head>
+<body style="-ms-touch-action: none; margin: 0px; padding: 0px; background: #000;">
+<div id="main_container">
+</div>
+<script type="text/javascript">
+(function() {
+var t = 10000, n = 0, d = (new Date).getTime();
+//setInterval(function(){ var d2 = (new Date).getTime(), diff = d2 - d; n += diff; d = d2*1; if (ga) ga('send', 'event', 'PC_PlayTime', t+'ms', 'darwinism_2048', diff); }, t);
+} )();
+</script>
+<script type="text/javascript">
+var HOME_CLICK = ('ontouchstart' in window) ? 'touchstart' : 'click'; 
+var scrollTimeout = null;
+function preventEvent(e) { e.preventDefault(); }
+function wheelScrollPopup(e) {
+var node = document.querySelector('.home-popup > section');
+if (node) node.scrollTop -= Math.round(~~e.wheelDeltaY/4);
+preventEvent(e);
+return false; 
+}
+function showHomePopup(e)
+{
+document.body.removeEventListener('touchstart', Utils.preventEvent, false);
+document.body.removeEventListener('touchmove', preventEvent, false);
+scrollTimeout = setInterval(function(){ window.scrollTo(0,0); }, 300);
+document.body.scrollTop = 0;
+document.body.addEventListener('wheel', wheelScrollPopup);
+var shader = document.querySelector('.modal-shader');
+if (!shader)
+{
+shader = document.createElement('div');
+shader.className = 'modal-shader';
+document.body.appendChild(shader);
+}
+shader.addEventListener(HOME_CLICK, closeHomePopup);
+shader.addEventListener('touchmove', preventEvent, false);
+shader.style.display = 'block';
+var popup = document.querySelector('.home-popup');
+var cls = popup.className.split(' ');
+if (cls.indexOf('active') < 0) cls.push('active');
+popup.className = cls.join(' ');
+document.querySelector('.game-home-button').style.display = 'none';
+Utils.preventEvent(e);
+return false;
+}
+function closeHomePopup(e)
+{
+clearInterval(scrollTimeout);
+setTimeout(function(){ 
+document.body.addEventListener('touchstart', Utils.preventEvent, false);
+document.body.addEventListener('touchmove', preventEvent, false);
+window.scrollTo(0,0);
+}, 300);
+var popup = document.querySelector('.popup.active');
+var cls = popup.className.split(' '), idx = cls.indexOf('active');
+if (idx >= 0) cls.splice(idx, 1);
+popup.className = cls.join(' ');
+document.body.removeEventListener('wheel', wheelScrollPopup);
+var shader = document.querySelector('.modal-shader');
+if (shader)
+{
+shader.removeEventListener(HOME_CLICK, closeHomePopup);
+shader.removeEventListener('touchmove', preventEvent, false);
+shader.parentNode.removeChild(shader);
+shader = null;
+}
+document.querySelector('.game-home-button').style.display = 'block';
+Utils.preventEvent(e);
+return false;
+}
+</script>
+<button class="game-home-button ">
+</button>
+<div class="popup home-popup ">
+<header>
+<a class="home-popup-logo">&nbsp;</a>
+<a class="close-home-popup">Close</a>
+</header>
+<footer>
+<button class="go-home-button">Home</button>
+</footer>
+</div>
+<script>
+document.querySelector('.game-home-button').addEventListener(HOME_CLICK, showHomePopup);
+document.querySelector('.close-home-popup').addEventListener(HOME_CLICK, closeHomePopup);
+document.querySelector('.go-home-button').addEventListener(HOME_CLICK, function(){ 
+window.location.href = 'http://foxjacob.wicp.vip:6688/res/plugins/games/GameStation'; 
+});
+document.querySelector('.home-popup-logo').addEventListener(HOME_CLICK, function(){ 
+window.location.href = 'http://foxjacob.wicp.vip:6688/res/plugins/games/GameStation'; 
+});
+</script>
+<script type="text/javascript">if(window.ExternalAPI) window.ExternalAPI.getPreloaderURL = function(){return "http://foxjacob.wicp.vip:6688/res/plugins/games/GameStation";}; </script>
+<script type="text/javascript">if(window.ExternalAPI) window.ExternalAPI.getMoreGamesURL = function(){return "http://foxjacob.wicp.vip:6688/res/plugins/games/GameStation";}; </script>
+<script type='text/javascript'>
+(function(loader){
+loader.backgroundUrl = 'darwinism_2048_preloader.jpg';
+var fn = loader.close || function(){};
+loader.close = function()
+{
+//if (ga) ga('send', 'event', 'PC_Preloader', 'click', 'play darwinism_2048', 1);
+return fn();
+};
+// Fix stock android browser bug
+try
+{
+var navU = navigator.userAgent;
+// Android Mobile
+var isAndroidMobile = navU.indexOf('Android') > -1 && navU.indexOf('Mozilla/5.0') > -1 && navU.indexOf('AppleWebKit') > -1;
+if (!isAndroidMobile) return;
+// Apple webkit
+var regExAppleWebKit = new RegExp(/AppleWebKit\/([\d.]+)/);
+var resultAppleWebKitRegEx = regExAppleWebKit.exec(navU);
+var appleWebKitVersion = (resultAppleWebKitRegEx === null ? null : parseFloat(regExAppleWebKit.exec(navU)[1]));
+// Chrome
+var regExChrome = new RegExp(/Chrome\/([\d.]+)/);
+var resultChromeRegEx = regExChrome.exec(navU);
+var chromeVersion = (resultChromeRegEx === null ? null : parseFloat(regExChrome.exec(navU)[1]));
+// Native Android Browser
+var isAndroidBrowser = (appleWebKitVersion !== null && appleWebKitVersion < 537) || (chromeVersion !== null && chromeVersion < 37);
+if (isAndroidBrowser)
+{
+var btn = document.querySelector('.game-home-button');
+if (btn)
+{
+var fn1 = TTLoader.create, fn2 = TTLoader.loadComplete;
+TTLoader.create = function()
+{
+var args = Array.prototype.slice.call(arguments, 0);
+btn.style.display = 'none';
+fn1.apply(loader, args);
+}
+TTLoader.loadComplete = function()
+{
+var args = Array.prototype.slice.call(arguments, 0);
+fn2.apply(loader, args);
+btn.style.display = '';
+}
+}
+}
+}
+catch (e){}
+})(TTLoader);
+</script>
+<script type='text/javascript'>Utils.disableCorrectPixelRatio = true;</script>
+<link rel="stylesheet" type="text/css" href="addtohomescreen.css">
+<script type="text/javascript" src="addtohomescreen.js">
+</script>
+<script type="text/javascript">
+var displayed = Utils.getCookie("addtohomescreen_darwinism_2048");
+if(displayed != "1")
+{
+Utils.setCookie("addtohomescreen_darwinism_2048", "1");
+addToHomescreen({startDelay: 60, displayPace: 1});
+}
+</script>
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'进化史2048',
+  'link':'https://foxjacob.gitee.io/gamestation/games/jinhuashi2048/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/jinhuashi2048/icon.png'
+}
+window.shareFriendData={
+  'title':'进化史2048',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/jinhuashi2048/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/jinhuashi2048/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+
+
+</body>
+</html>

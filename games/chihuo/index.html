@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>   
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="yes" name="apple-touch-fullscreen"/>
+	<meta content="telephone=no" name="format-detection"/>
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>	
+	<title>感恩节到了，吃货大作战！</title>
+	<link rel="stylesheet" type="text/css" href="css/game_min.css"/>	
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>		
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="js/game.min.js"></script>
+	<style type="text/css">
+	html,body{ width:100%; height:100%; margin:0 auto; padding:0; text-align:center; overflow:hidden; }
+	div{margin:0; padding:0;}
+	.layer1{ width:100%; height:100%; background: url(img/loading.jpg) top center no-repeat; background-size: auto 100%;}
+	.layer2{ display:none; width:100%; height:100%;  background: url(img/1.jpg) top center no-repeat; background-size: auto 100%;}
+    .next2{ width:40%; height:20%; top:70%;  position:relative; }
+    
+    .layer3{ display:none; width:100%; height:100%; }
+
+.layer4{ display:none; width:100%; height:100%;  background: url(img/bg.jpg) 0 0 no-repeat; background-size: 100% 100%;}
+.layer4_img1{ width:80%; height:60%; top:3%; left:10%; }
+.layer4_img2{ width:38%; height:18%; top:70%; left:12%; }
+.layer4_img3{ width:38%; height:18%; top:70%; left:50%; }
+.layer4_result{ width:100%; height:10%; top:60%;  text-align:center;  font-size:18px; color:Red;}
+
+.shareinfo{ display:none; width:100%; height:100%; left:0;top:0; position:absolute;background: url(img/share.png) 0 0 no-repeat; 
+            background-size: 100% 100%; z-index:9999;filter:alpha(opacity=90);opacity:0.9; background-color:#404040;}
+
+
+#teach{padding:40px 32px}#teach div.info{float:left}
+#teach .info{text-align:middle}#teach .info span{vertical-align:middle}
+#game{background:#fff;position:absolute;left:0;top:0;right:0;bottom:0;background: url(img/bg.jpg) 0 0 no-repeat; background-size: 100% 100%;}
+#game.shake{-webkit-animation:shake 120ms}
+#game img{display:block;position:absolute}
+#game #current{height:40%;width:60%;  top:25%; left:20%;}
+#game #next{width:50px;height:50px;top:20px;left:30px}
+#score{position:absolute;right:20px;top:20px;font-size:28px;color:#f00}
+#slash{position:absolute;left:0;top:0;bottom:0;right:0;opacity:0;-webkit-animation-duration:100ms}#slash.play{-webkit-animation:fadeout}
+#timer{display:none;position:absolute;left:20px;right:20px;bottom:20%;height:10px;font-size:20px;text-align:center;padding:0;line-height:1.5em}
+
+	
+
+	</style>
+
+</head>
+<body>
+<center>
+<div id="layer1" class="layer1"></div>
+
+<div id="layer2" class="layer2">
+    <div id="start" class="next2" onclick="start();"></div>
+</div>
+
+<!-- 游戏部分start-->
+<div id="layer3" class="layer3">
+    <div id="teach" style="display: none;">
+        <div class="info">
+            <img src="img/red.png" width="130" height="130">    
+        </div>
+        <div class="info">
+            <img src="img/green.png" width="130" height="130">        
+           
+        </div>
+    </div>
+  <!--  <div id="start" style="display: block;">再来一盘</div>-->
+    <div id="game" style="display: none;">
+        <img id="current" src="img/red.png">
+        <img id="next" src="img/red.png">
+        <div id="score">战果：0</div>
+        <div id="slash" class="" style="-webkit-animation: 3000ms; background: red;"></div>
+    </div>
+    <div id="timer" style="display: block;">15,00</div>
+    <div id="share" style="display: block;"></div>
+   
+  <!--  <div id="share-mask"></div>-->
+</div>
+ <!-- 游戏部分end--> 
+
+<div id="layer4" class="layer4">
+<img class="layer4_img1" src="img/result.png" />
+<div class="layer4_result">吃货大作战，好厉害吃掉 <strong>1</strong> 盘！牛叉~</div>
+<img class="layer4_img2" src="img/share_btn.png"  onclick="fnshare();"/>
+<img class="layer4_img3" src="img/again.png"  onclick="newgame();"/>
+</div>
+
+<div class="shareinfo" onclick="fnsharehidd();">
+</div>
+
+</center>
+<script language="javascript" type="text/javascript">
+    var dh = $(document).height();
+    var dw = $(document).width();
+    var present = parseInt($(document).height()) / 960;
+    //var dw = parseInt(640 * present);
+    if (dw > parseInt(640 * present)) {
+        dw = parseInt(640 * present);
+    }
+
+    $("#layer1").css("height", dh + "px");
+    $("#layer1").css("width", dw + "px");
+    $("#layer2").css("height", dh + "px");
+    $("#layer2").css("width", dw + "px");
+    $("#layer3").css("height", dh + "px");
+    $("#layer3").css("width", dw + "px");
+    $("#layer4").css("height", dh + "px");
+    $("#layer4").css("width", dw + "px");
+
+
+    var imgNum = 0;
+    var images = [];
+    preLoadImg();
+    function preLoadImg() {
+        images.push("img/1.jpg");
+        images.push("img/again.png");
+        images.push("img/bg.jpg");
+        images.push("img/green.png");
+        images.push("img/loading.jpg");
+        images.push("img/red.png");
+        images.push("img/result.png");
+        images.push("img/share.png");
+        images.push("img/share_btn.png");
+
+        $.imgpreload(images,
+    {
+        each: function() { },
+        all: function() {
+            //                $(".fakeloader").fadeOut(200);
+        //                $(".layer1").show();   
+            timer();            
+        }
+    });
+    }
+
+    var timeID;
+    var times = 0;
+    
+    function timer() {
+        timeID = setTimeout("timer()", 2000);
+        if (parseInt(times) > 0) {
+            $(".layer1").hide();
+            $(".layer2").show();
+            clearTimeout(timeID);
+        }
+        else {
+            times++;
+        }
+    }
+
+    function newgame() {
+        $(".layer4").hide();
+        //$(".layer3").show();
+        start();
+    }
+    function fnshare() {
+        $(".shareinfo").show();
+    }
+    function fnsharehidd() {
+        $(".shareinfo").hide();
+    }
+
+</script>
+
+  <script src="js/tiger.js"></script>
+</body>
+</html>

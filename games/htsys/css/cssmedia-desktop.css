@@ -1,0 +1,10 @@
+/*
+CSS for desctop screen
+*/
+
+
+body {
+    background: url("../images/background.jpg") center 0 no-repeat #0c0e09;
+    height: 100%;
+    padding-top: 49px;
+}

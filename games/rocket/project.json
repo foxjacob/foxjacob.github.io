@@ -1,0 +1,17 @@
+{
+    "showFPS" : false,
+    "jsList" : [
+        "src/MyLoaderScene.js",
+        "src/resource.js",
+        "src/app.js",
+        "src/game.js",
+        "src/globals.js",
+        "src/AnimationLayer.js",
+        "src/BackgroundLayer.js",
+        "src/StatusLayer.js",
+        "src/utility.js",
+        "src/GameOverLayer.js",
+        "src/AwardLayer.js",
+        "src/AwardResultLayer.js"
+    ]
+}

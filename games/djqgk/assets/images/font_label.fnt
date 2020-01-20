@@ -1,0 +1,26 @@
+<font>
+  <info face="font_label" size="20" bold="0" italic="0" charset="" unicode="" stretchH="100" smooth="1" aa="1" padding="2,2,2,2" spacing="0,0" outline="0"/>
+  <common lineHeight="22" base="15" scaleW="34" scaleH="209" pages="1" packed="0"/>
+  <pages>
+    <page id="0" file="font_label.png"/>
+  </pages>
+  <chars count="13">
+    <char id="48" x="2" y="2" width="14" height="19" xoffset="1" yoffset="0" xadvance="11" page="0" chnl="15"/>
+    <char id="49" x="2" y="23" width="10" height="19" xoffset="2" yoffset="0" xadvance="11" page="0" chnl="15"/>
+    <char id="50" x="2" y="44" width="14" height="19" xoffset="1" yoffset="0" xadvance="11" page="0" chnl="15"/>
+    <char id="51" x="14" y="23" width="14" height="19" xoffset="1" yoffset="0" xadvance="11" page="0" chnl="15"/>
+    <char id="52" x="18" y="2" width="14" height="19" xoffset="0" yoffset="0" xadvance="11" page="0" chnl="15"/>
+    <char id="53" x="2" y="65" width="14" height="19" xoffset="1" yoffset="0" xadvance="11" page="0" chnl="15"/>
+    <char id="54" x="2" y="86" width="14" height="19" xoffset="1" yoffset="0" xadvance="11" page="0" chnl="15"/>
+    <char id="55" x="2" y="107" width="14" height="18" xoffset="1" yoffset="0" xadvance="11" page="0" chnl="15"/>
+    <char id="56" x="2" y="127" width="14" height="19" xoffset="1" yoffset="0" xadvance="11" page="0" chnl="15"/>
+    <char id="57" x="2" y="148" width="14" height="19" xoffset="1" yoffset="0" xadvance="11" page="0" chnl="15"/>
+    <char id="46" x="2" y="169" width="6" height="6" xoffset="2" yoffset="13" xadvance="6" page="0" chnl="15"/>
+    <char id="44" x="2" y="177" width="6" height="9" xoffset="2" yoffset="13" xadvance="6" page="0" chnl="15"/>
+    <char id="37" x="2" y="188" width="20" height="19" xoffset="1" yoffset="0" xadvance="18" page="0" chnl="15"/>
+    <char id="32" x="0" y="0" width="0" height="0" xoffset="1" yoffset="0" xadvance="6" page="0" chnl="15"/>
+  </chars>
+  <kernings count="1">
+    <kerning first="49" second="49" amount="-1"/>
+  </kernings>
+</font>

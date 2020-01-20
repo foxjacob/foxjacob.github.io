@@ -1,0 +1,19 @@
+{
+	"groups":[
+	{
+		"keys":"640_json,number-export_fnt",
+		"name":"preload"
+	}],
+	"resources":[
+	{
+		"name":"640_json",
+		"subkeys":"btn_again,btn_back,btn_continue,btn_cut,btn_more,btn_pause,btn_start,btn_time,carrot,cucumber,cut_carrot,cut_carrotwei,cut_cucumber,cut_eggplant,cut_onionbai,cut_onionwei,dao,eggplant,fail,finger,game_bg,hand,onion1,onion2,shortcarrot,shortonion1,shortonion2,start_bg,tieshi,title,win",
+		"type":"sheet",
+		"url":"640.json"
+	},
+	{
+		"name":"number-export_fnt",
+		"type":"font",
+		"url":"../font/number-export.fnt"
+	}]
+}

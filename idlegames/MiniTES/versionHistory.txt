@@ -1,0 +1,103 @@
+v1.15 - Kongregate
+	Added highscores and user login for Kongregate
+	Added preemptive support for Kongregate badges. Not active yet
+	Fixed extra line of scrolling below the end of the screen
+	Fixed button text positioning in IE
+	Removed export save warning
+	Shortened a text in the Sea of Hileo
+
+v1.14 - Preparations
+	Fixed graphics bug with location and skill EXP on Windows
+	Readded Internet Explorer 11 and MS Edge support
+	Fixed incorrect font being used in the retro themes on Windows
+	Fixed incorrect font being used on the button bar on Windows
+	Added font preloading (I think)
+	Fixed a bug where AC and DMG weren't being recalculated after levelling up
+	Fixed button width glitching out when the page loads
+	Added basic encryption to Import and Export Save
+	Moved CSS theme application up in the load order
+	Changed the donation link to taylorcalderone.com/games
+	Added a warning to export saves before July 2017
+
+v1.13 - It's 2017!
+	Fixed a graphics bug with the 'Respawn at Vieda' option
+
+v1.12 - Pretty sure I tested this, I blame browser updates
+	Fixed Export Save button not working
+
+v1.11 - I never actually playtested this
+	Lowered XP gain for some more things
+
+v1.10 - Alexey K. FTW
+	I broke autosaving in 1.09 :(
+
+v1.09 - Just another maintanance update
+	Fixed a new text display error in Chrome
+	Rewrote gameplay clock to allow repeated triggers longer than 1 minute
+	Changed autosave trigger to every 5 minutes instead of every 1 minute
+	Lowered XP gain by ~30% for most things because the grind is too fast
+	
+v1.08 - Chrome error is fixed!
+	Rewrote 'Export Save' to work in all browsers
+	Fixed a new CSS bug in Safari 7
+	Twitter link wasn't opening in a popup window
+	Fixed a tiny formatting typo in the FAQ
+
+v1.07 - No promises, just got into a coding mood today (Also I have a job now)
+	Nerfed Hardening Oil by 50%
+	Lowered Guildmaster spawn rate from 5% to 2%
+
+v1.06 - Nothing important really
+	Simplified Rydale Keep's encounter table a bit
+	Added another paragraph to the help text
+	Changed the luck encounter in Farin's Delve to work properly
+	Changed the luck encounter in Farin's Delve to from 6XP to 1
+
+v1.05 - Windowwwwsssss
+	Added the correct button font for Windows users
+	Dropped support for Internet Explorer because fuck Internet Explorer
+	Fixed lots of terrible world map unicode errors for Windows users
+	Buffed monster hitrates starting at the game's halfway point
+	Removed 1.04's '!'s because they made the text less readable
+	Fixed a bug where damage could be a negative number
+	Fixed a bug where the final boss wasn't able to spawn
+	Added another FAQuestion
+	You now gain both weaponXP and critXP if you land a critical hit
+	Fixed a bug where the postgame dungeon's icon was 'X' even after you left
+	Fixed a bug where save importing didn't work
+
+v1.04 - More rebalancing
+	Changed a typo (arn't)
+	Increased medicXP gain by 100%
+	Increased blockXP gain by 100%
+	Increased athleteXP gain by 50%
+	Added "!"s to level up notifications
+	Added links to the MiniTES subreddit and wiki
+	Finding a key item now triggers a recalculate of your AC and DMG
+	MEDIC recovery time if you take no damage is now always one turn
+
+v1.03 - I killed the final boss in two hits lol
+	Fixed a NaN display bug in Skyview
+	Greatly buffed monster HP and DMG starting at the game's halfway point
+
+v1.02 - The FAQ Tab
+	Added lots of ingame documentation to the FAQ tab
+	Added a favicon
+	Fixed a bug where fist damage was being calculated with AGI instead of SPD
+
+v1.01 - Day 1 rebalancing
+	Fixed a bug where going to the Forest of Ice would cause a crash
+	Fixed a bug where MEDIC recovery time was being calculated backwards
+	Buffed the superboss a ton
+	Debuffed dodgeXP gain a tiny bit
+	Changed save exporting from alert() to prompt() so that you can copy from it
+	Displays your current location on the world map with an X 
+	Possibly made the cancel button in the import save feature a bit safer
+	You can now get critXP if you oneshot a monster with a crit, as intended
+	Changed combat damage readout to Math.ceil to prevent (0% remaining) results
+	Reduced MEDIC recovery time by 33%
+	CRIT is no longer capped at your LUK stat like all the other skills are
+	Made a version history file
+	Added the faq tab for the next update
+
+v1.0 - Initial Release

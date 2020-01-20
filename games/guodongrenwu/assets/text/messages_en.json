@@ -1,0 +1,42 @@
+{
+	"briefingScoreTime": "获得 %score% 积分 \n在 %time% 秒内",
+	"briefingScoreMoves": "获得 %score% 积分 \n在 %moves% 次内",
+    "shuffleNotAvailable": "关卡锁定!\n收集 %stars% 个星星\n去购买.",
+
+	"powerup.qty": "你拥有: {qty}",
+
+	"powerup.description.ExtraMoves1": "触摸获得额外奖励 +1, \n当你移动时!",
+	"powerup.description.ExtraMoves2": "触摸获得额外奖励 +2, \n当你移动时!",
+	"powerup.description.ExtraMoves3": "触摸获得额外奖励 +3, \n当你移动时!",
+	"powerup.description.BombChain": "获得奖励\n9个果冻!",
+	"powerup.description.Shuffle1": "果冻洗牌, \n当遇到困难时!",
+	"powerup.description.BonusPack1": "获得一个额外奖励\n 在关卡开始的时候!",
+
+	"powerup.caption.DoublePointsPowerup": "双倍点数",
+	"powerup.description.DoublePointsPowerup": "超酷道具!",
+
+	"powerup.caption.locked": "???",
+
+    "goal.label": "目标",
+    "goal.scoreNoMoves": "获得 %score% 点",
+    "goal.score": "获得 %score% 点\n在 %moves% 次内",
+    "goal.cookies": "收集 %cookies% 个甜饼\n在 %moves% 次内",
+    "goal.fruits": "收集所有水果\n在 %moves% 次内",
+    "goal.fruitsAndCookie": "收集所有水果和 %cookies% 个甜饼\n在 %moves% 次内",
+    "goal.boss": "摧毁方块使用\n烈性炸药!",
+
+    "tutorial.basics": "触摸消除2个或更多相同的果冻!",
+    "tutorial.cookie": "想吃甜饼吗? \n让它们落到底部!",
+    "tutorial.cookieTrouble": "甜饼太多了!!!\n\n我必须调整\n这个关卡的方块.",
+    "tutorial.moves": "方块疯狂了!!!\n\n你只有20次\n收集所有甜饼!",
+    "tutorial.bomb": "我发现一个果冻炸弹!\n\n当消除10个以上果冻时!",
+    "tutorial.fruits": "水果果冻!\n\n计数器\n归零!",
+    "tutorial.frozen": "我的炸药不能使用\n在低温下.\n\n但是我有新东西!",
+    "tutorial.boss": "你需要大量炸药\n炸这个野兽!",
+
+    "cod.scoreGoal": "你至少需要\n%scoreGoal% 积分! 再来一次!",
+    "cod.fruitGoal": "你还有水果未消除!\n再来一次!",
+    "cod.bossAlive": "方块必须被摧毁!\n使用更多炸药!",
+    "cod.cookieGoal": "你至少需要 %cookieGoal% 个甜饼!\n收集更多!"
+
+}

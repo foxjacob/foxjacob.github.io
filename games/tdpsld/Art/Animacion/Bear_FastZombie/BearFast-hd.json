@@ -1,0 +1,100 @@
+{"frames": {
+
+"BearFast_BrazoDer.png":
+{
+	"frame": {"x":40,"y":29,"w":36,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":27},
+	"sourceSize": {"w":36,"h":27}
+},
+"BearFast_BrazoIzq.png":
+{
+	"frame": {"x":78,"y":29,"w":36,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":27},
+	"sourceSize": {"w":36,"h":27}
+},
+"BearFast_Cabeza.png":
+{
+	"frame": {"x":2,"y":121,"w":93,"h":83},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":83},
+	"sourceSize": {"w":93,"h":83}
+},
+"BearFast_Cuerpo.png":
+{
+	"frame": {"x":40,"y":69,"w":51,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":50},
+	"sourceSize": {"w":51,"h":50}
+},
+"BearFast_OrejaDer.png":
+{
+	"frame": {"x":2,"y":69,"w":36,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":38},
+	"sourceSize": {"w":36,"h":38}
+},
+"BearFast_OrejaIzq.png":
+{
+	"frame": {"x":2,"y":29,"w":36,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":38},
+	"sourceSize": {"w":36,"h":38}
+},
+"BearFast_PieDer.png":
+{
+	"frame": {"x":74,"y":2,"w":33,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":25},
+	"sourceSize": {"w":33,"h":25}
+},
+"BearFast_PieIzq.png":
+{
+	"frame": {"x":39,"y":2,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24}
+},
+"BearFast_PiernaDer.png":
+{
+	"frame": {"x":2,"y":2,"w":16,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":23},
+	"sourceSize": {"w":16,"h":23}
+},
+"BearFast_PiernaIzq.png":
+{
+	"frame": {"x":20,"y":2,"w":17,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":23},
+	"sourceSize": {"w":17,"h":23}
+},
+"BearFast_Sombra.png":
+{
+	"frame": {"x":2,"y":206,"w":93,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":37},
+	"sourceSize": {"w":93,"h":37}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "BearFast-hd.png",
+	"format": "RGBA5555",
+	"size": {"w":116,"h":245},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:66984768be041082fcfe0a78085d6e92:f34d395a6e0792810affa9eb5c960f20:7e1043cc71ab5a4125a8d7318a46f02e$"
+}
+}

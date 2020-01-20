@@ -1,0 +1,25 @@
+{
+"images": ["images/game_sheet.png"],
+"frames": [
+
+    [2, 300, 630, 160], 
+    [406, 2, 374, 134], 
+    [326, 138, 160, 160], 
+    [164, 105, 160, 160], 
+    [634, 164, 345, 302], 
+    [2, 2, 402, 101], 
+    [2, 105, 160, 160], 
+    [782, 2, 160, 160]
+],
+"animations": {
+    
+        "bot":[0], 
+        "btn_start":[1],
+        "correct_normal":[2], 
+        "correct_pressed":[3], 
+        "hint":[4], 
+        "title":[5], 
+        "incorrect_normal":[6],
+        "incorrect_pressed":[7]
+}
+}

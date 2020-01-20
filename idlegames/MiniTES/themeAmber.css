@@ -1,0 +1,73 @@
+body {
+	background: #000000;
+	color:#FF9000;
+	font-family: Monaco, monospace;
+}
+
+
+
+
+
+
+
+
+button {									/* On a scale of Body#background to Body#color, ranges from 0-14 */
+	background: #000000;					/* 0 */
+	border:1px solid #c46F00;				/* 10 */
+	color:#FF9000;							/* 14 */
+}
+
+button:hover {
+	color:#FF9000;							/* 14 */
+	background: #623700;					/* 5 */
+}
+
+button:disabled {
+	color:#4e2C00;							/* 4 */
+	background: #000000;					/* 0 */
+	border: 1px solid #4E2C00;				/* 4 */
+}
+ 
+button:disabled:hover {
+	background: #000000;					/* 0 */
+	border: 1px solid #573508;				/* 4.5 */
+}
+
+
+
+
+
+
+
+
+.fadedText4 {
+	color:#3B2300;
+}
+
+.fadedText3 {
+	color:#623B00;
+}
+
+.fadedText2 {
+	color:#895200;
+}
+
+.fadedText1 {
+	color:#B16A00;
+}
+
+.fullBrightText {
+	color:#FF9000;
+}
+
+
+
+
+
+
+
+
+a:link    { color:#FF9000 }  /* unvisited links */
+a:visited { color:#FF9000 }  /* visited links   */
+a:hover   { color:#FF9000 }  /* user hovers     */
+a:active  { color:#FF9000 }  /* active links    */

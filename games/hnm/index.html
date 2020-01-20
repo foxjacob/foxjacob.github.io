@@ -1,0 +1,651 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta charset="utf-8">
+    <meta name="keywords"
+      content="iPhone,Android,iPad,game,html5 game,puzzle game,puzzle,Puzzle,flick,card,postman,post,action,Flash,Flash for iPhone,html5,iPod touch,iPad">
+    <!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+    <meta name="viewport"
+      content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta equiv="Expires" content="0">
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+
+	 <script type="text/javascript">
+		(function(){
+		//updateShare(0);
+		})();
+	 </script>
+<title>滑你妹</title>
+<style type="text/css">
+  .ad-w {
+      display: none;
+      background-color: #323232;
+      color: #fff;
+      position: absolute;
+      width: 100%;
+      height: 80px;
+      opacity: 0.8;
+      z-index: 100;
+      text-align: left;
+  }
+
+  .ad-w div{
+    position: static;
+  }
+
+  .ad-top-w {
+      top: 0;
+  }
+
+  .ad-bottom-w {
+      bottom: 0;
+  }
+
+  .ad-w .des {
+      float: left;
+      font-size: 12px;
+      padding-top: 15px;
+  }
+
+  .ad-w p.ad-title {
+      font-size: 16px;
+  }
+
+  .ad-w p {
+      line-height: 25px;
+      margin: 0px;
+  }
+
+  .ad-w img {
+      float: left;
+      margin: 15px 3% 15px 3%;
+  }
+
+  .ad-w span {
+      float: left;
+      font-size: 12px;
+      margin: 30px 0;
+  }
+
+  .ad-w a {
+      border: 1px solid #fff;
+      border-radius: 4px;
+      color: #fff;
+      height: 30px;
+      width: 60px;
+      float: right;
+      line-height: 30px;
+      text-align: center;
+      margin: 25px 3% 0 3%;
+      text-decoration: none;
+      position: static;
+  }
+
+  .ad-w-f {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 55px;
+      z-index: 100;
+  }
+
+  .ad-top-w-f {
+      top: 0;
+  }
+
+  .ad-bottom-w-f {
+      bottom: 0;
+  }
+  #meiriq-share {
+    display: none;
+  }
+  #meiriq-share #meiriq-share-mask{
+    width: 100%;
+    height: 100%;
+    background:  #0F0F0F;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 105;
+    opacity: 0.6;
+  }
+  #meiriq-share #meiriq-share-image img{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+  }
+
+  #tips{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #323232;
+    color: #FFF;
+    z-index: 101;
+    opacity: 0.7;
+  }
+
+</style>    <link rel="stylesheet" href="styles/main.css">
+    <script>
+      //
+      clientgender = 'm';
+    </script>
+    <script src="scripts/createjs.js"></script>
+    <style type="text/css">
+    /*html{
+      max-width: 600px;
+      position: absolute;
+      max-height: 100%;
+    }*/
+
+    @media  screen and (min-width:320px) and (max-width:400px){
+        .showres{
+        font-size: .8em !important;
+      }
+      .tofriend{
+        font-size: .8em !important;
+      }
+      .toagain{
+        font-size: .8em !important;
+      }
+    }
+
+    body{
+        /*max-width: 600px;*/
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        -webkit-user-select: none;
+        /*background-color: #000;*/
+    }
+    .bodybg{
+        /*background: url(images/home.png) center center;*/
+        background-size: 100%;
+    }
+    img, ul, li, a{
+        display: block;
+    }
+    .start, .game, .result, .wxWindow{
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        /*-webkit-transition: all .6s ease;*/
+        z-index: 1;
+        /*background-color: rgba(0,0,0,.6);*/
+        
+    }
+    a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+    .hide {
+        visibility: hidden;
+        /*display: none;*/
+        /*top: 0%;*/
+        overflow: hidden;
+        /*width: 0;*/
+        /*height: 100%;*/
+        min-height: 100% !important;
+        max-height: 100% !important;
+        z-index: 0 !important;
+    }
+    .body{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      /*max-width: 500px;*/
+      margin: 0 auto;
+    }
+    .bg1 {
+        background: url(images/bg-1.png) center bottom;
+        background-size: 100%;
+    }
+    .bg2 {
+        background: url(images/bg-2.png) center bottom;
+        background-size: 100%;
+    }
+
+    /*开始页面的设置*/
+    .start{
+        width: 100%;
+        height: 100%;
+        background: url(images/home.png) center center;
+        background-size: 100%;
+    }
+    .help{
+      position: absolute;
+      left: 25%;
+      /*bottom: 28%;*/
+      bottom: 37%;
+      width: 50%;
+    }
+    .help img{
+      /*width: 100%;*/
+      width: 70%;
+      margin-left: 15%;
+      position:relative;
+      top:10px;
+    }
+    .help .finger{
+        position: absolute;
+        left: 20%;
+        height: 100%;
+        width: 30%;
+        top: 0;
+        /*更改手指*/
+        background: url(images/finger.png) center center no-repeat;
+        background-size: 70% auto;
+        -webkit-animation: flash 2s infinite linear;
+    }
+    @-webkit-keyframes flash {
+        0% { -webkit-transform: translate3d(0, -10%, 0); opacity: 1;}
+        50% { -webkit-transform: translate3d(100%, -10%, 0); opacity: 0; }
+        51% { -webkit-transform: translate3d(0%, 56%, 0); opacity: 1;}
+        100% { -webkit-transform: translate3d(100%, 56%, 0); opacity: 0;}
+    }
+    .start .btn{
+      position: absolute;
+      width: 50%;
+      left: 25%;
+      bottom: 15%;
+    }
+    .start .btnmore{
+      position: absolute;
+      width: 50%;
+      left: 25%;
+      bottom: 3%;
+    }
+      #game2{
+          width: 100%;
+          height: 100%;
+          /*background: url(images/bg-5.jpg) center bottom;
+          background-size: 100%;*/
+      }
+      .game .title{
+        position: absolute;
+        top:0;
+        width: 100%;
+      }
+      .game .title .time{
+        font-size: 2.5em;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        margin-left: -0.5em;
+      }
+      .game .title .score{
+        top: 30%;
+        left: 78%;
+        width: 20%;
+        text-align: center;
+        display: block;
+        position: absolute;
+      }
+      .result{
+          width: 100%;
+          height: 100%;
+        /*  background: url(images/r-bg.png) center top;*/
+          background-size: 100%;
+          color: #fff;
+          /*font-weight: bold;*/
+      }
+
+      .result .btn{
+          position: absolute;
+          width: 80%;
+          top: 63%;
+          left: 10%;
+          z-index: 10;
+      }
+      .win .btn{}
+      .lose .btn{
+          top: 38%;
+      }
+      .result .btn>div{
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 47%;
+          z-index: 10;
+      }
+      .result .btn .b1{
+          left: 0;
+      }
+      .result .btn .b2{
+          right: 0;
+      }
+      .result .share-btn{
+          position: absolute;
+          width: 90%;
+          bottom: 8%;
+          height: auto;
+          overflow: hidden;
+          z-index: 10;
+          /* -webkit-transform: translate3d(-100%, 0, 0); */
+          /*-webkit-transition: all .6s ease;*/
+          left: 5%;
+      }
+      .result .score{
+        position: absolute;
+        width: 100%;
+        font-size: 2em;
+        text-align: center;
+        color: white;
+        top: 24%;
+        /*background: url(images/scorebg.png) center center;*/
+        /*background-size: auto 100%;*/
+      }
+      .result .max-score{
+        position: absolute;
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: center;
+        color: white;
+        /* top: 44%; */
+        /* background: url(images/scorebg.png) center center; */
+        /* background-size: auto 100%; */
+      }
+      .result .text{
+        position: absolute;
+        width: 85%;
+        font-size: 1em;
+        text-align: center;
+        color: white;
+        left: 10%;
+        top: 51%;
+        /*background: url(images/scorebg.png) center center;*/
+        /*background-size: auto 100%;*/
+      }
+      .result .text2{
+        position: absolute;
+        width: 85%;
+        font-size: .9em;
+        text-align: center;
+        color: white;
+        left: 8%;
+        bottom: 18%;
+        /*background: url(images/scorebg.png) center center;*/
+        /*background-size: auto 100%;*/
+      }
+      .result .score{
+        position: absolute;
+        width: 30%;
+        left: 35%;
+        font-size: 2em;
+        text-align: center;
+        color: white;
+        top: 22%;
+        /*background: url(images/scorebg.png) center center;*/
+        /*background-size: auto 100%;*/
+      }
+      .result .scorebox{
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          display: -webkit-box;
+          -webkit-box-orient: horizontal;
+          -webkit-box-pack: center;
+          -webkit-box-align: center;
+          text-align: center;
+      }
+      .result .scorebox .title{
+          width: 100%;
+          -webkit-transform: translate3d(-100%, 0, 0);
+          font-size: 1.2rem;
+      }
+      .result .scorebox .s{
+          width: 100%;
+          -webkit-transform: translate3d(-100%, 0, 0);
+      }
+      .win .share-btn{
+
+      }
+      .lose .share-btn{
+          top: 48%;
+      }
+      .result .share-btn.act{
+          -webkit-transform: translate3d(0, 0, 0);
+      }
+      .result .share-btn .sbtn{
+          /*padding: 0 6%;*/
+          display: -webkit-box;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          box-sizing: border-box;
+          z-index: 10;
+      }
+      .result  .share-btn .b{
+          -webkit-box-flex: 1;
+      }
+
+      .resulpanl{
+        width: 77.5%;
+        z-index: 10;
+        height: 30.8%;
+        margin-top: 50%;
+        background: #fff;
+        margin-left: 11.25%;
+        border-radius: 10px;
+        font-family: Microsoft Yahei;
+        font-size: 1.2em;
+      }
+
+      .tellfriend{
+        width: 100%;
+        height: 100%;
+        background: url(images/share1.png);
+        background-size: 100%;
+        color: #fff;
+        display: none;
+        z-index: 13;
+      }
+
+      .showres{
+        display: block;
+         height: 34%; 
+        /* width: 90%; */
+        /* margin-left: 5%; */
+        text-align: center;
+        color: black;
+        padding: 6%;
+        font-size: 1.3em;
+        padding-top: 10%;
+      }
+      .tofriend{
+        margin-left: 6%;
+        height: 28%;
+        width: 40%;
+        border-radius: 5px;
+        border: 3px solid rgb(153,153,153);
+        background: white;
+        /* margin-top: 8%; */
+        font-size: 1.3em;
+      }
+      .toagain{
+        float: right;
+        margin-right: 6%;
+        width: 40%;
+        height: 28%;
+        border-radius: 5%;
+        border: 3px solid rgb(153,153,153);
+        /* margin-top: 8%; */
+        font-size: 1.3em;
+        background: rgb(255,255,255);
+        border-radius: 5px;
+        font-family: Microsoft Yahei;
+        color: #999999;
+      }
+
+      .shareres{
+          width: 100%;
+          height: 100%;
+          background: url(images/share1.png);
+          /*background: url(images/r-bg.png) center top;*/
+          background-size: 100%;
+          color: #fff;
+          /*font-weight: bold;*/
+      }
+      .shareresnormal{
+          width: 100%;
+          height: 100%;
+          background: url(images/share2.png);
+          /*background: url(images/r-bg.png) center top;*/
+          background-size: 100%;
+          color: #fff;
+          /*font-weight: bold;*/
+      }
+
+      .shareback{
+        margin-top: 95%;
+        height: 6%;
+        margin-left: 40%;
+        width: 20%;
+        font-size: 1.5em;
+        background: transparent;
+        border: none;
+      }
+
+      .toppanel{
+        width: 30%;
+        display: block;
+        margin-top: 10%;
+      }
+
+      .toppanel>img{
+        margin-top: 0.2em;
+        position: absolute;
+        left: 50%;
+        margin-left: -70px;
+        display: inline-block;
+      }
+
+      .toppanel>.time{
+      }
+
+      .boyplayer, .boyplayer>.tofriend{
+        border: 3px solid rgb(0,176,239);
+        color: rgb(0,176,239);
+      }
+      .girlplayer, .girlplayer>.tofriend{
+        color: #ff8abe;
+        border: 3px solid #ff8abe;
+      }
+
+      /*.loading {
+          width: 15%;
+          position: absolute;
+          top: 50%;
+          left: 42.5%;
+          -webkit-animation: loading 3s infinite linear;
+      }
+
+      @-webkit-keyframes loading {
+          from {
+              -webkit-transform: rotate(0deg);
+          }
+          to {
+              -webkit-transform: rotate(360deg);
+          }
+      }*/
+      .hidden{
+        opacity: 0;
+      }
+    </style>
+    
+    <script type="text/javascript">
+    var _smq = _smq || [];
+    _smq.push(['_setAccount', 'c9930ed8', new Date()]);
+    _smq.push(['pageview']);
+  var _gaq = _gaq || [];  
+    </script>
+    <style type="text/css">
+      #weixin-shade {
+        font-size: 10px; position: fixed; top: 0;left: 0;width: 100%; height: 100%; background-color: rgba(0,0,0,.8); z-index: 1000; overflow: auto;color:#fff; text-align: center; }
+      #weixin-shade-scroll {position:absolute; top: 0;left: 0;width: 100%; height: 100%; overflow-y: auto;overflow-x: hidden;}
+      #weixin-shade-qr div {font-size:2.4em; text-align: center; margin-top: 1em;}
+      #weixin-shade-qr {}
+      #weixin-shade-qr img {display: block; width: 50%; margin:2em auto;}
+      #weixin-shade .step {}
+      #weixin-shade .step .num{display: inline-block;margin:.5em auto; font-size: 3em; width: 1.5em; height: 1.5em; line-height: 1.5em; border-radius: 1em; background-color: #aaa; color: #000; }
+      #weixin-shade .step div{font-size:2em;}
+      #weixin-shade .step img{display: block; width: 70%; margin:2em auto;}
+    </style>
+
+
+  </head>
+  <body class="" >
+    <div class="body">
+      <div class="start hide">
+        <div class="help">
+          <img src="images/help.png">
+          <div class="finger"></div>
+        </div>
+        <img src="images/begin.png" class="btn" onclick="startbtn()"></img>
+      </div>
+      <div id="game2" class="game hide">
+        <div class="title">
+          <div class="toppanel">
+            <img src="images/clock.png"/>
+            <span class="time">9'99"</span>
+          </div>
+        </div>
+      </div>
+      <div class="result hide resultshow">
+            <div class="resulpanl">
+              <!-- <div> -->
+                <span class="showres"></span>
+              <!-- </div> -->
+              <button class="tofriend" onclick="tellfriend()">右上方分享</button>
+              <button class="toagain" onclick="restartbtn()">再玩一次</button>
+            </div>
+            <div class="tellfriend"></div>
+      </div>
+
+      <div class="sharepanel hide">
+          <button class="shareback" onclick="shareback()"></button>
+      </div>
+
+    </div>
+      <script src="scripts/main.js"></script>
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <div style="display: none;">
+    </div>
+
+
+  <script  type="text/JavaScript">
+window.shareData={
+  'title':'划你妹',
+  'link':'https://foxjacob.gitee.io/gamestation/games/hnm/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/hnm/icon.png'
+}
+window.shareFriendData={
+  'title':'划你妹',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/hnm/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/hnm/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+  </body>
+</html>

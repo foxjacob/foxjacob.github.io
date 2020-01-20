@@ -1,0 +1,92 @@
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>YY会员 - 精彩活动</title>
+<link href="/activity/css/activity.css?v=3" rel="stylesheet" type="text/css" />
+
+
+<body>
+
+
+<div class="header_bg">
+	<div class="header_bar">
+		<a href="http://vip.yy.com/vip/index" target="_self"><img class="header_logo" src="/activity/images/header_logo.jpg" width="110" height="45"/></a>
+		<div class="header_menu">
+			<div><a class="menu_item" href="http://vip.yy.com/vip/index" target="_self">首页</a></div>
+			<div><a class="menu_item" href="http://vip.yy.com/vip/introduction" target="_self">会员特权</a></div>
+			
+		</div>
+		<div class="header_login">
+			<input type="hidden" id="user_passport" value=''/>
+			<input type="hidden" id="user_id" value=''/>
+			
+			
+			
+				您尚未登录，请先 <a class="login_btn" href="javascript:void(0)" onclick="showUdbLogin()">登录</a>
+			
+			
+		</div>
+	</div>
+</div>
+
+<div id="main_wrapper">
+<div id="box_wrapper">
+<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+function jsLoader(url, callback){
+	$.ajax({type: "GET",url: url,success: callback,dataType: 'script',cache:true});
+}
+</script>
+<script type="text/javascript" src="/js/artDialog.min.js"></script>
+<script type="text/javascript" src="/js/comm120824.js?v=7"></script>
+<div id="main_box" style="margin-left:150px;height:320px;text-align: left;">
+	<div style="background: url('/activity/images/error/top.jpg') no-repeat scroll 0 0 transparent;width:563px;height:48px;"></div>
+	<div style="background: url('/activity/images/error/notfound.jpg') no-repeat scroll 0 0 transparent;width:563px;height:79px;"></div>
+	<div style="background: url('/activity/images/error/body.jpg') no-repeat scroll 0 0 transparent;width:563px;height:104px;"></div>
+	<div style="background: url('/activity/images/error/foot.jpg') no-repeat scroll 0 0 transparent;width:563px;height:82px;"></div>
+</div>
+
+
+<div class="cp"><a href="http://www.huanju.cn/s/introduction.html" class="cptext" target="_blank">关于欢聚</a> | <a href="http://www.huanju.cn/s/join.html" class="cptext" target="_blank">欢聚招聘</a> | <a href="http://www.huanju.cn/s/contact.html" class="cptext" target="_blank">联系欢聚</a> | 客服频道：<a href="http://www.yy.com/go.html#10" target="_blank" class="cptext">10</a> | <a href="http://www.huanju.cn/s/links.html" class="cptext" target="_blank">友情链接</a> | <a href="http://kf.yy.com/" class="cptext" target="_blank">YY客服中心 </a><br />
+广州华多网络科技有限公司 版权所有 2005-2014 DuoWan.com [多玩游戏] 粤ICP备09075143号 | 备案编号：4401060102637</div>
+
+</div><!-- end tag for box_wrapper div -->
+
+</div><!-- end tag for main_wrapper div -->
+
+
+<div id="infoLoad" >
+	<img src="/activity/images/ajax_loading.gif" width="16" height="16" align="absmiddle"/>正在载入数据...
+</div>
+
+<script src="http://res.udb.duowan.com/lgn/js/oauth/udbsdk/pcweb/udb.sdk.pcweb.popup.min.js"></script>
+<script src="/js/jquery.scroll-follow.js"></script>
+<script type="text/javascript">
+(function (d) {
+var ta=d.createElement("script");ta.type="text/javascript";ta.async=true;ta.id="yy-static";
+ta.setAttribute("exparams","category=&userid=359625531&channel=109&");
+ta.src="http://www.duowan.com/duowan.js";
+d.getElementsByTagName("head")[0].appendChild(ta);
+})(document);
+</script>
+
+<!--IE6透明判断-->
+<!--[if IE 6]>
+<script src="/activity/js/DD_belatedPNG.js"></script>
+<script>
+DD_belatedPNG.fix('*');
+document.execCommand("BackgroundImageCache", false, true);  
+</script>
+<![endif]-->
+
+</body>
+</html>

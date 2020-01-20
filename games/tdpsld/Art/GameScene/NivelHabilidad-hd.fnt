@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created using Glyph Designer - http://www.71squared.com/glyphdesigner-->
+<font>
+    <info face="NivelHabilidad" size="36" bold="0" italic="0" chasrset="" unicode="0" stretchH="100" smooth="1" aa="1" padding="0,0,0,0" spacing="2,2"/>
+    <common lineHeight="31" base="0" scaleW="128" scaleH="128" pages="1" packed="0"/>
+    <pages>
+        <page id="0" file="NivelHabilidad-hd.png"/>
+    </pages>
+    <chars count="15">
+        <char id="32" x="91" y="67" width="0" height="0" xoffset="0" yoffset="31" xadvance="18" page="0" chnl="0" letter="space"/>
+        <char id="48" x="54" y="2" width="21" height="31" xoffset="1" yoffset="0" xadvance="21" page="0" chnl="0" letter="0"/>
+        <char id="49" x="2" y="67" width="13" height="30" xoffset="5" yoffset="1" xadvance="21" page="0" chnl="0" letter="1"/>
+        <char id="50" x="102" y="2" width="22" height="30" xoffset="1" yoffset="1" xadvance="21" page="0" chnl="0" letter="2"/>
+        <char id="51" x="26" y="35" width="21" height="30" xoffset="1" yoffset="1" xadvance="21" page="0" chnl="0" letter="3"/>
+        <char id="52" x="77" y="2" width="23" height="30" xoffset="0" yoffset="1" xadvance="21" page="0" chnl="0" letter="4"/>
+        <char id="53" x="49" y="35" width="21" height="30" xoffset="1" yoffset="1" xadvance="21" page="0" chnl="0" letter="5"/>
+        <char id="54" x="72" y="35" width="21" height="30" xoffset="1" yoffset="1" xadvance="21" page="0" chnl="0" letter="6"/>
+        <char id="55" x="2" y="35" width="22" height="30" xoffset="1" yoffset="1" xadvance="21" page="0" chnl="0" letter="7"/>
+        <char id="56" x="30" y="2" width="22" height="31" xoffset="1" yoffset="0" xadvance="21" page="0" chnl="0" letter="8"/>
+        <char id="57" x="95" y="35" width="21" height="30" xoffset="1" yoffset="1" xadvance="21" page="0" chnl="0" letter="9"/>
+        <char id="77" x="2" y="2" width="26" height="31" xoffset="1" yoffset="0" xadvance="26" page="0" chnl="0" letter="M"/>
+        <char id="97" x="70" y="67" width="19" height="22" xoffset="1" yoffset="9" xadvance="19" page="0" chnl="0" letter="a"/>
+        <char id="109" x="17" y="67" width="27" height="22" xoffset="1" yoffset="9" xadvance="27" page="0" chnl="0" letter="m"/>
+        <char id="120" x="46" y="67" width="22" height="22" xoffset="0" yoffset="9" xadvance="20" page="0" chnl="0" letter="x"/>
+    </chars>
+    <kernings count="1">
+        <kerning first="97" second="120" amount="-1"/>
+    </kernings>
+</font>

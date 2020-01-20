@@ -1,0 +1,82 @@
+{
+  "mc": {
+    "baobao": {
+      "frameRate": 120,
+      "labels": [],
+      "frames": [
+        {
+          "res": "baobao1",
+          "x": -59,
+          "y": -95,
+          "duration": 30
+        },
+        {
+          "res": "baobao2",
+          "x": -56.5,
+          "y": -98,
+          "duration": 30
+        }
+      ]
+    },
+    "baobao_back": {
+      "frameRate": 120,
+      "labels": [],
+      "frames": [
+        {
+          "res": "baobao3",
+          "x": -56.5,
+          "y": -98.5,
+          "duration": 30
+        },
+        {
+          "res": "baobao4",
+          "x": -57.5,
+          "y": -98.5,
+          "duration": 30
+        }
+      ]
+    }
+  },
+  "res": {
+    "baobao1": {
+      "x": 118,
+      "y": 1,
+      "w": 118,
+      "h": 190,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 118,
+      "sourceH": 190
+    },
+    "baobao2": {
+      "x": 353,
+      "y": 1,
+      "w": 113,
+      "h": 196,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 122,
+      "sourceH": 196
+    },
+    "baobao3": {
+      "x": 238,
+      "y": 1,
+      "w": 113,
+      "h": 197,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 115,
+      "sourceH": 197
+    },
+    "baobao4": {
+      "x": 1,
+      "y": 1,
+      "w": 115,
+      "h": 197,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 115,
+      "sourceH": 197
+    }
+  }
+}

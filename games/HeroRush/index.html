@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.01, user-scalable=no, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <title>汽车冲冲冲</title>
+    
+    <script type="text/javascript" src="./lib/soundjs.min.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="http://cdn.gameplayer.io/api/js/developer.js"></script>
+    <script type="text/javascript" src="./herorush.js"></script>
+    <script>
+        window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, false);
+        if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+            var meta = document.getElementById ("viewport");
+            meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+        }
+
+        var height;
+        isIOS=function(){return navigator.userAgent.toLowerCase().match(/(ipad|iphone|ipod)/g)?!0:!1};
+
+        if(isIOS() == true)
+        {
+            window.onload = resize;
+            window.onresize = resize;
+            resize();
+
+            window.addEventListener('scroll', function () {
+                if (document.activeElement === document.body && window.scrollY > 0) {
+                    document.body.scrollTop = 0;
+                }
+            }, true);
+        }  
+
+        function resize()
+        {
+            if(window.innerHeight < window.innerWidth)
+            {
+                height = window.innerHeight;
+                document.getElementById('openfl-content').style.height = height + "px";
+            }
+            else
+            {
+                document.getElementById('openfl-content').style.height = "100%";
+            }
+            setTimeout(function()
+            {
+                window.scrollTo(0, 1);
+            }, 50);
+        }        
+    </script>
+    
+    <style>
+        html,body{margin:0; padding:0; width:100%; height:100%; overflow:hidden; position:fixed; top:0px;}
+        body{-webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
+        #openfl-content{width:100%; height:100%; position:fixed; background:#4878BA;}
+
+        
+        @font-face {
+            font-family: 'Tw Cen MT Bold';
+            src: url('assets/fonts/tw_cen_mt_b.eot');
+            src: url('assets/fonts/tw_cen_mt_b.eot?#iefix') format('embedded-opentype'),
+            url('assets/fonts/tw_cen_mt_b.svg#my-font-family') format('svg'),
+            url('assets/fonts/tw_cen_mt_b.woff') format('woff'),
+            url('assets/fonts/tw_cen_mt_b.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div id="openfl-content"></div>
+    <script type="text/javascript">
+        lime.embed ("openfl-content", 640, 960, "4878BA");
+    </script>
+</body>
+</html>

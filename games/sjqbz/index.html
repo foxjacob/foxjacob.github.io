@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="apple-touch-icon" href="icon.png" />
+<link rel="shortcut icon" href="icon.png" />
+<link rel="icon" href="icon.png" />
+<title>手机强迫症测试</title>
+<meta name="keywords" content="手机强迫症测试,手机强迫症测试html5游戏" />
+<meta name="description" content="手机强迫症测试html5游戏,手机强迫症测试手机在线游戏" />
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<style>
+#weixin-shade{position:absolute;top:0;left:0;width:100%;height:100%;background:url(images/share_pic.png) no-repeat top right; background-size:cover; z-index:9999; display:none;}
+</style>
+<script type="text/javascript">
+//wechat js
+var url="http://yx8.com/game/forceTest/";
+var dataForWeixin={
+appId:"",
+MsgImg:"http://yx8.com/game/forceTest/shareImg.jpg",
+TLImg:"http://yx8.com/game/forceTest/shareImg.jpg",
+url:url,
+title:'你的手机强迫症到底有几级，敢秀出来吗？',
+desc:'手机强迫症测试,看看你到底有没有药救',
+fakeid:"",
+callback:function(){}
+};
+(function(){
+var onBridgeReady=function(){
+WeixinJSBridge.on('menu:share:appmessage', function(argv){
+WeixinJSBridge.invoke('sendAppMessage',{
+"appid":dataForWeixin.appId,
+"img_url":dataForWeixin.MsgImg,
+"img_width":"120",
+"img_height":"120",
+"link":dataForWeixin.url,
+"desc":dataForWeixin.desc,
+"title":dataForWeixin.title
+}, function(res){(dataForWeixin.callback)();});
+});
+WeixinJSBridge.on('menu:share:timeline', function(argv){
+(dataForWeixin.callback)();
+WeixinJSBridge.invoke('shareTimeline',{
+"img_url":dataForWeixin.TLImg,
+"img_width":"120",
+"img_height":"120",
+"link":dataForWeixin.url,
+"desc":dataForWeixin.title,
+"title":dataForWeixin.desc
+}, function(res){});
+});
+};
+if(document.addEventListener){
+document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+}else if(document.attachEvent){
+document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+}
+})();
+</script>
+</head>
+<body onLoad="jiazai()">
+<div class="main">
+<img src="images/tran.png" class="img" />
+<div class="pg pg0">
+<img src="images/bg.gif" class="img" />
+<div class="btn"></div>
+</div>
+<div class="pg pg1">
+<img src="images/go.png" class="img" />
+</div>
+<div class="pg pg2">
+<img src="images/shiti_bg.png" class="img" />
+<div class="shiti_con">
+<div class="ul">
+<div class="shiti s1">
+<p class="tit"><span class="tihao">1.</span><span class="timu">晚上睡觉前、早上醒来第一件事是摸手机?</span></p>
+<div class="zitu"><img src="images/1.png" class="img" /></div>
+<ul>
+<li><div class="input" value="3"></div>A.这都被你发现了！</li>
+<li><div class="input" value="2"></div>B.有时候摸的不是手机啦<img src="images/xiu.gif" /></li>
+<li><div class="input" value="1"></div>C.从不拿 </li>
+</ul>
+</div>
+<div class="shiti s2">
+<p class="tit"><span class="tihao">2.</span><span class="timu">出门走很远突然发现忘带手机肿么办？</span></p>
+<ul>
+<li class="buyao"><div id="b1" class="input" value="3"></div><label for="b1" style="vertical-align:top;">A.&nbsp;<img src="images/2-A.jpg" />冲回去拿!</label></li>
+<li class="buyao"><div id="b2" class="input" value="2"></div><label for="b2" style="vertical-align:top;">B.&nbsp;<img src="images/2-B.jpg" />心塞一天</label></li>
+<li class="buyao"><div id="b3" class="input" value="1"></div><label for="b3" style="vertical-align:top;">C.&nbsp;<img src="images/2-C.jpg" />手机是啥？</label></li>
+</ul>
+</div>
+<div class="shiti s3">
+<p class="tit"><span class="tihao">3.</span><span class="timu">手机能断网多久？</span></p>
+<br />
+<ul>
+<li><div class="input" value="3"></div>A.断网？不可能！</li>
+<li><div class="input" value="2"></div>B.半天</li>
+<li><div class="input" value="1"></div>C.断个半年都无所谓</li>
+</ul>
+</div>
+<div class="shiti s4">
+<p class="tit"><span class="tihao">4.</span><span class="timu">手机剩下多少电量时你会着急到处找充电器？</span></p>
+<div class="zitu"><img src="images/4.png" class="img" /></div>
+<ul>
+<li><div class="input" value="3"></div>A.90%以下</li>
+<li><div class="input" value="2"></div>B.50%以下</li>
+<li><div class="input" value="1"></div>C.手机提示电量低时</li>
+</ul>
+</div>
+<div class="shiti s5">
+<p class="tit"><span class="tihao">5.</span><span class="timu">常常幻听到手机铃声或幻觉到震动提示？</span></p>
+<br />
+<ul>
+<li><div class="input" value="3"></div>A.常常</li>
+<li><div class="input" value="2"></div>B.偶尔</li>
+<li><div class="input" value="1"></div>C.从不 </li>
+</ul>
+</div>
+<div class="shiti s6">
+<p class="tit"><span class="tihao">6.</span><span class="timu">没有流量的时候，我不是在找WiFi，就是在去找WiFi的路上？</span></p>
+<br />
+<ul>
+<li><div class="input" value="3"></div>A.必须去有WiFi的地方</li>
+<li><div class="input" value="2"></div>B.会尽量去有WiFi的地方</li>
+<li><div class="input" value="1"></div>C.老子有的是流量~！ </li>
+</ul>
+</div>
+<div class="shiti s7">
+<p class="tit"><span class="tihao">7.</span><span class="timu">即使没什么事也时不时解锁手机滑动下屏幕？</span></p>
+<br />
+<ul>
+<li><div class="input" value="3"></div>A.卧槽，好像真的常常会这样</li>
+<li><div class="input" value="2"></div>B.好吧，偶尔会这样</li>
+<li><div class="input" value="1"></div>C.有病啊？没事滑什么手机</li>
+</ul>
+</div>
+<div class="shiti s8">
+<p class="tit"><span class="tihao">8.</span><span class="timu">刷微博、朋友圈的频率？</span></p>
+<br />
+<ul>
+<li><div class="input" value="3"></div>A.5分钟1次以上</li>
+<li><div class="input" value="2"></div>B.5分钟1次~半个小时1次</li>
+<li><div class="input" value="1"></div>C.一个小时不到2次 </li>
+</ul>
+</div>
+<div class="shiti s9">
+<p class="tit"><span class="tihao">9.</span><span class="timu">上厕所一定要带?</span></p>
+<br />
+<ul>
+<li class="buyao"><div id="b4" class="input" value="3"></div><label for="b4" style="vertical-align:top;">A.&nbsp;<img width="25%" src="images/9A.png"></label></li>
+<li class="buyao"><div id="b5" class="input" value="2"></div><label for="b5" style="vertical-align:top;">B.&nbsp;<img width="80%" src="images/9B.png"></label></li>
+<li class="buyao"><div id="b6" class="input" value="1"></div><label for="b6" style="vertical-align:top;">C.&nbsp;<img width="40%" src="images/9C.png"></label></li>
+</ul>
+</div>
+<div class="shiti s10">
+<p class="tit"><span class="tihao">10.</span><span class="timu">绝对不能忍受满满的通知栏？</span></p>
+<div class="zitu" style="width:70%;"><img src="images/10.png" class="img" /></div>
+<ul>
+<li><div class="input" value="3"></div>A.是的！</li>
+<li><div class="input" value="2"></div>B.还好。</li>
+<li><div class="input" value="1"></div>C.我倒想看看它能有多满<img src="images/wa.gif" /></li>
+</ul>
+</div>
+<div class="shiti s11">
+<p class="tit"><span class="tihao">11.</span><span class="timu">多久清理一次垃圾文件？</span></p>
+<div class="zitu"><img src="images/11.png" class="img" /></div>
+<ul>
+<li><div class="input" value="3"></div>A.每天一次或以上</li>
+<li><div class="input" value="2"></div>B.每星期一次左右</li>
+<li><div class="input" value="1"></div>C.我的手机已经存满了，请问怎么清理</li>
+</ul>
+</div>
+<div class="shiti s12">
+<p class="tit"><span class="tihao">12.</span><span class="timu">用耳机听歌的时候一定要分清左右耳？</span></p>
+<div class="zitu"><img src="images/12.png" class="img" /></div>
+<ul>
+<li><div class="input" value="3"></div>A.是的</li>
+<li><div class="input" value="2"></div>B.偶尔会纠结下这个啦</li>
+<li><div class="input" value="1"></div>C.额，原来耳机分左右耳的？</li>
+</ul>
+</div>
+<div class="shiti s13">
+<p class="tit"><span class="tihao">13.</span><span class="timu">看到以下图片的反应是?</span></p>
+<div class="zitu"><img src="images/13.png" class="img" /></div>
+<ul>
+<li><div class="input" value="3"></div>A.点！</li>
+<li><div class="input" value="2"></div>B.忍住不点...</li>
+<li><div class="input" value="1"></div>C.这不就一图标吗能有什么反应？</li>
+</ul>
+</div>
+<div class="shiti s14">
+<p class="tit"><span class="tihao">14.</span><span class="timu">看到以下图片的反应是?</span></p>
+<div class="zitu"><img src="images/14.png" class="img" /></div>
+<ul>
+<li><div class="input" value="3"></div>A.你TM就不能把最后一个也放整齐吗！</li>
+<li><div class="input" value="2"></div>B.总感觉有什么不对的样子</li>
+<li><div class="input" value="1"></div>C.不就一堆图标<img src="images/wa.gif" /></li>
+</ul>
+</div>
+<div class="shiti s15">
+<p class="tit"><span class="tihao">15.</span><span class="timu">看到以下图片的反应是：</span></p>
+<div class="zitu"><img src="images/15.gif" class="img" /></div>
+<ul>
+<li><div class="input" value="3"></div>A.刷新刷新刷新刷新刷新</li>
+<li><div class="input" value="2"></div>B.刷新刷新</li>
+<li><div class="input" value="1"></div>C.妈的，劳资不看了</li>
+</ul>
+</div>
+<div class="shiti s16">
+<p class="tit"><span class="tihao">16.</span><span class="timu">被以下微信头像愚弄后的反应是？</span></p>
+<div class="zitu"><img src="images/16.png" class="img" /></div>
+<ul>
+<li><div class="input" value="3"></div>A.麻痹<img src="images/huo.gif" /></li>
+<li><div class="input" value="2"></div>B.额，被骗了</li>
+<li><div class="input" value="1"></div>C.呵呵，还挺有趣的</li>
+</ul>
+</div>
+</div>
+<div class="scroll" style="display: block;">
+</div>
+</div>
+<div class="share">
+<img src="images/share.png" class="img" />
+</div>
+<div class="no_click">
+<img src="images/no_click.png" class="img" />
+</div>
+<div class="again"><img src="images/again.png" class="img" /></div>
+<div class="result"><img src="images/result.png" class="img" /></div>
+<div class="left_btn"><img src="images/left_btn.png" class="img" /></div>
+<div class="right_btn"><img src="images/right_btn.png" class="img" /></div>
+</div>
+<div id="weixin-shade"></div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/layout.js"></script>
+
+
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/sjqbz/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/sjqbz/icon.png'
+}
+window.shareFriendData={
+  'title':'手机强迫症测试',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/sjqbz/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/sjqbz/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+</body>
+</html>

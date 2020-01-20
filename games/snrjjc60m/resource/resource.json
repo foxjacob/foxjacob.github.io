@@ -1,0 +1,13 @@
+{
+"resources":
+	[
+		{"name":"man","type":"image","url":"assets/man.png"},
+		{"name":"btn","type":"image","url":"assets/btn.png"},
+		{"name":"wx","type":"image","url":"assets/wx.png"}
+	],
+
+"groups":
+	[
+        {"name":"preload","keys":"man,btn,wx"}
+	]
+}

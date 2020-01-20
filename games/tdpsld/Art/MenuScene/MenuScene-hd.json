@@ -1,0 +1,268 @@
+{"frames": {
+
+"MenuScene_AvisoTienda.png":
+{
+	"frame": {"x":2,"y":2,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":62},
+	"sourceSize": {"w":62,"h":62}
+},
+"MenuScene_BotonTienda.png":
+{
+	"frame": {"x":2,"y":280,"w":156,"h":156},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":156},
+	"sourceSize": {"w":156,"h":156}
+},
+"MenuScene_Credits.png":
+{
+	"frame": {"x":266,"y":124,"w":134,"h":134},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":134,"h":134},
+	"sourceSize": {"w":134,"h":134}
+},
+"MenuScene_CreditsHold.png":
+{
+	"frame": {"x":538,"y":124,"w":134,"h":134},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":134,"h":134},
+	"sourceSize": {"w":134,"h":134}
+},
+"MenuScene_CreditsInfo.png":
+{
+	"frame": {"x":712,"y":484,"w":602,"h":496},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":602,"h":496},
+	"sourceSize": {"w":602,"h":496}
+},
+"MenuScene_DestelloTienda.png":
+{
+	"frame": {"x":160,"y":280,"w":156,"h":156},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":156},
+	"sourceSize": {"w":156,"h":156}
+},
+"MenuScene_LogoGrenades.png":
+{
+	"frame": {"x":66,"y":2,"w":326,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":326,"h":80},
+	"sourceSize": {"w":326,"h":80}
+},
+"MenuScene_Play.png":
+{
+	"frame": {"x":524,"y":280,"w":214,"h":158},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":214,"h":158},
+	"sourceSize": {"w":214,"h":158}
+},
+"MenuScene_PlayHold.png":
+{
+	"frame": {"x":740,"y":280,"w":214,"h":158},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":214,"h":158},
+	"sourceSize": {"w":214,"h":158}
+},
+"MenuScene_Sound.png":
+{
+	"frame": {"x":674,"y":124,"w":134,"h":134},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":134,"h":134},
+	"sourceSize": {"w":134,"h":134}
+},
+"MenuScene_SoundOff.png":
+{
+	"frame": {"x":402,"y":124,"w":134,"h":134},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":134,"h":134},
+	"sourceSize": {"w":134,"h":134}
+},
+"Tienda_Back.png":
+{
+	"frame": {"x":1126,"y":124,"w":140,"h":140},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":140},
+	"sourceSize": {"w":140,"h":140}
+},
+"Tienda_BotonHome.png":
+{
+	"frame": {"x":810,"y":124,"w":156,"h":136},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":136},
+	"sourceSize": {"w":156,"h":136}
+},
+"Tienda_BotonHomeHold.png":
+{
+	"frame": {"x":968,"y":124,"w":156,"h":136},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":156,"h":136},
+	"sourceSize": {"w":156,"h":136}
+},
+"Tienda_Caparazon.png":
+{
+	"frame": {"x":1219,"y":2,"w":148,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":148,"h":116},
+	"sourceSize": {"w":148,"h":116}
+},
+"Tienda_Cuadro.png":
+{
+	"frame": {"x":306,"y":484,"w":404,"h":372},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":404,"h":372},
+	"sourceSize": {"w":404,"h":372}
+},
+"Tienda_Gallina.png":
+{
+	"frame": {"x":318,"y":280,"w":204,"h":156},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":204,"h":156},
+	"sourceSize": {"w":204,"h":156}
+},
+"Tienda_GenkyGama.png":
+{
+	"frame": {"x":2,"y":484,"w":206,"h":206},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":206,"h":206},
+	"sourceSize": {"w":206,"h":206}
+},
+"Tienda_Granada.png":
+{
+	"frame": {"x":956,"y":280,"w":128,"h":158},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":158},
+	"sourceSize": {"w":128,"h":158}
+},
+"Tienda_JustinBiebear.png":
+{
+	"frame": {"x":1086,"y":280,"w":112,"h":160},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":112,"h":160},
+	"sourceSize": {"w":112,"h":160}
+},
+"Tienda_JustinBiebear2.png":
+{
+	"frame": {"x":1288,"y":280,"w":150,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":200},
+	"sourceSize": {"w":150,"h":200}
+},
+"Tienda_KawaiBanana.png":
+{
+	"frame": {"x":1200,"y":280,"w":86,"h":190},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":86,"h":190},
+	"sourceSize": {"w":86,"h":190}
+},
+"Tienda_MolotovCola.png":
+{
+	"frame": {"x":1440,"y":280,"w":70,"h":202},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":202},
+	"sourceSize": {"w":70,"h":202}
+},
+"Tienda_Next.png":
+{
+	"frame": {"x":1268,"y":124,"w":140,"h":140},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":140,"h":140},
+	"sourceSize": {"w":140,"h":140}
+},
+"Tienda_PimpedGrenade.png":
+{
+	"frame": {"x":1410,"y":124,"w":118,"h":154},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":154},
+	"sourceSize": {"w":118,"h":154}
+},
+"Tienda_Poo.png":
+{
+	"frame": {"x":2,"y":124,"w":128,"h":130},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":130},
+	"sourceSize": {"w":128,"h":130}
+},
+"Tienda_Select.png":
+{
+	"frame": {"x":959,"y":2,"w":258,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":258,"h":110},
+	"sourceSize": {"w":258,"h":110}
+},
+"Tienda_Selected.png":
+{
+	"frame": {"x":699,"y":2,"w":258,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":258,"h":110},
+	"sourceSize": {"w":258,"h":110}
+},
+"Tienda_Unlock.png":
+{
+	"frame": {"x":394,"y":2,"w":303,"h":105},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":303,"h":105},
+	"sourceSize": {"w":303,"h":105}
+},
+"Tienda_Wokia.png":
+{
+	"frame": {"x":210,"y":484,"w":94,"h":212},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":212},
+	"sourceSize": {"w":94,"h":212}
+},
+"Tienda_ZombieBall.png":
+{
+	"frame": {"x":132,"y":124,"w":132,"h":132},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":132,"h":132},
+	"sourceSize": {"w":132,"h":132}
+},
+"Tienda_ZombieBird.png":
+{
+	"frame": {"x":1369,"y":2,"w":158,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":158,"h":120},
+	"sourceSize": {"w":158,"h":120}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "MenuScene-hd.png",
+	"format": "RGBA5555",
+	"size": {"w":1530,"h":982},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:0ba0a7fc5dc4145960372977d89a2608:d182e28cb10e946fd1a2e55a4fd3b668:8a53ed635b667540845cadf145059e9e$"
+}
+}

@@ -1,0 +1,603 @@
+﻿html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #E1F5FC;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Microsoft YaHei',SimHei;
+}
+
+body {
+    background-image: url(../content/images/background.jpg);
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-size: cover;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+}
+
+input {
+    outline: none;
+}
+
+a, button, div {
+    outline: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-appearance: none;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+div, span {
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+}
+
+canvas {
+    -webkit-transform: translateZ(0);
+}
+
+#leftController {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    z-index: 999;
+    display: none;
+}
+
+#rightController {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    z-index: 999;
+    display: none;
+}
+
+    #leftController div, #rightController div {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        animation: tipsImageAnimation 5s;
+        -moz-animation: tipsImageAnimation 5s; /* Firefox */
+        -webkit-animation: tipsImageAnimation 5s; /* Safari 和 Chrome */
+        -o-animation: tipsImageAnimation 5s; /* Opera */
+    }
+
+#leftController div {
+    background-image: url(../content/images/arrowLeft.png);
+}
+
+#rightController div {
+    background-image: url(../content/images/arrowRight.png);
+}
+
+@keyframes tipsImageAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+@-moz-keyframes tipsImageAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+@-webkit-keyframes tipsImageAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+#playingScreen {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 640px;
+    height: 100px;
+    display: none;
+    z-index: 100;
+}
+
+#score {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    text-align: right;
+    padding-right: 5px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: -2px 0px 5px #4f5e63,2px 0px 5px #4f5e63,0px -2px 5px #4f5e63,0px 4px 5px #4f5e63;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+}
+
+#startScreen {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 640px;
+    height: 1136px;
+    display: none;
+}
+
+    #startScreen .title {
+        position: absolute;
+        left: -79px;
+        top: 70px;
+        width: 799px;
+        height: 199px;
+        background-image: url(../content/images/title.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    #startScreen .loading {
+        position: absolute;
+        left: 0px;
+        top: 590px;
+        width: 640px;
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: -2px 0px 5px #4f5e63,2px 0px 5px #4f5e63,0px -2px 5px #4f5e63,0px 4px 5px #4f5e63;
+    }
+
+    #startScreen .tips {
+        position: absolute;
+        width: 340px;
+        height: 35px;
+        left: 151px;
+        top: 343px;
+        background-image: url(../content/images/startTips.png);
+        background-repeat: no-repeat;
+        display: none;
+    }
+
+    #startScreen .face {
+        position: absolute;
+        width: 146px;
+        height: 148px;
+        background-image: url(../content/images/faces.png);
+        background-repeat: no-repeat;
+        border: solid 6px #fff;
+        border-radius: 50%;
+        box-shadow: 1px 1px 5px #aaa;
+        cursor: pointer;
+        display: none;
+    }
+
+        #startScreen .face .name {
+            position: absolute;
+            width: 93px;
+            height: 34px;
+            background-image: url(../content/images/faces.png);
+            background-repeat: no-repeat;
+            background-position: 0px -178px;
+            top: 178px;
+            display: none;
+        }
+
+    #startScreen .face1 {
+        left: 49px;
+        top: 438px;
+        background-position: 0px 0px;
+        border-color: #88d436;
+    }
+
+        #startScreen .face1 .name {
+            left: 25px;
+            background-position: -22px -178px;
+        }
+
+    #startScreen .face2 {
+        left: 245px;
+        top: 438px;
+        background-position: -191px 0px;
+    }
+
+        #startScreen .face2 .name {
+            left: 25px;
+            background-position: -220px -178px;
+        }
+
+    #startScreen .face3 {
+        left: 439px;
+        top: 438px;
+        background-position: -381px 0px;
+    }
+
+        #startScreen .face3 .name {
+            left: 25px;
+            background-position: -406px -178px;
+        }
+
+    #startScreen .btnStart {
+        position: absolute;
+        left: 144px;
+        top: 790px;
+        width: 345px;
+        height: 111px;
+        background-image: url(../content/images/btnStart.png);
+        background-repeat: no-repeat;
+        cursor: pointer;
+        display: none;
+    }
+
+    #startScreen .btnRanklist {
+        position: absolute;
+        left: 144px;
+        top: 920px;
+        width: 345px;
+        height: 111px;
+        background-image: url(../content/images/btnRanklist.png);
+        background-repeat: no-repeat;
+        cursor: pointer;
+        display: none;
+    }
+
+    #startScreen .copyright {
+        position: absolute;
+        width: 561px;
+        height: 232px;
+        left: 40px;
+        bottom: 130px;
+       
+        background-repeat: no-repeat;
+        z-index: 1000;
+    }
+
+        #startScreen .copyright a {
+            position: absolute;
+            width: 140px;
+            height: 55px;
+            display: block;
+            z-index: 1000;
+            background-color: rgba(0,0,0,0);
+        }
+
+        #startScreen .copyright .linkMiaopai {
+            bottom: 0px;
+            left: 115px;
+        }
+
+        #startScreen .copyright .linkHuowu {
+            bottom: 0px;
+            left: 400px;
+        }
+
+    #startScreen .copyright1 {
+        display: none;
+        font-size: 24px;
+        color: #fff;
+        right: 0px;
+        bottom: 10px;
+        position: absolute;
+        text-align: right;
+        text-shadow: 0px 0px 15px #000;
+    }
+
+#ranklistScreen {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 640px;
+    height: 1136px;
+    display: none;
+}
+
+    #ranklistScreen .background {
+        position: absolute;
+        left: 25px;
+        top: 139px;
+        width: 587px;
+        height: 775px;
+        background-image: url(../content/images/ranklistBg.png);
+        background-repeat: no-repeat;
+    }
+
+        #ranklistScreen .background #ranklistFrame {
+            position: absolute;
+            left: 45px;
+            top: 111px;
+            width: 500px;
+            height: 605px;
+            overflow: hidden;
+        }
+
+    #ranklistScreen .btnStart1 {
+        position: absolute;
+        left: 60px;
+        top: 864px;
+        width: 292px;
+        height: 97px;
+        background-image: url(../content/images/btnStart1.png);
+        background-repeat: no-repeat;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    #ranklistScreen .btnAward {
+        position: absolute;
+        left: 368px;
+        top: 864px;
+        width: 213px;
+        height: 101px;
+        
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+#ranklist li {
+    position: relative;
+    background-image: url(../content/images/ranklistElement.png);
+    background-repeat: no-repeat;
+    left: 9px;
+    width: 485px;
+    height: 116px;
+}
+
+    #ranklist li .number {
+        position: absolute;
+        left: 20px;
+        top: 25px;
+        width: 65px;
+        height: 65px;
+        background-image: url(../content/images/ranklistElement.png);
+        line-height: 55px;
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+    }
+
+    #ranklist li .name {
+        position: absolute;
+        left: 100px;
+        top: 20px;
+        font-size: 26px;
+        color: #fff;
+        text-shadow: 0px 1px 3px #3c240a,-3px 0px 3px #3c240a,3px 0px 3px #3c240a;
+    }
+
+    #ranklist li .score {
+        position: absolute;
+        left: 100px;
+        top: 55px;
+        font-size: 26px;
+        color: #fff;
+        text-shadow: 0px 1px 3px #3c240a,-3px 0px 3px #3c240a,3px 0px 3px #3c240a;
+    }
+
+#gameOverScreen {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 640px;
+    height: 1136px;
+    display: none;
+}
+
+    #gameOverScreen .title {
+        position: absolute;
+        left: 181px;
+        top: 210px;
+        width: 277px;
+        height: 43px;
+        background-image: url(../content/images/gameOverTitle.png);
+        background-repeat: no-repeat;
+    }
+
+    #gameOverScreen .background {
+        position: absolute;
+        left: 91px;
+        top: 309px;
+        width: 438px;
+        height: 229px;
+        background-image: url(../content/images/gameOverBg.png);
+        background-repeat: no-repeat;
+        text-align: center;
+        padding-top: 50px;
+        font-weight: bold;
+        color: #fff;
+        font-size: 25px;
+        text-shadow: -2px 0px 5px #686456,2px 0px 5px #686456,0px -2px 5px #686456,0px 4px 5px #686456;
+    }
+
+        #gameOverScreen .background .text {
+            color: #ffe556;
+            vertical-align: middle;
+            text-shadow: -2px 0px 5px rgba(200,69,11,1),2px 0px 5px rgba(200,69,11,1),0px -2px 5px rgba(200,69,11,1),0px 4px 5px rgba(200,69,11,1);
+        }
+
+        #gameOverScreen .background .subTitle {
+            display: inline-block;
+            width: 231px;
+            height: 44px;
+            background-image: url(../content/images/gameOverSubTitle.png);
+            background-repeat: no-repeat;
+            vertical-align: middle;
+        }
+
+        #gameOverScreen .background .content {
+            position: absolute;
+            left: 50px;
+            top: 120px;
+            width: 370px;
+            height: 110px;
+            text-align: left;
+            line-height: 36px;
+            letter-spacing: 3px;
+        }
+
+    #gameOverScreen .button {
+        position: absolute;
+        width: 150px;
+        height: 154px;
+        background-image: url(../content/images/btnGameOver.png);
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    #gameOverScreen .btnContinue {
+        left: 75px;
+        top: 627px;
+        background-position: 0px 0px;
+    }
+
+    #gameOverScreen .btnShare {
+        left: 246px;
+        top: 627px;
+        background-position: -171px 0px;
+    }
+
+    #gameOverScreen .btnAward {
+        left: 415px;
+        top: 627px;
+        background-position: -340px 0px;
+    }
+
+    #gameOverScreen .banner {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 640px;
+        height: 100px;
+     
+        z-index: 1000;
+    }
+
+        #gameOverScreen .banner a {
+            position: absolute;
+            display: block;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background-color: rgba(0,0,0,0);
+        }
+
+#ruleScreen {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 640px;
+    height: 1136px;
+    display: none;
+    z-index: 1000;
+}
+
+    #ruleScreen .background {
+        position: absolute;
+        left: 27px;
+        top: 170px;
+        width: 587px;
+        height: 535px;
+       
+        background-repeat: no-repeat;
+    }
+
+    #ruleScreen #txtTelphone {
+        position: absolute;
+        left: 71px;
+        top: 520px;
+        width: 355px;
+        height: 61px;
+        background-color: rgba(0,0,0,0);
+        background-image: url(../content/images/ruleElement.png);
+        background-repeat: no-repeat;
+        background-position: 0px -2px;
+        color: #fff;
+        border: 0px;
+        font-size: 34px;
+        padding-left: 25px;
+        z-index: 999;
+    }
+
+    #ruleScreen .btnOk {
+        position: absolute;
+        left: 455px;
+        top: 520px;
+        width: 122px;
+        height: 69px;
+        background-image: url(../content/images/ruleElement.png);
+        background-repeat: no-repeat;
+        background-position: -379px 0px;
+        cursor: pointer;
+    }
+
+    #ruleScreen .btnShare {
+        position: absolute;
+        left: 151px;
+        top: 643px;
+        width: 345px;
+        height: 111px;
+        background-image: url(../content/images/ruleElement.png);
+        background-repeat: no-repeat;
+        background-position: -16px -79px;
+        cursor: pointer;
+    }
+
+    #ruleScreen .btnBack {
+        position: absolute;
+        left: 151px;
+        top: 761px;
+        width: 345px;
+        height: 111px;
+        background-image: url(../content/images/ruleElement.png);
+        background-repeat: no-repeat;
+        background-position: -16px -201px;
+        cursor: pointer;
+    }

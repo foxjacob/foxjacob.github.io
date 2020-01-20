@@ -1,0 +1,100 @@
+{"frames": {
+
+"BearTank_BrazoDer.png":
+{
+	"frame": {"x":63,"y":28,"w":40,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":30},
+	"sourceSize": {"w":40,"h":30}
+},
+"BearTank_BrazoIzq.png":
+{
+	"frame": {"x":22,"y":28,"w":39,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":30},
+	"sourceSize": {"w":39,"h":30}
+},
+"BearTank_Cabeza.png":
+{
+	"frame": {"x":2,"y":197,"w":100,"h":95},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":95},
+	"sourceSize": {"w":100,"h":95}
+},
+"BearTank_Cuerpo.png":
+{
+	"frame": {"x":2,"y":142,"w":91,"h":53},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":53},
+	"sourceSize": {"w":91,"h":53}
+},
+"BearTank_OrejaDer.png":
+{
+	"frame": {"x":43,"y":99,"w":39,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":41},
+	"sourceSize": {"w":39,"h":41}
+},
+"BearTank_OrejaIzq.png":
+{
+	"frame": {"x":2,"y":99,"w":39,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":41},
+	"sourceSize": {"w":39,"h":41}
+},
+"BearTank_PieDer.png":
+{
+	"frame": {"x":2,"y":2,"w":31,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":17},
+	"sourceSize": {"w":31,"h":17}
+},
+"BearTank_PieIzq.png":
+{
+	"frame": {"x":35,"y":2,"w":31,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":17},
+	"sourceSize": {"w":31,"h":17}
+},
+"BearTank_PiernaDer.png":
+{
+	"frame": {"x":68,"y":2,"w":18,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":24},
+	"sourceSize": {"w":18,"h":24}
+},
+"BearTank_PiernaIzq.png":
+{
+	"frame": {"x":2,"y":28,"w":18,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":24},
+	"sourceSize": {"w":18,"h":24}
+},
+"BearTank_Sombra.png":
+{
+	"frame": {"x":2,"y":60,"w":93,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":37},
+	"sourceSize": {"w":93,"h":37}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "BearTank-hd.png",
+	"format": "RGBA5555",
+	"size": {"w":105,"h":294},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:aef033abdd8cba0738ef85592cdb1af9:e1eea927b93b3677d4c479c3717dc8f4:8268b656912bb03337262bc321a22946$"
+}
+}

@@ -1,0 +1,32 @@
+{
+"resources":
+	[
+		{"name":"bgImage","type":"image","url":"assets/map.png"},
+        {"name":"enemy1Pixel","type":"image","url":"assets/enemy1.png"},
+        {"name":"enemy2Pixel","type":"image","url":"assets/enemy2.png"},
+        {"name":"enemy3Pixel","type":"image","url":"assets/enemy3.png"},
+        {"name":"enemy4Pixel","type":"image","url":"assets/enemy4.png"},
+        {"name":"enemy5Pixel","type":"image","url":"assets/enemy5.png"},
+        {"name":"enemy6Pixel","type":"image","url":"assets/enemy6.png"},
+        {"name":"major.png","type":"image","url":"assets/major.png"},
+        {"name":"major.json","type":"json","url":"assets/major.json"},
+      {"name":"nameJson","type":"sheet","url":"assets/name.json"},
+      {"name":"namePng","type":"image","url":"assets/name.png"},
+      {"name":"uiJson","type":"sheet","url":"assets/ui.json"},
+      {"name":"uiPng","type":"image","url":"assets/ui.png"},
+      {"name":"num1Json","type":"sheet","url":"assets/num1.json"},
+      {"name":"num1Png","type":"image","url":"assets/num1.png"},
+      {"name":"num2Json","type":"sheet","url":"assets/num2.json"},
+      {"name":"num2Png","type":"image","url":"assets/num2.png"},
+        {"name":"description","type":"json","url":"config/description.json"}
+	],
+
+"groups":
+	[
+      {"name":"loading","keys":"bgImage"},
+      {"name":"num1","keys":"num1Json, num1Png"},
+      {"name":"num2","keys":"num2Json, num2Png"},
+        {"name":"preload",
+          "keys":"nameJson, namePng, enemy1Pixel, enemy2Pixel, enemy3Pixel, enemy4Pixel, enemy5Pixel,enemy6Pixel, major.png, major.json, uiJson, uiPng"}
+	]
+}

@@ -1,0 +1,19 @@
+{
+    "taskList":
+        [
+            {"tid":1,"icon":8,"name":"一夜七次郎","type":1,"jc":1,"targetS":"1000","target":1000,"time":20,"desc":"知道为啥全村娃都跟我一个姓？因为我就是传说中的----老村长！"},
+            {"tid":1,"icon":4,"name":"XX小能手","type":1,"jc":1,"targetS":"1W","target":10000,"time":25,"desc":"俺们乡可是个大乡哦！\n欧哈哈哈！"},
+            {"tid":2,"icon":6,"name":"多过及爽","type":1,"jc":1,"targetS":"10W","target":100000,"time":40,"desc":"表要看不起县长，\n再小也是官"},
+            {"tid":3,"icon":10,"name":"蛇精病","type":1,"jc":1,"targetS":"500W","target":5000000,"time":60,"desc":"小小的乡村怎能挡住我前进的脚步？农村又一次包围城市啦~"},
+            {"tid":4,"icon":5,"name":"称霸全球","type":1,"jc":1,"targetS":"2000w","target":30000000,"time":65,"desc":"真是子孙遍天下啊！\n~~~~"},
+            {"tid":5,"icon":11,"name":"称霸全球","type":1,"jc":1,"targetS":"4000w","target":40000000,"time":70,"desc":"国王驾到！\n都来向国王朝拜吧！"},
+            {"tid":5,"icon":11,"name":"称霸全球","type":1,"jc":1,"targetS":"1E","target":100000000,"time":90,"desc":"奔向世界！\n我要制霸全球，成为世界之王！"},
+            {"tid":5,"icon":11,"name":"称霸全球","type":1,"jc":1,"targetS":"2E","target":200000000,"time":90,"desc":"只能对你说牛逼!"},
+            {"tid":5,"icon":11,"name":"称霸全球","type":1,"jc":1,"targetS":"3E","target":300000000,"time":90,"desc":"牛逼!"},
+            {"tid":5,"icon":11,"name":"称霸全球","type":1,"jc":1,"targetS":"4E","target":400000000,"time":90,"desc":"牛!"},
+            {"tid":5,"icon":11,"name":"称霸全球","type":1,"jc":1.1,"targetS":"10E","target":100000000,"time":90,"desc":"牛！牛！牛!"}
+
+        ],
+    "fxjs":0.1
+}
+ 

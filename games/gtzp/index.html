@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="MobileOptimized" content="320">
+<meta name="apple-touch-fullscreen" content="YES">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>龟兔再跑</title>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/main.css?v=0.55" rel="stylesheet">
+<link href="css/webBox.css" rel="stylesheet">
+<link href="css/msgBox.css" rel="stylesheet">
+<link href="css/media.css" rel="stylesheet">
+
+</head>
+
+<body>
+<script>
+function GetParam(e){//通过名称获取url传值方法
+	/*
+	 *e:key名字
+	*/
+	var url = document.location.href;
+	var name="";
+	e+='=';
+
+	if (url.indexOf(e)>0){
+		 name = url.substring(url.indexOf(e)+e.length,url.length);
+	}
+	
+	if(name.indexOf('&')>0){
+		name = name.substring(0,name.indexOf('&'));
+	}
+	return name;
+}
+
+if(!GetParam('restart')){
+	var bodyObj = document.body;//页面body节点对象
+	var loadingBox = document.createElement("div");//Loading对象
+	bodyObj.appendChild(loadingBox);//新建的对象加入页面
+	loadingBox.innerHTML='<div class="rabbitLoading" id="loadingId"><div class="rabbitLoad"><img src="logo.png" ><div class="progressbar"><div class="progressing" id="progressingId"></div></div></div></div>';
+	loadingBox.id="loadingBox_by_gzy";
+	
+	var loadPre=0;
+	
+	var loadTimer;
+	
+	setProgress();
+}
+	
+function setProgress(){
+	
+	var rnd=Math.ceil(Math.random()*10)+5;
+	
+	loadPre+=rnd;
+	
+	if(loadPre>90){
+		loadPre=90;
+	}
+	
+	document.getElementById('progressingId').style.width=loadPre+'%';
+	
+	if(loadPre<90){
+		loadTimer=setTimeout(function(){
+			setProgress();
+		},3000);
+	}
+	
+}
+
+</script>
+
+<div class="main" id="mainId" style="height: 504px; -webkit-transform: scale(0.952380952380952, 0.952380952380952); transform: scale(0.952380952380952, 0.952380952380952);">
+
+	<div class="sence sence0" id="sence0Id" style="display: block; opacity: 1; z-index: 1;">
+    
+    </div>
+
+	<div class="sence sence1" id="sence1Id">
+        
+        <div class="rabbitFront">
+        	<img src="images/rabbit1.png">
+            <div class="rabbitHand">
+            <!--<img src="images/hand1.png" id="rabbitHandId" />-->
+            </div>
+        </div>
+        
+        <div class="jumpLineCtxBox" id="jumpLineCtxBoxId" style="width: 320px; height: 504px;">
+
+            <div class="jumpLineImg">
+            	<img src="images/line0.png" id="line0Id" style="z-index:5;">
+                <img src="images/line1.png" id="line1Id" style="z-index:5;">
+                <img src="images/line2.png" id="line2Id" style="z-index:5;">
+                <img src="images/line3.png" id="line3Id" style="z-index:5;">
+                <img src="images/line4.png" id="line4Id" style="z-index:5;">
+                <img src="images/line5.png" id="line5Id">
+                <img src="images/line6.png" id="line6Id">
+                <img src="images/line7.png" id="line7Id">
+                <img src="images/line8.png" id="line8Id">
+                <img src="images/line9.png" id="line9Id">
+                <img src="images/line10.png" id="line10Id">
+                <img src="images/line11.png" id="line11Id">
+                <img src="images/line12.png" id="line12Id">
+                <img src="images/line13.png" id="line13Id">
+                <img src="images/line14.png" id="line14Id">
+                <img src="images/line15.png" id="line15Id" style="z-index:5;">
+                <img src="images/line16.png" id="line16Id" style="z-index:5;">
+                <img src="images/line17.png" id="line17Id" style="z-index:5;">
+                <img src="images/line18.png" id="line18Id" style="z-index:5;">
+                <img src="images/line19.png" id="line19Id" style="z-index:5;">
+            </div>
+            
+        </div>
+        
+        <div class="rabbitBack">
+            <img src="images/rabbit2.png">
+        </div>
+        
+        <div class="tortoiseBox" id="tortoiseBoxId">
+        	<div class="tortoise1" id="tortoise1Id" style="display: none;">
+            	<img src="images/tortoise_f1.png" id="tortoise1_loseId">
+                <img src="images/tortoise_n1.png" id="torroise1_waitId">
+                <img src="images/tortoise_n1.png" id="torroise1_walk1Id">
+                <img src="images/tortoise_w1.png" id="torroise1_walk2Id">
+                <img src="images/tortoise_up1.png" id="torroise1_jumpId">
+            </div>
+            
+            <div class="tortoise2" id="tortoise2Id" style="display: none;">
+            	<img src="images/tortoise_f2.png" id="tortoise2_loseId">
+                <img src="images/tortoise_n2.png" id="torroise2_waitId">
+                <img src="images/tortoise_n2.png" id="torroise2_walk1Id">
+                <img src="images/tortoise_w2.png" id="torroise2_walk2Id">
+                <img src="images/tortoise_up2.png" id="torroise2_jumpId">
+            </div>
+            
+            <div class="tortoise3" id="tortoise3Id" style="display: none;">
+            	<img src="images/tortoise_f3.png" id="tortoise3_loseId">
+                <img src="images/tortoise_n3.png" id="torroise3_waitId">
+                <img src="images/tortoise_n3.png" id="torroise3_walk1Id">
+                <img src="images/tortoise_w3.png" id="torroise3_walk2Id">
+                <img src="images/tortoise_up3.png" id="torroise3_jumpId">
+            </div>
+            
+            <div class="tortoise4" id="tortoise4Id" style="display: none;">
+            	<img src="images/tortoise_f4.png" id="tortoise4_loseId">
+                <img src="images/tortoise_n4.png" id="torroise4_waitId">
+                <img src="images/tortoise_n4.png" id="torroise4_walk1Id">
+                <img src="images/tortoise_w4.png" id="torroise4_walk2Id">
+                <img src="images/tortoise_up4.png" id="torroise4_jumpId">
+            </div>
+        </div>
+        <div class="scoreBox" id="scoreBoxId">
+        	<img src="images/0.png">
+            <img src="images/1.png" class="display_no">
+            <img src="images/2.png" class="display_no">
+            <img src="images/3.png" class="display_no">
+            <img src="images/4.png" class="display_no">
+            <img src="images/5.png" class="display_no">
+            <img src="images/6.png" class="display_no">
+            <img src="images/7.png" class="display_no">
+            <img src="images/8.png" class="display_no">
+            <img src="images/9.png" class="display_no">
+        </div>
+        <!--文字提示-->
+        <div class="bannerText">
+        	<div class="text">
+	            点击手机控制乌龟跳绳
+            </div>
+        </div>        
+        <div class="ctrlBox" id="ctrlBoxId">
+        </div>        
+    </div>
+    
+    <div class="sence sence2" id="sence2Id" style="opacity: 0; display: none; z-index: -1;">
+    
+    	<div class="gameEndBox">
+        	<img src="images/end.png">
+        </div>
+    	<div class="mark"><span id="markId">
+        	<img src="images/0.png">
+        </span></div>
+        
+        <div class="btn restartBtn" id="restartBtnId">
+        	<img src="images/btn_1.png">
+        </div>
+        
+        
+        <div class="btn shareBtn" id="shareBtnId">
+			<img src="images/btn_2.png">
+        </div>
+        
+        <div class="btn paihangBtn" id="paihangBtnId">
+			<img src="images/btn_3.png">
+        </div>
+    </div>
+    
+    
+</div>
+
+<script src="js/command.js"></script>
+<script src="js/main.js"></script>
+<!-- /*<script language=javascript>
+/*        var game9g = new Game9G("gtzp");
+        game9g.shareData.title = "龟兔再跑-9G游戏";
+        game9g.shareData.content = "最难的游戏！你最多能跳几下？-9G游戏";*/
+
+		function goHome(){
+			// window.location=game9g.homeurl;
+		}
+		function clickMore(){
+			 // window.location=game9g.moreurl;
+			 Play68.goHome();
+		}
+		function dp_share(){
+			// game9g.share();
+		}
+	/*	function dp_Ranking(){
+			window.location=game9g.homeurl;
+		}*/
+		function dp_submitScore(score){
+			/*if(score>0){
+				game9g.score =parseInt(score);
+				game9g.scoreName = "跳过"+score+"次";
+				game9g.shareData.title ="我在龟兔再跑成功跳过了 "+score+"次，快来试试看！-9G游戏";
+				game9g.utils.shareConfirm("你在龟兔再跑成功跳过了"+score+"次,通知一下小伙伴吧!",dp_share);
+			}*/
+		}
+</script>*/ -->
+</body></html>

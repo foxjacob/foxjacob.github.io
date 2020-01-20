@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+/*动画效果*/
+.my01{animation:my01 0.5s linear;-moz-animation:my01 0.5s linear;-o-animation:my01 0.5s linear;-webkit-animation:my01 0.5s linear;}
+@keyframes my01
+{
+	0%{top:-100%}
+	100%{ top:0}
+	}
+@-o-keyframes my01
+{
+	0%{top:-100%}
+	100%{ top:0}
+	}
+@-webkit-keyframes my01
+{
+	0%{top:-100%}
+	100%{ top:0}
+	}
+@-moz-keyframes my01
+{
+	0%{top:-100%}
+	100%{ top:0}
+	}
+
+.my02{animation:my02 0.5s linear;-moz-animation:my02 0.5s linear;-o-animation:my02 0.5s linear;-webkit-animation:my02 0.5s linear;}
+@keyframes my02
+{
+	
+	100%{ top:-100%}
+	}
+@-o-keyframes my02
+{
+	
+	100%{ top:-100%}
+	}
+@-webkit-keyframes my02
+{
+	
+	100%{ top:-100%}
+	}
+@-moz-keyframes my02
+{
+	
+	100%{ top:-100%}
+	}
+
+.suoxiao{animation:suoxiao 0.5s linear;-moz-animation:suoxiao 0.5s linear;-o-animation:suoxiao 0.5s linear;-webkit-animation:suoxiao 0.5s linear;}
+@keyframes suoxiao
+{
+	0%{transform:scale(2,2)}
+	100%{transform:scale(1,1)}
+	}
+@-o-keyframes suoxiao
+{
+	0%{-o-transform:scale(2,2)}
+	100%{ -o-transform:scale(1,1)}
+	}
+@-webkit-keyframes suoxiao
+{
+	0%{-webkit-transform:scale(2,2)}
+	100%{-webkit-transform:scale(1,1)}
+	}
+@-moz-keyframes suoxiao
+{
+	0%{-moz-transform:scale(2,2)}
+	100%{ -moz-transform:scale(1,1)}
+	}
+
+.fd{animation:fd 0.5s linear;-moz-animation:fd 0.5s linear;-o-animation:fd 0.5s linear;-webkit-animation:fd 0.5s linear;}
+@keyframes fd
+{
+	
+	100%{ transform:scale(2,2)}
+	}
+@-o-keyframes fd
+{
+	
+	100%{-o-transform:scale(2,2)}
+	}
+@-webkit-keyframes fd
+{
+	
+	100%{-webkit-transform:scale(2,2)}
+	}
+@-moz-keyframes fd
+{
+	
+	100%{-moz-transform:scale(2,2)}
+	}
+
+.xuan{animation:xuan 1s linear infinite;-moz-animation:xuan 1s linear infinite;-o-animation:xuan 1s linear infinite;-webkit-animation:xuan 1s linear infinite;}
+@keyframes xuan
+
+	
+	100%{transform:rotate(360deg)}
+	}
+@-o-keyframes xuan
+{
+	
+	100%{-o-transform:rotate(360deg)}
+	}
+@-webkit-keyframes xuan
+{
+	
+	100%{-webkit-transform:rotate(360deg)}
+	}
+@-moz-keyframes xuan
+{
+	
+	100%{-moz-transform:rotate(360deg)}
+	}

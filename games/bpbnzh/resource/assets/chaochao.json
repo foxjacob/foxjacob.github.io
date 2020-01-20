@@ -1,0 +1,27 @@
+{ "mc": {
+  "chaochao": {
+    "frameRate":120,
+    "labels": [
+    ],
+    "frames": [
+      {"res":"chaochao1","x":-83.5,"y":-96.5,"duration":30},
+      {"res":"chaochao2","x":-84.5,"y":-96,"duration":30}
+    ]
+  },
+  "chaochao_back": {
+    "frameRate":120,
+    "labels": [
+    ],
+    "frames": [
+      {"res":"chaochao3","x":-74,"y":-96,"duration":30},
+      {"res":"chaochao4","x":-74.5,"y":-96,"duration":30}
+    ]
+  }
+},
+  "res":{
+"chaochao4":{"x":170,"y":195,"w":149,"h":192,"offX":0,"offY":0,"sourceW":150,"sourceH":192},
+"chaochao1":{"x":1,"y":195,"w":167,"h":193,"offX":0,"offY":0,"sourceW":167,"sourceH":193},
+"chaochao2":{"x":1,"y":1,"w":169,"h":192,"offX":1,"offY":0,"sourceW":170,"sourceH":192},
+"chaochao3":{"x":321,"y":195,"w":148,"h":192,"offX":0,"offY":0,"sourceW":148,"sourceH":192}
+}
+}

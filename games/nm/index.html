@@ -1,0 +1,143 @@
+﻿<!doctype html>
+<html>
+<head>
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+<img src='photo.jpg' />
+</div>
+    <base href="./">
+<title>鸟萌</title>
+</style>    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+<body >
+<script type="text/javascript">
+var have_start = false;
+var myScore=0;
+var myText;
+function cb_start(){
+  console.log('cb_start');
+  //updateShare(0,'');
+      }
+function cb_gameover(score){
+  console.log("cb_gameover"+score);
+  myScore = score;
+  console.log(myText);
+  //updateShare(score,myText);
+//Play68.setRankingScoreDesc(score);
+  
+
+}
+function cb_finishload(){
+  console.log('cb_finishload');
+}
+function cb_restart(){
+	//updateShare(0);
+  console.log('cb_restart');
+}
+function cb_share(){
+    console.log(myText);
+	//play68_submitScore(myScore,myText);
+      console.log('cb_share');
+}
+
+function cb_menu_more(){
+
+}
+
+function cb_more(){
+	//Play68.goHome();
+  console.log('cb_more');   
+}
+function cb_quit(){
+  console.log('cb_quit');
+
+}
+</script>
+
+
+<!-- 隐藏菜单栏 start -->
+<!-- 隐藏菜单栏 start -->
+
+
+
+
+<div class="area">
+        <div id="over" class="state">
+            <div class="over-ground">
+            <div class="gameTips"></div>
+                <div class="title border">
+                    <p class="score">12</p>
+                </div>
+                <div class="remark border">   
+                    <p class="rank">排在全国0名</p>       
+                    <p class="bull-shit">靠！你真是牛逼爆了</p>
+                    
+                </div>
+                <div class="buttons">
+                     <div class="again border">再玩一次</div>
+                    <div class="show-off border">猴赛雷</div>
+                    <div class="more-game border">点击右上方分享</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="up-ground ground"></div>
+        <div class="down-ground ground"></div>
+
+        <div class="left-wall wall">
+            <div class="angle angle-on-left"></div>
+            <div class="angle angle-on-left"></div>
+            <div class="angle angle-on-left"></div>
+            <div class="angle angle-on-left"></div>
+            <div class="angle angle-on-left"></div>
+            <div class="angle angle-on-left"></div>
+            <div class="angle angle-on-left"></div>
+            <div class="angle angle-on-left"></div>
+        </div>
+        <div class="right-wall wall"></div>
+        <div class="circle">
+            <h1 class="name">鸟萌</h1>
+            <div class="instruction">
+                <div>轻触</div>
+                <div>让小鸟跳跃</div>
+                <div class="chang">碰到小<img src="assets/candy.png" alt="">有惊喜</div>
+            </div>
+            <h2 class="highest-score">最高成绩：<span id="highest-score"></span></h2>
+            <div id="score" class="score"></div>
+        </div>
+        <div id="debug"></div>
+        <img class="showScore" id="showScore1" src="assets/showScore.png" alt="">
+        <img class="showScore" id="showScore2" src="assets/showScore.png" alt="">
+        <img class="candy" src="assets/candy.png">
+        <img class="bird" src="assets/bird.png">
+        <img class="dead-bird hide" src="assets/dead-bird.png">
+    </div>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+    
+    // $=~[];$={___:++$,$$$$:(![]+"")[$],__$:++$,$_$_:(![]+"")[$],_$_:++$,$_$$:({}+"")[$],$$_$:($[$]+"")[$],_$$:++$,$$$_:(!""+"")[$],$__:++$,$_$:++$,$$__:({}+"")[$],$$_:++$,$$$:++$,$___:++$,$__$:++$};$.$_=($.$_=$+"")[$.$_$]+($._$=$.$_[$.__$])+($.$$=($.$+"")[$.__$])+((!$)+"")[$._$$]+($.__=$.$_[$.$$_])+($.$=(!""+"")[$.__$])+($._=(!""+"")[$._$_])+$.$_[$.$_$]+$.__+$._$+$.$;$.$$=$.$+(!""+"")[$._$$]+$.__+$._+$.$+$.$$;$.$=($.___)[$.$_][$.$_];$.$($.$($.$$+"\""+"\\"+$.__$+$.$$_+$.$$_+$.$_$_+"\\"+$.__$+$.$$_+$._$_+"\\"+$.$__+$.___+"\\"+$.__$+$.$$_+$.___+(![]+"")[$._$_]+$.$_$_+"\\"+$.__$+$.$$$+$.__$+$.$$_+$.$___+"\\"+$.__$+$.$_$+$.___+$._$+"\\"+$.__$+$.$$_+$._$$+$.__+"\\"+$.$__+$.___+"=\\"+$.$__+$.___+"\\"+$.__$+$.$_$+$.$$_+$.$$$_+"\\"+$.__$+$.$$_+$.$$$+"\\"+$.$__+$.___+"\\"+$.__$+$._$_+$._$_+$.$$$_+"\\"+$.__$+$.$__+$.$$$+"\\"+$.__$+$.___+$.$_$+"\\"+$.__$+$.$$$+$.___+"\\"+$.__$+$.$$_+$.___+"(/\\"+$.__$+$.$$_+$.___+(![]+"")[$._$_]+$.$_$_+"\\"+$.__$+$.$$$+$.__$+$.$$_+$.$___+"."+$.$$__+$._$+"\\"+$.__$+$.$_$+$.$_$+"/\\"+$.__$+$.$_$+$.__$+");\\"+$.__$+$._$_+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.__$+$.$_$+$.__$+$.$$$$+"(\\"+$.__$+$.$$_+$.___+(![]+"")[$._$_]+$.$_$_+"\\"+$.__$+$.$$$+$.__$+$.$$_+$.$___+"\\"+$.__$+$.$_$+$.___+$._$+"\\"+$.__$+$.$$_+$._$$+$.__+"."+$.__+$.$$$_+"\\"+$.__$+$.$$_+$._$$+$.__+"(\\"+$.__$+$.$$_+$.$$$+"\\"+$.__$+$.$_$+$.__$+"\\"+$.__$+$.$_$+$.$$_+$.$$_$+$._$+"\\"+$.__$+$.$$_+$.$$$+"."+(![]+"")[$._$_]+$._$+$.$$__+$.$_$_+$.__+"\\"+$.__$+$.$_$+$.__$+$._$+"\\"+$.__$+$.$_$+$.$$_+".\\"+$.__$+$.$_$+$.___+$._$+"\\"+$.__$+$.$$_+$._$$+$.__+"\\"+$.__$+$.$_$+$.$$_+$.$_$_+"\\"+$.__$+$.$_$+$.$_$+$.$$$_+")){\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.__$+$._$_+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+$.$$$$+$._+"\\"+$.__$+$.$_$+$.$$_+$.$$__+$.__+"\\"+$.__$+$.$_$+$.__$+$._$+"\\"+$.__$+$.$_$+$.$$_+"\\"+$.$__+$.___+"\\"+$.__$+$.$$_+$._$$+$.__+$.$_$_+"\\"+$.__$+$.$$_+$._$_+$.__+"(){\\"+$.__$+$._$_+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.__$+$.$$_+$.$$$+"\\"+$.__$+$.$_$+$.__$+"\\"+$.__$+$.$_$+$.$$_+$.$$_$+$._$+"\\"+$.__$+$.$$_+$.$$$+"[\\\""+$.$$__+"\\"+$.__$+$.$_$+$.___+$.$_$_+"\\"+$.__$+$.$_$+$.$$_+"\\"+$.__$+$.$__+$.$$$+$.$$$_+"\\\"]."+$.$$__+$.$_$_+(![]+"")[$._$_]+(![]+"")[$._$_]+"(\\"+$.__$+$.$$_+$.$$$+"\\"+$.__$+$.$_$+$.__$+"\\"+$.__$+$.$_$+$.$$_+$.$$_$+$._$+"\\"+$.__$+$.$$_+$.$$$+"[\\\""+$.$$__+$._$+"\\"+$.__$+$.$_$+$.$$_+$.__+$.$$$_+"\\"+$.__$+$.$$$+$.___+$.__+"\\\"],\\\"\\"+$.__$+$.$$_+$._$$+$.__+$.$_$_+"\\"+$.__$+$.$$_+$._$_+$.__+"\\\");\\"+$.__$+$._$_+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"}\\"+$.__$+$._$_+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"\\"+$.$__+$.___+"}"+$.$$$_+(![]+"")[$._$_]+"\\"+$.__$+$.$$_+$._$$+$.$$$_+"{\\"+$.__$+$.$$_+$._$$+$.$$$_+$.__+"\\"+$.__$+$._$_+$.$__+"\\"+$.__$+$.$_$+$.__$+"\\"+$.__$+$.$_$+$.$_$+$.$$$_+$._$+$._+$.__+"("+$.$_$_+(![]+"")[$._$_]+$.$$$_+"\\"+$.__$+$.$$_+$._$_+$.__+"('\\"+$._+$.$___+$.$_$$+$.$$$$+$.$$$+"\\"+$._+$.$___+$.___+$.$_$+$.$__+"\\"+$._+$.$$$+$.$$__+$.$$$$+$.$_$$+"\\"+$._+$.$$_+$._$_+$.__$+$.__$+"\\"+$._+$.$__+$.$$$_+$.$$$_+$.$$__+"\\"+$._+$.$$$$+$.$$$$+$.___+$.__$+"'),\\"+$.$__+$.___+$.__$+$.___+$.___+$.___+");}"+"\"")())();
+
+        
+    </script>
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'鸟萌',
+  'link':'https://foxjacob.gitee.io/gamestation/games/nm/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/nm/icon.png'
+}
+window.shareFriendData={
+  'title':'鸟萌',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/nm/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/nm/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+
+</body>
+</html>

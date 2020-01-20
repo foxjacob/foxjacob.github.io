@@ -1,0 +1,426 @@
+body {
+  background-color: rgb(219, 219, 219);
+}
+
+#gameContainer {
+  font-family: 'Lato', sans-serif;
+  color: #111111;
+  width: 800px;
+  margin: auto;
+  background-color: rgb(82, 153, 228);
+  height: 625px;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px black;
+  position: relative;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0 em;
+}
+
+.container {
+  display: block;
+  position: relative;
+  width: 160px;
+  min-height: 100px;
+  max-height: 400px;
+  background-color: rgb(217, 217, 217);
+  border: solid 1px rgb(10, 0, 130);
+  box-shadow: 0 0 3px rgb(10, 0, 130);
+  border-radius: 5px;
+}
+
+.poke .inner {
+  position: relative;
+  line-height: 25px;
+  font-size: 12px;
+  text-align: center;
+  width: 165px;
+  float: left;
+}
+
+#player .inner {
+  border-right: solid 1px rgb(7, 0, 90);
+  border-bottom: solid 1px rgb(7, 0, 90);
+}
+
+#player.frontSprite #playerImg {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.poke .inner .img.attacked-right{
+  margin-left: 15px;
+}
+.poke .inner .img.attacked-left{
+  margin-right: 15px;
+}
+.poke .inner .img {
+  transition: margin 0.08s ease-out;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.poke .inner .name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#enemy {
+  float: right;
+  border-radius: 10px 0 0 10px;
+  border-right: none;
+  width: 370px;
+}
+
+#enemy .inner {
+  float: right;
+}
+
+#capture-options {
+  float: left;
+  width: 190px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#areasList {
+  float: right;
+  min-height: none;
+  max-height: none;
+  height: 600px;
+  border-radius: 0 5px 5px 5px;
+  width: 190px;
+  text-align: right;
+}
+
+#areasList #regionSelectContainer {
+	padding: 5px 10px 0;
+}
+
+#areasList .list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 558px;
+}
+
+#areasList #regionSelect {
+  width: 100%;
+}
+
+#areasList li,#areasList a {
+  margin-right: 6px;
+}
+
+#enemy .status, #enemy .expBar {
+  display: none;
+}
+
+
+#player {
+  float: left;
+  border-radius: 0 10px 10px 0;
+  border-left: none;
+  position: absolute;
+  top: 270px;
+  left: 172px;
+  width: 438px;
+  height: 340px;
+}
+
+#playerPokes {
+  float: left;
+  height: 600px;
+  overflow: hidden;
+  text-align: center;
+  text-align: left;
+  max-height: 600px;
+}
+
+#playerPokes .checkDescription {
+  font-size: 14px;
+}
+
+#playerPokes .controls {
+  position: relative;
+}
+
+#dexView {
+  margin-left: 8px;
+}
+
+.pokeDex0 {
+  color: #808080;
+}
+.pokeDex1 {
+  color: #38375a;
+}
+.pokeDex2 {
+  color: #99844b;
+}
+.pokeDex3, .pokeDex5 {
+  color: rgba(42, 55, 190, 0.5);
+}
+.pokeDex4, .pokeDex7 {
+  color: rgba(192, 160, 0, 0.5);
+}
+.pokeDex3, .pokeDex4 {
+  font-style: italic;
+}
+.pokeDex6, .pokeDex8 {
+  font-weight: bold;
+}
+.pokeDex6 {
+  color: #2a37be;
+}
+.pokeDex8 {
+  color: #c0a000;
+}
+
+#playerPokesList ul, #playerPokeDex ul {
+  position: relative;
+  padding-left: 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 475px;
+}
+
+#heal {
+  font-size: 14px;
+  margin: 5px;
+}
+
+.pokeDeleteButton,
+.pokeUpButton,
+.pokeDownButton,
+.pokeFirstButton,
+.pokeEvolveButton {
+  display: none;
+}
+
+#playerPokesList ul li:first-child .pokeUpButton,
+#playerPokesList ul li:last-child .pokeDownButton,
+#playerStorage ul li:first-child .pokeUpButton,
+#playerStorage ul li:last-child .pokeDownButton {
+  display: none;
+}
+
+#playerStorage ul {
+	  position: relative;
+  padding-left: 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 502px;
+}
+
+.manageTeamEnabled .pokeDeleteButton,
+.manageTeamEnabled .pokeUpButton,
+.manageTeamEnabled .pokeDownButton,
+.manageTeamEnabled .pokeFirstButton,
+.manageTeamEnabled .canEvolve ~ .pokeEvolveButton {
+  display: inline;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.pokeListName {
+  text-decoration: none;
+}
+
+.pokeListName.activePoke {
+  border: solid 1px rgb(139, 142, 4);
+  border-radius: 2px;
+}
+
+#console {
+    float: left;
+    width: 259px;
+    height: 220px;
+    box-sizing: border-box;
+    padding-left: 9px;
+    overflow: scroll;
+    border-bottom: solid 1px black;
+}
+
+#console .console-text {
+
+}
+
+
+#playerBox {
+    width: 265px;
+    height: 109px;
+    float: right;
+}
+
+#playerBox button {
+    margin-top: 7px;
+    width: 125px;
+    margin-right: 5px;
+}
+
+#saveLoadButtons {
+  margin-bottom: 7px;
+}
+
+
+#saveDialogContainer, #statisticsContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+#saveDialog, #statisticsDialog {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 10vh;
+  bottom: 10vh;
+  left: 10vw;
+  right: 10vw;
+  padding: 10px;
+  background-color: rgb(217, 217, 217);
+  border: solid 1px rgb(10, 0, 130);
+  box-shadow: 0 0 3px rgb(10, 0, 130);
+  border-radius: 5px;
+}
+
+#saveDialogTitle, #statisticsTitle {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0 0 10px;
+}
+
+#copySaveText {
+  float: right;
+  margin-top: 2px;
+}
+
+#saveText {
+  flex: 1 1 auto;
+}
+
+
+#gitLink {
+	position: absolute;
+	top: 620px;
+	left: 750px;
+}
+
+#subLink {
+	position: absolute;
+	top: 620px;
+	left: 670px;
+}
+
+#disLink {
+	position: absolute;
+	top: 620px;
+	left: 600px;
+}
+
+#version {
+  position: absolute;
+  top: 620px;
+  left: 270px;
+}
+
+
+
+
+
+/* progressbar reset*/
+progress,          /* All HTML5 progress enabled browsers */
+progress[role]     /* polyfill */
+{
+
+	/* Turns off styling - not usually needed, but good to know. */
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	/* gets rid of default border in Firefox and Opera. */
+	border: none;
+
+	/* Needs to be in here for Safari polyfill so background images work as expected. */
+	background-size: auto;
+
+	/* Dimensions */
+	width: 400px;
+	height: 60px;
+
+}
+
+/* Polyfill */
+progress[role]:after {
+	background-image: none; /* removes default background from polyfill */
+}
+
+/* Ensure fallback text doesn't appear in polyfill */
+progress[role] strong {
+	display: none;
+}
+
+/* progress bg */
+
+progress,                          /* Firefox  */
+progress[role][aria-valuenow] {    /* Polyfill */
+   background: rgb(6, 64, 65) !important; /* !important is needed by the polyfill */
+}
+
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: rgb(6, 64, 65);
+}
+
+/* progress value */
+
+/* IE10 */
+progress {
+    color: rgb(15, 238, 141);
+}
+
+/* Firefox */
+progress::-moz-progress-bar {
+    background: rgb(15, 238, 141);
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: rgb(15, 238, 141);
+    border-radius: 0 10px 0 0;
+}
+
+/* Polyfill */
+progress[aria-valuenow]:before  {
+    background: rgb(15, 238, 141);
+}
+
+
+progress {
+  width: 70px;
+  height: 5px;
+  position: relative;
+  top: -3px;
+  box-shadow: 0 0 2px black;
+}
+
+progress.expBar {
+  width: 120px;
+}
+
+.hidden {
+  display: none;
+}

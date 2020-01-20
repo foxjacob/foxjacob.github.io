@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>NoSuchKey</Code>
+  <Message>The specified key does not exist.</Message>
+  <Key>chdzz2/res/favicon.ico</Key>
+  <RequestId>552F1D43D5A3400868F7AEB4</RequestId>
+  <HostId>9g.idods.cn</HostId>
+</Error>

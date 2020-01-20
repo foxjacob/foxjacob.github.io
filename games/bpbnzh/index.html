@@ -1,0 +1,109 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>奔跑吧男子</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            position: absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+
+</head>
+<body>
+<div style="position:relative;" id="gameDiv"></div>
+<script src="meiriq_loading.js"></script>
+<script src="meiriq_game.js"></script>
+<script type="text/javascript">
+// 传入游戏英文名,分数类型为score 或者 level
+var meiriq_game = new Meiriq_game("getinorout", "score");
+window["meiriq_game"].haveShare     = 1;
+window["meiriq_game"].haveGamelist  = 1;
+window["meiriq_game"].permitStart   = 1;  //这里需要自己修改参数测试一下 如果是1允许开始 0则不允许开始游戏
+window.resourceCDN   = "";
+
+if (typeof(config_info.page_source) !== "undefined") {
+    page_source = config_info.page_source;
+} else {
+    page_source = 'base';
+}
+
+</script>
+<script>var document_class = "Main";</script><!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+<!--This part will be replaced during compiling, and to modify the document class, please go to the project directory and edit in the file of egretProperties. Jsonr-->
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script src="launcher/game-min.js"></script>
+<script>
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+        egret_h5.startGame();
+    }
+    else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+</script>
+<script language=javascript>
+//        var game9g = new Game9G("bpbnzh","mrqyx");
+//        game9g.shareData.title = "来挑战一下男子汉气概";
+//        game9g.shareData.content = "不要被黑衣人抓住哦！";
+
+		function goHome(){
+		//	window.location=game9g.homeurl;
+		}
+		function clickMore(){
+			//window.location = game9g.homeurl;
+		}
+		function dp_share(){
+			//game9g.share();
+		}
+		function dp_Ranking(){
+			//window.location=game9g.homeurl;
+		}
+
+		function showAd(){
+		}
+		function hideAd(){
+		}
+		function dp_submitScore(score){
+//			if(score>0){
+//				game9g.score =parseInt(score);
+//				game9g.scoreName = "得了"+score+"分";
+//				game9g.shareData.title = "我在奔跑吧男子汉中得了" + score + "分！来挑战一下男子汉气概吧！";
+//				game9g.utils.shareConfirm("你在奔跑吧男子汉中得了"+score+"分！快告诉你的小伙伴们吧！",dp_share);
+//			}
+		}
+	</script>
+	<div style="display: none;">
+		
+	</div>
+
+</body>
+</html>

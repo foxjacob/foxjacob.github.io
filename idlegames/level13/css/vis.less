@@ -1,0 +1,161 @@
+// out: vis.css, compress: false
+
+@import "colors";
+
+/* MAPS */
+
+#minimap {
+    overflow: hidden;
+}
+
+#mainmap {
+    overflow: hidden;
+}
+
+#mainmap, #researched-upgrades-vis {
+    overflow: hidden;
+}
+
+.canvas-overlay {
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+}
+
+.canvas-overlay-cell {
+    position: absolute;
+    pointer-events: auto;
+    cursor: pointer;
+    font-size: 70%;
+    display: table;
+    line-height: 0.85;
+}
+
+.canvas-overlay-cell:hover {
+}
+
+.canvas-overlay-cell p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.map-overlay-cell {
+    width: 10px;
+    height: 10px;
+}
+
+.map-overlay-cell:hover {
+    background: @color-dark-text;
+}
+
+/* TECH TREE */
+
+.upgrades-overlay-cell {
+    width: 85px;
+    height: 22px;
+    color: @color-dark-bg;
+}
+
+.upgrades-overlay-cell:hover {
+    background: fade(@color-dark-text, 10%)
+}
+
+
+/* CAMP VIS */
+
+#tab-vis-in {
+    border: 2px solid @color-dark-border-box-1;
+    padding: 0;
+}
+
+.sunlit #tab-vis-in {
+    border: 2px solid @color-light-border-box-1;
+}
+
+#tab-vis-in-container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    height: 100px;
+}
+
+.vis-camp-layer {
+    position: absolute;
+}
+
+.vis-camp-building-container {
+    background: transparent;
+    border-radius: 3px;
+    border: 2px dotted transparent;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    font-size: 75%;
+    color: transparent;
+}
+
+.vis-camp-building-container.filled {
+    display: none;
+}
+
+.vis-camp-floor {
+    background: @color-dark-bg-element;
+    position: absolute;
+    left: 0px;
+}
+
+.sunlit .vis-camp-floor {
+    background: @color-light-bg-element;
+}
+
+.vis-camp-building {
+    position: absolute;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    z-index: 3;
+    font-size: 75%;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+}
+
+.vis-camp-building-z0 {
+    background: #888;
+    border-color:lighten(@color-dark-highlight-element-3, 20%);
+    z-index: 2;
+}
+
+.vis-camp-building-z1 {
+    background: @color-dark-highlight-element;
+    border-color: lighten(@color-dark-highlight-element, 20%);
+    z-index: 1;
+
+}
+
+.vis-camp-building-z2 {
+    background: @color-dark-highlight-element-2;
+    border-color: lighten(@color-dark-highlight-element-2, 20%);
+    z-index: 0;
+}
+
+.vis-camp-building-rounded {
+    border-radius: 6px 6px 0px 0px;
+}
+
+.vis-camp-building-lit {
+    background: #ddd56c;
+}
+
+.vis-camp-point {
+    width: 2px;
+    height: 2px;
+    background: red;
+    position: absolute;
+    z-index: 100;
+}

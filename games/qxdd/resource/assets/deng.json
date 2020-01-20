@@ -1,0 +1,20 @@
+﻿{
+"res":{
+	"an0000": {"x":20,"y":20,"w":100,"h":126},
+	"liang0000": {"x":20,"y":166,"w":156,"h":190}
+},
+"frames": {
+	"an": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"an0000","x":-50,"y":0}
+		]
+	},
+	"liang": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"liang0000","x":-74.05,"y":-24.6}
+		]
+	}
+}
+}

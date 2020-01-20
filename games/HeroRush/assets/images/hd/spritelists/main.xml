@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:cf4285feb45e004d49521bacd5c3c2dc:b009dcc8591c33068b40a019d5821804:f7afabebcd35587b8270ff90b311ebd0$ -->
+<TextureAtlas imagePath="main.png">
+    <SubTexture name="barier1" x="389" y="180" width="73" height="59"/>
+    <SubTexture name="barier2" x="389" y="123" width="76" height="55"/>
+    <SubTexture name="barier3" x="389" y="50" width="85" height="71"/>
+    <SubTexture name="boost_anim 0001" x="950" y="1744" width="48" height="53" frameX="-7" frameY="-15" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0002" x="950" y="1690" width="50" height="52" frameX="-6" frameY="-16" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0003" x="331" y="1649" width="52" height="51" frameX="-5" frameY="-17" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0004" x="335" y="1598" width="53" height="49" frameX="-5" frameY="-18" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0005" x="335" y="1548" width="55" height="48" frameX="-4" frameY="-19" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0006" x="340" y="1499" width="56" height="47" frameX="-3" frameY="-20" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0007" x="342" y="1387" width="58" height="46" frameX="-2" frameY="-21" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0008" x="342" y="1341" width="59" height="44" frameX="-1" frameY="-22" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0009" x="406" y="1300" width="60" height="47" frameX="-1" frameY="-19" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0010" x="346" y="1079" width="61" height="52" frameX="0" frameY="-14" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0011" x="345" y="1133" width="61" height="52" frameX="0" frameY="-13" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0012" x="408" y="1133" width="61" height="52" frameX="0" frameY="-13" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0013" x="409" y="1078" width="61" height="53" frameX="0" frameY="-12" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0014" x="344" y="1238" width="61" height="44" frameX="0" frameY="-20" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0015" x="344" y="1187" width="61" height="49" frameX="0" frameY="-15" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0016" x="409" y="1022" width="61" height="54" frameX="0" frameY="-10" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0017" x="346" y="1022" width="61" height="55" frameX="0" frameY="-9" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0018" x="368" y="346" width="61" height="56" frameX="0" frameY="-9" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0019" x="436" y="309" width="61" height="57" frameX="0" frameY="-8" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0020" x="407" y="1187" width="61" height="49" frameX="0" frameY="-16" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0021" x="344" y="1284" width="60" height="55" frameX="-1" frameY="-11" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0022" x="407" y="1238" width="60" height="60" frameX="-1" frameY="-6" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0023" x="403" y="1349" width="58" height="61" frameX="-2" frameY="-5" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0024" x="340" y="1435" width="57" height="62" frameX="-3" frameY="-5" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0025" x="399" y="1436" width="56" height="63" frameX="-3" frameY="-4" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0026" x="398" y="1501" width="55" height="60" frameX="-4" frameY="-7" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0027" x="392" y="1563" width="53" height="65" frameX="-5" frameY="-2" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0028" x="390" y="1630" width="52" height="67" frameX="-5" frameY="-1" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0029" x="950" y="1621" width="50" height="67" frameX="-6" frameY="-1" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="boost_anim 0030" x="464" y="181" width="48" height="68" frameX="-7" frameY="0" frameWidth="61" frameHeight="68"/>
+    <SubTexture name="coin" x="977" y="1547" width="44" height="40"/>
+    <SubTexture name="crash_anim 0001" x="1019" y="99" width="2" height="3" frameX="-12" frameY="-30" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0002" x="191" y="130" width="4" height="4" frameX="-11" frameY="-29" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0003" x="191" y="123" width="4" height="5" frameX="-11" frameY="-28" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0004" x="1007" y="112" width="6" height="7" frameX="-10" frameY="-26" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0005" x="999" y="111" width="6" height="8" frameX="-10" frameY="-25" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0006" x="374" y="220" width="8" height="10" frameX="-9" frameY="-23" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0007" x="374" y="207" width="8" height="11" frameX="-9" frameY="-22" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0008" x="374" y="186" width="10" height="13" frameX="-8" frameY="-20" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0009" x="1007" y="96" width="10" height="14" frameX="-8" frameY="-19" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0010" x="1007" y="78" width="12" height="16" frameX="-7" frameY="-17" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0011" x="1007" y="59" width="12" height="17" frameX="-7" frameY="-16" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0012" x="1007" y="32" width="14" height="19" frameX="-6" frameY="-14" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0013" x="1007" y="10" width="14" height="20" frameX="-6" frameY="-13" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0014" x="984" y="1422" width="16" height="21" frameX="-5" frameY="-12" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0015" x="838" y="1067" width="16" height="23" frameX="-5" frameY="-10" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0016" x="984" y="1396" width="18" height="24" frameX="-4" frameY="-9" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0017" x="455" y="1545" width="18" height="26" frameX="-4" frameY="-7" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0018" x="470" y="1210" width="20" height="27" frameX="-3" frameY="-6" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0019" x="487" y="368" width="20" height="29" frameX="-3" frameY="-4" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0020" x="999" y="121" width="22" height="31" frameX="-2" frameY="-2" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0021" x="999" y="154" width="22" height="30" frameX="-2" frameY="-3" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0022" x="455" y="1514" width="24" height="29" frameX="-1" frameY="-4" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0023" x="463" y="1389" width="24" height="30" frameX="-1" frameY="-3" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0024" x="459" y="368" width="26" height="32" frameX="0" frameY="-1" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0025" x="431" y="368" width="26" height="33"/>
+    <SubTexture name="crash_anim 0026" x="463" y="1356" width="24" height="31" frameX="-1" frameY="-1" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0027" x="462" y="1421" width="24" height="30" frameX="-1" frameY="-2" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0028" x="999" y="186" width="22" height="29" frameX="-2" frameY="-3" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0029" x="471" y="1150" width="20" height="28" frameX="-3" frameY="-4" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0030" x="469" y="1276" width="19" height="28" frameX="-4" frameY="-5" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0031" x="468" y="1306" width="19" height="26" frameX="-4" frameY="-6" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0032" x="469" y="1239" width="20" height="27" frameX="-3" frameY="-5" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0033" x="471" y="1180" width="20" height="28" frameX="-3" frameY="-4" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0034" x="472" y="1119" width="21" height="29" frameX="-3" frameY="-3" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0035" x="472" y="1055" width="21" height="30" frameX="-3" frameY="-2" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0036" x="472" y="1087" width="21" height="30" frameX="-3" frameY="-2" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="crash_anim 0037" x="472" y="1022" width="21" height="31" frameX="-3" frameY="-1" frameWidth="26" frameHeight="33"/>
+    <SubTexture name="hero10_b" x="191" y="186" width="181" height="92"/>
+    <SubTexture name="hero10_damage" x="2" y="192" width="181" height="92"/>
+    <SubTexture name="hero10_s" x="2" y="123" width="187" height="67"/>
+    <SubTexture name="hero11_b" x="184" y="347" width="178" height="72"/>
+    <SubTexture name="hero11_damage" x="508" y="415" width="178" height="72"/>
+    <SubTexture name="hero11_s" x="2" y="123" width="187" height="67"/>
+    <SubTexture name="hero12_b" x="170" y="1532" width="163" height="71"/>
+    <SubTexture name="hero12_damage" x="2" y="1562" width="163" height="70"/>
+    <SubTexture name="hero12_s" x="660" y="1301" width="166" height="58"/>
+    <SubTexture name="hero13_b" x="667" y="1067" width="169" height="115"/>
+    <SubTexture name="hero13_damage" x="838" y="1092" width="169" height="115"/>
+    <SubTexture name="hero13_s" x="682" y="816" width="174" height="63"/>
+    <SubTexture name="hero14_b" x="868" y="505" width="154" height="135"/>
+    <SubTexture name="hero14_damage" x="2" y="1722" width="154" height="135"/>
+    <SubTexture name="hero14_s" x="686" y="683" width="176" height="64"/>
+    <SubTexture name="hero15_b" x="508" y="573" width="176" height="78"/>
+    <SubTexture name="hero15_damage" x="686" y="603" width="176" height="78"/>
+    <SubTexture name="hero15_s" x="185" y="280" width="181" height="65"/>
+    <SubTexture name="hero16_b" x="704" y="2" width="195" height="88"/>
+    <SubTexture name="hero16_damage" x="699" y="92" width="195" height="88"/>
+    <SubTexture name="hero16_s" x="2" y="50" width="193" height="71"/>
+    <SubTexture name="hero17_b" x="668" y="985" width="170" height="80"/>
+    <SubTexture name="hero17_damage" x="495" y="1016" width="170" height="80"/>
+    <SubTexture name="hero17_s" x="354" y="789" width="149" height="55"/>
+    <SubTexture name="hero18_b" x="475" y="1549" width="158" height="78"/>
+    <SubTexture name="hero18_damage" x="817" y="1547" width="158" height="72"/>
+    <SubTexture name="hero18_s" x="688" y="448" width="178" height="69"/>
+    <SubTexture name="hero19_b" x="2" y="555" width="176" height="78"/>
+    <SubTexture name="hero19_damage" x="180" y="555" width="176" height="78"/>
+    <SubTexture name="hero19_s" x="682" y="749" width="174" height="65"/>
+    <SubTexture name="hero1_b" x="174" y="1086" width="169" height="80"/>
+    <SubTexture name="hero1_damage" x="2" y="1135" width="169" height="80"/>
+    <SubTexture name="hero1_s" x="181" y="421" width="177" height="65"/>
+    <SubTexture name="hero20_b" x="360" y="485" width="146" height="105"/>
+    <SubTexture name="hero20_damage" x="358" y="682" width="146" height="105"/>
+    <SubTexture name="hero20_s" x="869" y="357" width="153" height="56"/>
+    <SubTexture name="hero2_b" x="864" y="642" width="158" height="104"/>
+    <SubTexture name="hero2_damage" x="864" y="748" width="158" height="104"/>
+    <SubTexture name="hero2_s" x="180" y="700" width="175" height="64"/>
+    <SubTexture name="hero3_b" x="879" y="276" width="142" height="79"/>
+    <SubTexture name="hero3_damage" x="364" y="404" width="142" height="79"/>
+    <SubTexture name="hero3_s" x="879" y="217" width="143" height="57"/>
+    <SubTexture name="hero4_b" x="856" y="956" width="166" height="134"/>
+    <SubTexture name="hero4_damage" x="172" y="1396" width="166" height="134"/>
+    <SubTexture name="hero4_s" x="2" y="635" width="176" height="64"/>
+    <SubTexture name="hero5_b" x="354" y="846" width="140" height="86"/>
+    <SubTexture name="hero5_damage" x="353" y="934" width="140" height="86"/>
+    <SubTexture name="hero5_s" x="374" y="251" width="133" height="56"/>
+    <SubTexture name="hero6_b" x="901" y="2" width="104" height="107"/>
+    <SubTexture name="hero6_damage" x="896" y="111" width="101" height="103"/>
+    <SubTexture name="hero6_s" x="368" y="309" width="66" height="35"/>
+    <SubTexture name="hero7_b" x="869" y="415" width="149" height="88"/>
+    <SubTexture name="hero7_damage" x="358" y="592" width="148" height="88"/>
+    <SubTexture name="hero7_s" x="447" y="1629" width="157" height="61"/>
+    <SubTexture name="hero8_b" x="2" y="1298" width="168" height="79"/>
+    <SubTexture name="hero8_damage" x="490" y="1281" width="168" height="76"/>
+    <SubTexture name="hero8_s" x="682" y="816" width="174" height="63"/>
+    <SubTexture name="hero9_b" x="635" y="1551" width="157" height="100"/>
+    <SubTexture name="hero9_damage" x="166" y="1693" width="156" height="100"/>
+    <SubTexture name="hero9_s" x="180" y="635" width="176" height="63"/>
+    <SubTexture name="koleco" x="468" y="1334" width="19" height="20"/>
+    <SubTexture name="moneta_anim 0001" x="476" y="98" width="37" height="47" frameX="-1" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0002" x="476" y="98" width="37" height="47" frameX="-1" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0003" x="476" y="98" width="37" height="47" frameX="-1" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0004" x="476" y="98" width="37" height="47" frameX="-1" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0005" x="1004" y="1396" width="17" height="47" frameX="-11" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0006" x="1004" y="1396" width="17" height="47" frameX="-11" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0007" x="1004" y="1396" width="17" height="47" frameX="-11" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0008" x="1004" y="1396" width="17" height="47" frameX="-11" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0009" x="457" y="1453" width="30" height="47" frameX="-3" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0010" x="457" y="1453" width="30" height="47" frameX="-3" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0011" x="457" y="1453" width="30" height="47" frameX="-3" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0012" x="457" y="1453" width="30" height="47" frameX="-3" frameY="0" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0013" x="476" y="50" width="38" height="46" frameX="0" frameY="-1" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0014" x="476" y="50" width="38" height="46" frameX="0" frameY="-1" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0015" x="476" y="50" width="38" height="46" frameX="0" frameY="-1" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="moneta_anim 0016" x="476" y="50" width="38" height="46" frameX="0" frameY="-1" frameWidth="38" frameHeight="47"/>
+    <SubTexture name="npc10_b" x="2" y="1859" width="154" height="135"/>
+    <SubTexture name="npc10_damage" x="794" y="1621" width="154" height="135"/>
+    <SubTexture name="npc10_s" x="686" y="683" width="176" height="64"/>
+    <SubTexture name="npc11_b" x="516" y="40" width="181" height="118"/>
+    <SubTexture name="npc11_damage" x="514" y="160" width="181" height="118"/>
+    <SubTexture name="npc11_s" x="197" y="50" width="190" height="67"/>
+    <SubTexture name="npc12_b" x="508" y="489" width="176" height="82"/>
+    <SubTexture name="npc12_damage" x="686" y="519" width="176" height="82"/>
+    <SubTexture name="npc12_s" x="2" y="490" width="177" height="63"/>
+    <SubTexture name="npc13_b" x="508" y="573" width="176" height="78"/>
+    <SubTexture name="npc13_damage" x="508" y="653" width="176" height="78"/>
+    <SubTexture name="npc13_s" x="2" y="423" width="177" height="65"/>
+    <SubTexture name="npc14_b" x="2" y="911" width="170" height="111"/>
+    <SubTexture name="npc14_damage" x="496" y="903" width="170" height="111"/>
+    <SubTexture name="npc14_s" x="180" y="700" width="175" height="64"/>
+    <SubTexture name="npc15_b" x="704" y="2" width="195" height="88"/>
+    <SubTexture name="npc15_damage" x="699" y="92" width="195" height="88"/>
+    <SubTexture name="npc15_s" x="2" y="50" width="193" height="71"/>
+    <SubTexture name="npc16_b" x="681" y="881" width="173" height="102"/>
+    <SubTexture name="npc16_damage" x="178" y="871" width="173" height="102"/>
+    <SubTexture name="npc16_s" x="2" y="286" width="180" height="67"/>
+    <SubTexture name="npc17_b" x="2" y="701" width="174" height="103"/>
+    <SubTexture name="npc17_damage" x="178" y="766" width="174" height="103"/>
+    <SubTexture name="npc17_s" x="2" y="286" width="180" height="67"/>
+    <SubTexture name="npc18_b" x="2" y="806" width="174" height="103"/>
+    <SubTexture name="npc18_damage" x="506" y="733" width="174" height="103"/>
+    <SubTexture name="npc18_s" x="2" y="286" width="180" height="67"/>
+    <SubTexture name="npc19_b" x="509" y="280" width="178" height="133"/>
+    <SubTexture name="npc19_damage" x="689" y="314" width="178" height="132"/>
+    <SubTexture name="npc19_s" x="2" y="355" width="177" height="66"/>
+    <SubTexture name="npc1_b" x="174" y="975" width="170" height="109"/>
+    <SubTexture name="npc1_damage" x="2" y="1024" width="170" height="109"/>
+    <SubTexture name="npc1_s" x="197" y="119" width="190" height="65"/>
+    <SubTexture name="npc20_b" x="2" y="1460" width="166" height="100"/>
+    <SubTexture name="npc20_damage" x="489" y="1359" width="165" height="100"/>
+    <SubTexture name="npc20_s" x="2" y="423" width="177" height="65"/>
+    <SubTexture name="npc2_b" x="489" y="1461" width="162" height="86"/>
+    <SubTexture name="npc2_damage" x="167" y="1605" width="162" height="86"/>
+    <SubTexture name="npc2_s" x="492" y="1215" width="169" height="64"/>
+    <SubTexture name="npc3_b" x="858" y="854" width="163" height="100"/>
+    <SubTexture name="npc3_damage" x="656" y="1361" width="162" height="100"/>
+    <SubTexture name="npc3_s" x="181" y="488" width="177" height="65"/>
+    <SubTexture name="npc4_b" x="2" y="1634" width="162" height="86"/>
+    <SubTexture name="npc4_damage" x="820" y="1371" width="162" height="86"/>
+    <SubTexture name="npc4_s" x="173" y="1249" width="169" height="64"/>
+    <SubTexture name="npc5_b" x="820" y="1459" width="162" height="86"/>
+    <SubTexture name="npc5_damage" x="653" y="1463" width="162" height="86"/>
+    <SubTexture name="npc5_s" x="173" y="1249" width="169" height="64"/>
+    <SubTexture name="npc6_b" x="172" y="1315" width="168" height="79"/>
+    <SubTexture name="npc6_damage" x="2" y="1379" width="168" height="79"/>
+    <SubTexture name="npc6_s" x="697" y="182" width="180" height="64"/>
+    <SubTexture name="npc7_b" x="837" y="1209" width="169" height="79"/>
+    <SubTexture name="npc7_damage" x="837" y="1290" width="169" height="79"/>
+    <SubTexture name="npc7_s" x="697" y="248" width="180" height="64"/>
+    <SubTexture name="npc8_b" x="173" y="1168" width="169" height="79"/>
+    <SubTexture name="npc8_damage" x="2" y="1217" width="169" height="79"/>
+    <SubTexture name="npc8_s" x="697" y="248" width="180" height="64"/>
+    <SubTexture name="npc9_b" x="495" y="1098" width="169" height="115"/>
+    <SubTexture name="npc9_damage" x="666" y="1184" width="169" height="115"/>
+    <SubTexture name="npc9_s" x="505" y="838" width="174" height="63"/>
+    <SubTexture name="point" x="1015" y="112" width="6" height="6"/>
+    <SubTexture name="roadBorderDown" x="2" y="20" width="700" height="12"/>
+    <SubTexture name="roadBorderMid" x="2" y="34" width="700" height="4"/>
+    <SubTexture name="roadBorderUp" x="2" y="2" width="700" height="16"/>
+    <SubTexture name="roadBreak" x="2" y="40" width="512" height="8"/>
+    <SubTexture name="speed_up_anim 0001" x="1019" y="96" width="3" height="1" frameX="-202" frameY="-3" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0002" x="467" y="123" width="6" height="2" frameX="-202" frameY="-2" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0003" x="374" y="201" width="9" height="4" frameX="-201" frameY="-1" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0004" x="1007" y="53" width="13" height="4" frameX="-200" frameY="-1" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0005" x="1007" y="2" width="15" height="6" frameX="-200" frameY="0" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0006" x="469" y="1268" width="20" height="6" frameX="-179" frameY="-5" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0007" x="404" y="241" width="25" height="7" frameX="-159" frameY="-10" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0008" x="374" y="241" width="28" height="8" frameX="-140" frameY="-15" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0009" x="984" y="1384" width="33" height="10" frameX="-119" frameY="-19" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0010" x="984" y="1371" width="37" height="11" frameX="-100" frameY="-24" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0011" x="977" y="1589" width="41" height="13" frameX="-80" frameY="-29" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0012" x="467" y="147" width="45" height="15" frameX="-60" frameY="-34" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0013" x="2" y="2016" width="49" height="17" frameX="-41" frameY="-39" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0014" x="2" y="1996" width="51" height="18" frameX="-23" frameY="-44" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0015" x="402" y="1412" width="58" height="22" frameX="0" frameY="-49" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0016" x="467" y="164" width="45" height="15" frameX="-2" frameY="-53" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0017" x="455" y="1502" width="32" height="10" frameX="-4" frameY="-57" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0018" x="431" y="241" width="21" height="6" frameX="-5" frameY="-61" frameWidth="215" frameHeight="71"/>
+    <SubTexture name="speed_up_anim 0019" x="454" y="241" width="8" height="3" frameX="-7" frameY="-65" frameWidth="215" frameHeight="71"/>
+</TextureAtlas>

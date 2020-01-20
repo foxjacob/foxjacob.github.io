@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+<img src='photo.jpg' />
+</div>
+<title>停车入位,练不好了，气shi教练不偿命！</title>
+<link href="img/gamelebi.css" rel="stylesheet" type="text/css">
+<script src="img/gamelebi.js"></script>
+<meta name="viewport" content="initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, width=device-width,target-densitydpi=device-dpi">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="full-screen" content="yes">
+<meta name="screen-orientation" content="landscape">
+<meta name="x5-fullscreen" content="true">
+<style>
+canvas {image-rendering: optimizeSpeed;image-rendering: -moz-crisp-edges;image-rendering: -webkit-optimize-contrast;image-rendering: -o-crisp-edges;image-rendering: optimize-contrast;-ms-interpolation-mode: nearest-neighbor;}
+</style>
+</head>
+<body style="padding:0; margin: 0; background: #000;">
+<div id="spns"></div>
+<canvas id="gameCanvas" width="540" height="960"></canvas>
+<script src="js/game.min.js"></script><div style="font-family: 宋体; position: absolute; left: -100px; top: -100px; line-height: normal; font-size: 20px;"></div><input type="text" id="imeDispatcherInput" tabindex="2" style="-webkit-transform: translate3d(0px, 0px, 0px) rotateZ(0deg) scale(0, 0) skewX(0deg) skewY(0deg); opacity: 0; font-size: 1px; position: absolute; top: 0px; left: 0px;">
+<script>
+	var gamelebi = new GameLeBi("tcrw");
+	gamelebi.shareData.title = "停车入位-悠狐阁";
+	gamelebi.shareData.content = "停车入位-悠狐阁";
+
+	function goHome(){
+		window.location=gamelebi.homeurl;
+	}
+	function clickMore(){
+		 if((window.location+"").indexOf("f=zf",1)>0){
+			window.location = gamelebi.gzurl;
+		  }
+		  else{
+			goHome();
+		  }
+	}
+	function dp_Ranking(){
+		window.location=gamelebi.homeurl;
+	}
+	function dp_share(){
+	}
+
+	function showAd(){
+	}
+	function hideAd(){
+	}
+	function dp_submitScore(score,stitle){
+		if(score>0){
+			gamelebi.score =parseInt(score);
+			gamelebi.scoreName =score/10+"秒"; 
+			gamelebi.shareData.title =stitle;
+			gamelebi.utils.shareConfirm("你用了"+(score/10)+"秒成功停好车,不让小伙伴知道可不行!",dp_share);
+		}
+	}
+</script>
+<div style="display:none">
+<script type="text/javascript">gamelebi.utils.tongji();</script>
+<script src=http://m.xiaolebi.com/ViewClick.php?classid=27&id=67&addclick=1></script>
+</div>
+<script type="text/javascript">gamelebi.utils.guanggao();</script>
+</body>
+</html>

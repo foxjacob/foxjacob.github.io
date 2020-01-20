@@ -1,0 +1,19 @@
+{
+    "resources":
+        [
+            {"name":"bgImage","type":"image","url":"assets/bg.jpg"},
+            {"name":"bg_qiang","type":"image","url":"assets/bg_qiang.png"},
+            {"name":"pengyouquan","type":"image","url":"assets/pengyouquan.png"},
+            {"name":"shang","type":"image","url":"assets/shang.jpg"},
+            {"name":"xia","type":"image","url":"assets/xia.jpg"},
+            {"name":"btn_rank","type":"image","url":"assets/btn_rank.png"},
+            {"name":"gameRes","type":"sheet","url":"assets/ui/Sprites.json"},
+            {"name":"roleRes","type":"sheet","url":"assets/role/Sprites.json"}
+        ],
+
+    "groups":
+        [
+            {"name":"preload","keys":"bgImage,bg_qiang,btn_rank,gameRes,roleRes,pengyouquan,shang,xia"}
+
+        ]
+}

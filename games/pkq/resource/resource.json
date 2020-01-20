@@ -1,0 +1,66 @@
+{
+"resources":
+	[
+        {"name":"numberText_png","type":"image",	"url":"assets/numberText.png"},
+        {"name":"numberText_json","type":"json",	"url":"assets/numberText.json"},
+
+        {"name":"numberText2_png","type":"image",	"url":"assets/numberText2.png"},
+        {"name":"numberText2_json","type":"json",	"url":"assets/numberText2.json"},
+
+        {"name":"leftHero_png","type":"image",	"url":"assets/leftHero.png"},
+        {"name":"leftHero_json","type":"json",	"url":"assets/leftHero.json"},
+
+        {"name":"rightHero_png","type":"image",	"url":"assets/rightHero.png"},
+        {"name":"rightHero_json","type":"json",	"url":"assets/rightHero.json"},
+
+
+        {"name":"start_btn_png","type":"image",	"url":"assets/start_btn.png"},
+
+        {"name":"more_btn_png","type":"image",	"url":"assets/more_btn.png"},
+        {"name":"replay_btn_png","type":"image",	"url":"assets/replay_btn.png"},
+        {"name":"share_btn_png","type":"image",	"url":"assets/share_btn.png"},
+        {"name":"download_btn_png","type":"image",	"url":"assets/download_btn.png"},
+
+
+        {"name":"gj_btn_png","type":"image",	"url":"assets/gj_btn.png"},
+        {"name":"libao_btn_png","type":"image",	"url":"assets/libao_btn.png"},
+
+        {"name":"go_png","type":"image",	"url":"assets/go.png"},
+        {"name":"miss_png","type":"image",	"url":"assets/miss.png"},
+        {"name":"scoreBg_png","type":"image",	"url":"assets/scoreBg.png"},
+        {"name":"timeTip_png","type":"image",	"url":"assets/timeTip.png"},
+        {"name":"close_btn_png","type":"image",	"url":"assets/close_btn.png"},
+
+        {"name":"num1_png","type":"image",	"url":"assets/1.png"},
+        {"name":"num2_png","type":"image",	"url":"assets/2.png"},
+        {"name":"num3_png","type":"image",	"url":"assets/3.png"},
+
+        {"name":"hw_logo_png","type":"image",	"url":"assets/hw_logo.png"},
+        {"name":"logo_png","type":"image",	"url":"assets/logo.png"},
+        {"name":"t1_png","type":"image",	"url":"assets/t1.png"},
+        {"name":"t2_png","type":"image",	"url":"assets/t2.png"},
+        {"name":"gameOver_png","type":"image",	"url":"assets/gameOver.png"},
+        {"name":"arrow_png","type":"image",	"url":"assets/arrow.png"},
+        {"name":"wanfa_png","type":"image",	"url":"assets/wanfa.png"},
+
+
+        {"name":"nuqi1_png","type":"image",	"url":"assets/nuqi1.png"},
+        {"name":"nuqi2_png","type":"image",	"url":"assets/nuqi2.png"},
+
+        {"name":"taoqi_png","type":"image",	"url":"assets/taoqi.png"},
+        {"name":"newPanel_png","type":"image",	"url":"assets/newPanel2.png"},
+
+        {"name":"bgSound","type":"sound"," soundType":"music",	"url":"assets/bgSound.mp3"},
+        {"name":"woda","type":"sound", 	"url":"assets/woda.mp3"},
+        {"name":"woshan","type":"sound",	"url":"assets/woshan.mp3"},
+
+        {"name":"bg_jpg","type":"image",	"url":"assets/bg.jpg"},
+        {"name":"homepage_jpg","type":"image",	"url":"assets/homepage.jpg"}
+	],
+
+"groups":
+	[
+        {"name":"loading","keys":"hw_logo_png,logo_png,bg_jpg"},
+        {"name":"preload","keys":"close_btn_png,newPanel_png,libao_btn_png,timeTip_png,taoqi_png,numberText_json,numberText_png,numberText2_json,numberText2_png,nuqi1_png,nuqi2_png,roundRect_png,woda,woshan,wanfa_png,arrow_png,bgSound,gameOver_png,t1_png,t2_png,scoreBg_png,miss_png,go_png, num1_png,num2_png,num3_png, gj_btn_png,bg_jpg, leftHero_json,leftHero_png, rightHero_json,rightHero_png,   start_btn_png,more_btn_png,replay_btn_png,share_btn_png,download_btn_png"}
+	]
+}

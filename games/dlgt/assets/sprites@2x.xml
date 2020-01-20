@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="sprites@2x.png">
+	<!--
+	Created with ShoeBox
+	http://renderhjs.net/shoebox/
+	-->
+	<SubTexture name="Arrow"	x="931"	y="594"	width="50"	height="80" frameX="-0" frameY="-0" frameWidth="50" frameHeight="80"/>
+	<SubTexture name="Bar"	x="1322"	y="0"	width="126"	height="600" frameX="-0" frameY="-0" frameWidth="126" frameHeight="600"/>
+	<SubTexture name="Base"	x="641"	y="378"	width="344"	height="215" frameX="-0" frameY="-0" frameWidth="344" frameHeight="215"/>
+	<SubTexture name="Base_2"	x="641"	y="0"	width="375"	height="244" frameX="-0" frameY="-0" frameWidth="375" frameHeight="244"/>
+	<SubTexture name="Bird"	x="276"	y="979"	width="41"	height="43" frameX="-0" frameY="-0" frameWidth="41" frameHeight="43"/>
+	<SubTexture name="Cloud"	x="641"	y="245"	width="358"	height="132" frameX="-0" frameY="-0" frameWidth="358" frameHeight="132"/>
+	<SubTexture name="Cloud_2"	x="641"	y="594"	width="289"	height="106" frameX="-0" frameY="-0" frameWidth="289" frameHeight="106"/>
+	<SubTexture name="Flag"	x="1055"	y="468"	width="60"	height="48" frameX="-0" frameY="-0" frameWidth="60" frameHeight="48"/>
+	<SubTexture name="Ground"	x="0"	y="323"	width="640"	height="156" frameX="-0" frameY="-0" frameWidth="640" frameHeight="156"/>
+	<SubTexture name="Heart"	x="1055"	y="517"	width="57"	height="48" frameX="-0" frameY="-0" frameWidth="57" frameHeight="48"/>
+	<SubTexture name="HeartEmpty"	x="540"	y="918"	width="70"	height="62" frameX="-0" frameY="-0" frameWidth="70" frameHeight="62"/>
+	<SubTexture name="HeartFill"	x="469"	y="918"	width="70"	height="62" frameX="-0" frameY="-0" frameWidth="70" frameHeight="62"/>
+	<SubTexture name="Lands"	x="0"	y="0"	width="640"	height="322" frameX="-0" frameY="-0" frameWidth="640" frameHeight="322"/>
+	<SubTexture name="Object_1"	x="89"	y="991"	width="14"	height="31" frameX="-0" frameY="-0" frameWidth="14" frameHeight="31"/>
+	<SubTexture name="Object_2"	x="118"	y="991"	width="12"	height="23" frameX="-0" frameY="-0" frameWidth="12" frameHeight="23"/>
+	<SubTexture name="Object_3"	x="131"	y="991"	width="11"	height="24" frameX="-0" frameY="-0" frameWidth="11" frameHeight="24"/>
+	<SubTexture name="Object_4"	x="71"	y="991"	width="17"	height="27" frameX="-0" frameY="-0" frameWidth="17" frameHeight="27"/>
+	<SubTexture name="Object_5"	x="104"	y="991"	width="13"	height="28" frameX="-0" frameY="-0" frameWidth="13" frameHeight="28"/>
+	<SubTexture name="Planet"	x="641"	y="701"	width="180"	height="180" frameX="-0" frameY="-0" frameWidth="180" frameHeight="180"/>
+	<SubTexture name="Record"	x="641"	y="882"	width="142"	height="139" frameX="-0" frameY="-0" frameWidth="142" frameHeight="139"/>
+	<SubTexture name="Rocks"	x="0"	y="480"	width="640"	height="437" frameX="-0" frameY="-0" frameWidth="640" frameHeight="437"/>
+	<SubTexture name="Trees"	x="986"	y="468"	width="68"	height="78" frameX="-0" frameY="-0" frameWidth="68" frameHeight="78"/>
+	<SubTexture name="Zig"	x="0"	y="991"	width="36"	height="27" frameX="-0" frameY="-0" frameWidth="36" frameHeight="27"/>
+	<SubTexture name="backRecord"	x="0"	y="918"	width="275"	height="72" frameX="-0" frameY="-0" frameWidth="275" frameHeight="72"/>
+	<SubTexture name="backWallet"	x="276"	y="918"	width="192"	height="60" frameX="-0" frameY="-0" frameWidth="192" frameHeight="60"/>
+	<SubTexture name="buttonAgain"	x="822"	y="701"	width="160"	height="160" frameX="-0" frameY="-0" frameWidth="160" frameHeight="160"/>
+	<SubTexture name="buttonBack"	x="1144"	y="790"	width="160"	height="222" frameX="-0" frameY="-0" frameWidth="160" frameHeight="222"/>
+	<SubTexture name="buttonFinish"	x="1161"	y="223"	width="160"	height="222" frameX="-0" frameY="-0" frameWidth="160" frameHeight="222"/>
+	<SubTexture name="buttonHeadstart"	x="983"	y="594"	width="160"	height="222" frameX="-0" frameY="-0" frameWidth="160" frameHeight="222"/>
+	<SubTexture name="buttonInsurance"	x="1000"	y="245"	width="160"	height="222" frameX="-0" frameY="-0" frameWidth="160" frameHeight="222"/>
+	<SubTexture name="buttonMoneyDoubler"	x="1017"	y="0"	width="160"	height="222" frameX="-0" frameY="-0" frameWidth="160" frameHeight="222"/>
+	<SubTexture name="buttonMore"	x="822"	y="862"	width="160"	height="160" frameX="-0" frameY="-0" frameWidth="160" frameHeight="160"/>
+	<SubTexture name="buttonSoundOff"	x="983"	y="817"	width="160"	height="160" frameX="-0" frameY="-0" frameWidth="160" frameHeight="160"/>
+	<SubTexture name="buttonSoundOn"	x="1144"	y="468"	width="160"	height="160" frameX="-0" frameY="-0" frameWidth="160" frameHeight="160"/>
+	<SubTexture name="buttonTwitter"	x="1144"	y="629"	width="160"	height="160" frameX="-0" frameY="-0" frameWidth="160" frameHeight="160"/>
+	<SubTexture name="partAlphaBlack"	x="790"	y="947"	width="1"	height="64" frameX="-0" frameY="-0" frameWidth="1" frameHeight="64"/>
+	<SubTexture name="partAlphaWhite"	x="788"	y="947"	width="1"	height="64" frameX="-0" frameY="-0" frameWidth="1" frameHeight="64"/>
+	<SubTexture name="partBase1"	x="784"	y="947"	width="1"	height="64" frameX="-0" frameY="-0" frameWidth="1" frameHeight="64"/>
+	<SubTexture name="partBase1A"	x="143"	y="991"	width="6"	height="26" frameX="-0" frameY="-0" frameWidth="6" frameHeight="26"/>
+	<SubTexture name="partBase1B"	x="150"	y="991"	width="1"	height="26" frameX="-0" frameY="-0" frameWidth="1" frameHeight="26"/>
+	<SubTexture name="partBase1Window"	x="37"	y="991"	width="33"	height="13" frameX="-0" frameY="-0" frameWidth="33" frameHeight="13"/>
+	<SubTexture name="partBase2"	x="786"	y="947"	width="1"	height="64" frameX="-0" frameY="-0" frameWidth="1" frameHeight="64"/>
+	<SubTexture name="partBase2Window"	x="1178"	y="0"	width="41"	height="62" frameX="-0" frameY="-0" frameWidth="41" frameHeight="62"/>
+	<SubTexture name="part_1_1"	x="784"	y="882"	width="5"	height="64" frameX="-0" frameY="-0" frameWidth="5" frameHeight="64"/>
+	<SubTexture name="part_1_2"	x="790"	y="882"	width="1"	height="64" frameX="-0" frameY="-0" frameWidth="1" frameHeight="64"/>
+	<SubTexture name="part_2"	x="611"	y="918"	width="29"	height="64" frameX="-0" frameY="-0" frameWidth="29" frameHeight="64"/>
+</TextureAtlas>

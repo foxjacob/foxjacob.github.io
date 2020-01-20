@@ -1,0 +1,93 @@
+﻿
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="apple-touch-icon" href="icon.png" />
+<link rel="shortcut icon" href="icon.png" />
+<link rel="icon" href="icon.png" />
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+<img src='photo.jpg' />
+</div>
+<title>别吃五仁,讨厌的话就躲过去吧！</title>
+<meta name="keywords" content="别吃五仁,别吃五仁html5游戏" />
+<meta name="description" content="别吃五仁html5游戏,别吃五仁手机在线游戏" />
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="full-screen" content="true"/>
+<meta name="screen-orientation" content="portrait"/>
+<meta name="x5-fullscreen" content="true"/>
+<meta name="360-fullscreen" content="true"/>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<style>
+body {
+text-align: center;
+background: #000000;
+padding: 0;
+border: 0;
+margin: 0;
+height: 100%;
+}
+html {
+-ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+}
+a[href*='baidu']{
+display: none;
+}
+</style>
+</head>
+<body>
+<div style="display:inline-block;width:100%; height:100%;margin: 0 auto; background: black; position:relative;" id="gameDiv">
+<canvas id="gameCanvas" width="480" height="800" style="background-color: #ffffff"></canvas>
+</div>
+<div id="share" style="display: none;width:100%;height:100%;background:rgba(0,0,0,.8);position: fixed; z-index: 9999; top: 0; left: 0; ">
+<img id="mk" width="90%" src="./share.png"/>
+</div>
+<script>var document_class = "GameScene";</script>
+<script src="js/egret_require.js"></script>
+<script src="js/egret_loader.js"></script>
+<script src="./js/gameshare.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/game-min.js"></script>
+<script>
+var _url;
+function setShare(title, content){
+LBGAME.Share.updateData({
+call:false,// false只更新数据||true更新数据+调启用户端分享
+title:title||"一起来玩【别吃五仁月饼】！超好玩！",
+imgUrl:"http://yx8.com/game/wuren/img/icon.png",
+cont:content||"一起来玩【别吃五仁月饼】！超好玩！",
+url:_url||"http://yx8.com/game/wuren/",
+doneJump:"http://yx8.com/game/wuren/?wuren",
+fun:"" // 分享时回调，不 fun:function(){}
+});
+}
+setShare();
+LBGAME.Share.setShareUrl(function(url){
+_url = url;
+setShare();
+})
+var oShare=document.getElementById('share');
+oShare.addEventListener('touchstart', function(){this.style.display='none';}, false)
+egret_h5.startGame();
+</script>
+<!-- <script src="../js/stat.js"></script> -->
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'别吃五仁',
+  'link':'https://foxjacob.gitee.io/gamestation/games/wuren/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/wuren/icon.png'
+}
+window.shareFriendData={
+  'title':'别吃五仁',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/wuren/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/wuren/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+</body>
+</html>

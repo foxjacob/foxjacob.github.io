@@ -1,0 +1,46 @@
+{
+  "BASEBALL": {
+    "hp": 10,
+    "secondsToGoal": 50,
+    "damage": 1,
+    "exp": 15,
+    "score": 15,
+    "dodgeChance": 0.3
+  },
+  "TANK": {
+    "hp": 32,
+    "secondsToGoal": 82,
+    "damage": 2,
+    "exp": 15,
+    "score": 15
+  },
+  "SPEEDY": {
+    "hp": 5,
+    "secondsToGoal": 38.5,
+    "damage": 1,
+    "exp": 10,
+    "score": 10
+  },
+  "NORMAL": {
+    "hp": 5,
+    "secondsToGoal": 45,
+    "damage": 1,
+    "exp": 5,
+    "score": 5
+  },
+  "SKATE": {
+    "hp": 5,
+    "secondsToGoalWalking": 45,
+    "secondsToGoal": 20,
+    "damage": 1,
+    "exp": 20,
+    "score": 20
+  },
+  "METAL": {
+    "hp": 72,
+    "secondsToGoal": 72,
+    "damage": 3,
+    "exp": 25,
+    "score": 25
+  }
+}

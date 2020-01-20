@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<div id='wx_pic' style='margin:0 auto;display:none;'>
+<img src='photo.jpg' />
+</div>
+    <title>再回到小学刷刷智商吧！</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+        div, canvas {
+            display:block;
+            position:absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+ <!-- <link rel="stylesheet" type="text/css" href="http://game.9g.com/css/game9g.css">
+<script src="http://game.9g.com/js/game9g.js"></script> -->	
+</head>
+<body>
+    <div id="share" style="display:none">
+        <img width="100%" src="share2.png" style="position: fixed; z-index: 9999; top: 0; left: 0; display: " ontouchstart="document.getElementById('share').style.display='none';" onclick="document.getElementById('share').style.display='none';" />
+    </div>
+    
+<div style="position:relative;" id="gameDiv"></div>
+<script>var document_class = "Main";</script><!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script src="launcher/game-min.js"></script>
+<script src="tool.js"></script>
+    
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../../js/common2.js"></script>
+<script>
+
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+        setTimeout( egret_h5.startGame, 800 )
+       // egret_h5.startGame();
+    }
+    else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+</script>
+<script language=javascript>
+        //var game9g = new Game9G("sjy");
+        //game9g.shareData.title = "4+1-9G游戏";
+        //game9g.shareData.content = "4+1-9G游戏";
+        window.shareData={
+            title : "四加一",
+            link : "http://ikongzhong.iwanwan.cn/games/sjy",
+            imgUrl : "http://ikongzhong.iwanwan.cn/games/sjy/sjy.jpg",
+            desc : "好玩的小游戏《四加一》,快来试试吧。"
+        }
+        
+        function getParentage(nub,random){
+            random = random || true;
+            //分数
+            var data1 = [0,500, 800,1000, 1400, 1600, 1800,2000];
+            //百分比
+            var data2 = [0,60,  86, 90,   94,   96,   98,  100];
+            if(nub <= 0) return 0;
+            for(var i =0;i<data1.length;i++){
+                if(nub<=data1[i]){
+
+                    var per;
+                    var detaX = data1[i] - data1[i-1];
+                    var detaY = data2[i] - data2[i-1];
+                    var diffX = nub - data1[i-1];
+                    per =  diffX * (detaY / detaX) + data2[i-1];
+                    random && (per = per + Math.random());
+                    per = Math.min(99.99,per);
+                    return per.toFixed(2);
+                }
+            }
+            return 99.9;
+        }
+    
+		function goHome(){
+			window.location="http://ikongzhong.iwanwan.cn";
+		}
+    
+		function clickMore(){
+			window.location="http://ikongzhong.iwanwan.cn";
+		}
+    
+		function dp_share(){
+            document.getElementById("share").style.display = "block";
+		}
+    
+		function dp_Ranking(){
+			window.location="http://ikongzhong.iwanwan.cn";
+		}
+
+		function showAd(){
+            
+		}
+    
+		function hideAd(){
+            
+		}
+		function dp_submitScore(score){		
+            score = score | 0;
+            window.shareData.desc = "我在《四加一》中得了" +score + "分，击败了"+ getParentage(score) +"%的人，你也来试试吧！";
+			//if(score>0){
+				//game9g.score =parseInt(score);
+				//game9g.scoreName = "得了"+score+"分";
+				//game9g.shareData.title ="我在四加一中得了" +score + "分，你也来试试吧！-9G游戏";
+				//game9g.utils.shareConfirm("你在四加一中得了"+score+"分，快炫耀下吧!",dp_share);
+                
+			//}
+		}
+</script>
+	<div class="" style="display:none;">
+        <script type="text/javascript">
+            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F94c393e91adc6ef59fa06c3f34ce2c0d' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+    </div>
+</body>
+</html>

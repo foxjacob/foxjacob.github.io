@@ -1,0 +1,84 @@
+{
+"resources":
+	[
+		{"name":"homepage_jpg","type":"image","url":"assetsGame/homepage.jpg"},
+        {"name":"bg_jpg","type":"image","url":"assetsGame/bg.jpg"},
+
+
+        {"name":"left_btn_json","type":"json",	"url":"assetsGame/left_btn.json"},
+        {"name":"left_btn_png","type":"image",	"url":"assetsGame/left_btn.png"},
+
+        {"name":"right_btn_json","type":"json",	"url":"assetsGame/right_btn.json"},
+        {"name":"right_btn_png","type":"image",	"url":"assetsGame/right_btn.png"},
+
+        {"name":"item_json","type":"json",	"url":"assetsGame/item.json"},
+        {"name":"item_png","type":"image",	"url":"assetsGame/item.png"},
+
+        {"name":"numberText_json","type":"json",	"url":"assetsGame/numberText.json"},
+        {"name":"numberText_png","type":"image",	"url":"assetsGame/numberText.png"},
+
+        {"name":"powerMc_json","type":"json",	"url":"assetsGame/powerMc.json"},
+        {"name":"powerMc_png","type":"image",	"url":"assetsGame/powerMc.png"},
+
+
+        {"name":"smoke_json","type":"json",	"url":"assetsGame/smoke.json"},
+        {"name":"smoke_png","type":"image",	"url":"assetsGame/smoke.png"},
+
+
+
+        {"name":"clock_png","type":"image",	"url":"assetsGame/clock.png"},
+        {"name":"koushao_png","type":"image",	"url":"assetsGame/koushao.png"},
+        {"name":"scorePanel_png","type":"image",	"url":"assetsGame/scorePanel.png"},
+
+        {"name":"timeUp_png","type":"image",	"url":"assetsGame/timeUp.png"},
+
+        {"name":"timeLine_png","type":"image",	"url":"assetsGame/timeLine.png"},
+        {"name":"timeContent_png","type":"image",	"url":"assetsGame/timeContent.png"},
+
+        {"name":"powerLine_png","type":"image",	"url":"assetsGame/powerLine.png"},
+        {"name":"powerContent_png","type":"image",	"url":"assetsGame/powerContent.png"},
+
+        {"name":"combo_png","type":"image",	"url":"assetsGame/combo.png"},
+
+        {"name":"fx_txt_png","type":"image",	"url":"assetsGame/fx_txt.png"},
+        {"name":"fx_btn_png","type":"image",	"url":"assetsGame/fx_btn.png"},
+
+        {"name":"start_btn_png","type":"image",	"url":"assetsGame/start_btn.png"},
+
+        {"name":"more_btn_png","type":"image",	"url":"assetsGame/more_btn.png"},
+        {"name":"replay_btn_png","type":"image",	"url":"assetsGame/replay_btn.png"},
+        {"name":"gameoverBg_jpg","type":"image",	"url":"assetsGame/gameoverBg.jpg"},
+
+
+        {"name":"infoBg_jpg","type":"image",	"url":"assetsGame/infoBg.jpg"},
+        {"name":"qiandao_png","type":"image",	"url":"assetsGame/qiandao.png"},
+        {"name":"kqb_png",     "type":"image",	"url":"assetsGame/kqb.png"},
+        {"name":"qian_yes_png","type":"image",	"url":"assetsGame/qian_yes.png"},
+        {"name":"qian_no_png","type":"image",	"url":"assetsGame/qian_no.png"},
+        {"name":"close_btn_png","type":"image",	"url":"assetsGame/close_btn.png"},
+        {"name":"shop_bg_png","type":"image",	"url":"assetsGame/shop_bg.png"},
+
+        {"name":"gold_png","type":"image",	"url":"assetsGame/gold.png"},
+        {"name":"add_gold_btn_png","type":"image",	"url":"assetsGame/add_gold_btn.png"},
+        {"name":"payItem_btn_png","type":"image",	"url":"assetsGame/payItem_btn.png"},
+        {"name":"face_png","type":"image",	"url":"assetsGame/face.png"},
+        {"name":"home_btn_png","type":"image",	"url":"assetsGame/homeBtn.png"},
+
+
+        {"name":"mscNormal","type":"sound", "soundType":"music","url":"assetsGame/mscNormal.mp3"},
+        {"name":"mscPower","type":"sound"," soundType":"music",	"url":"assetsGame/mscPower.mp3"},
+        {"name":"sndFail","type":"sound","soundType":"effect",	"url":"assetsGame/sndFail.mp3"},
+        {"name":"sndOver","type":"sound","soundType":"effect",	"url":"assetsGame/sndOver.mp3"},
+        {"name":"sndSucc1","type":"sound","soundType":"effect",	"url":"assetsGame/sndSucc1.mp3"},
+        {"name":"sndSucc2","type":"sound","soundType":"effect",	"url":"assetsGame/sndSucc2.mp3"},
+        {"name":"sndSucc3","type":"sound","soundType":"effect",	"url":"assetsGame/sndSucc3.mp3"}
+	],
+
+"groups":
+	[
+        {"name":"preloadGame","keys":"homepage_jpg"},
+        {"name":"buttons","keys":"left_btn_json,left_btn_png,   right_btn_json,right_btn_png,   start_btn_png,more_btn_png,replay_btn_png,fx_txt_png,fx_btn_png"},
+        {"name":"pics","keys":"home_btn_png,face_png,payItem_btn_png,add_gold_btn_png,gold_png,shop_bg_png,close_btn_png,kqb_png,qian_yes_png,qian_no_png,qiandao_png,infoBg_jpg,smoke_json,smoke_png,gameoverBg_jpg, combo_png,  powerMc_json,powerMc_png,  mscNormal,mscPower,sndFail,sndOver,  sndSucc1,sndSucc2,sndSucc3,  timeUp_png,numberText_json,numberText_png,bg_jpg,item_json,item_png,   timeLine_png,timeContent_png,   powerLine_png,powerContent_png,  clock_png,koushao_png,scorePanel_png "}
+
+	]
+}

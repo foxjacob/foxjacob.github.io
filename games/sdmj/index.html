@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="x-key" content="4d8806e1e3367ddc4946d37d32ae0ddf">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0" />
+<title>圣诞母鸡</title><meta name="x-id" content="623">
+
+<link type="text/css" href="css/common.css" rel="stylesheet" />
+<link href="css/gamef.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/rank.css" />
+<link rel="stylesheet" href="css/game.css" />
+<!-- <script src="js/gamef.js?v=1" type="text/javascript"></script> -->
+<style>
+        body, html {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background: rgb(255, 247, 26);
+            /*background-image: url(images/14.png);*/
+            /*background-repeat: repeat-x;*/
+            /*background-size: 100% 100%;*/
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        #container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+<canvas id="canvas"></canvas>
+</div>
+<div style="display: none;">
+</div>
+<section id="rank-con" class="rank-con">
+<div class="rank-con-main">
+<div class="rank-head">
+<a href="#" id="rank-close">&times;</a>
+<i class="rank-icon"></i>
+</div>
+<div class="rank-body" id="rank-body">
+<div class="rank-tips" id="rank-tips">
+您在好友中排名 <span id="rank-user"></span>名
+</div>
+<ul class="person-list" id="person-list"></ul>
+</div>
+</div>
+</section>
+<section id="gl-con" class="gl-con" alt="游戏攻略">
+<nav>
+<img src="images/30.jpg" alt="奖品兑换">
+<a id="btn_close"></a>
+</nav>
+</section>
+<section id="prize-con" class="prize-con" alt="奖品兑换页面">
+<nav>
+<img src="images/22.jpg" alt="奖品兑换页面">
+<a href="javascript:void(0);" id="close" alt="关闭按钮"></a>
+<a href="javascript:void(0);" class="a_1 " alt="掌-碎片"></a>
+<a href="javascript:void(0);" class="a_2" alt="上-碎片"></a>
+<a href="javascript:void(0);" class="a_3 " alt="大-碎片"></a>
+<a href="javascript:void(0);" class="a_4 " alt="学-碎片"></a>
+<a href="javascript:void(0);" class="a_5" alt="圣-碎片"></a>
+<a href="javascript:void(0);" class="a_6" alt="诞-碎片"></a>
+<a href="javascript:void(0);" class="a_7" alt="圣-碎片"></a>
+<a href="javascript:void(0);" class="a_8" alt="诞-碎片"></a>
+<a href="javascript:void(0);" class="film" alt="兑换电影券"></a>
+<a href="javascript:void(0);" class="other" alt="查看他人"></a>
+</nav>
+</section>
+<section id="main-mask" class="main-mask" style="display: none;">
+<div class="null_div" style="display: none;">
+<img class="msg_img img_58" alt="images/58.png" num='0' style="display: none;">
+<a id="a_btn_null" href="javascript:void(0);"></a>
+</div>
+<div class="s_div" alt="提示" style="display: none;">
+<img class="msg_img img_50" alt="images/50.png" num='0' style="display: none;">
+<img class="msg_img img_52" alt="images/52.png" num='0' style="display: none;">
+<img class="msg_img img_51" alt="images/51.png" num='0' style="display: none;">
+<span name="number" date="img_51" id="img_51" style="display: none;"></span>
+<span name="number" date="span_51" id="span_51" style="display: none;"></span>
+<img class="msg_img img_55" alt="images/55.png" num='0' style="display: none;">
+<img class="msg_img img_56" alt="images/56.png" num='0' style="display: none;">
+<a href="javascript:void(0);" id="down_href" style="display: none;"></a>
+<a id="a_btn_ok" href="javascript:void(0);"></a>
+</div>
+<div class="prize_div" alt="奖品兑换" style="display: none;">
+<a class="btn_a_close"></a>
+<img class="msg_img img_54" alt="images/54.png" num='0'>
+<label for="name" id="lable_1">
+<input type="text" name="name" id="names" />
+</label>
+<label for="phone" id="lable_2">
+<input type="text" name="phone" length="11" id="phones" />
+</label>
+<label for="phone" id="lable_3">
+<input type="text" name="phone" length="11" id="phones_1" />
+</label>
+<a id="a_btn_prize" href="javascript:void(0);"></a>
+</div>
+<div class="share_div" alt="分享" style="display: none;">
+<a class="btn_a_close_1"></a>
+<img class="msg_img img_53" alt="images/53.png" num='0' style="display: none;">
+<img class="msg_img img_57" alt="images/57.png" num='0' style="display: none;">
+<a id="a_btn_share" class="btn_a_share"></a>
+</div>
+</section>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/createjs-2013.12.12.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/gamef.js?v=1"></script>
+<script type="text/javascript" src="js/index.js?v=2"></script>
+<script src="js/jqMethod.js"></script>
+<script type="text/javascript">
+
+        $(function () {
+
+            window.gamef = new GameF();
+            window.bodyHeight, window.bodyWidth;
+            window.divheight, window.divwidth;
+            window.onload = function () {
+                // alert("gameid:"+gamef.gameid+"\nkey:"+gamef.key+"\nopen_id:"+gamef.open_id+"\nmyKey:"+gamef.myKey);
+                window.divwidth = $("#main-mask").width();
+                window.divheight = $("#main-mask").height();
+                window.bodyWidth = document.body.clientWidth;
+                window.bodyHeight = document.body.clientHeight;
+            };
+            window.onresize = function () {
+                if (window.bodyHeight > document.body.clientHeight) {
+                    $('#main-mask').css({
+                        marginTop: "-30%"
+                    });
+                } else {
+                    $('#main-mask').css({
+                        marginTop: "0"
+                    });
+                }
+            }
+
+            Main.initStage();
+            btGame.resizeArea($("#gl-con"), Main.width, Main.height, "100%", "center");
+            btGame.resizeArea($("#prize-con"), Main.width, Main.height, "100%", "center");
+            btGame.resizeArea($("#main-mask"), Main.width, Main.height, "0%", "center");
+            btGame.resizeArea($("prize-mask"), Main.width, Main.height, "0%", "center");
+
+            $("#container").bind("click", function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            });
+            $("#canvas").bind("click", function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            });
+            $("#main-mask").bind("click", function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            });
+
+            $("#a_btn_share").unbind('click').bind('click', function (event) {
+                JQMethod.messageBox_close();
+                gamef.share();
+                event.stopPropagation();
+            });
+
+            $(".btn_a_close,.btn_a_close_1").unbind('click').bind('click', function (event) {
+                JQMethod.messageBox_close();
+                event.stopPropagation();
+            });
+
+            //$("#down_href").unbind('click').bind('click', function (event) {
+            //    window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.realcloud.loochadroid.college";
+            //    event.stopPropagation();
+            //});
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+.popup-base {
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    visibility:hidden;
+    z-index:1000000;
+    opacity:1;
+    -moz-transition:all .3s;
+    -webkit-transition:opacity .3s;
+    -o-transition:all .3s;
+    transition:all .3s;
+    background:rgba(0,0,0,.3);
+}
+
+.popup-base.popup-visible {
+    opacity:1;
+    visibility:visible;
+}
+
+#popup-bg {
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+.popup-base .dialog {
+    position:absolute;
+}
+
+.dialog-prompt {
+    margin-top:10px;
+    text-align:center;
+}
+
+.dialog-buttons {
+    padding:10px;
+    text-align:right;
+    background:-webkit-gradient(linear , 0% 0% , 0% 100%, from(#E6E6E6), to(#F7F6F6));
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+}
+
+.popup {
+    font-family:sans-serif;
+    font-weight:700;
+    text-align:center;
+    font-size:12px;
+    line-height:130%;
+    /* text-transform:uppercase; */
+    background-color:rgba(049,049,049,.7);
+    border-radius:6px;
+    -webkit-box-shadow:0px 0px 5px rgba(0,0,0,1);
+    z-index:999999999;
+}
+
+.dialog-buttons button {
+    display:inline-block;
+    vertical-align:baseline;
+    cursor:pointer;
+    font-family:sans-serif;
+    font-style:normal;
+    text-decoration:none;
+    border:1px solid #CCC;
+    outline:0;
+    -webkit-background-clip:padding-box;
+    font-size:13px;
+    line-height:13px;
+    font-weight:700;
+    border-radius:5px;
+    text-transform:uppercase;
+    background:-webkit-gradient(linear , 0% 0% , 0% 100%, from(#FEFEFE), to(#E9E9E9));
+    color:#666;
+    margin:0 0 0 5px;
+    padding:9px 12px;
+}
+.dialog-buttons button:hover{
+    background:-webkit-gradient(linear , 0% 0% , 0% 100%, from(#E9E9E9), to(#FEFEFE));
+}
+
+.dialog-prompt input {
+    font-family:sans-serif;
+    outline:none;
+    border:1px solid #333;
+    width:85%;
+    background-color:#fff;
+    font-size:15px;
+    margin:0;
+    padding:5px;
+}
+
+#popup-out .dialog {
+    min-width:200px;
+    min-height: 100px;
+    position:absolute;
+}
+
+#popup-out .dialog-inner {
+    margin:2px;
+    background:white;
+    border-radius:4px;
+    color:#666;
+    text-align:left;
+    min-width: 195px; 
+    min-height: 95px;
+}
+
+button.cancel {
+    background-color:rgba(0,0,0,.7);
+}
+
+.dialog-content{
+    min-height:50px;
+    min-width: 172px;
+    padding:10px;
+}
+
+.popup-close{
+    background: url(../img/sprite.png) -30px -86px;
+    background-size: 320px;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    float:right;
+    position:absolute;
+    right:-9px;
+    top:-10px;
+}
+
+.popup-loading{
+	text-align: center; 
+	min-height: 50px; 
+	line-height: 50px;
+}
+.popup-loading img{
+	vertical-align:middle;
+}
+
+#dismiss-indicator {
+  min-height: 15px;
+  margin: 5px auto 2px auto;
+  width: 5.4em;
+  overflow: hidden;
+  display: block;
+
+}

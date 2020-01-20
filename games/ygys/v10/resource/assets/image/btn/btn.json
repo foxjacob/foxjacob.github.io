@@ -1,0 +1,15 @@
+{
+"file": "btn.png"
+,
+"frames": {
+	"40035_1": {"x":0, "y":133, "w":54, "h":54, "offX":0,"offY":0,"sourceW":54,"sourceH":54},
+	"40035_2": {"x":100, "y":146, "w":44, "h":44, "offX":5,"offY":5,"sourceW":54,"sourceH":54},
+	"40040_1": {"x":0, "y":78, "w":54, "h":54, "offX":1,"offY":1,"sourceW":57,"sourceH":57},
+	"40040_2": {"x":55, "y":144, "w":44, "h":44, "offX":6,"offY":6,"sourceW":57,"sourceH":57},
+	"40070": {"x":130, "y":0, "w":72, "h":145, "offX":4,"offY":2,"sourceW":80,"sourceH":149},
+	"40075": {"x":55, "y":78, "w":52, "h":65, "offX":0,"offY":0,"sourceW":52,"sourceH":65},
+	"40080": {"x":0, "y":0, "w":129, "h":77, "offX":0,"offY":0,"sourceW":129,"sourceH":77},
+	"60100_1": {"x":145, "y":180, "w":39, "h":33, "offX":0,"offY":0,"sourceW":39,"sourceH":33},
+	"60100_2": {"x":145, "y":146, "w":39, "h":33, "offX":0,"offY":0,"sourceW":39,"sourceH":33}
+
+}}

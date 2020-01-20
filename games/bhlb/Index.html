@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+<img src='photo.jpg' />
+</div>
+<title>小的们，不想被老板炒鱿鱼的话，表忠心的机会来了！！</title>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta name="description" content="保护老板" />
+    <meta name="keywords" content="保护老板,益智游戏,html5游戏,前端开发,HTML5开发,小游戏">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="author" content="sumei" />
+    <link rel="stylesheet" type="text/css" href="css/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <script>
+    	(function (doc, win){
+            var clientWidth = doc.documentElement.clientWidth;
+            var metaEl = doc.createElement('meta');
+            var scale = clientWidth/640;
+            metaEl.setAttribute('name', 'viewport');
+            metaEl.setAttribute('content', 'width=640, initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+            doc.documentElement.firstElementChild.appendChild(metaEl);
+        })(document, window);
+    </script>
+</head>
+
+<body>
+	<div id="load">
+        <img src="images/266.png" class="p266">
+        <div class="spinner"></div>
+        <div id="percent">0%</div>
+    </div>
+	    
+	<div class="view" id="view">
+		<div id="page_index">
+			<span id="voice_btn"></span>
+			<span id="help_btn" class="help_btn"></span>
+			<div class="index_img"></div>
+			<div class="index_text index_highest"></div>
+			<span id="start_btn"></span>
+			<span class="boyaaLogo"></span>
+		</div>
+
+		<div id="page_game" style="display:none">
+			<header>
+				<div class="highest"><span id="highest"></span></div>
+				<div class="score"><span id="score">0</span></div>
+				<a href="javascript:;" id="new_game_button" title="New Game"></a>
+			</header>
+			<!-- <div class="anim_add"></div> -->
+			<div id="game_container">
+				<div id="grid_container"></div>
+			</div>
+		</div>
+
+		<div id="page_gameOver" style="display:none">
+			<div id="gameOver">
+				<span id="this_score">444</span>
+				<span id="highest_score"></span>
+
+				<a href="javascript:;" id="share_btn" title="分享"></a>
+				<a href="javascript:;" id="continue_btn" title="更多游戏"></a>
+			</div>
+		</div>
+
+		<div id="page_help" style="display:none">
+			<img src="images/help.png" alt="">
+			<a id="close_help_btn" href="javascript:;"><img src="images/btn_orange.png" alt=""></a>
+		</div>
+
+		<!-- 分享 -->
+	    <div id="page_share" style="display:none">
+	    	<div class="cont_wrap">
+	    		<img src="images/share.png" alt="">
+	    	</div>
+	    </div>
+
+	</div>
+
+	<img class="boss_key" src="images/boss_key.png" alt="使用键盘上下左右键玩游戏">
+	<img class="boss_Qr" src="images/boss_qr.png" alt="扫描二维码手机上玩游戏">
+	
+	<audio id="voice_audio" preload="preload" src="audio/start.mp3"></audio>
+	<audio id="voice_kill_k" preload="preload" src="audio/kill_k.mp3"></audio>
+	<audio id="voice_kill_p" preload="preload" src="audio/kill_p.mp3"></audio>
+	<audio id="voice_slide" preload="preload" src="audio/slide.mp3"></audio>
+	<audio id="voice_merge" preload="preload" src="audio/merge.mp3"></audio>
+	<audio id="voice_eat" preload="preload" src="audio/eat.mp3"></audio>
+	<audio id="voice_start" preload="preload" src="audio/start.mp3" loop="loop"></audio>
+	
+	<!-- build:js js/j.js -->
+	<script type="text/javascript" src="js/all.min.js"></script>
+	<!-- endbuild -->
+
+		<script src='js/dcagent.v2.min.js'></script>
+	<script>
+	    DCAgent.init({appId:'C7BAAC2BE2A8ED2AD4924B0C43CB44164', virus: false ,channel: '266'});
+	</script>
+
+    <!-- share -->
+    <script src="js/jssdk.php"></script>
+    <script src="js/jweixin-1.0.0.js"></script>
+    <script src="js/share.js" type="text/javascript"></script>
+    <!-- endshare -->
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+{"frames": {
+
+"BearBaseball_Bate.png":
+{
+	"frame": {"x":54,"y":92,"w":26,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":90},
+	"sourceSize": {"w":26,"h":90}
+},
+"BearBaseball_BrazoDer.png":
+{
+	"frame": {"x":39,"y":26,"w":35,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":26},
+	"sourceSize": {"w":35,"h":26}
+},
+"BearBaseball_BrazoIzq.png":
+{
+	"frame": {"x":2,"y":26,"w":35,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":26},
+	"sourceSize": {"w":35,"h":26}
+},
+"BearBaseball_Cabeza.png":
+{
+	"frame": {"x":2,"y":279,"w":90,"h":63},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":90,"h":63},
+	"sourceSize": {"w":90,"h":63}
+},
+"BearBaseball_Cuerpo.png":
+{
+	"frame": {"x":2,"y":92,"w":50,"h":47},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":47},
+	"sourceSize": {"w":50,"h":47}
+},
+"BearBaseball_Gorro.png":
+{
+	"frame": {"x":2,"y":223,"w":90,"h":54},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":90,"h":54},
+	"sourceSize": {"w":90,"h":54}
+},
+"BearBaseball_OrejaDer.png":
+{
+	"frame": {"x":39,"y":54,"w":35,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":36},
+	"sourceSize": {"w":35,"h":36}
+},
+"BearBaseball_OrejaIzq.png":
+{
+	"frame": {"x":2,"y":54,"w":35,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":36},
+	"sourceSize": {"w":35,"h":36}
+},
+"BearBaseball_PieDer.png":
+{
+	"frame": {"x":38,"y":2,"w":27,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":15},
+	"sourceSize": {"w":27,"h":15}
+},
+"BearBaseball_PieIzq.png":
+{
+	"frame": {"x":67,"y":2,"w":28,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":15},
+	"sourceSize": {"w":28,"h":15}
+},
+"BearBaseball_PiernaDer.png":
+{
+	"frame": {"x":20,"y":2,"w":16,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":22},
+	"sourceSize": {"w":16,"h":22}
+},
+"BearBaseball_PiernaIzq.png":
+{
+	"frame": {"x":2,"y":2,"w":16,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":22},
+	"sourceSize": {"w":16,"h":22}
+},
+"BearBaseball_Sombra.png":
+{
+	"frame": {"x":2,"y":184,"w":93,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":37},
+	"sourceSize": {"w":93,"h":37}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "BearBaseball-hd.png",
+	"format": "RGBA5555",
+	"size": {"w":97,"h":344},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2a2f653e9642275f1b1beaad2b0d7417:c5fafa63b2dbb6ed0816bdb56494c851:efbf275706f0a5a8bd98adf4d1ea4cc1$"
+}
+}

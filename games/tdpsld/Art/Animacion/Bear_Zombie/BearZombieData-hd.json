@@ -1,0 +1,205 @@
+{
+"bones": [
+	{ "name": "root", "y": -1.57 },
+	{ "name": "Salto", "parent": "root", "length": 34.95, "x": -12.83, "y": -8.33, "rotation": -1.8 },
+	{ "name": "bone", "parent": "root", "length": 15.95, "x": 1.17, "y": -16.74, "rotation": -90 },
+	{ "name": "Cuerpo", "parent": "Salto", "length": 27.55, "x": 11.18, "y": 24.87, "rotation": 90.9 },
+	{ "name": "BrazoDer", "parent": "Cuerpo", "length": 21.82, "x": 29.81, "y": -14.31, "rotation": -108.29 },
+	{ "name": "BrazoIzq", "parent": "Cuerpo", "length": 24.3, "x": 28.48, "y": 14.08, "rotation": 107.89 },
+	{ "name": "Cabeza", "parent": "Cuerpo", "length": 38.57, "x": 30.16, "y": 0.19, "rotation": 0.45 },
+	{ "name": "PiernaDer", "parent": "Cuerpo", "length": 10.45, "x": 1.05, "y": -11.87, "rotation": -159.69 },
+	{ "name": "PiernaIzq", "parent": "Cuerpo", "length": 10.63, "x": 1.27, "y": 11.04, "rotation": 170.17 },
+	{ "name": "Grenade", "parent": "BrazoDer", "length": 17.65, "x": 25.42, "y": 5.07, "rotation": 87.74 },
+	{ "name": "OrejaDer", "parent": "Cabeza", "length": 25.91, "x": 41.83, "y": -8.42, "rotation": -54.78 },
+	{ "name": "OrejaIzq", "parent": "Cabeza", "length": 32.37, "x": 42.29, "y": 6.42, "rotation": 59.77 },
+	{ "name": "PieDer", "parent": "PiernaDer", "length": 19.82, "x": 12.44, "y": 2.26, "rotation": 64.53 },
+	{ "name": "PieIzq", "parent": "PiernaIzq", "length": 18.21, "x": 10.63, "y": -0.05, "rotation": -65.45 }
+],
+"slots": [
+	{ "name": "BearZombie_Sombra", "bone": "bone", "attachment": "BearZombie_Sombra" },
+	{ "name": "BearZombie_REF", "bone": "root" },
+	{ "name": "BearZombie_PiernaDer", "bone": "PiernaDer", "attachment": "BearZombie_PiernaDer" },
+	{ "name": "BearZombie_PieDer", "bone": "PieDer", "attachment": "BearZombie_PieDer" },
+	{ "name": "BearZombie_PiernaIzq", "bone": "PiernaIzq", "attachment": "BearZombie_PiernaIzq" },
+	{ "name": "BearZombie_PieIzq", "bone": "PieIzq", "attachment": "BearZombie_PieIzq" },
+	{ "name": "BrazoIzq", "bone": "BrazoIzq", "attachment": "BearZombie_BrazoIzq" },
+	{ "name": "BearZombie_BrazoDer", "bone": "BrazoDer", "attachment": "BearZombie_BrazoDer" },
+	{ "name": "Cuerpo", "bone": "Cuerpo", "attachment": "BearZombie_Cuerpo" },
+	{ "name": "BearZombie_OrejaDer", "bone": "OrejaDer", "attachment": "BearZombie_OrejaDer" },
+	{ "name": "BearZombie_OrejaIzq", "bone": "OrejaIzq", "attachment": "BearZombie_OrejaIzq" },
+	{ "name": "Cabeza", "bone": "Cabeza", "attachment": "BearZombie_Cabeza" }
+],
+"skins": {
+	"default": {
+		"BearZombie_BrazoDer": {
+			"BearZombie_BrazoDer": { "x": 14.13, "y": 1.38, "rotation": 19.2, "width": 36, "height": 27 }
+		},
+		"BearZombie_OrejaDer": {
+			"BearZombie_OrejaDer": { "x": 23.07, "y": -0.9, "rotation": -34.76, "width": 36, "height": 38 }
+		},
+		"BearZombie_OrejaIzq": {
+			"BearZombie_OrejaIzq": { "x": 25.52, "y": 1.45, "rotation": -149.32, "width": 36, "height": 37 }
+		},
+		"BearZombie_PieDer": {
+			"BearZombie_PieDer": { "x": 5.03, "y": 0.62, "rotation": 6.05, "width": 29, "height": 16 }
+		},
+		"BearZombie_PieIzq": {
+			"BearZombie_PieIzq": { "x": 7.94, "y": -0.42, "rotation": 166.18, "width": 28, "height": 16 }
+		},
+		"BearZombie_PiernaDer": {
+			"BearZombie_PiernaDer": { "x": 0.7, "y": 2.46, "rotation": 70.59, "width": 17, "height": 23 }
+		},
+		"BearZombie_PiernaIzq": {
+			"BearZombie_PiernaIzq": { "x": 0.74, "y": -3.83, "rotation": 100.72, "width": 16, "height": 23 }
+		},
+		"BearZombie_Sombra": {
+			"BearZombie_Sombra": { "x": -20.69, "y": -0.58, "rotation": 90, "width": 93, "height": 37 }
+		},
+		"BrazoIzq": {
+			"BearZombie_BrazoIzq": { "x": 15.28, "y": -2.59, "rotation": 163.01, "width": 36, "height": 27 }
+		},
+		"Cabeza": {
+			"BearZombie_Cabeza": { "x": 37.37, "rotation": -89.54, "width": 94, "height": 80 }
+		},
+		"Cuerpo": {
+			"BearZombie_Cuerpo": { "x": 20.53, "y": -0.12, "rotation": -89.09, "width": 48, "height": 48 }
+		}
+	}
+},
+"animations": {
+	"Walk": {
+		"bones": {
+			"Cuerpo": {
+				"rotate": [
+					{ "time": 0, "angle": -8.6 },
+					{ "time": 0.3333, "angle": 8.88 },
+					{ "time": 0.6666, "angle": -8.6 }
+				],
+				"translate": [
+					{ "time": 0, "x": -0.1, "y": 6.7, "curve": "stepped" },
+					{ "time": 0.6666, "x": -0.1, "y": 6.7 }
+				]
+			},
+			"Cabeza": {
+				"rotate": [
+					{
+						"time": 0,
+						"angle": -8.84,
+						"curve": [ 0.438, 0.05, 0.567, 0.98 ]
+					},
+					{
+						"time": 0.2333,
+						"angle": 11.35,
+						"curve": [ 0.438, 0.05, 0.567, 0.98 ]
+					},
+					{ "time": 0.6666, "angle": -8.84 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.1666, "x": -3.85, "y": -0.19 },
+					{ "time": 0.3, "x": 0.74, "y": 0.76 },
+					{ "time": 0.5, "x": -3.57, "y": 0.54 },
+					{ "time": 0.6666, "x": 0, "y": 0 }
+				]
+			},
+			"OrejaDer": {
+				"rotate": [
+					{ "time": 0, "angle": -12.56 },
+					{ "time": 0.4, "angle": 7.43 },
+					{ "time": 0.6666, "angle": -12.56 }
+				]
+			},
+			"OrejaIzq": {
+				"rotate": [
+					{ "time": 0, "angle": -14.51 },
+					{ "time": 0.4, "angle": 2.43 },
+					{ "time": 0.6666, "angle": -14.51 }
+				]
+			},
+			"PiernaIzq": {
+				"rotate": [
+					{ "time": 0, "angle": -45.23 },
+					{ "time": 0.3333, "angle": 8.54 },
+					{ "time": 0.6666, "angle": -45.23 }
+				],
+				"translate": [
+					{ "time": 0, "x": -6.64, "y": 5.09 },
+					{ "time": 0.3333, "x": 0.34, "y": -1.2 },
+					{ "time": 0.6666, "x": -6.64, "y": 5.09 }
+				]
+			},
+			"PieIzq": {
+				"rotate": [
+					{ "time": 0, "angle": -18.9 },
+					{ "time": 0.1666, "angle": 3.02 },
+					{ "time": 0.3666, "angle": -12.72 },
+					{ "time": 0.5, "angle": 10.43 },
+					{ "time": 0.6666, "angle": -18.9 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0.33, "y": -3.34 },
+					{ "time": 0.3666, "x": 0, "y": 0 },
+					{ "time": 0.6666, "x": 0.33, "y": -3.34 }
+				]
+			},
+			"PiernaDer": {
+				"rotate": [
+					{ "time": 0, "angle": -13.58 },
+					{ "time": 0.1666, "angle": 7.94 },
+					{ "time": 0.3333, "angle": 50.65 },
+					{ "time": 0.5, "angle": 0.58 },
+					{ "time": 0.6666, "angle": -13.58 }
+				],
+				"translate": [
+					{ "time": 0, "x": -0.11, "y": 0.98 },
+					{ "time": 0.1666, "x": -1.67, "y": -0.85 },
+					{ "time": 0.3333, "x": -2.6, "y": -6.39 },
+					{ "time": 0.5, "x": -2.17, "y": 0.79 },
+					{ "time": 0.6666, "x": -0.11, "y": 0.98 }
+				]
+			},
+			"PieDer": {
+				"rotate": [
+					{ "time": 0, "angle": 17.82 },
+					{ "time": 0.1666, "angle": -9.87 },
+					{ "time": 0.4, "angle": 2.86 },
+					{ "time": 0.5, "angle": -7.12 },
+					{ "time": 0.6666, "angle": 17.82 }
+				]
+			},
+			"BrazoIzq": {
+				"rotate": [
+					{ "time": 0, "angle": -34.67 },
+					{ "time": 0.3666, "angle": 35.93 },
+					{ "time": 0.6666, "angle": -34.67 }
+				]
+			},
+			"BrazoDer": {
+				"rotate": [
+					{ "time": 0, "angle": -35.12 },
+					{ "time": 0.3666, "angle": 32.17 },
+					{ "time": 0.6666, "angle": -35.12 }
+				]
+			},
+			"Salto": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.1666, "x": -0.1, "y": -3.35 },
+					{ "time": 0.3333, "x": -0.02, "y": -0.82 },
+					{ "time": 0.5, "x": -0.09, "y": -2.96 },
+					{ "time": 0.6666, "x": 0, "y": 0 }
+				]
+			},
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": 2.04, "y": 1.36 },
+					{ "time": 0.1666, "x": -2.04, "y": 1.36 },
+					{ "time": 0.3333, "x": -5.45, "y": 1.36 },
+					{ "time": 0.5, "x": -2.04, "y": 1.36 },
+					{ "time": 0.6666, "x": 2.04, "y": 1.36 }
+				]
+			}
+		}
+	}
+}
+}

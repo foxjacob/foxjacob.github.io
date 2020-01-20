@@ -1,0 +1,84 @@
+{
+  "mc": {
+    "black": {
+      "frameRate": 120,
+      "labels": [
+      ],
+      "frames": [
+        {
+          "res": "black1",
+          "x": -49.5,
+          "y": -91.5,
+          "duration": 30
+        },
+        {
+          "res": "black2",
+          "x": -50,
+          "y": -92.5,
+          "duration": 30
+        }
+      ]
+    },
+    "black_back": {
+      "frameRate": 120,
+      "labels": [
+      ],
+      "frames": [
+        {
+          "res": "black3",
+          "x": -50,
+          "y": -92.5,
+          "duration": 30
+        },
+        {
+          "res": "black4",
+          "x": -49.5,
+          "y": -91.5,
+          "duration": 30
+        }
+      ]
+    }
+  },
+  "res": {
+    "black1": {
+      "x": 306,
+      "y": 1,
+      "w": 99,
+      "h": 183,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 99,
+      "sourceH": 183
+    },
+    "black2": {
+      "x": 1,
+      "y": 1,
+      "w": 100,
+      "h": 185,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 100,
+      "sourceH": 185
+    },
+    "black3": {
+      "x": 103,
+      "y": 1,
+      "w": 100,
+      "h": 185,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 100,
+      "sourceH": 185
+    },
+    "black4": {
+      "x": 205,
+      "y": 1,
+      "w": 99,
+      "h": 183,
+      "offX": 0,
+      "offY": 0,
+      "sourceW": 99,
+      "sourceH": 183
+    }
+  }
+}

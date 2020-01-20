@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+ <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="animate.css">
+
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<title>挑战无影手</title>
+
+
+<style>
+	.btns{
+			position:fixed;
+			left:10%;
+			width:80%;
+			bottom:0%;
+			text-align:center;
+			z-index:999;
+	}
+</style>
+</head>
+
+<body>
+<!--游戏主界面-->
+<div class="index">
+<img class="bg" src="img/gamesbg.png">
+    <p class="pbox"></p>	
+	<div class="btns">
+		<p class="start"></p>
+    	<p class="gamegz" id="gamegz"></p>
+	</div>
+    <p></p>
+</div>
+
+<!--游戏进行-->
+<div class="gamesstart" id="gamesstart">
+<img class="bg" src="img/gamesstartbg.png">
+<div class="top">
+    	
+    	<p class="fs" id="fenshu">0</p>
+    	<p class="sj" id="shijian">90</p>
+    </div>
+    <span class="xian"></span>
+    <div id="img">
+    <p class="p p1"><img src="img/1.png"></p>
+    <p class="p p2"><img src="img/2.png"></p>
+    <p class="p p3"><img src="img/3.png"></p>
+    <p class="p p4"><img src="img/4.png"></p>
+    <p class="p p5"><img src="img/0.png"></p>
+    </div>
+    <p class="rw" id="rw"></p>
+</div>
+<!--游戏结束-->
+<div class="gamesjs" >
+<!--游戏结束-->
+    <ul class="u1">
+        <li class="l1" id="yhimg">
+        	<img src>
+        </li>
+        <li class="l2" id="texta">超级无敌<br>无影手</li>
+        <li class="l3" id="textb">您击败了<span class="red">99%</span>的挑战者，如此深厚的功力看起来萌萌哒！</li>
+        <li class="text-align:center;">
+			<div class="fx" id="fenxiang"></div>
+		</li>
+        <li class="lq" id="lingqu"></li>
+		<li class="more" id="more"></li>
+    </ul>
+</div>
+<!--游戏暂停-->
+<div class="gameszt" id="gameszt">
+    <ul class="u1">
+    	<h1>暂停</h1>
+    	<li class="l1" id="fhgames"></li>
+        <li class="l2"></li>
+        <li class="l3"></li>
+    </ul>
+</div>
+<div class="jiafen" style="display: none; top:400px;">
+    <span>+30</span>
+<img src="img/xl.png" width="100%">
+</div>
+<div class="yykj xuan" id="play"></div>
+<audio src="kl.mp3" autoplay="autoplay" loop id="audio"></audio>
+<input type="hidden" id="uid" value="">
+
+<input type="hidden" id="msg" >
+<input type="hidden" id="title">
+<script src="js.js?v=1.0"></script>
+<script language=javascript>
+       (function (){
+        //updateShare(0);
+        })();
+		function goHome(){
+			//Play68.goHome();
+            window.location.href="https://foxjacob.gitee.io/gamestation/";
+		}
+		function clickMore(){
+			//Play68.goHome();
+            window.location.href="https://foxjacob.gitee.io/gamestation/";
+			
+		}
+		function dp_share(){
+			//setTimeout(play68_submitScore(window.score),500);
+		
+		}
+		function dp_Ranking(){
+			
+		}
+
+	
+		function dp_submitScore(score){
+	
+		}
+	</script>
+
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'不能停止',
+  'link':'https://foxjacob.gitee.io/gamestation/games/bntz/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/bntz/icon.png'
+}
+window.shareFriendData={
+  'title':'不能停止',
+  'content':'关注悠狐阁网络科技,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/bntz/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/bntz/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+</body></html>

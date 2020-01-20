@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html class="html" lang="en"><head>
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+<img src='photo.jpg' />
+</div>
+    <meta charset="UTF-8">
+    <title>清明节去郊游，一起来吧！</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" name="viewport">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <script language="javascript" type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/head.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var bh = $(window).height();
+            $(".index,.gamedo").css("backgroundSize", "100% " + bh + "px");
+            $(".index,.gamedo").css("height", bh + "px");
+        })
+    </script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head><iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe><iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+<body>
+    <div class="index hide" id="loading" style="height: 826px; background-size: 100% 826px;">
+        <img src="images/logo.png" class="logo ">
+        <img src="images/theme.png" class="theme bling">
+        <img src="images/ani0.png" class="carbody qqani1 ">
+        <p id="loadnum" class="startbtn" style="color:#ff6a00;font-size:24px;">加载中0%</p>
+        <div class="indexbg">
+            <img src="images/indexbg.png" class="img_1">
+            <img src="images/indexbg.png">
+        </div>
+
+    </div>
+    
+    <!-- 游戏提示 -->
+    <div class="wfpop hide">
+        <img src="images/wftxt.png" class="wftxt iStart">
+    </div>
+
+
+    <div class="index dIndex" style="height: 826px; background-size: 100% 826px;">
+        <img src="images/logo.png" class="logo ">
+        <img src="images/theme.png" class="theme bling">
+        <img src="images/ani.png" class="carbody qqani1">
+        <img src="images/startbtn.png" class="startbtn shand iStart1">
+        <img src="images/yun.png" class="yun ">
+        <div class="roadmap">
+            <img src="images/qiqiu.png" class="qiqiu qqani">
+            <img src="images/botroad.png" class="botroad">
+        </div>
+        <img src="images/lookrule.png" class="lookrule ">
+        <div class="menu">
+            <ul>
+                <li class="rulebtn" onclick="$('.rule').show()"><img src="images/rulebtn.png"></li>
+                <li><span></span></li>
+                <li class="phbtn iList"><img src="images/phbtn.png"></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 游戏页 -->
+    <div class="gamedo hide dGame" style="height: 826px; background-size: 100% 826px;">
+        <canvas id="gameCanvas" width="800" height="450"></canvas>
+    </div>
+
+    <div class="gover pop hide dGameOver">
+        <div class="main1">
+            <h3><img src="images/txt.png"></h3>
+            <p class="txt1"><img src="images/txt1.png"><span class="jifen">1</span></p>
+            <p class="txt2 divPM dOrder"><img src="images/txt2.png"><span class="phnum iOrder">13</span></p>
+            <p class=><span class="synum"></span>【长按下方二维码即可快速关注，了解更多游戏活动】<br><img src="images/ewm.jpg" class="ewm"></p>
+            <ul>
+                <li class="iAgain"><img src="images/morebtn.png"></li>
+                <li class="iShare"><img src="images/sharebtn.png" class="sharebtn"></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 分享弹窗 -->
+    <div class="sharepop hide dShare "><img src="images/share.png"></div>
+
+    <script type="text/javascript">
+   
+        //$(document).ready(function () {
+        //    $(".bolan").addClass("animate");
+        //});
+        //var iiiii = 0;
+        //(function _ani() {
+        //    iiiii -= 1;
+        //    iiiii == -3198 && (iiiii = 0);
+        //    document.getElementsByClassName("img_1")[0].style.marginLeft = iiiii + 'px';
+        //    document.getElementsByClassName("img_1")[1].style.marginLeft = iiiii + 'px';
+        //    setTimeout(_ani, 8);
+        //})();
+    </script>
+    
+    <script cocos="" src="game.min.js"></script><div style="font-family: Arial; position: absolute; left: -100px; top: -100px; line-height: normal;"></div><input type="text" id="imeDispatcherInput" tabindex="2" style="-webkit-transform: translate3d(0px, 0px, 0px) rotateZ(0deg) scale(0, 0) skewX(0deg) skewY(0deg); opacity: 0; font-size: 1px; position: absolute; top: 0px; left: 0px;">
+    <!--<script type="text/javascript" src="js/game.min.js"></script>-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="http://wx.qqauto.cn/html/upcoin/js/share1.js"></script>
+
+
+</body></html>

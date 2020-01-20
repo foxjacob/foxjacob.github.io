@@ -1,0 +1,23 @@
+{
+    "graphicPacks": [
+        {
+            "name": "base",
+            "preload": true,
+            "products": [
+                {"name": "Cake", "url": "cake.png", "w": 2, "h": 2},
+                {"name": "CheeseH", "url": "cheeseH.png", "w": 2, "h": 1},
+                {"name": "CheeseV", "url": "cheeseV.png", "w": 1, "h": 2},
+                {"name": "Fish", "url": "fish.png", "w": 2, "h": 1},
+                {"name": "LongLoafH", "url": "long_loafH.png", "w": 3, "h": 1},
+                {"name": "LongLoafV", "url": "long_loafV.png", "w": 1, "h": 3},
+                {"name": "Orange", "url": "orange.png", "w": 1, "h": 1},
+                {"name": "SausageH", "url": "sausageH.png", "w": 3, "h": 1},
+                {"name": "SausageV", "url": "sausageV.png", "w": 1, "h": 3},
+                {"name": "Tomato", "url": "tomato.png", "w": 1, "h": 1},
+                {"name": "CucumberH", "url": "cucumberH.png", "w": 2, "h": 1},
+                {"name": "CucumberV", "url": "cucumberV.png", "w": 1, "h": 2},
+                {"name": "Ice", "url": "ice.png", "w": 1, "h": 1, "special": "immovable"}
+            ]
+        }
+    ]
+}

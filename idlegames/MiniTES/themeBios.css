@@ -1,0 +1,73 @@
+body {
+	background: #0000CC;
+	color:#FFFFFF;
+	font-family: Monaco, monospace;
+}
+
+
+
+
+
+
+
+
+button {									/* On a scale of Body#background to Body#color, ranges from 0-14 */
+	background: #0000CC;					/* 0 */
+	border:1px solid #B8B8FF;				/* 10 */
+	color:#FFFFFF;							/* 14 */
+}
+
+button:hover {
+	color:#FFFFFF;							/* 14 */
+	background: #993333;					/* RED!!! */
+}
+
+button:disabled {
+	color:#4343FF;							/* 4 */
+	background: #0000CC;					/* 0 */
+	border: 1px solid #4343FF;				/* 4 */
+}
+ 
+button:disabled:hover {
+	background: #0000CC;					/* 0 */
+	border: 1px solid #4E4EFF;				/* 4.5 */
+}
+
+
+
+
+
+
+
+
+.fadedText4 {
+	color:#2B2BD4;
+}
+
+.fadedText3 {
+	color:#5656FF;
+}
+
+.fadedText2 {
+	color:#8080E6;
+}
+
+.fadedText1 {
+	color:#AAAAEE;
+}
+
+.fullBrightText {
+	color:#FFFFFF;
+}
+
+
+
+
+
+
+
+
+a:link    { color:#FFFFFF }  /* unvisited links */
+a:visited { color:#FFFFFF }  /* visited links   */
+a:hover   { color:#FFFFFF }  /* user hovers     */
+a:active  { color:#FFFFFF }  /* active links    */

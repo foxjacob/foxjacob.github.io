@@ -1,0 +1,77 @@
+/* CSS Document */
+body{ margin:0; padding:0; font-family:"微软雅黑"}
+.img{width:100%;}
+ul,li{margin:0; padding:0; list-style-type:none;}
+p{margin:0; padding:0;}
+.main{position:relative; margin:0 auto; max-width:720px; width:100%; height:100%; overflow:hidden;}
+.pg{position:absolute; top:0; left:0; overflow:hidden;}
+.pg>div{position:absolute;}
+.pg0{z-index:3;}
+.pg1{z-index:2;}
+.pg2{z-index:1;}
+.pg0 .btn{width:90%; height:40%; top:31%; left:5%;}
+.shiti_con{width:90%; left:5%; top:19.47%; height:52%;  background:#FFF8B9; border-radius:15px; overflow:hidden;}
+.shiti{width:18%; text-align:center; float:left;}
+.shiti .tit{font-size:1.5em; text-align:left; padding-left:7%; padding-right:7%; overflow:hidden;}
+.shiti .tit .tihao{display:block;float:left; display:block; width:10%;}
+.shiti .tit .timu{float:left; width:90%; display:block; text-align:left;}
+.shiti_con .ul{position: absolute; height:100%; width:500%; left:0; top:0; overflow:hidden;  padding-top:13%;}
+ul{clear:both;}
+
+.left_btn{width:15.83%; left:0px; position:absolute; top:40.085%;}
+.right_btn{width:15.83%; right:0px; position:absolute; top:40.085%;}	
+
+
+.shiti li{position:relative; padding-left:30px; width:60%; text-align:left; margin:5px auto; font-size:1.2em; line-height:1.5em;}
+.input{position:absolute; top:25%; left:5px; width:15px; height:15px; border:1px solid #000;}
+.select{background:url(../images/select.png) no-repeat; background-size:100% 100%;}
+.zitu{width:50%; height:auto; margin:0 auto;}
+.scroll{height:auto; width:80%; display:none; min-height:100px; margin:5% auto;}
+
+.scroll_tit{color:red; font-size:25px; text-align:center;}
+.scroll_con1{font-size:18px; text-indent:2em; margin-top:20px; float:left;}
+.scroll_con{font-size:18px; text-indent:2em; margin-top:0px; width:70%; float:left;}
+.show_tu{width:30%; float:right; margin-top:15%;}
+
+.no_click{width:35.83%; top:73%; left:60%; display:none;}
+.share{width:50.8%; left:5%; top:73%; display:none;}
+.result{width:35.83%; top:73%;  left:60%; display:none;}
+.again{width:35.83%; top:78%;  left:60%; display:none;}
+
+@media all and (min-width: 720px){
+	.shiti{margin-top:0.8%; padding-left:0.7%; box-sizing:border-box;}
+	.shiti .tit{font-size:2.2em;}
+	.shiti li{font-size:1.8em; width:70%;}
+	.zitu{width:200px;}
+	.s11{margin-top:0;}
+	.scroll_tit{font-size:2.3em;}
+	.scroll_con{font-size:2em; line-height:1.5em; margin-top:5px;}
+	.scroll_con1{font-size:2em; line-height:1.8em;}
+}
+@media all and (width: 640px){
+	.shiti{margin-top:1%; padding-left:0.5%; box-sizing:border-box;}
+	.shiti .tit{font-size:2em;}
+	.shiti li{font-size:1.6em;}
+	.s16 .zitu{width:30%;}
+	.scroll_tit{font-size:2em;}
+	.scroll_con{font-size:1.6em; line-height:1.8em; margin-top:5px;}
+	.scroll_con1{font-size:1.6em; line-height:1.8em;}
+}
+@media all and (min-width: 320px) and (max-width: 480px){
+	.shiti{padding-left:0.5%; box-sizing:border-box;}
+	.shiti_con .ul{padding-top:18%;}
+	.shiti .tit{font-size:20px;}
+	.shiti li{font-size:16px;}
+	.s16 .zitu{width:30%;}
+	.scroll_tit{font-size:25px; margin-top:10%;}
+	.scroll_con{font-size:16px; line-height:1.6em;}
+	.scroll_con1{font-size:16px; line-height:1.8em;}
+}
+@media all and (width: 320px){
+	.shiti .tit{font-size:1em;}
+	.shiti li{font-size:0.8em;}
+	.s16 .zitu{width:30%;}
+	.scroll_tit{font-size:20px; margin-top:0px;}
+	.scroll_con{font-size:15px;line-height:1.2em; margin-top:5px;}
+	.scroll_con1{font-size:15px; line-height:1.5em;}
+}

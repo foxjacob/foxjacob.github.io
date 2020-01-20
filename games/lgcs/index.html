@@ -1,0 +1,503 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title>老公测试</title>
+    <link type="text/css" rel="stylesheet" href="css/idangerous.swiper.css">
+    <style type="text/css">
+        html {
+          margin: 0;
+          padding: 0;
+          font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+          font-size: 12px;
+          -webkit-touch-callout: none;
+          background: url('imgs/bg.jpg') no-repeat left top;
+          background-size: 100% 100%;
+          width: 100%;
+          height: 100%;
+        }
+        img{
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .music{
+            width: 2rem;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+        }
+        @-webkit-keyframes round{
+            0%{-webkit-transform:rotate(0deg);}
+            100%{-webkit-transform:rotate(360deg);}
+        }
+        .round{
+            -webkit-animation:round 4s infinite;
+        }
+        #close{
+            display: none;
+        }
+        #page_zero{
+            display: block;
+        }
+        #page_zero .center{
+            width: 25rem;
+            height: auto;
+            margin: 0 auto;
+            padding-top: 5rem;
+            opacity: 1;
+        }
+        #start{
+            width: 10rem;   
+        }
+        .logo{
+            width: 7rem;
+            margin-top: 1rem;
+        }
+        .word{
+            width: 17rem;
+            margin-top: 2rem;
+        }
+        .center{
+            width: 25rem;
+            height: auto;
+            margin-right: 0;
+            /* opacity: 0; */
+        }
+        .center_ans{
+            width: 25rem;
+            height: auto;
+            margin: 0 auto;
+        }
+        .btn{
+            text-align: center;
+        }
+        .btn img{
+            display: inline-block;
+        }
+        #btn_a,.btn_a{
+            width: 8rem;
+            margin-right: 2rem;
+            /* opacity: 0; */
+        }
+        #btn_b,.btn_b{
+            width: 8rem;
+            /* opacity: 0; */
+        }
+        .go{
+            width: 8rem;
+            margin: 0 auto;
+        }
+        p{
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: #ff8800;
+            text-align: center;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .page{
+            display: none;
+        }
+        .ans_page{
+            display: none;
+        }
+        @-webkit-keyframes swing {
+          20% {
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+          }
+
+          40% {
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -10deg);
+          }
+
+          60% {
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+          }
+
+          80% {
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -10deg);
+          }
+
+          100% {
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+          }
+        }
+        .bounceIn{
+            -webkit-animation: bounceIn .8s;
+        }
+        .swing {
+          -webkit-animation:swing 1s infinite 0s;
+        }
+        @-webkit-keyframes bounceIn {
+          0%, 20%, 40%, 60%, 80%, 100% {
+            -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+          }
+
+          0% {
+            opacity: 0;
+            -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+          }
+
+          20% {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+          }
+
+          40% {
+            -webkit-transform: scale3d(.9, .9, .9);
+            transform: scale3d(.9, .9, .9);
+          }
+
+          60% {
+            opacity: 1;
+            -webkit-transform: scale3d(1.03, 1.03, 1.03);
+            transform: scale3d(1.03, 1.03, 1.03);
+          }
+
+          80% {
+            -webkit-transform: scale3d(.97, .97, .97);
+            transform: scale3d(.97, .97, .97);
+          }
+
+          100% {
+            opacity: 1;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
+        }
+        @-webkit-keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+        @-webkit-keyframes fadeInDown {
+          0% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+          }
+
+          100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+          }
+        }
+        .move .word {
+          -webkit-animation: fadeInDown .6s;
+        }
+        .move .center {
+          -webkit-animation: bounceIn .8s;
+          /* -webkit-transition:all 0.6s; */
+        }
+        .move .btn_a {
+          -webkit-animation: fadeIn 3s;
+        }
+        .move .btn_b {
+          -webkit-animation: fadeIn 3s;
+        }
+        .move .center_ans{
+            -webkit-animation: bounceIn .8s;
+        }
+        .move .go{
+            -webkit-animation: fadeIn 3s;
+        }
+        .move .shop{
+            -webkit-animation: fadeIn 3s;
+        }
+        @-webkit-keyframes zoomInDown {
+          0% {
+            opacity: 0;
+            -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+            transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+            -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+            animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+          }
+
+          60% {
+            opacity: 1;
+            -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+            transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+            -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+          }
+        }
+        .zoomInDown {
+          -webkit-animation: zoomInDown 1.2s;
+        }
+    </style>
+</head>
+<body> 
+
+        <img class="music" src="imgs/open.png" id="open">
+        <img class="music" src="imgs/close.png" id="close">
+        <div class="page" id="page_zero">
+            <img class="center" src="imgs/0.png" id="zero_cen">
+            <div>
+                <img id="start" src="imgs/start.png">
+            </div>
+            <img class="logo" src="imgs/logo.png">
+        </div>
+        <div class="page" id="page_one">
+            <img class="word" src="imgs/1-q.png">
+            <img class="center" src="imgs/1.png">
+            <div class="btn">
+                <img class="btn_a" src="imgs/1-a.png">
+                <img class="btn_b"  src="imgs/1-b.png">
+            </div>
+        </div>
+        <div class="page" id="page_two">
+            <img class="word" src="imgs/2-q.png">
+            <img class="center" src="imgs/2.png">
+            <div class="btn">
+                <img class="btn_a" src="imgs/2-a.png">
+                <img class="btn_b"  src="imgs/2-b.png">
+            </div>
+        </div>
+        <div class="page" id="page_three">
+            <img class="word" src="imgs/3-q.png">
+            <img class="center" src="imgs/3.png">
+            <div class="btn">
+                <img class="btn_a" src="imgs/3-a.png">
+                <img class="btn_b"  src="imgs/3-b.png">
+            </div>
+        </div>
+        <div class="page" id="page_four">
+            <img class="word" src="imgs/4-q.png">
+            <img class="center" src="imgs/4.png">
+            <div class="btn">
+                <img class="btn_a" src="imgs/4-a.png">
+                <img class="btn_b"  src="imgs/4-b.png">
+            </div>
+        </div>
+        <div class="page" id="page_five">
+            <img class="word" src="imgs/5-q.png">
+            <img class="center" src="imgs/5.png">
+            <div class="btn">
+                <img class="btn_a" src="imgs/5-a.png">
+                <img class="btn_b"  src="imgs/5-b.png">
+            </div>
+        </div>
+        <div class="page" id="page_six">
+            <img class="word" src="imgs/6-q.png">
+            <img class="center" src="imgs/6.png">
+            <div class="btn">
+                <img id="btn_a" src="imgs/6-a.png">
+                <img id="btn_b"  src="imgs/6-b.png">
+            </div>
+        </div>
+        <div class="ans_page" id="page_a">
+            <img class="word" src="imgs/a-r.png">
+            <img class="center_ans" src="imgs/a.png">
+            <img class="go go_1" src="imgs/go-1.jpg">
+        </div>
+        <div class="ans_page" id="page_b">
+            <img class="word" src="imgs/b-r.png">
+            <img class="center_ans" src="imgs/b.png">
+            <img class="go" src="imgs/go-1.jpg">
+        </div>
+        <div class="ans_page" id="page_c">
+            <img class="word" src="imgs/c-r.png">
+            <img class="center_ans" src="imgs/c.png">
+            <img class="go" src="imgs/go-1.jpg">
+        </div>
+        <div class="ans_page" id="page_d">
+            <img class="word" src="imgs/d-r.png">
+            <img class="center_ans" src="imgs/d.png">
+            <img class="go" src="imgs/go-2.jpg">
+        </div>
+        <div class="ans_page" id="page_e">
+            <img class="word" src="imgs/e-r.png">
+            <img class="center_ans" src="imgs/e.png">
+            <img class="go" src="imgs/go-2.jpg">
+        </div>
+        <div id="divShare"></div>
+    <audio src="music.mp3" autoplay="autoplay" loop="loop"></audio>
+    <script type="text/ecmascript">
+    var _doc = document;
+    var docuH = _doc.documentElement.clientHeight,
+        docuW = _doc.documentElement.clientWidth,
+        html=_doc.getElementsByTagName('html')[0];
+    var num = docuW/320;
+    html.style.fontSize=12*num+"px";
+    //获取每个页面的div
+    var pageZero = _doc.getElementById('page_zero'),
+        pageOne = _doc.getElementById('page_one'),
+        pageTwo = _doc.getElementById('page_two'),
+        pageThree = _doc.getElementById('page_three'),
+        pageFour = _doc.getElementById('page_four'),
+        pageFive = _doc.getElementById('page_five'),
+        pageSix = _doc.getElementById('page_six'),
+        pageA = _doc.getElementById('page_a'),
+        pageB = _doc.getElementById('page_b'),
+        pageC = _doc.getElementById('page_c'),
+        pageD = _doc.getElementById('page_d'),
+        pageE = _doc.getElementById('page_e');
+
+    var start = _doc.getElementById('start'),
+        btnA=_doc.getElementsByClassName('btn_a'),
+        btnB=_doc.getElementsByClassName('btn_b'),
+        btnLastA=_doc.getElementById('btn_a'), 
+        btnLastB=_doc.getElementById('btn_b'),
+        go=_doc.getElementsByClassName('go'),
+        open=_doc.getElementById('open'),
+        close=_doc.getElementById('close');
+    var zeroCen=_doc.getElementById('zero_cen');
+    var audio=_doc.getElementsByTagName('audio')[0];
+
+
+    window.onload=function(){
+        // (function(){play68_init();})();
+        addClass(start,'swing');
+        addClass(open,'round');
+    };
+    //打开音乐
+    open.addEventListener('click',function(){
+        this.style.display="none";
+        close.style.display="block";
+        audio.pause();
+    });
+    //关闭音乐
+    close.addEventListener('click',function(){
+        this.style.display="none";
+        open.style.display="block";
+        audio.play();
+    })
+    //首页点击开始测试
+    start.addEventListener('click', function(){
+        showAndHide(this);
+    });
+    var num=null;
+    //点击A选项
+    for(var i=0;i<btnA.length;i++){
+        btnA[i].addEventListener('click',function(){
+            showAndHide(this);
+            num=num+1;
+        });
+    }
+    //点击B选项
+    for(var i=0;i<btnB.length;i++){
+        btnB[i].addEventListener('click',function(){
+            showAndHide(this);
+        });
+    }
+    //最后一个问题点击A选项
+    btnLastA.addEventListener('click',function(){
+        num=num+1;
+        judge();
+    });
+    //最后一个问题点击B选项
+    btnLastB.addEventListener('click',function(){
+        judge();
+    });
+    
+    var divShare=document.getElementById('divShare');
+
+    for(var i=0;i<go.length;i++){
+        go[i].addEventListener('click',function(){
+            // play68_submitScore(num);   
+        });
+    }
+
+
+    divShare.addEventListener("touchstart", function(ev) {
+        // divShare.style.display = "none";
+    }, false);
+
+    //判断去往哪个页面
+    function judge(){
+        
+        pageSix.style.display="none";
+        switch(num){
+            case 6:
+                //updateShare(num);
+                //Play68.setRankingScoreDesc(5000000);
+                anserAnni(pageA);
+            break;
+            case 5:
+                //updateShare(num);
+                //Play68.setRankingScoreDesc(2800000);
+                anserAnni(pageB);
+            break;
+            case 4:
+                //updateShare(num);
+                //Play68.setRankingScoreDesc(1000000);   
+                anserAnni(pageC);
+            break;
+            case 3:
+                //updateShare(num);
+                //Play68.setRankingScoreDesc(3000); 
+                anserAnni(pageD);
+            break;
+            case 2:
+                //updateShare(num);
+                //Play68.setRankingScoreDesc(3000); 
+                anserAnni(pageD);
+            break;
+            default:
+                //updateShare(num);
+                //Play68.setRankingScoreDesc(-200);
+                anserAnni(pageE);
+        }
+    };
+    //答案页面的动画效果
+    function anserAnni(ele){
+        ele.style.display="block";
+        addClass(ele,'move');
+    };
+    //点击去到下一个问题
+    function showAndHide(ele){
+        var that=ele;
+        var parent=that.parentNode,
+            parents=parent.parentNode;
+        parents.style.display="none";
+        getNextElement(parents).style.display="block";
+        addClass(getNextElement(parents),'move');
+    };
+    //获取下一个元素节点
+    function getNextElement(node){
+        if(node.nextSibling.nodeType==1){
+            return node.nextSibling;
+        }else if(node.nextSibling.nodeType==3){
+            return getNextElement(node.nextSibling);
+        }else{
+            return null;
+        }
+    };
+    function hasClass(obj, cls) {
+        if (obj) {
+            return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+        };  
+    };
+    function addClass(obj, cls) {
+        if (obj) {
+            if (!hasClass(obj, cls)) obj.className += " " + cls;
+        };
+    };
+    function removeClass(obj, cls) {
+        if (hasClass(obj, cls)) {
+            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+            obj.className = obj.className.replace(reg, ' ');
+        }
+    };
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return r[2]; return "";
+    }
+    </script>
+</body>
+</html>

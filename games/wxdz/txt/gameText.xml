@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<text>
+  <lang id="en">
+    <totalScore>全局分</totalScore>
+    <bestScore>最高分</bestScore>
+    <htoPlay1>避免触及任何障碍和边墙</htoPlay1>
+    <htoPlay2>点击箭头使用其避开障碍</htoPlay2>
+    <htoPlay3>然后释放让它继续直行！</htoPlay3>
+    <moreGames></moreGames>
+  </lang>
+  <lang id="es">
+    <totalScore>total</totalScore>
+    <bestScore>mejor</bestScore>
+    <htoPlay1>evita golpear los obstaculos y muros laterals</htoPlay1>
+    <htoPlay2>toca y manten apretado en cualquier lado para girar alrededor del objeto mas cercano</htoPlay2>
+    <htoPlay3>suelta para continuar tu camino</htoPlay3>
+    <moreGames>Mas Juegos</moreGames>
+  </lang>
+<lang id="de">
+    <totalScore>Gesamt</totalScore>
+    <bestScore>Rekord</bestScore>
+    <htoPlay1>Umfliege alle Hindernisse und meide die Außenwände</htoPlay1>
+    <htoPlay2>Berühre und halte eine beliebige Stelle, um das nahegelegenste Hindernis zu umkreisen</htoPlay2>
+    <htoPlay3>Lass los, um Dein Abenteuer fortzusetzen</htoPlay3>
+    <moreGames>Mehr Spiele</moreGames>
+  </lang>
+<lang id="fr">
+    <totalScore>total</totalScore>
+    <bestScore>Meilleur</bestScore>
+    <htoPlay1>Évitez de frapper des obstacles ou les parois latérales</htoPlay1>
+    <htoPlay2>Appuyez et maintenez n'importe où pour diriger vers l'obstacle le plus proche.</htoPlay2>
+    <htoPlay3>Relâchez pour continuer votre aventure</htoPlay3>
+    <moreGames>Plus de jeux</moreGames>
+  </lang>
+<lang id="pt">
+    <totalScore>total</totalScore>
+    <bestScore>Melhor</bestScore>
+    <htoPlay1>Evite atingir quaisquer obstáculos ou paredes laterais.</htoPlay1>
+    <htoPlay2>Toque e mantenha em qualquer sítio para passar o obstáculo mais próximo.</htoPlay2>
+    <htoPlay3>Liberte para continuar a sua aventura.</htoPlay3>
+    <moreGames>Mais Jogos</moreGames>
+  </lang>
+<lang id="it">
+    <totalScore>totale</totalScore>
+    <bestScore>Classifiche</bestScore>
+    <htoPlay1>avoid hit any obstacle and side wall</htoPlay1>
+    <htoPlay2>toca y manten apretado en cualquier lado para girar alrededor del objeto mas cercano</htoPlay2>
+    <htoPlay3>suelta para continuar tu camino</htoPlay3>
+    <moreGames>Altri giochi</moreGames>
+  </lang>
+<lang id="ru">
+    <totalScore>весь</totalScore>
+    <bestScore>Лучший</bestScore>
+    <htoPlay1>Избегайте ударов о препятствия или стены</htoPlay1>
+    <htoPlay2>Нажмите и удерживайте для обхода ближайшего препятствия</htoPlay2>
+    <htoPlay3>Отпустите для продолжения путешествия.</htoPlay3>
+    <moreGames>Другие игры</moreGames>
+  </lang>
+<lang id="tr">
+    <totalScore>toplam</totalScore>
+    <bestScore>En iyi </bestScore>
+    <htoPlay1>Herhangi bir engele veya yan duvarlara çarpmaktan sakın</htoPlay1>
+    <htoPlay2>En yakın engelin etrafından dolaşmak için herhangi bir yere dokun ve tut</htoPlay2>
+    <htoPlay3>Macerana devam etmek için serbest bırak.</htoPlay3>
+    <moreGames>Daha Fazla Oyun</moreGames>
+  </lang>
+  <lang id="th">
+    <totalScore>ทั้งหมด</totalScore>
+    <bestScore>เก่งที่สุด</bestScore>
+    <htoPlay1>หลีกเลี่ยงการปะทะกับสิ่งกีดขวางหรือกำแพงด้านข้าง</htoPlay1>
+    <htoPlay2>แตะค้างที่ใดก็ได้เพื่อหมุนสิ่งกีดขวางที่อยู่ใกล้ที่สุด</htoPlay2>
+    <htoPlay3>ปล่อยเพื่อผจญภัยของคุณต่อไป</htoPlay3>
+    <moreGames>เกมอื่น ๆ</moreGames>
+  </lang>
+</text>

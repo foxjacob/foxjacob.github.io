@@ -1,0 +1,13 @@
+﻿{
+"res":{
+	"right_btn_yes0000": {"x":40,"y":40,"w":120,"h":120}
+},
+"frames": {
+	"right_btn_yes": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"right_btn_yes0000","x":-60,"y":-60}
+		]
+	}
+}
+}

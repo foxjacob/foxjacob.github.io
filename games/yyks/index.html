@@ -1,0 +1,628 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>趣味英语测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+    <script src="script/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="script/ishoock.tools.js"></script>
+    <script src="script/question.js"></script>
+    <script>
+        /*var base = "http://www.ishoock.com/work/_51talk/201505/children/";
+        var wxconfig1 = {
+            title: '据说拿不到60分的都是没有童年的人',
+            desc: '据说拿不到60分的都是没有童年的人',
+            link: base,
+            imgUrl: "./image/share.jpg" + "?ver=1"
+        };
+        var wxconfig2 = {
+            title: '据说拿不到60分的都是没有童年的人',
+            desc: '据说拿不到60分的都是没有童年的人',
+            link: base,
+            imgUrl: "./image/share.jpg" + "?ver=1"
+        };*/
+
+   /*     var uri = window.location.href.split("#")[0];
+        var path = uri.split("?")[0];
+        var query = uri.split("?")[1];
+        uri = path + (query ? ("?" + encodeURI(query)) : "");
+
+        $.post("http://www.ishoock.com/wechathandler/baiduzhushou/", {
+            uri: uri
+        }, function (data) {
+            data = eval("(" + data + ")");
+            var apilist = [
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage'
+            ];
+            wx.config({
+                debug: false,
+                appId: data.appid,
+                timestamp: data.timestamp,
+                nonceStr: data.noncestr,
+                signature: data.signature,
+                jsApiList: apilist
+            });
+            wx.error(function (res) {
+                alert(JSON.stringify(res));
+            });
+            wx.ready(function () {
+                wx.onMenuShareTimeline(wxconfig1);
+                wx.onMenuShareAppMessage(wxconfig2);
+            });
+        });*/
+(function(){
+    //play68_init();
+    })();
+        var load = new Load(function (p) {
+            var text = $("#load .text");
+            text.html(parseInt(p * 100) + "%");
+            $("#load .action1").addClass("on");
+            $("#load .action2").addClass("on");
+        }, loadComplete, [         
+			"./image/beeper.png",
+			"./image/beeper1.png",
+			"./image/bg.jpg",
+			"./image/bgq.jpg",
+			"./image/book.png",
+			"./image/fp_1a.png",
+			"./image/fp_1b.png",
+			"./image/fp_2a.png",
+			"./image/fp_2b.png",
+			"./image/fp_3a.png",
+			"./image/fp_3b.png",
+			"./image/fp_3c.png",
+			"./image/fp_3d.png",
+			"./image/fp_4.png",
+			"./image/fp_5.png",
+			"./image/fp_6a.png",
+			"./image/fp_6b.png",
+			"./image/fp_6c.png",
+			"./image/fp_7.png",
+			"./image/fp_8.png",
+			"./image/glass.png",
+			"./image/load_1.png",
+			"./image/load_2.png",
+			"./image/load_3.png",
+			"./image/load_4.png",
+			"./image/load_5.png",
+			"./image/lpage1.png",
+			"./image/lpage2_1.png",
+			"./image/lpage2_10.png",
+			"./image/lpage2_2.png",
+			"./image/lpage2_3.png",
+			"./image/lpage2_4.png",
+			"./image/lpage2_5.png",
+			"./image/lpage2_6.png",
+			"./image/lpage2_7.png",
+			"./image/lpage2_8.png",
+			"./image/lpage2_9.png",
+			"./image/lpage3_1.png",
+			"./image/lpage3_2.png",
+			"./image/lpage3_3.png",
+			"./image/lpage3_4.png",
+			"./image/lpage3_5.png",
+			"./image/lpage4_1.png",
+			"./image/lpage4_2.png",
+			"./image/lpage4_3.png",
+			"./image/lpage4_4.png",
+			"./image/lpage4_5.png",
+			"./image/lpage5.png",
+			"./image/lpage6.png",
+			"./image/lpage7.png",
+			"./image/off.png",
+			"./image/on.png",
+			"./image/p1_1n.png",
+			"./image/p1_1r.png",
+			"./image/p1_1w.png",
+			"./image/p1_2.png",
+			"./image/p1_aa.png",
+			"./image/p1_ab.png",
+			"./image/p1_ac.png",
+			"./image/p1_ad.png",
+			"./image/p1_t.png",
+			"./image/p10_1n.png",
+			"./image/p10_1r.png",
+			"./image/p10_1w.png",
+			"./image/p10_aa.png",
+			"./image/p10_ab.png",
+			"./image/p10_ac.png",
+			"./image/p10_ad.png",
+			"./image/p10_t.png",
+			"./image/p2_1n.png",
+			"./image/p2_1r.png",
+			"./image/p2_1w.png",
+			"./image/p2_aa.png",
+			"./image/p2_ab.png",
+			"./image/p2_ac.png",
+			"./image/p2_ad.png",
+			"./image/p2_t.png",
+			"./image/p3_1n.png",
+			"./image/p3_1r.png",
+			"./image/p3_1w.png",
+			"./image/p3_aa.png",
+			"./image/p3_ab.png",
+			"./image/p3_ac.png",
+			"./image/p3_ad.png",
+			"./image/p3_btn.png",
+			"./image/p3_finger.png",
+			"./image/p3_radio.png",
+			"./image/p3_t.png",
+			"./image/p4_1n.png",
+			"./image/p4_1r.png",
+			"./image/p4_1w.png",
+			"./image/p4_aa.png",
+			"./image/p4_ab.png",
+			"./image/p4_ac.png",
+			"./image/p4_ad.png",
+			"./image/p4_bow.png",
+			"./image/p4_rubber.png",
+			"./image/p4_t.png",
+			"./image/p5_1n.png",
+			"./image/p5_1r.png",
+			"./image/p5_1w.png",
+			"./image/p5_aa.png",
+			"./image/p5_ab.png",
+			"./image/p5_ac.png",
+			"./image/p5_ad.png",
+			"./image/p5_bow.png",
+			"./image/p5_ink.png",
+			"./image/p5_t.png",
+			"./image/p6_1n.png",
+			"./image/p6_1r.png",
+			"./image/p6_1w.png",
+			"./image/p6_aa.png",
+			"./image/p6_ab.png",
+			"./image/p6_ac.png",
+			"./image/p6_ad.png",
+			"./image/p6_t.png",
+			"./image/p7_1n.png",
+			"./image/p7_1r.png",
+			"./image/p7_1w.png",
+			"./image/p7_aa.png",
+			"./image/p7_ab.png",
+			"./image/p7_ac.png",
+			"./image/p7_ad.png",
+			"./image/p7_t.png",
+			"./image/p8_1n.png",
+			"./image/p8_1r.png",
+			"./image/p8_1w.png",
+			"./image/p8_aa.png",
+			"./image/p8_ab.png",
+			"./image/p8_ac.png",
+			"./image/p8_ad.png",
+			"./image/p8_t.png",
+			"./image/p9_1n.png",
+			"./image/p9_1r.png",
+			"./image/p9_1w.png",
+			"./image/p9_aa.png",
+			"./image/p9_ab.png",
+			"./image/p9_ac.png",
+			"./image/p9_ad.png",
+			"./image/p9_t.png",
+			"./image/pen1.png",
+			"./image/pen2.png",
+			"./image/right.png",
+			"./image/rubber.png",
+			"./image/tel.png",
+			"./image/wrong.png",
+			"./image/logo.png"
+        ], 36);
+
+        score = 0;
+
+        var bgm = new Audio();
+        bgm.src = "audio/bgm.mp3";
+        bgm.loop = true;
+
+        var listen = new Audio();
+        listen.src = "audio/2.mp3";
+
+        changing = true;
+
+        var indexs = 0;
+
+        $(function () {
+            load.Start();
+            setQuestion();
+            setLabel();
+        })
+
+        function loadComplete() {
+
+            gesture = new Gesture(document.getElementById("content"), {
+                "click": function (e) {
+
+                    if(e.target.id == "bgm_btn"){
+                        if ($("#bgm_btn").hasClass("on")) {
+                            bgm.pause();
+                            $("#bgm_btn").attr("class", "off");
+                            if (indexs == 1 || indexs == 2) {
+                                changing = false;
+                            }
+                        } else {
+                            bgm.play();
+                            $("#bgm_btn").attr("class", "on");
+                            if (indexs == 1 || indexs == 2) {
+                                changing = true;
+                            }
+                        }
+                    };
+
+                    if (e.target.id == "btn1") {
+                        indexs = 0;
+                        gesture.Kill();
+                        $("#result").hide();
+                        $("#result .btn1").removeClass("in");
+                        $("#result .btn2").removeClass("in");
+                        $("#result .btn3").removeClass("in");
+                        $("#bgq").hide();
+                        $("#fpage .foil").removeClass("in");
+                        $("#fpage .men").removeClass("in");
+                        $("#fpage .no1").removeClass("in");
+                        $("#fpage .no2").removeClass("in");
+                        $("#fpage .no3").removeClass("in");
+                        $("#fpage .no4").removeClass("in");
+                        setTimeout(function () {
+                            $("#fpage").removeClass("out");
+                        }, 400);
+                        score = 0;
+                        $("#btn").removeClass("on");
+                        $("#btn1").removeClass("in");
+                        $("#btn2").removeClass("in");
+                        // $("#btn3").removeClass("in");
+                        $("#logo").removeClass("in");
+                        $("#questions .tit").removeClass("in");
+                        $("#questions .ans").removeClass("in");
+                        $("#questions .pro").removeClass("out");
+                        $("#questions .pro").removeClass("out");
+                        $("#questions .pro").hide();
+                        $("#questions").removeClass("in");
+                        $("#questions").show();
+                        $("#questions .expren").css("display", "");
+                        $("#questions .expre").hide();
+                        $("#questions .ans").removeClass("checked");
+                        $("#questions .mark-r").hide();
+                        $("#questions .mark-w").hide();
+                    };
+                    if (e.target.id == "btn2") {
+
+                    	// play68_submitScore(shareDesc,shareTitle);
+                        $("#share").addClass("in");
+                    }
+                    if (e.target.id == "share") {
+                    	// play68_submitScore(shareDesc,shareTitle);
+                        $("#share").removeClass("in");
+                    }
+                    if (e.target.id == "share1") {
+                    	console.log("share");
+                        // $("#share").removeClass("in");
+                    }
+                    if (e.target.id == "btn3") {
+                    	console.log("btn3")
+                    	// Play68.goHome();
+                        // window.location.href = "http://wap.51talk.com/wap_children.php";
+                    }
+                    if (e.target.id == "logo") {
+                    	console.log("logo")
+                    	// Play68.goHome();
+                        // window.location.href = "http://wap.51talk.com/wap_children.php";
+                    }
+                }
+            },
+              function (code) {
+                  if (code == 1) {
+                      switch (index) {
+                          case 1:
+                              // window.location.href = "http://wap.51talk.com/wap_children.php";
+                              break;
+                      }
+                  }
+              });
+
+            $("#bgm_btn").on("click", function () {
+                if (this.className == "on") {
+                    bgm.pause();
+                    $("#bgm_btn").attr("class", "off");
+                    if (indexs == 1 || indexs == 2) {
+                        changing = false;
+                    }
+                } else {
+                    bgm.play();
+                    $("#bgm_btn").attr("class", "on");
+                    if (indexs == 1 || indexs == 2) {
+                        changing = true;
+                    }
+                }
+            });
+
+            $("#load").addClass("out");
+            $("#fpage").addClass("in");
+            $("#bg").addClass("in");
+            setTimeout(function () {
+                $("#begin").fadeIn();
+            }, 3500);
+            $("#begin").on("click", function () {
+                indexs = 1;
+                try { $("#bgm_btn").attr("class", "on"); } catch (e) { $("bgm_btn").attr("class", "off"); };
+                bgm.play();
+                changing = true;
+                $("#fpage .foil").addClass("in");
+                $("#fpage .men").addClass("in");
+                $("#fpage .no1").addClass("in");
+                $("#fpage .no2").addClass("in");
+                $("#fpage .no3").addClass("in");
+                $("#fpage .no4").addClass("in");
+                setTimeout(function () {
+                    $("#fpage").addClass("out");
+                    $("#bgq").fadeIn();
+                    $("#questions").addClass("in");
+                }, 1500);
+                setTimeout(function () {
+                    $("#question0").fadeIn();
+                    $("#question0 .title0").addClass("in");
+                    $("#question0 .answer0").addClass("in");
+                    $("#question0 .answer1").addClass("in");
+                    $("#question0 .answer2").addClass("in");
+                    $("#question0 .answer3").addClass("in");
+                    setTimeout(function () {
+                        $("#question0 .not0").fadeIn();
+                    }, 1200);
+                }, 2000);
+            });
+            $("#btn").on("click", function () {
+                bgm.pause();
+                $("#bgm_btn").attr("class", "off");
+                listen.load();
+                listen.play();
+                $("#btn").addClass("on");
+            });
+        }
+        function setLabel() {
+            _str1 = "";
+            _str1 += "<div id='btn'></div> <div id='finger'></div>";
+            $("#question2 .not2").html(_str1);
+        }
+        function setQuestion() {
+            _str = "";
+            for (var i = 0; i < 10; i++) {
+                var answers = questions[i].answers;
+                _str += "<div class='pro' id='question" + i + "'>";
+                _str += "<div class='title" + i + " tit'></div>" + "<div class='not" + i + " expren'></div>" + "<div class='wrong" + i + " expre'></div>" + "<div class='right" + i + " expre'></div>" + "<div class='ele" + i + "a'></div>" + "<div class='ele" + i + "b'></div>";
+                for (var j = 0; j < 4; j++) {
+                    _str += "<div class='answer" + j + " ans' data-score='" + answers[j].score + "'" + "' data-action='" + answers[j].result + "'" + "onclick='Checked(this);return false;' >" + "<div class='hook" + j + " mark-r'></div>" + "<div class='fork" + j + " mark-w'></div>" + "</div>";
+                }
+                _str += "</div>";
+            }
+            $("#questions").html(_str);
+        }
+        function Checked(el) {
+            if (!$(el).hasClass("checked") && !$(el).siblings(".checked")[0]) {
+                $(el).addClass("checked");
+                current = $(el).parent();
+                var not = current.children()[1];
+                var wrong = current.children()[2];
+                var right = current.children()[3];
+                var next = current.next();
+                var title = next.children()[0];
+                var notbg = next.children()[1];
+                var answer0 = next.children()[6];
+                var answer1 = next.children()[7];
+                var answer2 = next.children()[8];
+                var answer3 = next.children()[9];
+                listen.pause();
+                _result = parseInt($(el).attr("data-action"));
+                if (_result == 1) {
+                    $(el).children(".mark-r").show();
+                    $(not).hide();
+                    $(right).show();
+                } else {
+                    $(el).children(".mark-w").show();
+                    $(not).hide();
+                    $(wrong).show();
+                }
+                if (next[0]) {
+                    setTimeout(function () {
+                        indexs++;
+                        $(current).addClass("out");
+                        $(next).fadeIn();
+                        $(title).addClass("in");
+                        $(answer0).addClass("in");
+                        $(answer1).addClass("in");
+                        $(answer2).addClass("in");
+                        $(answer3).addClass("in"); 
+                        if (indexs == 4 && changing == false) {
+                            bgm.pause();
+                            $("#bgm_btn").attr("class", "off");
+                        }
+                        if(indexs==4 && changing == true)
+                        {
+                            bgm.play();
+                            $("#bgm_btn").attr("class", "on");
+                        }
+                        setTimeout(function () {
+                            $(notbg).fadeIn();
+                        }, 1200);
+                    }, 2000);
+                    var _score = parseInt($(el).attr("data-score"));
+                    score += _score;
+                    Result(score);
+                }
+                else {
+                    setTimeout(function () {
+                        $(current).addClass("out");
+                        setTimeout(function () {
+                            $("#questions").fadeOut();
+                            $("#result").fadeIn();
+                            index = 1;
+                            gesture.Init();
+                            $("#btn1").addClass("in");
+                            $("#btn2").addClass("in");
+                            $("#btn3").addClass("in");
+                            $("#logo").addClass("in");
+                        }, 500);
+                    }, 2000);
+                    var _score = parseInt($(el).attr("data-score"));
+                    score += _score;
+                    Result(score);
+                    //updateShare(shareDesc,shareTitle);
+					//Play68.setRankingScoreDesc(score);
+                }
+            }
+        }
+        function Result(score) {
+            if (score == 10) {
+                $("#result .pic").css("background-image","url(./image/lpage3_1.png)");
+                $("#result .text2").css({ "background-image": "url(./image/lpage2_1.png)", "background-size": "90% 90%" });
+                $("#result .text3").css("background-image", "url(./image/lpage4_1.png)");
+                shareDesc = "据说拿不到60分的都是没有童年的人";
+                shareTitle = "我初中英语考了" + score + "分，我当年的英语真的是体育老师教的";
+            }
+            if (score == 20) {
+                $("#result .pic").css("background-image", "url(./image/lpage3_1.png)");
+                $("#result .text2").css({ "background-image": "url(./image/lpage2_2.png)", "background-size": "100% 100%" });
+                $("#result .text3").css("background-image", "url(./image/lpage4_1.png)");
+                shareDesc = "据说拿不到60分的都是没有童年的人";
+                shareTitle = "我初中英语考了" + score + "分，我当年的英语真的是体育老师教的";
+            }
+            if (score == 30) {
+                $("#result .pic").css("background-image", "url(./image/lpage3_1.png)");
+                $("#result .text2").css({ "background-image": "url(./image/lpage2_3.png)", "background-size": "100% 100%" });
+                $("#result .text3").css("background-image", "url(./image/lpage4_1.png)");
+                shareDesc = "据说拿不到60分的都是没有童年的人";
+                shareTitle = "我初中英语考了" + score + "分，我当年的英语真的是体育老师教的";
+            }
+            if (score == 40) {
+                $("#result .pic").css("background-image", "url(./image/lpage3_2.png)");
+                $("#result .text2").css({ "background-image": "url(./image/lpage2_4.png)", "background-size": "100% 100%" });
+                $("#result .text3").css("background-image", "url(./image/lpage4_2.png)");
+                shareDesc = "据说拿不到60分的都是没有童年的人";
+                shareTitle = "我初中英语考了" + score + "分，难怪当年泡不到英语科代表";
+            }
+            if (score == 50) {
+                $("#result .pic").css("background-image", "url(./image/lpage3_2.png)");
+                $("#result .text2").css({ "background-image": "url(./image/lpage2_5.png)", "background-size": "100% 100%" });
+                $("#result .text3").css("background-image", "url(./image/lpage4_2.png)");
+                shareDesc = "据说拿不到60分的都是没有童年的人";
+                shareTitle = "我初中英语考了" + score + "分，难怪当年泡不到英语科代表";
+            }
+            if (score == 60) {
+                $("#result .pic").css("background-image", "url(./image/lpage3_2.png)");
+                $("#result .text2").css({ "background-image": "url(./image/lpage2_6.png)", "background-size": "100% 100%" });
+                $("#result .text3").css("background-image", "url(./image/lpage4_2.png)");
+                shareDesc = "据说拿不到60分的都是没有童年的人";
+                shareTitle = "我初中英语考了" + score + "分，难怪当年泡不到英语科代表";
+            }
+            if (score == 70) {
+                $("#result .pic").css("background-image", "url(./image/lpage3_3.png)");
+                $("#result .text2").css({ "background-image": "url(./image/lpage2_7.png)", "background-size": "100% 100%" });
+                $("#result .text3").css("background-image", "url(./image/lpage4_3.png)");
+                shareDesc = "据说拿不到60分的都是没有童年的人";
+                shareTitle = "我初中英语考了" + score + "分，成功俘获了韩梅梅";
+            }
+            if (score == 80) {
+                $("#result .pic").css("background-image", "url(./image/lpage3_3.png)");
+                $("#result .text2").css({ "background-image": "url(./image/lpage2_8.png)", "background-size": "100% 100%" });
+                $("#result .text3").css("background-image", "url(./image/lpage4_3.png)");
+                shareDesc = "据说拿不到60分的都是没有童年的人";
+                shareTitle = "我初中英语考了" + score + "分，成功俘获了韩梅梅";
+            }
+            if (score == 90) {
+                $("#result .pic").css("background-image", "url(./image/lpage3_4.png)");
+                $("#result .text2").css({ "background-image": "url(./image/lpage2_9.png)", "background-size": "100% 100%" });
+                $("#result .text3").css("background-image", "url(./image/lpage4_4.png)");
+                shareDesc = "据说拿不到60分的都是没有童年的人";
+                shareTitle = "我初中英语考了" + score + "分，这些年的药果然没白吃";
+            }
+            if (score == 100) {
+                $("#result .pic").css("background-image", "url(./image/lpage3_5.png)");
+                $("#result .text2").css({ "background-image": "url(./image/lpage2_10.png)", "background-size": "100% 100%" });
+                $("#result .text3").css("background-image", "url(./image/lpage4_5.png)");
+                shareDesc = "据说拿不到60分的都是没有童年的人";
+                shareTitle = "我初中英语考了" + score + "分，我英语这么好我妈真的不造";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div id="content">
+        <div id="load">
+            <div class="action2"></div>
+            <div class="action1"></div>
+            <div class="pic"></div>
+            <div class="text"></div>
+        </div>
+        <div id="pages">
+            <div id="bg"></div>
+            <div id="fpage">
+                <div class="layer">
+                    <div class="foil"></div>
+                    <div class="men"></div>
+                    <div class="sound">
+                        <div class="no1"></div>
+                        <div class="no2"></div>
+                        <div class="no3"></div>
+                        <div class="no4"></div>
+                    </div>
+                    <div class="text1"></div>
+                    <div class="frame"></div>
+                    <div class="loca">
+                        <div class="bya">
+                            <div class="texta"></div>
+                        </div>
+                    </div>
+                    <div class="locb">
+                        <div class="byb">
+                            <div class="textb"></div>
+                        </div>
+                    </div>
+                    <div class="locc">
+                        <div class="byc">
+                            <div class="textc"></div>
+                        </div>
+                    </div>
+                    <div class="pen"></div>
+                    <div id="begin"></div>
+                </div>
+            </div>
+            <div id="bgq"></div>
+            <div id="questions"></div>
+        </div>
+        <div id="result">
+            <div class="pic">
+                <div id="logo"></div>
+            </div>
+            <div class="text1"></div>
+            <div class="text2"></div>
+            <div class="text3"></div>
+            <div id="btn1"></div>
+            <div id="btn2"></div>
+            <div id="btn3"></div>
+        </div>
+        <div id="share">
+            <div id="share1"></div>
+        </div>
+        <div id="bgm_btn"></div>
+    </div>
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'儿童节到了',
+  'link':'https://foxjacob.gitee.io/gamestation/games/yyks/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/yyks/icon.png'
+}
+window.shareFriendData={
+  'title':'儿童节到了',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/yyks/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/yyks/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+</body>
+</html>

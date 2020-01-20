@@ -1,0 +1,72 @@
+body {
+	background: #E2E2E2;
+	color:#171717;
+	font-family: Courier, monospace;
+}
+
+
+
+
+
+
+
+
+button {									/* Inverted colors from themeBlack, then altered disabled buttons a bit */
+	background: #BBBBBB;
+	border:1px solid #777777;
+	color:#222222;
+}
+
+button:hover {
+	color:#070707;
+	background: #999999;
+}
+
+button:disabled {
+	color:#BBBBBB;
+	background: #E2E2E2;
+	border: 1px solid #BBBBBB;
+}
+ 
+button:disabled:hover {
+	background: #E4E4E4;
+}
+
+
+
+
+
+
+
+
+.fadedText4 {
+	color:#CCCCCC;
+}
+
+.fadedText3 {
+	color:#BBBBBB;
+}
+
+.fadedText2 {
+	color:#999999;
+}
+
+.fadedText1 {
+	color:#666666;
+}
+
+.fullBrightText {
+	color:#171717;
+}
+
+
+
+
+
+
+
+
+a:link    { color:#070707 }  /* unvisited links */
+a:visited { color:#070707 }  /* visited links   */
+a:hover   { color:#070707 }  /* user hovers     */
+a:active  { color:#070707 }  /* active links    */

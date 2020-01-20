@@ -1,0 +1,20 @@
+info face="mmFont" size=32 bold=0 italic=0 charset="" unicode=0 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1
+common lineHeight=27 base=26 scaleW=64 scaleH=32 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="mmFont.png"
+chars count=14
+char id=48 x=13 y=0 width=12 height=13 xoffset=0 yoffset=14 xadvance=14 page=0 chnl=0 letter="0"
+char id=49 x=57 y=14 width=6 height=13 xoffset=3 yoffset=14 xadvance=8 page=0 chnl=0 letter="1"
+char id=50 x=46 y=14 width=10 height=13 xoffset=1 yoffset=14 xadvance=12 page=0 chnl=0 letter="2"
+char id=51 x=37 y=0 width=10 height=13 xoffset=1 yoffset=14 xadvance=12 page=0 chnl=0 letter="3"
+char id=52 x=0 y=9 width=12 height=13 xoffset=0 yoffset=14 xadvance=14 page=0 chnl=0 letter="4"
+char id=53 x=26 y=0 width=10 height=13 xoffset=1 yoffset=14 xadvance=12 page=0 chnl=0 letter="5"
+char id=61 x=0 y=23 width=11 height=7 xoffset=0 yoffset=17 xadvance=13 page=0 chnl=0 letter="="
+char id=54 x=13 y=14 width=10 height=13 xoffset=1 yoffset=14 xadvance=12 page=0 chnl=0 letter="6"
+char id=55 x=35 y=14 width=10 height=13 xoffset=1 yoffset=14 xadvance=12 page=0 chnl=0 letter="7"
+char id=56 x=48 y=0 width=9 height=13 xoffset=1 yoffset=14 xadvance=11 page=0 chnl=0 letter="8"
+char id=57 x=24 y=14 width=10 height=13 xoffset=1 yoffset=14 xadvance=12 page=0 chnl=0 letter="9"
+char id=109 x=0 y=0 width=12 height=8 xoffset=0 yoffset=16 xadvance=14 page=0 chnl=0 letter="m"
+char id=32 x=0 y=0 width=0 height=0 xoffset=3 yoffset=0 xadvance=11 page=0 chnl=0 letter=" "
+char id=9 x=0 y=0 width=0 height=0 xoffset=0 yoffset=0 xadvance=88 page=0 chnl=0 letter="	"
+
+kernings count=0

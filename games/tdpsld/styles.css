@@ -1,0 +1,17 @@
+html, body {
+    margin: 0;
+    padding:0;
+    height: 100%;
+    background-color:#000000;
+}
+
+#gameArea {
+  position: absolute;
+  left:     50%;
+  top:      50%;
+}
+
+#gameCanvas {
+  width: 100%;
+  height: 100%;
+}

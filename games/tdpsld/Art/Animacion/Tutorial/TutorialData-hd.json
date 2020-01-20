@@ -1,0 +1,162 @@
+{
+"skeleton": { "spine": "1.9.14", "hash": "gpdj8NazQGPgvoNyMbowzm4CAUQ", "width": 456.23, "height": 624.17 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Cuadro", "parent": "root", "length": 136.77, "x": -66.44, "y": -207.09, "rotation": -0.45 },
+	{ "name": "Explosion", "parent": "root", "length": 25.59, "x": -4.67, "y": 215.59, "rotation": 92.7 },
+	{ "name": "Grenade", "parent": "root", "length": 36.59, "x": -6.7, "y": -4.9, "scaleX": 0.506, "scaleY": 0.506, "rotation": 90 },
+	{ "name": "Linea", "parent": "root", "length": 87.57, "x": -9.76, "y": 135.71, "rotation": -89.54 },
+	{ "name": "Mano", "parent": "root", "length": 44.6, "x": 143.54, "y": -51.24, "rotation": 90.9 },
+	{ "name": "Personaje", "parent": "root", "length": 141.68, "x": -66.97, "y": 0.2 }
+],
+"ik": [],
+"slots": [
+	{ "name": "Tutorial_Cuadro", "bone": "Cuadro", "attachment": "Tutorial_Cuadro" },
+	{ "name": "Tutorial_LineaTiro", "bone": "Linea", "attachment": "Tutorial_LineaTiro" },
+	{ "name": "Tutorial_Grenade", "bone": "Grenade", "attachment": "Tutorial_Grenade" },
+	{ "name": "Tutorial_Personaje", "bone": "Personaje", "attachment": "Tutorial_Personaje" },
+	{ "name": "Tutorial_Explosion", "bone": "Explosion", "attachment": "Tutorial_Explosion" },
+	{ "name": "ManoPuntero", "bone": "Mano", "attachment": "ManoPuntero" }
+],
+"skins": {
+	"default": {
+		"Tutorial_Personaje": {
+			"Tutorial_Personaje": { "x": 57.59, "y": -70.27, "width": 192, "height": 256 }
+		},
+		"Tutorial_Grenade": {
+			"Tutorial_Grenade": { "rotation": -90, "width": 97, "height": 119 }
+		},
+		"Tutorial_Cuadro": {
+			"Tutorial_Cuadro": { "x": 69.96, "y": 204.42, "rotation": 0.45, "width": 456, "height": 624 }
+		},
+		"Tutorial_Explosion": {
+			"Tutorial_Explosion": { "rotation": -92.7, "width": 100, "height": 100 }
+		},
+		"Tutorial_LineaTiro": {
+			"Tutorial_LineaTiro": { "rotation": 89.54, "width": 66, "height": 230 }
+		}
+	},
+	"Mano": {
+		"ManoPuntero": {
+			"ManoPuntero": { "name": "Tutorial_Mano", "x": -0.14, "y": -9.21, "rotation": -90.9, "width": 124, "height": 108 }
+		}
+	},
+	"Puntero": {
+		"ManoPuntero": {
+			"ManoPuntero": {
+				"name": "Tutorial_Puntero",
+				"x": -3.12,
+				"y": -3.02,
+				"scaleX": 0.852,
+				"scaleY": 0.852,
+				"rotation": -90.9,
+				"width": 96,
+				"height": 96
+			}
+		}
+	}
+},
+"animations": {
+	"Tutorial": {
+		"slots": {
+			"ManoPuntero": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.4666, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.4, "color": "ffffffff" },
+					{ "time": 3.6666, "color": "ffffff00" }
+				]
+			},
+			"Tutorial_LineaTiro": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.7666, "color": "ffffff00" },
+					{ "time": 1.2333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.5333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.4, "color": "ffffffff" },
+					{ "time": 3.6666, "color": "ffffff00" }
+				]
+			},
+			"Tutorial_Explosion": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 4.3666, "color": "ffffff00" },
+					{ "time": 4.6666, "color": "ffffffff" },
+					{ "time": 5, "color": "ffffff00" }
+				]
+			},
+			"Tutorial_Grenade": {
+				"color": [
+					{ "time": 4.0333, "color": "ffffffff" },
+					{ "time": 4.3666, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Linea": {
+				"rotate": [
+					{ "time": 1.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 1.5333, "angle": 0 },
+					{ "time": 2, "angle": -36.74 },
+					{ "time": 2.6666, "angle": 41.32 },
+					{ "time": 3.4, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.7666, "x": 1.2, "y": -153.35 },
+					{ "time": 1.2333, "x": 0.16, "y": -20.53, "curve": "stepped" },
+					{ "time": 1.5333, "x": 0.16, "y": -20.53 },
+					{ "time": 2, "x": 52.21, "y": -26.31 },
+					{ "time": 2.6666, "x": -54.36, "y": -32.44 },
+					{ "time": 3.4, "x": 0.16, "y": -20.53 }
+				]
+			},
+			"Mano": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 1.04,
+						"y": -65.81,
+						"curve": [ 0.155, 0, 0.332, 0.96 ]
+					},
+					{ "time": 0.4666, "x": -109.7, "y": -1.74, "curve": "stepped" },
+					{ "time": 0.7666, "x": -109.7, "y": -1.74 },
+					{ "time": 1.2333, "x": -106.99, "y": -171.92, "curve": "stepped" },
+					{ "time": 1.5333, "x": -106.99, "y": -171.92 },
+					{ "time": 2, "x": -231.18, "y": -173.9 },
+					{ "time": 2.6666, "x": -1.84, "y": -170.25 },
+					{ "time": 3.4, "x": -106.99, "y": -171.92 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 3.4, "x": 1, "y": 1 },
+					{ "time": 3.6666, "x": 1.869, "y": 1.869 }
+				]
+			},
+			"Grenade": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 3.1666, "angle": 0 },
+					{ "time": 4.3666, "angle": -178.21 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{
+						"time": 3.4333,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.141, 0.02, 0.861, 1 ]
+					},
+					{ "time": 4.3666, "x": 0, "y": 199.36 }
+				]
+			},
+			"Explosion": {
+				"scale": [
+					{ "time": 4.3666, "x": 1, "y": 1 },
+					{ "time": 5, "x": 1.261, "y": 1.261 }
+				]
+			}
+		}
+	}
+}
+}

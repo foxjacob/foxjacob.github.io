@@ -1,0 +1,2 @@
+﻿文件下载网址  =>  文件保存路径
+http://266.com/mini/boss/image/wrap.jpg  =>  C:\Users\Administrator\Desktop\单页扒站小工具\266.com\images\wrap.jpg

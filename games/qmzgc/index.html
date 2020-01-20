@@ -1,0 +1,64 @@
+﻿
+<html>
+<head>
+    <meta charset="utf-8">
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+<img src='photo.jpg' />
+</div>
+    <title>全民追公车</title>
+    <link rel="icon" type="image/PNG" href="res/icon.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+    <style>
+        body, canvas, div {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+</head>
+
+<body style="padding:0; margin: 0; background: #000;">
+<script type="text/javascript" src="http://static.play68.com/js/play68_sdk.js"></script>  
+<script language="javascript" type="text/javascript" src="js/play68.js"></script>
+<script type="text/javascript">
+    (function (){updateShare(0);})();
+    var link_Href=document.referrer;
+    if(link_Href.indexOf("open")==-1)
+        Play68.set_share_url("https://mp.weixin.qq.com/s/h0derngZtPCxIN2D3ubugw");
+</script>
+<script src="res/dcagent.min.js"></script>
+<script>
+    if(window.screen.availHeight * window.screen.availWidth < 1280 * 720)
+    {
+        var i = document.getElementsByTagName("meta");
+        i[5]["content"] = "width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi";
+    }
+    String.prototype.format= function(){
+           var args = arguments;
+           return this.replace(/\{(\d+)\}/g,function(s,i){
+             return args[i];
+           });
+    }
+
+     function share_wx(score)
+    {
+    	updateShare(score);  
+		Play68.setRankingScoreDesc(score); 
+    	console.log(score);
+    }
+
+</script>
+
+<!--<script src="res/scripts/loading.js"></script>-->
+
+<canvas id="gameCanvas" width="480" height="320"></canvas>
+<script cocos src="game.min.js"></script>
+</body>
+</html>

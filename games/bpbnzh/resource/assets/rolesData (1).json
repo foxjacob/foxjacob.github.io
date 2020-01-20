@@ -1,0 +1,37 @@
+[
+  {
+    "name" : "lanlan",
+    "unlocked" : true,
+    "prize" : 0
+  },
+  {
+    "name" : "baobao",
+    "unlocked" : true,
+    "prize" : 0
+  },
+  {
+    "name" : "hehe",
+    "unlocked" : false,
+    "prize" : 50
+  },
+  {
+    "name" : "kaikai",
+    "unlocked" : false,
+    "prize" : 100
+  },
+  {
+    "name" : "chenchen",
+    "unlocked" : false,
+    "prize" : 500
+  },
+  {
+    "name" : "chaochao",
+    "unlocked" : false,
+    "prize" : 500
+  },
+  {
+    "name" : "baby",
+    "unlocked" : false,
+    "prize" : 800
+  }
+]

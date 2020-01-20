@@ -1,0 +1,68 @@
+{"frames": {
+
+"Tutorial_Cuadro.png":
+{
+	"frame": {"x":2,"y":381,"w":456,"h":624},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":456,"h":624},
+	"sourceSize": {"w":456,"h":624}
+},
+"Tutorial_Explosion.png":
+{
+	"frame": {"x":100,"y":2,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100}
+},
+"Tutorial_Grenade.png":
+{
+	"frame": {"x":328,"y":2,"w":97,"h":119},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":97,"h":119},
+	"sourceSize": {"w":97,"h":119}
+},
+"Tutorial_LineaTiro.png":
+{
+	"frame": {"x":2,"y":123,"w":66,"h":230},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":230},
+	"sourceSize": {"w":66,"h":230}
+},
+"Tutorial_Mano.png":
+{
+	"frame": {"x":202,"y":2,"w":124,"h":108},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":124,"h":108},
+	"sourceSize": {"w":124,"h":108}
+},
+"Tutorial_Personaje.png":
+{
+	"frame": {"x":70,"y":123,"w":192,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":192,"h":256},
+	"sourceSize": {"w":192,"h":256}
+},
+"Tutorial_Puntero.png":
+{
+	"frame": {"x":2,"y":2,"w":96,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":96,"h":96},
+	"sourceSize": {"w":96,"h":96}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "Tutorial-hd.png",
+	"format": "RGBA5555",
+	"size": {"w":460,"h":1007},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:24aa8750e5e1d5db3f349fb2f0bb5b87:31aef8afd2e5540f473675900eac5c0d:11cec376e18504377661456cca9d3322$"
+}
+}

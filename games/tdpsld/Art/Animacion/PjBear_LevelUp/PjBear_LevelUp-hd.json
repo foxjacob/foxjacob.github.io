@@ -1,0 +1,116 @@
+{"frames": {
+
+"PjBear_BrazoDer.png":
+{
+	"frame": {"x":2,"y":2,"w":59,"h":45},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":45},
+	"sourceSize": {"w":59,"h":45}
+},
+"PjBear_BrazoIzq.png":
+{
+	"frame": {"x":63,"y":2,"w":59,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":44},
+	"sourceSize": {"w":59,"h":44}
+},
+"PjBear_Cabeza1.png":
+{
+	"frame": {"x":124,"y":2,"w":155,"h":107},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":107},
+	"sourceSize": {"w":155,"h":107}
+},
+"PjBear_Cabeza2.png":
+{
+	"frame": {"x":281,"y":2,"w":154,"h":107},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":107},
+	"sourceSize": {"w":154,"h":107}
+},
+"PjBear_Cabeza3.png":
+{
+	"frame": {"x":437,"y":2,"w":154,"h":107},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":154,"h":107},
+	"sourceSize": {"w":154,"h":107}
+},
+"PjBear_Cuerpo.png":
+{
+	"frame": {"x":593,"y":2,"w":77,"h":78},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":77,"h":78},
+	"sourceSize": {"w":77,"h":78}
+},
+"PjBear_Mechon.png":
+{
+	"frame": {"x":672,"y":2,"w":36,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":32},
+	"sourceSize": {"w":36,"h":32}
+},
+"PjBear_OrejaDer.png":
+{
+	"frame": {"x":710,"y":2,"w":60,"h":62},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":62},
+	"sourceSize": {"w":60,"h":62}
+},
+"PjBear_OrejaIzq.png":
+{
+	"frame": {"x":772,"y":2,"w":60,"h":62},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":62},
+	"sourceSize": {"w":60,"h":62}
+},
+"PjBear_PieDer.png":
+{
+	"frame": {"x":834,"y":2,"w":47,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":26},
+	"sourceSize": {"w":47,"h":26}
+},
+"PjBear_PieIzq.png":
+{
+	"frame": {"x":883,"y":2,"w":47,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":26},
+	"sourceSize": {"w":47,"h":26}
+},
+"PjBear_PiernaDer.png":
+{
+	"frame": {"x":932,"y":2,"w":26,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":36},
+	"sourceSize": {"w":26,"h":36}
+},
+"PjBear_PiernaIzq.png":
+{
+	"frame": {"x":960,"y":2,"w":26,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":37},
+	"sourceSize": {"w":26,"h":37}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "PjBear_LevelUp-hd.png",
+	"format": "RGBA5555",
+	"size": {"w":988,"h":111},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:6705c660fa9dd20cf350289aff6245cd:ad6c85ba5181e4340e72d1285c7aeb59:bbac6720405e533b4b537d32554a4dc6$"
+}
+}

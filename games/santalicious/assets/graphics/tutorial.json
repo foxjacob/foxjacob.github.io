@@ -1,0 +1,51 @@
+{"frames": {
+
+"Tutorial_10000":
+{
+	"frame": {"x":579,"y":274,"w":272,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":272,"h":260},
+	"sourceSize": {"w":272,"h":260}
+},
+"Tutorial_20000":
+{
+	"frame": {"x":579,"y":535,"w":272,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":272,"h":260},
+	"sourceSize": {"w":272,"h":260}
+},
+"Tutorial_30000":
+{
+	"frame": {"x":579,"y":1,"w":272,"h":272},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":272,"h":272},
+	"sourceSize": {"w":272,"h":272}
+},
+"Tutorial_40000":
+{
+	"frame": {"x":1,"y":639,"w":272,"h":260},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":272,"h":260},
+	"sourceSize": {"w":272,"h":260}
+},
+"Tutorial_Board0000":
+{
+	"frame": {"x":1,"y":1,"w":577,"h":637},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":577,"h":637},
+	"sourceSize": {"w":577,"h":637}
+}},
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "13.0.1.808",
+	"image": "tutorial.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":1024},
+	"scale": "1"
+}
+}

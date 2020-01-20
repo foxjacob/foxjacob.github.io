@@ -1,0 +1,59 @@
+{
+"resources":
+	[
+		{"name":"homepage_jpg","type":"image","url":"../homepage.jpg"},
+        {"name":"bg_jpg","type":"image","url":"../bg.jpg"},
+
+        {"name":"start_btn_png","type":"image","url":"../start_btn.png"},
+
+        {"name":"item_png","type":"image","url":"../item.png"},
+        {"name":"item_json","type":"json","url":"../item.json"},
+
+        {"name":"numberText_png","type":"image","url":"../numberText.png"},
+        {"name":"numberText_json","type":"json","url":"../numberText.json"},
+
+        {"name":"nText_png","type":"image","url":"../nText.png"},
+        {"name":"nText_json","type":"json","url":"../nText.json"},
+
+        {"name":"wText_png","type":"image","url":"../wText.png"},
+        {"name":"wText_json","type":"json","url":"../wText.json"},
+
+        {"name":"deer_png","type":"image","url":"../deer.png"},
+        {"name":"deer_json","type":"json","url":"../deer.json"},
+
+        {"name":"level_open_btn_png","type":"image","url":"../level_open_btn.png"},
+        {"name":"level_lock_btn_png","type":"image","url":"../level_lock_btn.png"},
+
+        {"name":"bar_png","type":"image","url":"../bar.png"},
+
+        {"name":"next_btn_png","type":"image","url":"../nextBtn.png"},
+        {"name":"sel_btn_png","type":"image","url":"../selBtn.png"},
+        {"name":"replay_btn_png","type":"image","url":"../replayBtn.png"},
+        {"name":"more_btn_png","type":"image","url":"../more_btn.png"},
+
+        {"name":"starBar_png","type":"image","url":"../starBar.png"},
+
+        {"name":"star1_png","type":"image","url":"../star1.png"},
+        {"name":"star2_png","type":"image","url":"../star2.png"},
+        {"name":"star3_png","type":"image","url":"../star3.png"},
+
+        {"name":"win_png","type":"image","url":"../win.png"},
+        {"name":"lose_png","type":"image","url":"../lose.png"},
+
+
+        {"name":"effect_png","type":"image","url":"../effect.png"},
+        {"name":"effect_json","type":"json","url":"../effect.json"},
+
+        {"name":"hpMc_png","type":"image","url":"../hpMc.png"},
+        {"name":"hpMc_json","type":"json","url":"../hpMc.json"},
+
+        {"name":"hero_png","type":"image","url":"../hero.png"},
+        {"name":"hero_json","type":"json","url":"../hero.json"}
+	],
+
+"groups":
+	[
+        {"name":"preload","keys":"homepage_jpg,bg_jpg,start_btn_png"},
+        {"name":"loading","keys":"wText_json,wText_png,more_btn_png,lose_png,win_png,effect_json,effect_png,star1_png,star2_png,star3_png,replay_btn_png,next_btn_png,sel_btn_png,hpMc_png,hpMc_json,starBar_png,bar_png,nText_png,nText_json,numberText_png,numberText_json,level_open_btn_png,level_lock_btn_png,item_png,item_json,hero_png,hero_json,deer_png,deer_json"}
+	]
+}

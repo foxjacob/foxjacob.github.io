@@ -1,0 +1,188 @@
+/* Force OSX fonts in windows so the pixel-perfection is consistent */
+
+@font-face {
+	font-family: monaco;
+	src: url('Monaco.ttf');
+}
+
+@font-face {
+	font-family: courier;
+	src: url('Courier.ttf');
+}
+
+body {
+	font-size:14px;
+	line-height:19px;
+	cursor:default;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+html {
+    overflow: hidden;						/* Prevents all (?) page scrolling */
+}
+
+/* Target Windows Firefox only */
+@media screen and (-moz-os-version) {
+
+}
+
+/* IE Hacks (>= 10) */
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast: none) {
+	#IEhack { line-height: 16px; }
+}
+
+/* Use this to target Chrome only. */
+@supports (-webkit-appearance:none) and (shape-outside:none) {
+
+}
+
+.forceCorrectASCII {
+	font-family: Monaco, monospace;
+}
+
+table, tr, td {
+	line-height:130%;
+	font-size:14px;
+	margin:0;
+	padding:0;
+	border:0;
+	border-spacing:0;
+}
+
+button {
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode';
+	font-size:11px;	
+	border-radius: 0;
+	cursor:pointer;
+	margin: 5px 0 0 5px;
+	outline:none;
+	height:20px;
+	-moz-padding-top:0;
+	-webkit-padding-top: 2px;
+	padding-right: 6px;
+	-moz-padding-bottom:0;
+	-webkit-padding-bottom: 3px;
+	padding-left: 6px;
+}
+
+button:hover {
+}
+
+button:disabled {
+	cursor:default;
+}
+ 
+button:disabled:hover {
+}
+
+.equipsButtonWidth {
+	width:49px;
+}
+
+.keyItemsButtonWidth {
+	width:72;	
+}
+
+
+
+
+
+
+
+
+/* Alignment stuff */
+.alignRightAndMargin5 {
+	float:right;
+	margin-right:5px;
+}
+
+.alignRightAndMarginX {
+	float:right;
+	margin-right:0.75px;
+}
+
+.alignRight {
+	float:right;
+}
+
+.alignCenter {
+	margin:0 auto;
+}
+
+.textAlignCenter {
+	text-align:center;
+}
+
+.ascii {
+	white-space: pre;
+	display: block;
+}
+
+.centerOfWindow {
+	height:100px; line-height:100px;
+}
+
+
+
+
+
+
+
+/* Tables */
+#statsTable {
+	text-align:left;
+	min-width: 120px;
+    width:120px;
+    max-width: 120px;
+}
+
+#keyItemsTable {
+	min-width: 180px;
+    width:180px;
+    max-width: 180px;
+}
+
+#equipsTable {
+	min-width: 180px;
+    width:180px;
+    max-width: 180px;
+}
+
+
+
+
+
+
+
+
+/* Hiding stuff for tabs */
+.invisible {
+	display: none;
+}
+
+.visible {
+	display: inline;
+	max-width:673px;
+}
+
+
+
+
+
+
+
+
+/* Various */
+.limitWidth {
+	max-width:673px;
+}
+
+.clickable {
+	cursor:pointer;
+}

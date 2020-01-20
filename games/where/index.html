@@ -1,0 +1,561 @@
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection"content="telephone=no">
+    <title>你的脚印地图</title>
+    <link rel="stylesheet" type="text/css" href="jymap.css">
+    <style type="text/css">
+        .index .ft{display:none; }
+        .index .starbg{z-index:100}
+    </style>
+    <meta name="author" content="shenshenyan 2014-09-23 9:43"/>
+</head>
+<body>
+<!-- *全站流量统计代码* -->
+
+
+<div class="wrap">
+    <!-- loading -->
+    <div class="loadPage" style="z-index:99999">
+        <div class="loading">
+            <div class="loading-num"><b></b></div>
+            <div class="inner undis">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loadBgB">
+                <span class="yunBg" ></span>
+                <span class="cityBg" ></span>
+                <span class="planload" ></span>
+            </div>
+        </div>
+    </div>
+    <!-- /loading -->
+    <!-- index -->
+    <div class="index">
+        <div class="inner">
+            <img src="img/jyindexBg.jpg" class="layer_bg" />
+            <div class="hd">
+                <h1>脚印地图</h1>
+                <h2>你是不是已经走过了很多地方？向朋友炫耀下吧！</h2>
+            </div>
+            <div class="bd">
+                <span class="planfly" ></span>
+                <span class="starbg" >记录我的脚印</span>
+            </div>
+            <!--
+            <div class="ft">
+                <span class="newsLogo"></span>
+            </div>
+            -->
+        </div>
+    </div>
+    <!-- /index -->
+    <!-- chgarea -->
+    <div class="layout chgarea">
+        <div class="inner">
+            <img src="img/jyindexBg.jpg" class="layer_bg" />
+            <div class="iscrllgb" id="iscrllgb" >
+                <div class="tbody">
+                    <div class="" id="main" >
+                        <!-- 直辖市 -->
+                        <div class="sbnt zxs">
+                            <div class="hd">
+                                <h2>直辖市</h2>
+                            </div>
+                            <div class="bd">
+                                <ul class="sbntLi">
+                                    <li sid="24"><img src="img/s_bj.png"/>北京</li>
+                                    <li sid="21"><img src="img/s_sh.png"/>上海</li>
+                                    <li sid="23"><img src="img/s_tj.png"/>天津</li>
+                                    <li sid="22"><img src="img/s_cq.png"/>重庆</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /直辖市 -->
+
+                        <!-- 省份 -->
+                        <div class="sbnt shengf">
+                            <div class="hd">
+                                <h2>省份</h2>
+                            </div>
+                            <div class="bd">
+                                <ul class="sbntLi">
+                                    <li sid="30"><img src="img/s_gd.png"/>广东</li>
+                                    <li sid="2"><img src="img/s_ln.png"/>辽宁</li>
+                                    <li sid="5"><img src="img/s_js.png"/>江苏</li>
+                                    <li sid="17"><img src="img/s_sc.png"/>四川</li>
+
+                                    <li sid="10"><img src="img/s_xian.png"/>陕西</li>
+                                    <li sid="3"><img src="img/s_hb2.png"/>河北</li>
+                                    <li sid="9"><img src="img/s_sx.png"/>山西</li>
+                                    <li sid="8"><img src="img/s_hn2.png"/>河南</li>
+
+                                    <li sid="1"><img src="img/s_jl.png"/>吉林</li>
+                                    <li sid="0"><img src="img/s_hlj.png"/>黑龙江</li>
+                                    <li sid="4"><img src="img/s_sd.png"/>山东</li>
+                                    <li sid="7"><img src="img/s_ah.png"/>安徽</li>
+
+                                    <li sid="6"><img src="img/s_zj.png"/>浙江</li>
+                                    <li sid="14"><img src="img/s_fj.png"/>福建</li>
+                                    <li sid="18"><img src="img/s_yn.png"/>云南</li>
+                                    <li sid="13"><img src="img/s_jx.png"/>江西</li>
+
+                                    <li sid="20"><img src="img/s_hn.png"/>海南</li>
+                                    <li sid="11"><img src="img/s_gs.png"/>甘肃</li>
+                                    <li sid="19"><img src="img/s_qh.png"/>青海</li>
+                                    <li sid="12"><img src="img/s_hb.png"/>湖北</li>
+
+                                    <li sid="15"><img src="img/s_hn1.png"/>湖南</li>
+                                    <li sid="16"><img src="img/s_gz.png"/>贵州</li>
+                                    <li sid="32"><img src="img/s_tw.png"/>台湾</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /省份 -->
+
+                        <!-- 自治区 -->
+                        <div class="sbnt zzq">
+                            <div class="hd">
+                                <h2>自治区</h2>
+                            </div>
+                            <div class="bd">
+                                <ul class="sbntLi">
+                                    <li sid="27"><img src="img/s_gx.png"/>广西</li>
+                                    <li sid="29"><img src="img/s_xz.png"/>西藏</li>
+                                    <li sid="25"><img src="img/s_nx.png"/>宁夏</li>
+                                    <li sid="28"><img src="img/s_xj.png"/>新疆</li>
+                                    <li sid="26"><img src="img/s_nm.png"/>内蒙</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /自治区 -->
+
+                        <!-- 特别行政区 -->
+                        <div class="sbnt xzq">
+                            <div class="hd">
+                                <h2>特别行政区</h2>
+                            </div>
+                            <div class="bd">
+                                <ul class="sbntLi">
+                                    <li sid="33"><img src="img/s_am.png"/>澳门</li>
+                                    <li sid="31"><img src="img/s_xg.png"/>香港</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /特别行政区 -->
+                        <div class="ft">
+                            <span id="submit_survey" >提 交</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /chgarea -->
+    <!-- map -->
+    <div class="layout mapBox">
+        <div class="inner">
+            <img src="img/jyindexBg.jpg" class="layer_bg" />
+            <div class="mapshow">
+                <div id="map"></div>
+                <div class="mapTips" id="mapTips" >
+                    <ul class=""></ul>
+                </div>
+                <span class="nansea"></span>
+            </div>
+            <div class="shareTxt">
+                <div class="text">你的足迹遍布<b>4</b>个省份，打败<b>7%</b>的网友！</div>
+                <p class="mychg"><a  title="" href="javascript:;" class="mychgBnt" >我来试试</a></p>
+                <p class="shareBox"><a  title="" href="javascript:;" class="goback" >再来一次</a><a  title="" href="javascript:;"  class="share_btn" data-title="脚印地图" data-url="" data-des="你是不是已经到过很多地方？想给朋友炫耀下吗？ 来秀出你的足迹，看你打败多少人！" data-pic="http://img1.gtimg.com/news/pics/hv1/132/198/1718/111763572.jpg">分享给好友</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- /map -->
+</div>
+
+<!-- 资源传递 -->
+<!-- 微信分享信息 --><input id="r-wx-title" type="hidden" value="脚印地图" />
+<!-- 微信分享图片 --><input id="r-wx-img"   type="hidden" value="img/111763572.jpg" />
+<!-- 微信描述内容 --><input id="r-wx-con"   type="hidden" value="你是不是已经到过很多地方？想给朋友炫耀下吗？ 来秀出你的足迹，看你打败多少人！" />
+<!-- 资源传递 end-->
+<div class="weixin_layout"></div>
+
+
+<script type="text/javascript" src="http://www.lagou.com/js/libs/jquery.1.10.1.min.js"></script>
+<script type="text/javascript" src="js/map.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/raphael-min.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script src="js/weixin.js" type="text/javascript" charset="utf-8"></script>
+<script language="javascript">
+/*
+ * loadImg  图片预加载
+ * @param   {Array}     预加载图片的对象数组
+ * author   jianminlu
+ * update   2014-06-20 9:35:13
+ */
+
+var myUrl = document.location.href,
+        shareUrl = myUrl.split("?area=")[0];
+$(".share_btn").attr("data-url",shareUrl);
+$(".index").bind("click",function(){
+    $(".index").removeClass("goin").addClass("goOut");
+    setTimeout(function(){$(".index").fadeOut()},1500);
+})
+
+var loadImg = function(pics, callback){
+    var index = 0;
+    var len = pics.length;
+    var img = new Image();
+    var flag = false;
+    var progress = function(w){
+        $('.loading-progress').animate({width:w}, 100, 'linear', function(){
+            $(".loading-num b").html(w);
+            // 测试图片，不使用请注释
+        });
+    }
+    var load = function(){
+        img.src = pics[index];
+        img.onload = function() {
+            // 控制台显示加载图片信息
+            //console.log('第' + index + '个img被预加载', img.src);
+            progress(Math.floor(((index + 1) / len) * 100) + "%");
+            index ++ ;
+            if (index < len) {
+                load();
+            }else{
+                callback()
+            }
+        }
+        return img;
+    }
+    if(len > 0){
+        load();
+    }else{
+        progress("100%");
+    }
+    return {
+        pics: pics,
+        load: load,
+        progress: progress
+    };
+}
+
+
+var pics = [
+    "img/jyindexBg.jpg",
+    "img/jymap.png",
+    "img/jyplan.png",
+    "img/jytclogo.png",
+    "img/loadPic.png",
+    "img/jycur.png"
+];
+// 调用
+loadImg(pics, function(){
+    setTimeout(function(){
+        $(".loadPage").fadeOut();
+        $(".index").addClass("goin");
+    }, 500);
+});
+
+var car2 = {
+    _weixin : RegExp("MicroMessenger").test(navigator.userAgent)? true : false
+};
+var option_wx = {};
+if($('#r-wx-title').val()!='') option_wx.title = $('#r-wx-title').val();
+if($('#r-wx-img').val()!='') option_wx.img = $('#r-wx-img').val();
+if($('#r-wx-con').val()!='') option_wx.con = $('#r-wx-con').val();
+option_wx.link = shareUrl;
+if(car2._weixin) $(document.body).wx(option_wx);
+
+/**
+ * author: jasonshan && jianminlu
+ * update: 2014-05-26 22:03
+ * version: v2.0
+ */
+/* ua */
+var UA = function(){
+    var userAgent = navigator.userAgent.toLowerCase();
+    return {
+        ipad: /ipad/.test(userAgent),
+        iphone: /iphone/.test(userAgent),
+        android: /android/.test(userAgent),
+        qqnews: /qqnews/.test(userAgent),
+        weixin: /micromessenger/.test(userAgent),
+        qqnews_version: userAgent.match(/qqnews/i) == "qqnews" ? userAgent.split('qqnews/')[1] : ''
+    };
+}
+
+/**
+ * mSahre 移动端分享功能 新闻客户端
+ */
+
+var mShare = {
+    main: function(o){
+        var _this = this;
+        var d = {
+            title: o.title || document.title,
+            pic: o.pic || "",
+            des: o.des || "",
+            url: o.url || document.location.href
+        };
+        var ua = UA();
+        switch(true){
+            case ua.qqnews:
+                if(window.TencentNews && window.TencentNews.showShareMenu) {
+                    window.TencentNews.showShareMenu(d.url,d.title,d.des,d.pic,"news_news_wc");
+                }else{
+                    window.TencentNews.shareFromWebView(d.title, d.des, d.pic);
+                }
+                break;
+            case ua.weixin:
+                $(".weixin_layout").show();
+                $('.weixin_layout').off('click').on('click',function(){
+                    $('.weixin_layout').hide();
+                });
+                break;
+            default:
+                window.location = "http://share.v.t.qq.com/index.php?c=share&a=index&appkey=801378464&url="
+                        + d.url + "&title="
+                        + d.title + "&pic="
+                        + d.pic;
+                break;
+        };
+    },
+    init: function(o){
+        var _this = this;
+        $(o.btn).bind("click", function(){
+            var _o = $(this);
+            _this.main({
+                title: _o.attr("data-title"),
+                pic: _o.attr("data-pic"),
+                des: _o.attr("data-des"),
+                url: _o.attr("data-url")
+            });
+
+        });
+    }
+};
+
+mShare.init({btn: ".share_btn"});
+
+/* page */
+var Layout = {
+    init: function(){
+        var _this = this,
+                _w = $(window).width(),
+                _h = $(window).height(),
+                _len = $(".layout").length;
+        var ua = UA();
+        //console.log(ua);
+
+        if(ua.iphone && ua.qqnews){//在IOS的新闻客户端中执行
+            _h = _h - 44;
+        }
+
+        if (_h < 460 ) {
+            if (_h < 400 ) {
+                $("body").addClass("smscren");
+            }else{
+                $("body").addClass("midscren");
+            }
+        }
+
+        $(".index,.index .inner,#iscrllgb,.layout,.loadPage").width( _w ).height( _h );
+    }
+}
+Layout.init();
+
+function reScroll(){
+    //var myScroll;
+    function loaded() {
+        myScroll4 = new iScroll('iscrllgb');
+    }
+    document.getElementById('iscrllgb').addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+}
+reScroll();
+
+
+
+//map
+
+/* svg地图 author ="johnnyHan" */
+var _h = $(window).height(),
+        _w = $(window).width();
+$("#map,.mapshow").css({"width":_w,"height":_w * 0.75});
+$(".mapshow").css({"width":_w,"height":_w * 0.75});
+$(".sbntLi li").css({"height":_w * 0.2});
+var names = {
+    0: '黑龙江',
+    1: '吉林',
+    2: '辽宁',
+    3: '河北',
+    4: '山东',
+    5: '江苏',
+    6: '浙江',
+    7: '安徽',
+    8: '河南',
+    9: '山西',
+    10: '陕西',
+    11: '甘肃',
+    12: '湖北',
+    13: '江西',
+    14: '福建',
+    15: '湖南',
+    16: '贵州',
+    17: '四川',
+    18: '云南',
+    19: '青海',
+    20: '海南',
+    21: '上海',
+    22: '重庆',
+    23: '天津',
+    24: '北京',
+    25: '宁夏',
+    26: '内蒙',
+    27: '广西',
+    28: '新疆',
+    29: '西藏',
+    30: '广东',
+    31: '香港',
+    32: '台湾',
+    33: '澳门'
+};
+var newArr = [];
+var level = ["2.94%","5.88%","8.82%","11.76%","14.71%","17.65%","23.59%","26.53%","31.47%","35.41%","48.35%","52.29%","55.24","65.17%","69.12%","72.06%","77.23%","78.94%","81.88%","83.82%","87.76%","88.71%","89.65%","90.59%","91.53%","92.47%","93.41%","94.35%","95.29%","95.74%","96.18%","97.12%","98.06%","99%"];
+
+var istruet = true;
+$(".sbntLi li").bind("click",function(){
+    if (istruet) {
+        istruet = false;
+        var idx = $(this).attr("sid");
+        if ($(this).hasClass("cur")) {
+            var idx = $(this).attr("sid");
+            $(this).removeClass("cur");
+            newArr = $.map(newArr, function(n){
+                return n != idx ? n  : null;
+            });
+        }else{
+            $(this).addClass("cur");
+            newArr.push($(this).attr("sid"));
+        }
+
+        var myHtml = "";
+        $("svg").find("path").attr("fill","#f6eed8");
+        for (var i = 0, l = newArr.length; i < l; i++) {
+            $("svg").find("path").eq(newArr[i]).attr("fill","#e25631");
+            myHtml += "<li class=li"+newArr[i]+">"+names[newArr[i]]+"</li>";
+        }
+        $("#mapTips ul").html(myHtml);
+        setTimeout(function(){istruet = true},400);
+    }
+})
+
+$(".goback").bind("click",function(){
+    newArr = [];
+    $(".sbntLi li").removeClass("cur");
+    $(".index").show().removeClass("goOut").addClass("goin");
+    $(".mapBox").removeClass("txtshow");
+    setTimeout(function(){$(".chgarea").show()},2000);
+})
+
+
+$("#submit_survey").bind("click",function(){
+    var myNum = newArr.length ;
+    if (myNum) {
+        $(".chgarea").fadeOut();
+        $(".mapBox").addClass("txtshow");
+
+        shareUrl = myUrl.split("?area=")[0]+"?area="+newArr;
+        var nunberHtml = "我踏遍中了中国<b>"+myNum+"</b>个省，谁敢和我比一下？";
+        var sharewxH = "我踏遍中了中国"+myNum+"个省，谁敢和我比一下？";
+
+        $(".share_btn").attr("data-url",shareUrl);
+        $(".share_btn").attr("data-title",sharewxH);
+
+        $("#r-wx-title").val(sharewxH);
+        mShare.init({btn: ".share_btn"});
+
+
+        $(".shareTxt .text").html(nunberHtml);
+        var car2 = {
+            _weixin : RegExp("MicroMessenger").test(navigator.userAgent)? true : false
+        };
+        var option_wx = {};
+        if($('#r-wx-title').val()!='') option_wx.title = $('#r-wx-title').val();
+        if($('#r-wx-img').val()!='') option_wx.img = $('#r-wx-img').val();
+        if($('#r-wx-con').val()!='') option_wx.con = $('#r-wx-con').val();
+
+        option_wx.link = shareUrl;
+        if(car2._weixin) $(document.body).wx(option_wx);
+    }else{
+        alert("亲！请选择你到过的地方！");
+    }
+})
+
+$('#map').SVGMap({
+    mapWidth: _w,
+    mapHeight: _w * 0.75,
+    strokeColor: '3d749c',
+    stateInitColor: 'f6eed8',       //默认填充颜色
+    stateHoverColor: 'f6eed8',      //鼠标滑过颜色
+    stateSelectedColor: 'f6eed8',   //点击后选中的颜色
+    showTip: false,//是否显示tip
+    hoverCallback: function(stateData, obj){
+        return false;
+        //$('#hoverInfo').html('hover:'+obj.name);
+    },
+    clickCallback: function(stateData, obj){
+        return false;
+    }
+});
+
+
+if (myUrl.split("?area=").length > 1) {
+    //document.location.href = myUrl.split("?area=")[0];
+    $(".loadPage,.index").hide();
+    $(".chgarea").css({"top":"-1000px"});
+    var myHtml2 = "";
+    var getArea = myUrl.split("?area=")[1].split("&from")[0].split(",");
+    for (var i = 0, l=getArea.length; i < l; i++) {
+        $("svg").find("path").eq(getArea[i]).attr("fill","#e25631");
+        myHtml2 += "<li class=li"+getArea[i]+">"+names[getArea[i]]+"</li>";
+    }
+    $("#mapTips ul").html(myHtml2);
+    var nunberHtml2 = "他的足迹遍布<b>"+getArea.length+"</b>个省份，打败<b>"+level[getArea.length - 1]+"</b>的网友！";
+    $(".shareTxt .text").html(nunberHtml2);
+    $(".shareBox").hide();
+    $(".mychg").show();
+}
+
+$(".mychgBnt").bind("click",function(){
+    //document.location.href = myUrl.split("?area=")[0];
+    newArr = [];
+    $(".sbntLi li").removeClass("cur");
+    $(".chgarea").css({"top":"0px"});
+    $(".index").show().removeClass("goOut").addClass("goin");
+    $(".mapBox").removeClass("txtshow");
+    setTimeout(function(){$(".chgarea").show()},2000);
+    $(".shareBox").show();
+    $(".mychg").hide();
+})
+
+</script>
+<div style="display:none"><script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F71d5b10e5c598dce21cfc13d62134c0b' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000296142'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1000296142%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div>
+<script type="text/javascript" src="js/wx.js"></script>
+
+</body>
+
+
+</html>

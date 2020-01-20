@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+body,html{margin:0;padding:0;width:100%;}
+ul,li,p,a,img,div{ margin:0; padding:0; color:#FFF; font-size:16px;text-decoration:none;border:none; list-style:none; display:block; font-family:"微软雅黑"}
+/*游戏主界面*/
+.index{ width:100%; height:100%;position:absolute; left:0; top:0; display:block; z-index:10}
+.index .bg{ width:100%; height:auto; position:absolute; left:0; top:0; z-index:-1}
+.index .pbox{ padding-top:112%;}
+.index .start{ width:100%; height:54px;background:url(img/gamestart.png) no-repeat bottom center;background-size:auto 54px;}
+.index .gamegz{width:100%; height:54px;background:url(img/more.png) no-repeat bottom center;background-size:auto 54px; margin-top:20px}
+
+/*游戏规则*/
+.gamesgztc{ width:100%; height:100%;position:fixed; left:0; top:0;background:url(img/gamesbg.png) no-repeat; background-size:100% 100%;display:none; z-index:11}
+.gamesgztc .gz{ width:96%; height:97%; background:url(img/gametextbox.png) no-repeat; background-size:100% 100%; margin-left:2%; margin-top:3%;}
+.gamesgztc .gz .gztext{ width:82%; height:80%;  margin-left:5%;padding:6% 3% 2% 3%; display:block}
+.gamesgztc .gz .gztext span{background:url(img/gamestextbg.png) no-repeat; background-size:100% 100%; display:block; color:#000; font-size:16px; width:96%;height:96%; padding:2% 2%; overflow:scroll}
+.gamesgztc .fh{ width:100%; display:block}
+.gamesgztc .fh img{ max-width:32%; margin:0 auto; display:block}
+
+/*游戏进行*/
+.gamesstart{ position:relative; width:100%;height:100%;display:block; position:fixed; left:0; top:0;}
+.gamesstart .bg{ width:100%; height:auto; position:absolute; left:0; top:0; z-index:-1;}
+.gamesstart .top{ width:100%; height:44px}
+.gamesstart .top .zt{width:36px;height:44px; float:left; margin-left:5%; margin-top:10px}
+.gamesstart .top .zt img{width:36px; margin:0 auto;}
+.gamesstart .top .fs{ width:92px; height:44px; float:left; margin-top:16px; margin-left:16%; background:url(img/fs.png) no-repeat; background-size:100%; line-height:20px;color:#000; text-indent:50px}
+.gamesstart .top .sj{ width:72px; height:44px; float:right; margin-right:5%;margin-top:16px; background:url(img/sj.png) no-repeat; background-size:100%; line-height:20px; color:#f00;text-indent:42px;}
+.gamesstart .xian{width:100%; height:10px; background:url(img/x_10.png) no-repeat; background-size:200% 100%; display:block}
+.gamesstart .p{ position:absolute; top:50px}
+.gamesstart .p img{ width:36px; height:auto;}
+.gamesstart .p1{left:50px}
+.gamesstart .p2{left:230px}
+.gamesstart .p3{ left:190px}
+.gamesstart .p4{ left:123px}
+.gamesstart .p5{ left:156px}
+.gamesstart .rw{ position:fixed; width:50px; height:92px; bottom:0; left:42%; background:url(img/rw_111.png) no-repeat; background-size:100%;}
+
+/*游戏结束*/
+.gamesjs{ position:fixed; width:100%; height:100%; background:rgba(255,255,255,0.5); display:none;}
+.gamesjs .u1{ width:250px; height:300px; margin-top:44px; background:url(img/gamestextbg.png) no-repeat; background-size:100% 100%;background-position:0 0;margin-left:auto; margin-right:auto; display:block;}
+.gamesjs .u1 .l1{ width:96%;padding-top:15px; padding-left:2%; padding-right:2%; background:url(img/bx.png) no-repeat center 12px; background-size:60%; height:141px; text-align:center; color:#000}
+.gamesjs .u1 .l1 img{ width:96%; height:auto; margin-left:auto; margin-right:auto; margin-top:0px;}
+.gamesjs .u1 .l2{ width:100%; height:48px; background:url(img/h.png) no-repeat left center; background-size:20%; color:#f39800; line-height:24px; font-size:24px; text-align:center}
+.gamesjs .u1 .l3{width:210px; height:52px;color:#000; padding-left:20px; padding-right:20px; line-height:24px}/*此处宽度不是百分比*/
+.gamesjs .u1 .l3 .red{ color:#F00}
+.gamesjs .u1 .fx{  width:90px;margin-top:50px; margin-left:80px; height:auto; background:url(img/gamestart.png) no-repeat; background-size:100%; height:36px;}
+.gamesjs .u1 .lq{ float:left; margin-left:20px; width:90px; height:auto; background:url(img/share.png) no-repeat; background-size:100%; height:36px;}
+.gamesjs .u1 .more{float:right; margin-right:20px; width:90px; height:auto; background:url(img/more.png) no-repeat; background-size:100%; height:36px;}
+.gamesjs .u2{ width:220px; height:300px; margin-left:auto; margin-right:auto; display:none; margin-top:44px}
+.gamesjs .u2 li img{ width:100%;}
+.gamesjs .u3{position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:100; display:none}
+.gamesjs .u3 img{ width:50%; height:auto; position:fixed; right:0px; top:0px}
+.gamesjs .fhsy{ position:fixed; left:20px; bottom:0px; width:90px; height:36px; background:url(img/fhsy.png) no-repeat; background-size:100%;}
+.gamesjs .u4{ width:250px; height:300px; margin-top:44px; background:url(img/gamestart.png) no-repeat; background-size:100%;background-position:0 0;margin-left:auto; margin-right:auto; display:none}
+.gamesjs .zlyc{ position:fixed; right:20px; bottom:0px; width:90px; height:36px; background:url(img/zlyc.png) no-repeat; background-size:100%;}
+
+/*游戏暂停*/
+.gameszt{ position:fixed; left:0; top:0;width:100%; height:100%; display:none}
+.gameszt .u1{width:250px; height:300px; margin-top:44px; background:url(img/ztbg.png) no-repeat; background-size:100%;margin-left:auto; margin-right:auto;}
+.gameszt .u1 h1{ width:100%; height:48px; text-align:center; line-height:48px; font-size:26px; color:#000; background:url(img/gamezt.png) no-repeat 52px center; background-size:auto 60%;}
+.gameszt .u1 .l1{ width:100%; height:56px; background:url(img/jxyx.png) no-repeat center; background-size:64%}
+.gameszt .u1 .l2{ width:100%; height:56px; background:url(img/cxyx.png) no-repeat center; background-size:64%}
+.gameszt .u1 .l3{ width:100%; height:56px; background:url(img/tcyx.png) no-repeat center; background-size:64%}
+
+.jiafen{ position:fixed; left:0; width:42px; height:64px;  color:#595757; font-size:26px;}
+
+/*音乐控件*/
+.yykj{ position:fixed; right:0px; top:0px; width:50px; height:50px; background:url(img/play.png) center no-repeat; z-index:20; background-size:30px 30px;}
+

@@ -1,0 +1,7 @@
+.menulist{ left: 0;overflow: hidden;position: absolute;top: 0;width: 100%;z-index: 122;}
+.menulist a{float: left;width:99.9%;margin-right:1px;color:#ffffff;font-size:14px;text-decoration: none;background:#000000;text-align: center;opacity: 0.6;line-height:30px;font-weight: bold;font-family:"΢���ź�"��}
+.menulist a img{position: relative;top: 1px;}.menulist_fix{overflow: hidden;width: 100%;z-index: 1;margin-bottom:0px;}
+	.menulist_fix a{display: block;width:99.9%;color:#ffffff;font-size:14px;text-decoration: none;background:#000000;text-align: center;opacity: 0.6;line-height:30px;font-weight: bold;font-family:"΢���ź�"��}
+	.menulist_fix a img{position: relative;top: 1px;}.menulist_down{ left: 0;overflow: hidden;width: 100%;z-index: 122;position: absolute;bottom: 0;}
+.menulist_down a{float: left;width:99.9%;margin-right:1px;color:#ffffff;font-size:14px;text-decoration: none;background:#000000;text-align: center;opacity: 0.6;line-height:30px;font-weight: bold;font-family:"΢���ź�"��}
+.menulist_down a img{position: relative;top: 1px;}

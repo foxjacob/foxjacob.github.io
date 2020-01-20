@@ -1,0 +1,13 @@
+{
+    "debugMode"     : 1,
+    "frameRate"     : 60,
+    "showFPS"       : false,
+    "id"            : "gameCanvas",
+    "renderMode"    : 1,
+    "modules" : ["cocos2d"],
+    "jsList"        : [
+      "src/resource-min.js",
+      "src/string_res.js",
+      "src/scene/GameScene-min.js"
+    ]
+}

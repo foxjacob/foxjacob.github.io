@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="patsy">
+	<meta name="description" content="Save editor for Kittens Game">
+
+	<title>Kittens Game Save Editor</title>
+	<link rel="stylesheet" type="text/css" href="editor/editor.css">
+
+	<!--for dev testing, if you see this live poke me (patsy)-->
+	<link rel="stylesheet" type="text/css" href="dev/html.css">
+	<script src="dev/jsondiffpatch.min.js"></script>
+	<script src="dev/jsondiffpatch-formatters.min.js"></script>
+</head>
+<body>
+	<form>
+		<div id="topBar" class="header">
+			<span class="smallText">
+				<a href="https://bitbucket.org/coderpatsy/kgsaveedit">Kittens Game Save Editor</a> by <a href="https://coderpatsy.bitbucket.io/">patsy</a>, with help from Guest93,
+				for <a href="http://bloodrizer.ru/games/kittens/">Kittens Game</a> version <span id="gameVersionSpan">1.4.6.2.d</span>
+				by <a href="http://bloodrizer.ru/">bloodrizer</a>
+			</span>
+
+			<span id="topSettings">
+				<span id="toolbarBlock"></span>
+
+				<span id="languageSelSpan" class="hidden">
+					<span data-lang-key="opts.lang">Language</span>
+					<select id="languageSel"></select>
+				</span>
+				&nbsp;
+				<a id="showImport" href="#" data-lang-key="menu.import">Import</a> |
+				<a id="showExport" href="#" data-lang-key="menu.export">Export</a>
+			</span>
+		</div>
+
+		<div id="load" class="hideSiblings">Loading...</div>
+
+		<div id="editContainer">
+			<div id="importBlock" class="lightbox hidden">
+				Save Import<br>
+				<textarea id="importSaveArea" class="saveArea" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea><br>
+				<input id="importLoadButton" type="button" value="Load">
+				<input id="importCancel" type="button" value="Cancel">
+				<span id="importDevSpan"></span>
+				<span id="importError" class="error hidden">Unable to import data!</span>
+			</div>
+
+			<div id="exportBlock" class="lightbox hidden">
+				Save Export<br>
+				<textarea id="exportSaveArea" class="saveArea" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea><br>
+				<input id="exportCancel" type="button" value="OK">
+			</div>
+
+			<div class="blockContainer">
+				<div id="tooltipBlock" class="hidden"></div>
+
+				<div id="resourceColumn" class="bottom-spacer">
+					<div id="resourceHeader"></div><br>
+					<table id="resourceBlock"></table><br>
+					<table id="craftableBlock"></table>
+				</div>
+
+				<div id="editColumn"><div class="blockContainer">
+					<div id="tabContainer"></div>
+
+					<div id="tabBlocks"><div id="tabBlocksContainer" class="blockContainer"></div></div>
+				</div></div>
+			</div>
+		</div>
+	</form>
+
+	<script src="lib/lz-string.js"></script>
+	<script src="lib/jquery-3.2.1.min.js"></script>
+	<script src="lib/dojo.js"></script>
+
+	<script>
+		/* global dojo, require */
+
+		require(["dojo/on"], function (on) {
+			window.catchError = on(window, "error", function () {
+				dojo.byId("load").textContent = "Something went wrong while loading!";
+			});
+		});
+	</script>
+
+	<script src="editor/e-config.js"></script>
+
+	<script>
+		/* global dojo, require, editorVersion: true, i18nLang */
+
+		require(["dojo/on"], function (on) {
+			"use strict";
+
+			// don't follow empty fragment links
+			// on(document.documentElement, 'a[href="#"]:click',
+			// 	function (ev) { ev.preventDefault(); });
+			// apparently the above consistently fails on certain elements and I have no clue why the [expletive], considering the elements are identical to others that do get prevented
+
+			document.documentElement.addEventListener("click", function (ev) {
+				if (ev && ev.target && ev.target.href && ev.target.href.slice(-1) === "#") {
+					ev.preventDefault();
+				}
+			}, true); // use capture
+
+			var scripts = ["editor/e-core.js", "editor/e-misc.js", "editor/e-resources.js",
+				"editor/e-upgrades.js", "editor/e-tech.js", "editor/e-prestige.js",
+				"editor/e-buildings.js", "editor/e-religion.js", "editor/e-space.js",
+				"editor/e-time.js", "editor/e-village.js", "editor/e-stats.js", "editor/e-main.js", "editor/e-extras.js", "dev/e-dev.js"];
+			var index = 0;
+			window.editorVersion = dojo.byId("gameVersionSpan").textContent;
+
+			console.log("Loading locale system");
+			var langPromise = i18nLang.init(editorVersion);
+			langPromise.done(function () {
+				console.log("Loading editor modules");
+				fetchScript();
+			}).fail(function () {
+				console.log("Unable to load locales");
+			});
+
+			function fetchScript() {
+				$.getScript(scripts[index] + "?" + editorVersion)
+				.done(function () {
+					index++;
+					if (scripts[index]) {
+						fetchScript();
+					} else {
+						initEditor();
+					}
+				}).fail(function () {
+					console.error("Unable to load modules");
+				});
+			}
+
+			function initEditor() {
+				/* global game:true, gamePage:true, classes, $I */
+				window.gamePage = new classes.KGSaveEdit.SaveEdit(dojo.byId("editContainer"));
+				window.game = gamePage;
+				window.saveEdit = gamePage;
+
+				game.version = editorVersion;
+
+				setTimeout(function () {
+					//stop the submit event from doing anything (the <form> element is only there for "valid" html)
+					on(document.forms[0], "submit", function (ev) { ev.preventDefault(); });
+
+					on(dojo.byId("showImport"), "click", function () {
+						game._toggleLightbox("importBlock");
+						dojo.addClass("importError", "hidden");
+
+						var area = dojo.byId("importSaveArea");
+						area.value = "";
+						area.focus();
+					});
+
+					on(dojo.byId("importLoadButton"), "click", function () {
+						var data = dojo.byId("importSaveArea").value;
+
+						if (!(/\S/.test(data)) || !window.confirm($I("save.msg.confirm"))) {
+							return;
+						}
+						var success = gamePage.importSave(data);
+
+						if (success === "ERROR") {
+							dojo.removeClass("importError", "hidden");
+						} else if (success) {
+							dojo.byId("importSaveArea").value = "";
+							dojo.addClass("importBlock", "hidden");
+							dojo.addClass("importError", "hidden");
+						}
+					});
+
+					on(dojo.byId("importCancel"), "click", function () {
+						dojo.addClass("importBlock", "hidden");
+						dojo.addClass("importError", "hidden");
+					});
+
+					on(dojo.byId("showExport"), "click", function () {
+						game._toggleLightbox("exportBlock");
+
+						var area = dojo.byId("exportSaveArea");
+						area.value = gamePage.exportSave(true);
+						area.select();
+					});
+
+					on(dojo.byId("exportCancel"), "click", function () {
+						dojo.addClass("exportBlock", "hidden");
+					});
+
+					on(dojo.byId("languageSel"), "change", function () {
+						i18nLang.updateLanguage(this.value);
+					});
+
+					dojo.removeClass("languageSelSpan", "hidden");
+					dojo.addClass("load", "hidden");
+					window.catchError.remove();
+
+					$(document).on("keyup keydown keypress", function (ev) {
+						game.keyStates = {
+							shiftKey: ev.shiftKey,
+							ctrlKey: ev.ctrlKey,
+							altKey: ev.altKey
+						};
+
+						game.updateTooltip();
+					});
+				}, 0);
+			}
+		});
+	</script>
+</body>
+</html>

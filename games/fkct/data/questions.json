@@ -1,0 +1,232 @@
+﻿{"questionRepoSize":10,
+"questions":[
+{
+"answer":"可口可乐",
+"ID":1,"category":"公司&品牌",
+"keyboard":"汽水爱中国"
+},
+{"answer":"爱因斯坦","ID":2,
+"category":"明星&名人",
+"keyboard":"艾米纳姆基摩居里夫人尔奇耐"
+},
+{
+"answer":"雪碧","ID":3,
+"category":"公司&品牌",
+"keyboard":"七喜绿色啤酒花青岛"
+},
+{
+"answer":"中国石化",
+"ID":4,"category":"公司&品牌",
+"keyboard":"美日本英孚人油寿平安"
+},
+{
+"answer":"金刚","ID":5,
+"category":"电影&电视",
+"keyboard":"光攻击飞机都市恶魔防守巨人丛林建筑高空"
+},
+{
+"answer":"罗纳尔多",
+"ID":6,"category":"明星&名人",
+"keyboard":"迪尼奥蒂胖肥大小比巴乔"
+},
+{
+"answer":"泰坦尼克号",
+"ID":7,"category":"电影&电视",
+"keyboard":"铁达尼大轮船碰撞掉落沉没幽灵"
+},
+{
+"answer":"南孚",
+"ID":8,"category":"公司&品牌",
+"keyboard":"通超霸英美白象用器"
+},
+{
+"answer":"希特勒","ID":9,
+"category":"明星&名人",
+"keyboard":"陈佩斯丘吉尔卓别林法西"
+},
+{
+"answer":"忍者神龟",
+"ID":10,"category":"电影&电视",
+"keyboard":"仙人武士奇四侠怪盗术日本帝国"
+},
+{
+"answer":"居里夫人",
+"ID":11,"category":"明星&名人",
+"keyboard":"爱因斯坦迪生陈景润华罗庚"
+},
+{
+        "answer": "亚马逊",
+        "category": "公司&品牌",
+        "ID": 12,
+        "keyboard": "卓越超讯自达麻谷歌苹果脸谱书"
+    },
+    {
+        "answer": "侏罗纪公园",
+        "category": "电影&电视",
+        "ID": 13,
+        "keyboard": "儒汉人恐龙总动员世时代主王国"
+    },
+    {
+        "answer": "乔布斯",
+        "category": "明星&名人",
+        "ID": 14,
+        "keyboard": "老爷不死治鲁门拉齐奥"
+    },
+    {
+        "answer": "星球大战",
+        "category": "电影&电视",
+        "ID": 15,
+        "keyboard": "堡垒争霸际迷航斗太空"
+    },
+    {
+        "answer": "小布什",
+        "category": "明星&名人",
+        "ID": 16,
+        "keyboard": "大老中尔哥戈叶利钦猴屁股"
+    },
+    {
+        "answer": "大白鲨",
+        "category": "电影&电视",
+        "ID": 17,
+        "keyboard": "鱼海底恶魔鲸惊魂毒蛇怪兽巨嘴危险"
+    },
+    {
+        "answer": "马三立",
+        "category": "明星&名人",
+        "ID": 18,
+        "keyboard": "刘宝瑞季张峰"
+    },
+    {
+        "answer": "马达加斯加",
+        "category": "电影&电视",
+        "ID": 19,
+        "keyboard": "戏团冒险斑长颈鹿河森林之王城市"
+    },
+    {
+        "answer": "金正恩",
+        "category": "明星&名人",
+        "ID": 20,
+        "keyboard": "三顺日成李明博胡志车太贤鸟叔"
+    },
+    {
+        "answer": "冰河世纪",
+        "category": "电影&电视",
+        "ID": 21,
+        "keyboard": "狮王子迪斯尼梦工厂克客齐奥林"
+    },
+    {
+        "answer": "贝克汉姆",
+        "category": "明星&名人",
+        "ID": 22,
+        "keyboard": "木慕罗纳尔多詹斯奥尼巴神"
+    },
+	 {
+        "answer": "老干妈",
+        "category": "驰名中外&食品",
+        "ID": 23,
+        "keyboard": "桂林辣椒酸梅酱"
+    },
+	{
+        "answer": "科比",
+        "category": "明星&名人",
+        "ID": 24,
+        "keyboard": "麦迪韦德安东尼"
+    },
+	{
+        "answer": "断背山",
+        "category": "电影&电视",
+        "ID": 25,
+        "keyboard": "迪斯尼梦工厂克客齐奥林"
+    },
+	{
+        "answer": "阿迪达斯",
+        "category": "运动&品牌",
+        "ID": 26,
+        "keyboard": "耐克李宁安踏"
+    },
+	{
+        "answer": "孙中山",
+        "category": "明星&名人",
+        "ID": 27,
+        "keyboard": "蒋介石"
+    },
+	{
+        "answer": "萨达姆",
+        "category": "恐怖&份子",
+        "ID": 28,
+        "keyboard": "本拉登"
+    },
+	{
+        "answer": "武士刀",
+        "category": "知名&兵器",
+        "ID": 29,
+        "keyboard": "倚天剑屠龙刀"
+    },
+	{
+        "answer": "刘翔",
+        "category": "明星&名人",
+        "ID": 30,
+        "keyboard": "史冬鹏飞人"
+    },
+	{
+        "answer": "奥力奥",
+        "category": "知名&食品",
+        "ID": 31,
+        "keyboard": "黑白配"
+    },
+	{
+        "answer": "复仇者联盟",
+        "category": "电影&电视",
+        "ID": 32,
+        "keyboard": "美国队长钢铁侠"
+    },
+	{
+        "answer": "郭德纲",
+        "category": "明星&名人",
+        "ID": 33,
+        "keyboard": "马三立"
+    },
+	{
+        "answer": "让子弹飞",
+        "category": "电影&电视",
+        "ID": 34,
+        "keyboard": "阻击手"
+    },
+	{
+        "answer": "林书豪",
+        "category": "明星&名人",
+        "ID": 35,
+        "keyboard": "易建联姚明"
+    },
+	{
+        "answer": "林肯",
+        "category": "交通&工具",
+        "ID": 36,
+        "keyboard": "法拉力宝马奔驰"
+    },
+	{
+        "answer": "处理器",
+        "category": "知名&产品",
+        "ID": 37,
+        "keyboard": "芯片内存硬盘"
+    },
+	{
+        "answer": "公共汽车",
+        "category": "交通&工具",
+        "ID": 38,
+        "keyboard": "桥车法拉力"
+    },
+	{
+        "answer": "耶酥",
+        "category": "明星&名人",
+        "ID": 39,
+        "keyboard": "拉登詹斯奥尼巴神"
+    },
+	{
+        "answer": "关羽",
+        "category": "明星&名人",
+        "ID": 40,
+        "keyboard": "张飞曹操吕布"
+    }
+	
+	]}

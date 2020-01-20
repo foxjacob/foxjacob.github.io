@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="yes" name="apple-touch-fullscreen"/>
+	<meta content="telephone=no" name="format-detection"/>
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>	
+	<title>长大后我就是你吗？</title>	
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>		
+	<script type="text/javascript" src="js/game.min.js"></script>
+
+    
+	<style type="text/css">
+	 body,html{ margin:0; padding:0; width:100%; height:100%; overflow:hidden;}
+	 div{margin:0; padding:0; }
+	 
+	 .loading{  width:100%; height:100%; position:absolute;background: url(img/loading.jpg) 0 0 no-repeat; background-size: 100% 100%;}
+	 
+	
+	.layer1{ display:none; width:100%; height:100%; position:absolute;background: url(img/bg1.jpg) 0 0 no-repeat; background-size: 100% 100%;}	
+	.next1{position:relative; width:80%; height:7%; top:76%;  }
+	.tipmsg{position:relative; width:80%; height:4%; top:65%; text-align:center; color:Red; font-size:1em;  }
+	
+	
+	.layer2{display:none; width:100%; height:100%; position:absolute;background: url(img/bg2.jpg) 0 0 no-repeat; background-size: 100% 100%;}
+	.img_2_1{position:absolute; width:130px; height:130px; margin-left:-65px; top:17%; left:50%;border-radius: 50%;}
+	.img_2_2{position:absolute; width:80%; height:6%;  top:55%; left:10%;}
+	
+	.layer3{display:none; width:100%; height:100%; position:absolute;background: url(img/bg2.jpg) 0 0 no-repeat; background-size: 100% 100%;}
+    .div_3_1{position:absolute; width:132px; height:132px; margin-top:-5px;  margin-left:-70px; top:17%; left:50%;
+             border: 4px solid #ecab18;
+    border-right-color: #1ad280;
+    border-bottom-color: #ecab18;
+    border-radius: 50%;
+    -webkit-transition: all .28s ease-in-out;
+    -moz-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    overflow:hidden;    
+             }
+    
+    .txt_2_1{position:absolute;  width:100%; height:4%; top:40%; text-align:center; font-size:1em;  }
+    
+    .img_3_2{position:absolute; width:58%; height:37%;  top:45%; left:21%;}
+    .img_3_3{position:absolute; width:96%; height:7%;  top:83%; left:2%;}
+    
+    .img_3_4{position:absolute; width:30%; height:8%; top:92%; left:12%; }
+    .img_3_5{position:absolute; width:30%; height:8%; top:92%; left:50%; }
+    
+    
+    
+  /* */
+ .shareinfo{ display:none; width:100%; height:100%;  position:absolute;background: url(img/share.png) 0 0 no-repeat; 
+            background-size: 100% 100%; z-index:9999;filter:alpha(opacity=90);opacity:0.9; background-color:#404040;}
+            
+   .mimg1{position:absolute; width:10%; height:4.8%; top:0.5%; right:2%; z-index:999;}
+   .mimg2{position:absolute; width:10%;height:4.8%; top:0.5%; right:2%; z-index:999;filter:alpha(opacity=50);opacity:0.5;}
+	</style>
+
+</head>
+<body>
+
+<center>
+<img src="img/icon.png" style="position:absolute; margin-top:-2000px; margin-left:-2000px;" />
+<div id="loading" class="loading"></div>
+
+<img id="playmimg" src="img/musicbtn.png" class="mimg1"  onclick="playm();"/>
+
+<div id="layer1" class="layer1">
+    <div class="next1" id="img_uppt"></div>
+    <div class="tipmsg"></div>
+    <input type="file" id="i-file" name="files" onchange='onSelectPhoto(this.files);' style='visibility:hidden;' />
+    <input type="hidden" id="hid_ptimgname" />
+    <img id='preview_img' src="img/touxiang.png"  style=" display:none "/>
+</div>
+
+<div  id="layer2" class="layer2">   
+<div class="div_3_1"></div>
+    <img src="img/touxiang.png"  class="img_2_1"/>
+     <img src="img/ziti.png"  class="img_2_2"/>
+</div>
+
+
+<div  id="layer3" class="layer3">
+    
+    <img src="img/touxiang.png"  class="img_2_1"/>
+    <div id="txt_2_1" class="txt_2_1"></div>
+    <img src="img/p/1.png"  class="img_3_2"/>
+    <img src="img/title.png"  class="img_3_3"/>
+   <a href="https://mp.weixin.qq.com/s/h0derngZtPCxIN2D3ubugw"><img src="img/apply.png"  class="img_3_4"/></a>
+    <img src="img/sharebtn.png"  class="img_3_5" onclick="fnshare();"/>     
+</div>
+
+<div class="shareinfo" onclick="fnsharehidd();">
+</div>
+
+<div class="hide">
+    <audio id="myAudio" loop="true"></audio>
+</div>
+
+</center>
+
+<script type="text/javascript">
+
+//var dh = $(document).height();
+//var dw = $(document).width();
+//var present = parseInt($(document).height()) / 960;
+//if (dw > parseInt(640 * present)) {
+//    dw = parseInt(640 * present);
+//}
+//$("#loading").css("height", dh + "px");
+//$("#loading").css("width", dw + "px");
+//$("#layer1").css("height", dh + "px");
+//$("#layer1").css("width", dw + "px");
+//$("#layer2").css("height", dh + "px");
+//$("#layer2").css("width", dw + "px");
+//$("#layer3").css("height", dh + "px");
+//$("#layer3").css("width", dw + "px");
+   
+function getrdm(Min, Max) {
+        var Range = Max - Min;
+        var Rand = Math.random();
+        return (Min + Math.round(Rand * Range));
+}
+
+function funGame()
+{
+    var ArrTxt = 
+    ["此人如此傲娇，传承了",
+    "此人如此上档次，传承了",
+    "此人这么相貌堂堂，传承了",
+    "此人如此心机，传承了",
+    "此人如此呆萌，传承了",
+    "此人这么欢乐，传承了",
+    "此人这么一表人才，传承了",
+    "此人这么土豪，传承了",
+    "此人如此吊丝，传承了",
+    "此人如此低调，传承了",
+    "此人这么矜持，传承了",
+    "此人这么文艺，传承了"    
+    ];
+    
+    var rdm1 = getrdm(0, 11);
+    var rdm2 = getrdm(1, 27);
+    
+    var txtInfo = ArrTxt[rdm1];
+    var imgInfo = "img/p/"+rdm2+".png";
+    
+    $(".txt_2_1").html(txtInfo);
+    $(".img_3_2").attr("src",imgInfo);  
+    
+//    var pName = ["阿飞","赤丸","迪达拉","哈蟆吉","哈蟆龙","好色仙人自来也","BSD-九尾妖狐",
+//    "绝","卡卡西","李洛克","我爱罗","君麻吕","BSD-幼少-鸣人","日向宁次","帕可","日向雏田",
+//    "豚豚","蛤蟆文太","BSD-SD幼少我爱罗","BSD-SD幼少-小李","小樱","蝎","牙","伊鲁卡老师",
+//    "BSD-SD幼少-伊鲁卡","宇智波鼬","佐助"];
+    
+    document.title = "原来我是这么正经靠谱的孩纸呢，看看你的未来呢！";
+    
+}
+
+    
+</script>
+
+
+<script type="text/javascript">
+    var imgNum = 0;
+    var images = [];
+    preLoadImg();
+    function preLoadImg() {
+        images.push("img/loading.jpg");
+        images.push("img/apply.png");
+        images.push("img/bg1.jpg");
+        images.push("img/bg2.jpg");
+        //images.push("img/bg3.jpg");
+        images.push("img/share.png");
+        images.push("img/title.png");
+        images.push("img/touxiang.png");  
+         images.push("img/ziti.png");         
+        images.push("img/p/1.png");
+        images.push("img/p/2.png");
+        images.push("img/p/3.png");
+        images.push("img/p/4.png");
+        images.push("img/p/5.png");
+        images.push("img/p/6.png");
+        images.push("img/p/7.png");
+        images.push("img/p/8.png");
+        images.push("img/p/9.png");
+        images.push("img/p/10.png");
+        images.push("img/p/11.png");
+        images.push("img/p/12.png");
+        images.push("img/p/13.png");
+        images.push("img/p/14.png");
+        images.push("img/p/15.png");
+        images.push("img/p/16.png");
+        images.push("img/p/17.png");
+        images.push("img/p/18.png");
+        images.push("img/p/19.png");
+        images.push("img/p/20.png");
+        images.push("img/p/21.png");
+        images.push("img/p/22.png");
+        images.push("img/p/23.png");
+        images.push("img/p/24.png");
+        images.push("img/p/25.png");
+        images.push("img/p/26.png");
+        images.push("img/p/27.png");
+        
+        $.imgpreload(images,
+        {
+            each: function() { },
+            all: function() {   
+                $('#loading').hide();
+                $(".layer1").show();    
+                initMusic();
+                playMusic(true);          
+            }
+        });
+    }
+</script>
+
+<script type="text/javascript">
+   
+    var file_name = false;
+    var file_obj = false;
+    var uploading = false;
+    var use_general_upload = false;
+    var default_pic = 'img/touxiang.png';
+    var loading_src = "img/loading.gif";
+    var succ_jumpdirect = "";
+    //var succ_defaulturl = "/usercp/myalbum.php?pin=84085299_0_1436852344_a2ce1d5b2874d2e9e6b6d308987e4aa3aa96fafb&v=6";
+
+    function onSelectPhoto(files) {
+        file_obj = files[0];
+        if (use_general_upload) {
+            return;
+        }
+        var filesize = file_obj.size < 120 || file_obj.size > 9242880;
+        var allow_type = '|.jpg|.png|.gif|';
+        var ext_name = '|' + file_obj.name.toLowerCase().substr(file_obj.name.length - 4) + '|';
+        var filetype = (allow_type.indexOf(ext_name) == -1);
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            if (e.target.result.substr(0, 11) == 'data:base64') {
+                //$("#preview_img").attr('src',
+				//								"data:application/octet-stream;"
+				//								+ e.target.result.substr(e.target.result.indexOf("base64,")));
+                $("#tipmsg").html("");
+
+            }
+            else {
+                //$("#preview_img").attr('src', e.target.result);
+                $("#tipmsg").html("");
+                //upImage(e.target.result);
+                
+                $(".img_2_1").attr('src', e.target.result);
+                $(".layer1").hide();
+                $(".layer2").show();
+                timer();
+                
+            }
+        }
+        if (filesize) {
+            file_obj = false;
+            $("#tipmsg").html("图片大小不得大于10M");
+            //showTextTime("您选择的文件大于5MB，请选择小于5MB的照片", 3000);
+            return false;
+        }
+        if (filetype) {
+            file_obj = false;
+            $("#tipmsg").html("文件格式只能为JPG、PNG或GIF");
+            //showTextTime("您选择的文件格式有误，应为JPG、PNG或GIF类型的文件", 3000);
+            return false;
+        }
+        file_name = file_obj.name;
+        reader.readAsDataURL(file_obj);
+    }
+
+    
+
+    $(function() {
+        $("#preview_img,#img_uppt").click(function() {
+            var e = document.getElementById("i-file");
+            var ev = document.createEvent("MouseEvents");
+            ev.initEvent("click", true, true);
+            e.dispatchEvent(ev);
+        });
+
+        if (typeof FileReader === 'undefined' || typeof FormData === 'undefined') {
+            $(".file_upload_con").attr("style", "margin-top:20px;");
+            $("#i-file").attr("style", "");
+            $(".jy-upload").addClass("dn");
+            use_general_upload = true;
+        }
+    });
+    
+var timeID;
+var times = 0;
+var t;
+var arotate = 1000;
+function timer() {    
+    timeID = setTimeout("timer()", 3000);   
+    if (parseInt(times) >0) {
+        funGame();
+        $(".layer2").hide();
+        $(".layer3").show();
+        clearTimeout(timeID);
+        clearInterval(t);
+    }
+    else {
+        times++;  
+       
+
+        var t = setInterval
+        (
+            function(){
+             arotate=parseInt(arotate)+1000; 
+             $(".div_3_1").css("transform","rotate("+arotate+"deg)");
+        },300);      
+
+    }
+}
+
+
+function fnshare() {
+    $(".shareinfo").show();
+}
+function fnsharehidd() {
+    $(".shareinfo").hide();
+}
+
+
+var reclick = true;
+var isSuccess = false;
+var musicPlayStatus = true;
+var getById = function (id) {
+    return document.getElementById(id);
+}
+
+
+var initMusic = function () {
+    var audio = getById("myAudio");
+    audio.src = "img/bg.mp3";
+}
+var playMusic = function (status) {
+    var audio = getById("myAudio");
+    if (status) {
+        if (audio.paused) {
+            audio.play();
+            musicPlayStatus = true;
+        }
+    } else {
+        if (!audio.paused) {
+            audio.pause();
+            musicPlayStatus = false;
+        }
+    }
+}
+
+function playm()
+{
+    if($("#playmimg").attr("class")=="mimg1")
+    {
+        playMusic(false);
+        $("#playmimg").attr("class","mimg2");
+    }
+    else
+    {
+        playMusic(true);
+        $("#playmimg").attr("class","mimg1");
+    }
+}
+</script>
+
+
+    
+    
+</body>
+</html>

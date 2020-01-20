@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="stick man,耍棍,小游戏,手机游戏,webAPP" name="Keywords">
+    <meta name="description" content="Webapp游戏新体验，Developed by woody">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+<img src='photo.jpg' />
+</div>
+    <title>智商超过130的人才能玩到第40关哦</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/WeixinApi.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+<!--
+.STYLE2 {
+	font-size: 18px;
+	color: #0000FF;
+}
+-->
+    </style>
+</head>
+<body>
+   	<div class="point">
+   		0
+   	</div>
+  <!--
+
+  <div class="shouji">
+    	<img src="img/bg1.png" class="img" />
+    </div>
+-->
+
+    <div class="point">
+   		0
+   	</div>
+   	<div class="tips">
+   		将手放在屏幕,使竿变长,据说智商超过130的人,<br />
+		才能玩到第40关,您能到几关呢？<br />
+		把您的成绩截图发到公众号“Fox_Jacob”<br />
+		超过180关赠送公共号运营教程<br />
+   		
+   	</div>
+   <div id="main">
+   	 <div class="wall">
+     	
+   	 </div>
+   	 <div class="wall new" style="left: 50%;">
+   	 	
+   	 </div>
+   	 <div class="stick"></div>
+   	 <div class="stickMan">
+   	 	<!--<img src="img/stick.gif" width="5%"/>-->
+   	 	<img src="images/stick_stand.png" width="5%"/>
+   	 </div>
+   </div>
+   <!-- 游戏结束弹层-->
+   <div class="gameOver">
+   	    <h3>游戏结束!</h3>
+   	    <div class="showPoint">
+   	    	<p>分数</p>
+   	    	<p class="newPoint">0</p>
+   	    	<p>最佳</p>
+   	    	<p class="bestPoint">0</p>
+			<p><a href="https://mp.weixin.qq.com/s/h0derngZtPCxIN2D3ubugw" target="_self" style=" font-size:18px; color:#0000FF">悠狐阁</a></p>
+   	    </div>
+   	    <div class="btn share">分享</div>
+   	    <div class="btn again">再玩一次</div>
+   </div>
+   <div id="mask">
+		<img src="images/share_img01.gif"/>
+</div>
+	
+	<div class="reloadImg" style="display: none;">
+		<img src="images/stick.gif"  />
+	</div>
+</body>
+
+<script type="text/javascript">
+    var longStick;
+    var shortStick;
+    var screenWidth = document.documentElement.clientWidth;
+    var point = 0;
+    var speed = "5%";
+    function touchSatrtFunc(evt) {
+		if(point>=2){
+			$(".tips").hide();
+		}
+    	evt.preventDefault();
+   		document.addEventListener('touchend', touchEndFunc, false);
+    	initStick();
+    	//longStick = setInterval(function(){
+    	//    $('.stick').css({width:'+='+speed});
+    	//},30);
+    	getLong();
+    	document.removeEventListener('touchstart', touchSatrtFunc, false);
+    }
+    function getLong() {
+		if(point>5){
+				//alert(point);
+				speed="5%";	
+			}
+    	longStick = setInterval(function() {
+			
+    		var stickWidth = getWidthNumber($('.stick').css('width'));
+    		if(stickWidth<=screenWidth){
+    			$('.stick').css({width:'+='+speed});
+    		}else{
+    			clearInterval(longStick);
+    			getShort();
+    		}
+    	},30);
+    }
+    function getShort() {
+		if(point>5){
+			//alert(point);
+			speed="10%";	
+		}
+    	shortStick = setInterval(function() {
+			
+    		var stickWidth = getWidthNumber($('.stick').css('width'));
+    		if(stickWidth>0){
+    			$('.stick').css({width:'-='+speed});
+    		}else{
+    			clearInterval(shortStick);
+    			getLong();
+    		}
+    	},30);
+    }
+    function getWidthNumber(ele){
+   		if (ele) {
+   			var WidthNumber = ele.substr(0,ele.length-2);
+   			WidthNumber = Number(WidthNumber);
+   			return WidthNumber;
+   		}
+    }
+    function touchEndFunc(evt) {
+    	clearBind();
+    	evt.preventDefault();
+    	clearInterval(longStick);
+    	clearInterval(shortStick);
+    	setTimeout(function(){
+    	    $('.stick').css('transition','.6s');
+    	    $('.stick').css('transform','rotate(0deg)');
+    	    setTimeout('checkStickLong.check()',600);
+    	},200);
+    }
+    function touchMoveFunc(evt){
+    	evt.preventDefault();
+    }
+    function initStick() {
+    	$(".stick").css({'transition':'0','transform':'rotate(-90deg)','width':'0','left':'20%'});
+    }
+    	  	
+   	function init(){
+   		$(".stick").css({'transform-origin':'0 0','transform':'rotate(-90deg)'});
+   		addBind();
+   		document.addEventListener('touchmove', touchMoveFunc, false);
+   		$(".again").click(function(){
+   			$(".gameOver").css('display','none');
+   			addBind();
+   			$(".point,.tips").css('display','block');
+   			point = 0;
+			speed="5%";
+   			$(".point").html(point);
+   			$(".wall").eq(0).css({'left':'0','width':'20%'});
+   			$(".new").css({'left':'50%','width':'20%'});
+   			$(".stick").css('transition','0')
+   			$(".stick").css('width','0');
+   			$(".stickMan").css({'left':'15.5%','bottom':'66.5%'});
+   			$("body").css('background-position-x', '0');
+		    $(".stickMan img").attr({'src':'images/stick_stand.png'});
+			$(".shouji").css({"left":"0%"});
+   		});
+   		$(".share").click(function(){
+   			$("#mask").css('display','block');
+   		});
+   		$("#mask").click(function(){
+   			$("#mask").css('display','none');
+   		});
+   		
+   	}
+   	function addBind() {
+   		document.addEventListener('touchstart', touchSatrtFunc, false);  
+   	}
+   	function clearBind() {
+   		document.removeEventListener('touchstart', touchSatrtFunc, false);
+   		document.removeEventListener('touchend', touchEndFunc, false);
+   	}
+   	
+   	function orientationChange() {
+    switch(window.orientation) {
+
+    　　case 0: 
+            addBind();
+            $("body").css('transform','');
+            break;
+
+    　　case -90: 
+            clearBind();
+            alert("游戏要竖屏玩哟！！！");
+            $("body").css('transform','rotate(90deg)');
+
+            break;
+
+    　　case 90:   
+            clearBind();
+            alert("游戏要竖屏玩哟！！！");
+            $("body").css('transform','rotate(-90deg)');
+            break;
+
+    　　case 180:   
+            addBind();
+            $("body").css('transform','rotate(0deg)');
+        　　break;
+
+    }
+}
+    
+    
+   	$(document).ready(function(){
+   	    init();
+   	     orientationChange();
+         window.onorientationchange = orientationChange;
+         shareToWeixin();
+   	})
+</script>
+</html>

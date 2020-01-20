@@ -1,0 +1,29 @@
+{
+"resources":
+	[
+		{"name":"bgScene","type":"image","url":"assets/scenebg.jpg"},
+		{"name":"bgLabel","type":"image","url":"assets/labelbg.png"},
+	  	{"name":"welcomeBG","type":"image","url":"assets/welcomebg.jpg?v=1"},
+	  	{"name":"security_png","type":"image","url":"assets/security.png"},
+	  	{"name":"security_json","type":"json","url":"assets/security.json"},
+	  	{"name":"runner_png","type":"image","url":"assets/santa.png"},
+	  	{"name":"runner_json","type":"json","url":"assets/santa.json"},
+	  	{"name":"runner_stand","type":"image","url":"assets/santa_static.png"},
+	  	{"name":"bgResult1","type":"image","url":"assets/resultbg1.png"},
+	  	{"name":"btnShare","type":"image","url":"assets/btnShare.png"},
+	  	{"name":"btnAgain","type":"image","url":"assets/btnAgain.png"},
+	  	{"name":"btnMore","type":"image","url":"assets/btnMore.png"},
+	  	{"name":"bgSound","type":"sound","url":"assets/bgSound.mp3"},
+	  	{"name":"btnBoy","type":"image","url":"assets/btnBoy.png"},
+	  	{"name":"logoCB","type":"image","url":"assets/logoCB.png"},
+	  	{"name":"logoShare","type":"image","url":"assets/share.png"},
+	  	{"name":"star","type":"image","url":"assets/particle/star.png"},
+	  	{"name":"fireworks_json","type":"json","url":"assets/particle/fireworks.json"}
+	],
+
+"groups":
+	[
+	  	{"name":"prepre","keys":"welcomeBG"},
+        {"name":"preload","keys":"bgScene,bgLabel,security_png,security_json,runner_png,runner_json,star,runner_stand,bgResult1,bgSound,logoShare,btnShare,btnAgain,btnMore,btnBoy,fireworks_json"}
+	]
+}

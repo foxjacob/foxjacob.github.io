@@ -1,0 +1,43 @@
+{
+"resources":
+	[
+		{"name":"bg1","type":"image","url":"assets/bg1.png"},
+		{"name":"bg2","type":"image","url":"assets/bg2.jpg"},
+        {"name":"more","type":"image","url":"assets/more.png"},
+        {"name":"startbtn","type":"image","url":"assets/startbtn.png"},
+
+        {"name":"tip","type":"image","url":"assets/tip.png"},
+        {"name":"timeMc","type":"image","url":"assets/timeMc.png"},
+        {"name":"hong","type":"image","url":"assets/hong.png"},
+        {"name":"hongdata","type":"json","url":"assets/hong.json"},
+        {"name":"yangjing","type":"image","url":"assets/yangjing.png"},
+        {"name":"yangjingdata","type":"json","url":"assets/yangjing.json"},
+
+        {"name":"cuowu","type":"image","url":"assets/cuowu.png"},
+        {"name":"cuowudata","type":"json","url":"assets/cuowu.json"},
+
+        {"name":"fenxiang","type":"image","url":"assets/fenxiang.png"},
+        {"name":"zailaibtn","type":"image","url":"assets/zailaibtn.png"},
+        {"name":"overbg","type":"image","url":"assets/overbg.jpg"},
+        {"name":"xuanyaobtn","type":"image","url":"assets/xuanyaobtn.png"},
+        {"name":"fenxiangbtn","type":"image","url":"assets/fenxiangbtn.png"},
+        {"name":"more","type":"image","url":"assets/more.png"},
+        {"name":"chenghao1","type":"image","url":"assets/chenghao1.png"},
+        {"name":"chenghao2","type":"image","url":"assets/chenghao2.png"},
+        {"name":"chenghao3","type":"image","url":"assets/chenghao3.png"},
+        {"name":"chenghao4","type":"image","url":"assets/chenghao4.png"},
+        {"name":"chenghao5","type":"image","url":"assets/chenghao5.png"},
+        {"name":"chenghao6","type":"image","url":"assets/chenghao6.png"},
+        {"name":"chenghao7","type":"image","url":"assets/chenghao7.png"},
+        {"name":"yuan","type":"image","url":"assets/yuan.png"},
+
+        {"name":"wupin","type":"image","url":"assets/wupin.png"}
+
+	],
+
+"groups":
+	[
+        {"name":"changjing1","keys":"fenxiang,bg1,more,startbtn"},
+        {"name":"changjing2","keys":"yuan,chenghao1,chenghao2,chenghao3,chenghao4,chenghao5,chenghao6,chenghao7,zailaibtn,overbg,xuanyaobtn,fenxiangbtn,more,cuowu,cuowudata,rs,ws,tk,bg2,wupin,hong,hongdata,timeMc,yangjing,yangjingdata,tip"}
+	]
+}

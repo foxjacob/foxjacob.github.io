@@ -1,0 +1,14 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "en":["Use",                  "Skip level",            "You need more diamonds",           "Get them for free"],
+  "de":["Benutzen",             "Level überspringen",    "Du benötigst mehr Diamanten",      "Jetzt kostenlos erhalten"],
+  "es":["Usar",                 "Saltar nivel",          "Necesitas más diamantes",          "Consíguelos gratis"],
+  "fr":["Utiliser",             "Ignorer le niveau",     "Il vous faut plus de diamants",    "Obtenez-les gratuitement"],
+  "it":["Usa",                  "Salta livello",         "Hai bisogno di altri diamanti",    "Ottienili gratuitamente"],
+  "pt":["Usar",                 "Saltar nível",          "Precisa de mais diamantes",        "Obtenha-os gratuitamente"],
+  "ru":["Использовать",         "Пропустить уровень",    "Тебе нужно больше бриллиантов",    "Получить их бесплатно"],
+  "tr":["Kullan",               "Seviyeyi Atla",         "Daha fazla elmasa ihtiyacınız var", "Ücretsiz edinin"],
+  "nl":["Gebruiken",            "Niveau overslaan",      "Je hebt meer diamanten nodig",      "Krijg ze gratis"],
+  "pl":["Wykorzystaj",          "Pomiń poziom",          "Potrzebujesz więcej diamentów",     "Zdobądź je za darmo"]
+}

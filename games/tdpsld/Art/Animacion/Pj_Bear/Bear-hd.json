@@ -1,0 +1,220 @@
+{"frames": {
+
+"Arma_Caparazon.png":
+{
+	"frame": {"x":2,"y":160,"w":60,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":48},
+	"sourceSize": {"w":60,"h":48}
+},
+"Arma_Gallina.png":
+{
+	"frame": {"x":2,"y":112,"w":60,"h":46},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":46},
+	"sourceSize": {"w":60,"h":46}
+},
+"Arma_GenkyGama.png":
+{
+	"frame": {"x":2,"y":222,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+"Arma_Grenade.png":
+{
+	"frame": {"x":2,"y":534,"w":70,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":86},
+	"sourceSize": {"w":70,"h":86}
+},
+"Arma_JustinBiebear.png":
+{
+	"frame": {"x":2,"y":700,"w":112,"h":160},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":112,"h":160},
+	"sourceSize": {"w":112,"h":160}
+},
+"Arma_KawaiBanana.png":
+{
+	"frame": {"x":44,"y":325,"w":42,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":90},
+	"sourceSize": {"w":42,"h":90}
+},
+"Arma_MolotovCola.png":
+{
+	"frame": {"x":64,"y":417,"w":40,"h":115},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":115},
+	"sourceSize": {"w":40,"h":115}
+},
+"Arma_PimpedGrenade.png":
+{
+	"frame": {"x":2,"y":417,"w":60,"h":78},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":78},
+	"sourceSize": {"w":60,"h":78}
+},
+"Arma_Poo.png":
+{
+	"frame": {"x":64,"y":222,"w":60,"h":62},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":62},
+	"sourceSize": {"w":60,"h":62}
+},
+"Arma_Wokia.png":
+{
+	"frame": {"x":2,"y":325,"w":40,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":90},
+	"sourceSize": {"w":40,"h":90}
+},
+"Arma_ZombieBall.png":
+{
+	"frame": {"x":64,"y":160,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+"Arma_ZombieBird.png":
+{
+	"frame": {"x":64,"y":112,"w":60,"h":46},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":46},
+	"sourceSize": {"w":60,"h":46}
+},
+"Bear_BandanaDer.png":
+{
+	"frame": {"x":74,"y":24,"w":23,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":38},
+	"sourceSize": {"w":23,"h":38}
+},
+"Bear_BandanaIzq.png":
+{
+	"frame": {"x":99,"y":24,"w":24,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":37},
+	"sourceSize": {"w":24,"h":37}
+},
+"Bear_BrazoDer.png":
+{
+	"frame": {"x":2,"y":24,"w":34,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":26},
+	"sourceSize": {"w":34,"h":26}
+},
+"Bear_BrazoIzq.png":
+{
+	"frame": {"x":38,"y":24,"w":34,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":26},
+	"sourceSize": {"w":34,"h":26}
+},
+"Bear_Cabeza.png":
+{
+	"frame": {"x":2,"y":622,"w":87,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":87,"h":76},
+	"sourceSize": {"w":87,"h":76}
+},
+"Bear_Cola.png":
+{
+	"frame": {"x":35,"y":2,"w":19,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":18},
+	"sourceSize": {"w":19,"h":18}
+},
+"Bear_Cuerpo.png":
+{
+	"frame": {"x":75,"y":64,"w":46,"h":46},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":46},
+	"sourceSize": {"w":46,"h":46}
+},
+"Bear_OrejaDer.png":
+{
+	"frame": {"x":38,"y":64,"w":35,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":35},
+	"sourceSize": {"w":35,"h":35}
+},
+"Bear_OrejaIzq.png":
+{
+	"frame": {"x":2,"y":64,"w":34,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":35},
+	"sourceSize": {"w":34,"h":35}
+},
+"Bear_PieDer.png":
+{
+	"frame": {"x":56,"y":2,"w":27,"h":14},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":14},
+	"sourceSize": {"w":27,"h":14}
+},
+"Bear_PieIzq.png":
+{
+	"frame": {"x":85,"y":2,"w":27,"h":14},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":14},
+	"sourceSize": {"w":27,"h":14}
+},
+"Bear_PiernaDer.png":
+{
+	"frame": {"x":18,"y":2,"w":15,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":20},
+	"sourceSize": {"w":15,"h":20}
+},
+"Bear_PiernaIzq.png":
+{
+	"frame": {"x":2,"y":2,"w":14,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":20},
+	"sourceSize": {"w":14,"h":20}
+},
+"Bear_Sombra.png":
+{
+	"frame": {"x":2,"y":286,"w":93,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":37},
+	"sourceSize": {"w":93,"h":37}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "Bear-hd.png",
+	"format": "RGBA5555",
+	"size": {"w":126,"h":862},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:705725bf0d20ac7a3069f08e7a458f11:05dff2dde9336d09ce710033cf3a81a7:fe70597a5af5e5b252327c47ca97e2ed$"
+}
+}

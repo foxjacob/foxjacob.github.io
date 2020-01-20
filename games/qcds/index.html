@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>切菜大师</title>
+<meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+        canvas {
+            display:block;
+            position:absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+<script src='launcher/howler.min.js'></script>
+
+</head>
+<body>
+<!------   微信分享接口   ------>
+<script type="text/javascript">
+var have_start = false;
+var myscore;
+function cb_start(){
+  console.log('cb_start');
+      }
+function cb_gameover(score){
+  console.log("cb_gameover"+score);
+  myscore = score;
+  //updateShare(score);
+//Play68.setRankingScoreDesc(score);
+}
+function cb_finishload(){
+  console.log('cb_finishload');
+}
+function cb_restart(){
+
+  console.log('cb_restart');
+}
+function cb_share(){
+	//play68_submitScore(myscore);
+      console.log('cb_share');
+  }
+
+function cb_menu_more(){
+  }
+
+function cb_more(){
+	//Play68.goHome();
+  console.log('cb_more');
+    
+}
+function cb_quit(){
+  console.log('cb_quit');
+}
+</script>
+
+
+<!-- 隐藏菜单栏 start -->
+<!-- 隐藏菜单栏 start -->
+<div>
+    <audio src="resource/assets/sound/pass.mp3" id='pass'></audio>
+</div> 
+
+<div>
+    <audio src="resource/assets/sound/pain.mp3" id='pain'></audio>
+</div>    
+<div style="position:relative;" id="gameDiv"></div>
+<script>var document_class = "Main";</script><!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script src="launcher/game-min.js"></script>
+<script src="launcher/app.js"></script>
+<script src="68wei_loading.js"></script>
+<script>
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+        egret_h5.startGame();
+    }
+    else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+    // 执行函数
+    function start(){
+        window["startGame"].call(window["context"]);
+    }
+	function isMobile(){
+	  return navigator.userAgent.match(/android|iphone|ipad|ipod|blackberry|meego|symbianos|windowsphone|ucbrowser/i);
+    }
+	if(isMobile()){
+		setTimeout(function(){
+			 play_load.finish();
+		},4000);
+	}else{
+		setTimeout(function(){
+			 play_load.finish();
+		},1000);	
+	}
+</script>
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'切菜大师',
+  'link':'http://games.vdcom.cn/games/qcds/',
+  'imgurl':'http://games.vdcom.cn/games/qcds/icon.png'
+}
+window.shareFriendData={
+  'title':'切菜大师',
+  'content':'关注微赢网络,更多好玩的游戏等着你。',
+  'link':'http://games.vdcom.cn/games/qcds/',
+  'imgurl':'http://games.vdcom.cn/games/qcds/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>
+</body>
+</html>

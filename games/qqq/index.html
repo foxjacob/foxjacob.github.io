@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>钱钱钱</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background: #ffffff;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+        canvas {
+            display:block;
+            position:absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        haveShare=1;
+        haveGamelist=1;
+        resourceCDN = '';
+        function cb_start(){
+           
+        }
+        function cb_gameover(score){
+
+			dp_submitScore(score);
+			
+        }
+        function cb_finishload(){
+           
+        }
+        function cb_restart(){
+           
+        }
+        function cb_share(){
+           
+			 //play68_submitScore(score);//分享
+        }
+        function cb_more(){
+           
+			clickMore();
+        }
+    </script>
+</head>
+<body>
+
+<div style="position:relative;" id="gameDiv"></div>
+<script>var document_class = "Main";</script><!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script src="launcher/game-min.js"></script>
+<script src="meiriq_loading.js"></script>
+<script>
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+        egret_h5.startGame();
+        function start(){
+            restartGame();
+        }
+    }
+    else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+</script>
+<script language=javascript>
+      
+		function goHome(){
+			//Play68.goHome();//更多游戏
+		}
+		function clickMore(){
+			 //Play68.goHome();//更多游戏
+		}
+		function dp_share(){
+			setTimeout(function(){
+			//play68_submitScore(score);//分享
+			},500);
+		}
+		function dp_Ranking(){
+			//Play68.goHome();//更多游戏
+		}
+
+		
+		function dp_submitScore(score){
+			
+		}
+	</script>
+
+<script  type="text/JavaScript">
+window.shareData={
+  'title':'钱钱钱',
+  'link':'https://foxjacob.gitee.io/gamestation/games/qqq/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/qqq/icon.png'
+}
+window.shareFriendData={
+  'title':'钱钱钱',
+  'content':'关注悠狐阁网络,更多好玩的游戏等着你。',
+  'link':'https://foxjacob.gitee.io/gamestation/games/qqq/',
+  'imgurl':'https://foxjacob.gitee.io/gamestation/games/qqq/icon.png'
+}
+</script>
+<script type="text/JavaScript" src="http://gc.veiying.cn/code"></script>	
+</body>
+</html>

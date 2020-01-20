@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>生化放置 - BioKiller Idle</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">生化放置</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+<!--                <li><a href="https://github.com/cwramsey/BioKiller-Idle" target="_blank">GitHub</a></li>-->
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container game">
+
+    <div class="col-md-4">
+        <div class="stats panel panel-default">
+            <div class="panel-heading">统计</div>
+            <div class="panel-body">
+                <h5>点数: <span class="totalPoints"></span></h5>
+                <h5>PPS: <span class="multiplier"></span></h5>
+                <h5>污染机率: <span class="contaminationChance"></span></h5>
+                <h5>病菌创造: <span class="totalGerms"></span></h5>
+            </div>
+        </div>
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <!--EXPERIMENTS-->
+            <div class="panel panel-default experiments actions">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            实验
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <div class="running-experiment progress">
+                            <div class="experiment progress-bar progress-bar-striped progress-bar-success active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                <span class="experiment-percent"></span>
+                            </div>
+                        </div>
+
+                        <button class="btn addMultiplier experiment rat" data-cost="2000" data-add="500" data-name="rat" data-time="60" disabled>
+                            大鼠试验
+                            <br />
+                            <small>
+                                +<span class="add"></span> PPS -
+                                成本: <span class="cost"></span> -
+                                时间: <span class="time"></span> 
+                            </small>
+                        </button>
+
+                        <button class="btn addMultiplier experiment pig" data-cost="8000" data-add="1100" data-name="pig" data-time="120" disabled>
+                            活猪试验
+                            <br />
+                            <small>
+                                +<span class="add"></span> PPS -
+                                成本: <span class="cost"></span> -
+                                时间: <span class="time"></span> 
+                            </small>
+                        </button>
+
+                        <button class="btn addMultiplier experiment horse" data-cost="25000" data-add="3000" data-name="horse" data-time="240" disabled>
+                            活马试验
+                            <br />
+                            <small>
+                                +<span class="add"></span> PPS -
+                                成本: <span class="cost"></span> -
+                                时间: <span class="time"></span> 
+                            </small>
+                        </button>
+
+                        <button class="btn addMultiplier experiment human" data-cost="100000" data-add="8000" data-name="human" data-time="360" disabled>
+                            人体试验
+                            <br />
+                            <small>
+                                +<span class="add"></span> PPS -
+                                成本: <span class="cost"></span> -
+                                时间: <span class="time"></span> 
+                            </small>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--LAB EQUIPMENT-->
+            <div class="panel panel-default equipment">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            实验室设备
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body actions">
+
+                        <div class="equipment-delivery progress">
+                            <div class="equipment progress-bar progress-bar-striped progress-bar-success active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                <span class="equipment-percent"></span>
+                            </div>
+                        </div>
+
+                        <p>实验室设备有助于保护你免受污染。</p>
+                        <p><small>CP = 污染物防护 %</small></p>
+
+                        <button class="btn addEquipment equipment hazmat" data-cost="10000" data-add="1.2" data-name="hazmat" data-time="230" disabled>
+                            购买防毒服
+                            <br />
+                            <small>
+                                +<span class="add"></span> CP -
+                                成本: <span class="cost"></span> -
+                                交货时间: <span class="time"></span> 
+                            </small>
+                        </button>
+
+                        <button class="btn addEquipment equipment freezer" data-cost="25000" data-add="1.6" data-name="freezer" data-time="470" disabled>
+                            购买冷冻器
+                            <br />
+                            <small>
+                                +<span class="add"></span> CP -
+                                成本: <span class="cost"></span> -
+                                交货时间: <span class="time"></span> 
+                            </small>
+                        </button>
+
+                        <button class="btn addEquipment equipment janitor" data-cost="100000" data-add="2.2" data-name="janitor" data-time="710" disabled>
+                            雇佣清洁工
+                            <br />
+                            <small>
+                                +<span class="add"></span> CP -
+                                成本: <span class="cost"></span> -
+                                交货时间: <span class="time"></span>
+                            </small>
+                        </button>
+
+                        <button class="btn addEquipment equipment solution" data-cost="220000" data-add="3.1" data-name="solution" data-time="1020" disabled>
+                            购买有机清洗液
+                            <br />
+                            <small>
+                                +<span class="add"></span> CP -
+                                成本: <span class="cost"></span> -
+                                交货时间: <span class="time"></span>
+                            </small>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--DEV PANEL-->
+            <div class="panel panel-default dev">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Dev
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        <!--Reproduce Button-->
+                        <div class="btn-group">
+                            <button class="btn addMultiplier reproduce" data-cost="0" data-add="50" data-name="reproduce">Reproduce</button>
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#" class="addMultiplier dev-reproduce" data-cost="0" data-add="50" data-name="dev-reproduce" data-multiple="2">x2</a></li>
+                                <li><a href="#" class="addMultiplier dev-reproduce" data-cost="0" data-add="50" data-name="dev-reproduce" data-multiple="10">x10</a></li>
+                            </ul>
+                        </div>
+
+                        <!--Add Points-->
+                        <button class="btn addPoints">Add Points</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="actions panel panel-default">
+            <div class="panel-heading">
+                生物行为
+            </div>
+
+            <div class="panel-body">
+                <button class="btn addMultiplier dna" data-cost="1" data-add="0.1" data-name="dna" disabled>
+                    测试新DNA链
+                    <br />
+                    <small>
+                        +<span class="add"></span> PPS -
+                        成本: <span class="cost"></span>
+                    </small>
+                </button>
+
+                <button class="btn addMultiplier strength" data-cost="20" data-add="1" data-name="strength" disabled>
+                    增加强度
+                    <br />
+                    <small>
+                        +<span class="add"></span> PPS -
+                        成本: <span class="cost"></span>
+                    </small>
+                </button>
+
+                <button class="btn addMultiplier resistance" data-cost="50" data-add="5" data-name="resistance" disabled>
+                    增加酶抗性
+                    <br />
+                    <small>
+                        +<span class="add"></span> PPS -
+                        成本: <span class="cost"></span>
+                    </small>
+                </button>
+
+                <button class="btn addMultiplier reproduce" data-cost="500" data-add="20" data-name="reproduce" disabled>
+                    繁殖
+                    <br />
+                    <small>
+                        +<span class="add"></span> PPS -
+                        成本: <span class="cost"></span>
+                    </small>
+                </button>
+            </div>
+
+            <canvas id="evo-canvas" class="evo-canvas" width="640" height="480"></canvas>
+
+        </div>
+    </div>
+
+
+
+
+</div><!-- /.container -->
+
+<!-- Large modal -->
+<div class="modal start-modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">生化放置</h4>
+            </div>
+            <div class="modal-body">
+                <p>你好，医生。</p>
+                <p>欢迎来到您的实验室。 在这里，您将制作一种能够消除全世界人口的设计师病毒 - 除了您自己。</p>
+                <p>一旦你完成了你最新的(也是最伟大的)杰作，你就会得到你应得的宁静。</p>
+                <p>要开始，只需点击下面的按钮，然后开始试用您的新生化武器。</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">开始吧</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div style="display: none;">
+    <img src="images/germ.png" id="germ"/>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-growl.min.js"></script>
+<script src="js/fabric.js" ></script>
+<script src="js/misc.js" ></script>
+<script src="js/evo.js"></script>
+<script src="js/game.js"></script>
+<!--客服 开始-->
+<link rel="stylesheet" href="//cnh5.gitee.io/game/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//cnh5.gitee.io/game/js/kf.js"></script>
+<!-- 客服 结束 -->
+</body>
+</html>

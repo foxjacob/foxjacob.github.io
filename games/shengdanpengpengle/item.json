@@ -1,0 +1,104 @@
+﻿{
+"res":{
+	"Diaozui10000": {"x":40,"y":40,"w":59,"h":89},
+	"Diaozui20000": {"x":139,"y":40,"w":67,"h":91},
+	"Diaozui30000": {"x":246,"y":40,"w":81,"h":90},
+	"Libao10000": {"x":367,"y":40,"w":47,"h":45},
+	"Libao20000": {"x":40,"y":171,"w":41,"h":37},
+	"Libao30000": {"x":121,"y":171,"w":37,"h":47},
+	"Lingdang0000": {"x":198,"y":171,"w":95,"h":73},
+	"Lingdang10000": {"x":333,"y":171,"w":47,"h":61},
+	"Lingdang20000": {"x":420,"y":171,"w":41,"h":65},
+	"Lingjie10000": {"x":40,"y":284,"w":77,"h":57},
+	"Lingjie20000": {"x":157,"y":284,"w":71,"h":53},
+	"Wazi10000": {"x":268,"y":284,"w":43,"h":65},
+	"Wazi20000": {"x":351,"y":284,"w":53,"h":69},
+	"Wazi30000": {"x":40,"y":393,"w":51,"h":67}
+},
+"frames": {
+	"Diaozui1": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Diaozui10000","x":-29.45,"y":-30.5}
+		]
+	},
+	"Diaozui2": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Diaozui20000","x":-33.25,"y":-26.95}
+		]
+	},
+	"Diaozui3": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Diaozui30000","x":-40.5,"y":-24.45}
+		]
+	},
+	"Libao1": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Libao10000","x":-23.35,"y":-22.85}
+		]
+	},
+	"Libao2": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Libao20000","x":-20.9,"y":-18.95}
+		]
+	},
+	"Libao3": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Libao30000","x":-18.8,"y":-23.05}
+		]
+	},
+	"Lingdang": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Lingdang0000","x":-47.75,"y":-36.35}
+		]
+	},
+	"Lingdang1": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Lingdang10000","x":-23.6,"y":-30.25}
+		]
+	},
+	"Lingdang2": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Lingdang20000","x":-20.75,"y":-32.85}
+		]
+	},
+	"Lingjie1": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Lingjie10000","x":-38.35,"y":-28.5}
+		]
+	},
+	"Lingjie2": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Lingjie20000","x":-35.5,"y":-26.95}
+		]
+	},
+	"Wazi1": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Wazi10000","x":-21.95,"y":-32}
+		]
+	},
+	"Wazi2": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Wazi20000","x":-26.15,"y":-34.75}
+		]
+	},
+	"Wazi3": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"Wazi30000","x":-25.65,"y":-33.5}
+		]
+	}
+}
+}

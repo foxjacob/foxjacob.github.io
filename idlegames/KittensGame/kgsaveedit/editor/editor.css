@@ -1,0 +1,660 @@
+.hidden,
+.hideSiblings:not(.hidden) ~ * {
+	display: none;
+}
+
+.collapsed {
+	visibility: collapse;
+}
+
+html, body {
+	height: 100%;
+	overflow-y: hidden;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 700px;
+	font-size: 14px;
+	color: #000000;
+}
+
+body, input[type="text"], select {
+	background-color: #ffffff;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+form, table, th, tr, td, div.table {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+form,
+.blockContainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+table {
+	border-spacing: 0 2px;
+}
+
+td {
+	padding: 1px 0;
+}
+
+td ~ td {
+	padding-left: 5px;
+}
+
+label:not(.hidden) ~ label,
+.leftSpacer {
+	margin-left: 5px;
+}
+
+.indent {
+	margin-left: 10px;
+}
+
+label:not(.locked),
+input[type="checkbox"]:enabled,
+.perTickNode.tooltipped {
+	cursor: pointer;
+}
+
+input[type="text"],
+input.integerInput.abbrInput {
+	width: 80px;
+}
+
+input.integerInput {
+	width: 50px;
+}
+
+.shortInt input.integerInput,
+input.integerInput.shortInt {
+	width: 35px;
+}
+
+input.integerInput.timeInput {
+	width: 110px;
+}
+
+:link, :visited {
+	color: #0000ee;
+}
+
+.help {
+	cursor: help;
+}
+
+.locked {
+	color: #333333;
+	font-style: italic;
+}
+
+.floatRight {
+	float: right;
+}
+
+.rightAlign {
+	text-align: right;
+}
+
+.smallText {
+	font-size: small;
+}
+
+.smallCaps {
+	font-variant: small-caps;
+}
+
+.ital {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+.limited,
+.btnDisabled.limited,
+.tooltipPriceNode .noRes {
+	color: #ff3030;
+}
+
+.resource.uncommon .nameNode,
+.coral {
+	color: coral;
+}
+
+.resource td {
+	white-space: nowrap;
+}
+
+.resource.rare .nameNode {
+	color: orange;
+	text-shadow: 1px 0px 10px coral;
+}
+
+.highlited {
+	background-color: #eeeeee;
+}
+
+.maxValueNode {
+	color: #aaaaaa;
+}
+
+.resLimitNotice {
+	color: orange;
+}
+
+.resLimitWarn {
+	/* color: coral;
+	opacity: 0.75; */
+	color: rgba(255, 127, 80, 0.75);
+}
+
+.red,
+.error {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.monospace {
+	font-family: monospace;
+}
+
+#topBar {
+	position: absolute;
+	top: 2px;
+	left: 0px;
+	height: 24px;
+	width: 100%;
+	padding: 0 10px;
+	border-bottom: 1px solid gray;
+	overflow: hidden;
+	box-shadow: 1px 0px 2px #888888;
+	white-space: nowrap;
+	clear: both;
+	z-index: 50;
+}
+
+#topBar > * {
+	display: inline-block;
+}
+
+#topSettings { /* Ugh Firefox why*/
+	position: absolute;
+	top: 2px;
+	right: 8px;
+}
+
+#toolbarBlock {
+	margin-right: 120px;
+}
+
+.toolbarIcon {
+	padding-right: 15px;
+	font-size: 12px;
+	cursor: default;
+}
+
+.toolbarIcon:hover {
+	font-weight: bold;
+}
+
+#load, #editContainer {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 28px;
+	min-height: 100%;
+	height: 100%;
+	vertical-align: top;
+	overflow-x: hidden;
+}
+
+#load {
+	padding: 40px 10px 10px 10px;
+}
+
+#resourceColumn {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 410px;
+	padding: 10px 20px 0 10px;
+	overflow-y: scroll;
+	z-index: 50;
+}
+
+#resourceColumn:not(.showResourceProps) .resourceProps,
+#resourceColumn.showResourceProps .resourceProps ~ td {
+	display: none;
+}
+
+.bottom-margin,
+.bottom-spacer > :last-child,
+.tabBlock > :last-child,
+#governmentBlock:not(:empty) {
+	margin-bottom: 20px;
+}
+
+.planet .nameNode {
+	display: inline-block;
+	min-width: 125px;
+}
+
+#tooltipBlock {
+	position: absolute;
+	background-color: #ffffff;
+	z-index: 100;
+	border: 1px solid gray;
+	padding: 5px;
+	pointer-events: none;
+}
+
+.button_tooltip {
+	width: 280px;
+	min-height: 50px;
+}
+
+.tooltipName {
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid gray;
+	padding-bottom: 4px;
+}
+
+.tooltipDesc {
+	text-align: center;
+	width: 100%;
+	max-width: 280px;
+	padding-bottom: 4px;
+	/* font-size: 15px; */
+	color: gray;
+}
+
+.tooltipDescBottom {
+	border-bottom: 1px solid gray;
+}
+
+.tooltipPriceNode {
+	overflow: hidden;
+}
+
+.tooltipPriceName {
+	float: left;
+}
+
+.tooltipPriceSpan {
+	float: right;
+}
+
+.tooltipEffectsTitle {
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid gray;
+	padding-bottom: 4px;
+	margin-bottom: 8px;
+}
+
+.tooltipEffect {
+	float: left;
+	/* font-size: 14px; */
+	color: gray;
+	clear: both;
+}
+
+.tooltipCycleTitle {
+	border-bottom: 1px solid gray;
+	padding-bottom: 4px;
+}
+
+.tooltipCycleSpacer {
+	padding-top: 4px;
+}
+
+.tooltipCycleEffectTitle {
+	float: left;
+	/*font-size: 16px;*/
+}
+
+.tooltipCycleEffectMod {
+	float: right;
+	/*font-size: 16px;*/
+	padding-left: 6px;
+}
+
+.spoiler,
+.anarchy .noAnarchy {
+	font-style: italic;
+}
+
+.tooltipFlavor {
+	display: block;
+	padding-top: 20px;
+	float: right;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.challenge_tooltip {
+	text-align: center;
+	width: 200px;
+}
+
+.lightbox {
+	box-sizing: content-box;
+	position: absolute;
+	border: 1px solid black;
+	width: 600px;
+	height: 300px;
+
+	left: 50%;
+	top: 50%;
+
+	margin-top: -150px;
+	margin-left: -300px;
+
+	background-color: #ffffff;
+	padding: 20px;
+	z-index: 100;
+}
+
+.closeLink {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+}
+
+.lightbox textarea,
+.saveArea {
+	width: 550px;
+	height: 220px;
+}
+
+.lightbox input[type="button"] {
+	margin-top: 10px;
+}
+
+#editColumn {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	vertical-align: top;
+	padding-left: 420px;
+	overflow-x: hidden;
+}
+
+#tabContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #ffffff;
+	padding: 2px 25px 0 0;
+	white-space: nowrap;
+	overflow-x: auto;
+}
+
+#tabContainer * {
+	white-space: nowrap;
+}
+
+.activeTab,
+.activeGroup {
+	text-decoration: none;
+	color: black;
+}
+
+.separated:not(.hidden) ~ .separated::before {
+	content: "|";
+	display: inline-block;
+	padding: 0 3px;
+}
+
+.separated:not(.hidden) ~ .separated.dotSeparator::before {
+	content: "\0022C5";
+}
+
+.btnDisabled {
+	color: #999999;
+}
+
+.building .nameNode,
+.program .nameNode {
+	padding-left: 12px;
+}
+
+.stageBtn {
+	float: right;
+	margin-left: 3px;
+}
+
+.nameNode.btnEnabled {
+	border-left: 8px solid green;
+	padding-left: 4px;
+}
+
+.nameNode.btnLackResConvert {
+	border-left: 8px solid #FF3030;
+	padding-left: 4px;
+}
+
+#tabBlocks {
+	height: 100%;
+	width: 100%;
+	padding-top: 40px; /* extra space for scroll bar on #tabContainer */
+}
+
+#tabBlocks > div {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding-right: 20px;
+}
+
+.linkListRoot {
+	display: inline-block;
+	position: relative;
+	height: 26px;
+	line-height: 25px;
+	background-color: #ffffff;
+	border: 1px solid #000000;
+	cursor: pointer;
+	text-align: center;
+}
+
+.linkListRoot a {
+	padding: 0 4px;
+	height: 100%;
+}
+
+.linkListRoot > a {
+	padding: 0 6px;
+}
+
+.linkListRoot a:hover {
+	color: orange;
+	text-shadow: 1px 0px 10px coral;
+}
+
+.linkListRoot + .linkListRoot {
+	border-left-width: 0;
+}
+
+.linkListTooltip {
+	position: absolute;
+	top: 100%;
+	left: -0.5px;
+	z-index: 100;
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	display: none;
+}
+
+.linkListRoot:hover .linkListTooltip {
+	display: block;
+}
+
+.linkListTooltipLink {
+	height: 25px;
+}
+
+.linkListTooltipLink ~ div {
+	border-top: 1px solid #000000;
+}
+
+#censusBlock {
+	max-width: 520px;
+}
+
+.censusLine {
+	margin-bottom: 5px;
+}
+
+#censusPageBlock {
+	white-space: nowrap;
+}
+
+#censusPageBlock > * {
+	display: inline-block;
+	padding: 0 2px;
+}
+
+#censusKittensBlock {
+	margin-top: 5px;
+}
+
+#massEditKittensBlock,
+.kittenBlock {
+	white-space: nowrap;
+	border: 1px solid gray;
+	margin-bottom: 5px;
+	padding: 5px;
+	min-height: 80px;
+}
+
+.kittenSubBlock {
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+}
+
+.toolbarIcon.tooltipped:hover,
+.perTickNode:hover {
+	font-weight: bold;
+}
+
+.newMarker:after {
+	content: attr(data-new);
+	color: red;
+	font-style: italic;
+	font-size: 10px;
+}
+
+.extraDataBlock {
+	margin-top: 5px;
+}
+
+.jsonField {
+	width: 300px;
+	height: 100px;
+}
+
+.help_tooltip {
+	max-width: 300px;
+}
+
+/* .hideSpoilers .spoiler,
+.hideSpoilers .spoiler * {
+	opacity: 0.6;
+}
+
+.hideSpoilers .spoiler input,
+.hideSpoilers .spoiler select {
+	opacity: 1;
+	color: rgba(0, 0, 0, 0.6);
+} */
+
+.blaze {
+	animation: rainbow 2.5s linear;
+	animation-iteration-count: infinite;
+}
+
+.hail {
+	animation: redrainbow 1.5s linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rainbow{
+	100%, 0%{
+		color: rgb(255, 0, 0);
+	}
+	8%{
+		color: rgb(255, 127, 0);
+	}
+	16%{
+		color: rgb(255, 255, 0);
+	}
+	25%{
+		color: rgb(127, 255, 0);
+	}
+	33%{
+		color: rgb(0, 255, 0);
+	}
+	41%{
+		color: rgb(0, 255, 127);
+	}
+	50%{
+		color: rgb(0, 255, 255);
+	}
+	58%{
+		color: rgb(0, 127, 255);
+	}
+	66%{
+		color: rgb(0, 0, 255);
+	}
+	75%{
+		color: rgb(127, 0, 255);
+	}
+	83%{
+		color: rgb(255, 0, 255);
+	}
+	91%{
+		color: rgb(255, 0, 127);
+	}
+}
+
+
+@keyframes redrainbow{
+	100%, 0%{
+		color: rgb(255, 0, 0);
+	}
+	50%{
+		color: rgb(0, 0, 0);
+	}
+}

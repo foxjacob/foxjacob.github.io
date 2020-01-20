@@ -1,0 +1,498 @@
+<DOCTYPE html><html><head>
+
+<! -- Include functions -- !>
+<script src="zh.js"></script>
+<script src="variables.js"></script>
+<script src="functions.js"></script>
+<script src="adventureList.js"></script>
+<script src="grinding.js"></script>
+<script src="combat.js"></script>
+<! -- Encryption JS library -- !>
+<script src="aes.js"></script>
+
+<link 	type='img/x-icon' rel='shortcut icon' 
+ 		href='https://likexia.gitee.io/game/favicon.ico'
+  />
+<title>迷你任务 - MiniTES v1.15</title>
+<meta 	charset="UTF-8">
+<link 	rel="stylesheet" href="formatting.css">
+<link 	rel="stylesheet" href="themeBlack.css">
+
+<!-- K站接口：涉及正常存档 -->
+<script src='kongregate_api.js'></script>
+
+</head>
+<body onload="preloader();">
+
+<span id="loadCSSThemeHere"></span>
+
+
+
+						<! -- Tabs -- !>
+<div class="limitWidth">
+<button id="mainButton" 	style="width:60px" onClick="showMain();" 		disabled="true">
+	<span id='IEhack'>
+		<!--Main     -->行动
+	</span>
+</button>
+<button id="equipsButton" 	style="width:49px" onClick="showEquips();" 		class="equipsButtonWidth">
+	<span id='IEhack'>
+		<!--Equips   -->装备
+	</span>
+</button>
+<button id="keyItemsButton" style="width:72px" onClick="showKeyItems();" 	class="keyItemsButtonWidth">
+	<span id='IEhack'>
+		<!--Key Items-->道具
+	</span>
+</button>
+<button id="worldMapButton" style="width:78px" onClick="showMap();"									>
+	<span id='IEhack'>
+		<!--World Map-->世界
+	</span>
+</button>
+<button id="aboutButton" 	style="width:47px" onClick="showAbout();" 		class="alignRightAndMargin5">
+	<span id='IEhack'>
+		<!--About    -->关于
+	</span>
+</button>
+<button id="faqButton" 		style="width:47px" onClick="showFAQ();" 		class="alignRightAndMargin5">
+	<span id='IEhack'>
+		<!--FAQ      -->答疑
+	</span>
+</button>
+<button id="optionsButton" 	style="width:56px" onClick="showOptions();" 	class="alignRightAndMargin5">
+	<span id='IEhack'>
+		<!--Options  -->选项
+	</span>
+</button>
+						
+						
+						
+						
+						
+						
+						<! -- Stats Tab -- !>
+
+<! -- Tab div -- !>
+<div id="statsTab" class="visible">
+
+<! -- HP and Stat texts -- !>
+<table><tbody>
+	<tr></tr>
+	<tr>
+		<td id="statsTable"><div class="ascii">
+<span><!--Lv      -->等级：</span><span id="textLevel"></span>
+<span><!--MaxHP   -->健康：</span><span id="textMaxHP"></span>
+<span>　</span>
+<span><!--STR     -->力量：</span><span id="textSTR"></span>
+<span><!--AGI     -->敏捷：</span><span id="textAGI"></span>
+<span><!--SPD     -->速度：</span><span id="textSPD"></span>
+<span><!--CHA     -->魅力：</span><span id="textCHA"></span>
+<span><!--LUK     -->幸运：</span><span id="textLUK"></span>
+		</div></td>
+		<td id="statsTable"><div class="ascii">
+<span><!--DMG     -->伤害：</span><span id="textMainTabMinDMG">1</span> - <span id="textMainTabMaxDMG">1</span>
+<span>　</span>
+<span><!--AXE     -->斧技：</span><span id="textAxe"></span>
+<span><!--SWORD   -->剑技：</span><span id="textSword"></span>
+<span><!--DAGGER  -->匕技：</span><span id="textDagger"></span>
+<span><!--FIST    -->拳技：</span><span id="textFist"></span>
+<span><!--SPEAR   -->矛技：</span><span id="textSpear"></span>
+<span><!--MACE    -->杖技：</span><span id="textMace"></span>
+		</div></td>
+		<td id="statsTable"><div class="ascii">
+<span>　</span>
+<span>　</span>
+<span>　</span>
+<span><!--AC      -->护甲：</span><span id="textMainTabAC">0</span>
+<span><!--H ARMOR -->重甲：</span><span id="textHArmor"></span>
+<span><!--M ARMOR -->中甲：</span><span id="textMArmor"></span>
+<span><!--L ARMOR -->轻甲：</span><span id="textLArmor"></span>
+<span><!--DEF     -->防御：</span><span id="textDEF"></span>
+		</div></td>
+		<td id="statsTable"><div class="ascii">
+<span>　</span>
+<span>　</span>
+<span>　</span>
+<span><!--CRIT    -->暴击：</span><span id="textCritical"></span>
+<span><!--SMASH   -->冲撞：</span><span id="textSmash"></span>
+<span><!--BLOCK   -->格挡：</span><span id="textBlock"></span>
+<span><!--ENDURE  -->耐力：</span><span id="textEndure"></span>
+<span><!--MEDIC   -->治疗：</span><span id="textMedic"></span>
+		</div></td>
+		<td id="statsTable"><div class="ascii">
+<span>　</span>
+<span>　</span>
+<span><!--SPEECH  -->口才：</span><span id="textSpeech"></span>
+<span><!--DODGE   -->闪避：</span><span id="textDodge"></span>
+<span><!--UNLOCK  -->开锁：</span><span id="textUnlock"></span>
+<span><!--CLIMB   -->攀爬：</span><span id="textClimb"></span>
+<span><!--STEALTH -->隐遁：</span><span id="textStealth"></span>
+<span><!--ATHLETE -->旅行：</span><span id="textAthlete"></span>
+		</div></td>
+	</tr>
+</tbody></table>
+
+
+
+
+<! -- Debug Console -- !>
+<br><br><br><br>
+<!-- <span id="textDebug1"></span><br> -->
+<!-- <span id="textDebug2"></span><br> -->
+
+
+
+
+<! -- Location & Skill XP-- !>
+<div class="alignRight">
+<span>
+	<!--LOCATION -->位置&nbsp;
+</span>[<span id="textCurrentMap"></span>]<span id="locationReadoutEmptySpace"></span>
+</div><br>
+
+<div class="alignRight">
+<span id="textCurrentlyGrindingSkill"></span>
+<span></span><span id="textCurrentlyGrindingSkillXP"></span><span id="skillXPEmptySpace"></span>
+</div><br>
+
+
+
+
+
+<! -- Activity Log -- !>
+<span id="fuckFirefox">
+	-------------------------------------------------- 
+	<!--EXP-->经验
+	 [ <span id="expBar"></span><span id="expBarEmptySpace"></span>] --</span><br>
+	
+<span id="console4" class="fadedText4"></span><br>
+<span id="console3" class="fadedText2"></span><br>
+<span id="console2" class="fadedText1"></span><br>
+<span id="console1" class="fullBrightText"></span>
+</div>
+
+
+
+
+
+
+
+
+						<! -- Equips Tab -- !>
+<div id="equipsTab" class="invisible"><br><br>
+
+<br>
+<table class="alignCenter">
+	<tr>
+		<td id="equipsTable" class="textAlignCenter">
+			<div class="ascii">
+<span id="textEquips1" class="fadedText3" onClick="equipArmor('light', 'HeadArmor')" onMouseOver="equipsArmorText('lightHeadArmor')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips2" class="fadedText3" onClick="equipArmor('light', 'ShoulderArmor')" onMouseOver="equipsArmorText('lightShoulderArmor')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips3" class="fadedText3" onClick="equipArmor('light', 'Gloves')" onMouseOver="equipsArmorText('lightGloves')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips4" class="fadedText3" onClick="equipArmor('light', 'BodyArmor')" onMouseOver="equipsArmorText('lightBodyArmor')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips5" class="fadedText3" onClick="equipArmor('light', 'Pants')" onMouseOver="equipsArmorText('lightPants')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips6" class="fadedText3" onClick="equipArmor('light', 'Shoes')" onMouseOver="equipsArmorText('lightShoes')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips7" class="fadedText3" onClick="equipArmor('light', 'Shield')" onMouseOver="equipsArmorText('lightShield')" onMouseout="equipsTextClear()">---</span>
+
+<span id="textEquips8" class="fadedText3" onClick="equipWeapon('Dagger')" onMouseOver="equipsWeaponText('dagger')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips9" class="fadedText3" onClick="equipWeapon('Fist')" onMouseOver="equipsWeaponText('fist')" onMouseout="equipsTextClear()">---</span>
+			</div>
+		</td>
+		<td id="equipsTable" class="textAlignCenter">
+			<div class="ascii">
+<span id="textEquips10" class="fadedText3" onClick="equipArmor('medium', 'HeadArmor')" onMouseOver="equipsArmorText('mediumHeadArmor')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips11" class="fadedText3" onClick="equipArmor('medium', 'ShoulderArmor')" onMouseOver="equipsArmorText('mediumShoulderArmor')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips12" class="fadedText3" onClick="equipArmor('medium', 'Gloves')" onMouseOver="equipsArmorText('mediumGloves')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips13" class="fadedText3" onClick="equipArmor('medium', 'BodyArmor')" onMouseOver="equipsArmorText('mediumBodyArmor')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips14" class="fadedText3" onClick="equipArmor('medium', 'Pants')" onMouseOver="equipsArmorText('mediumPants')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips15" class="fadedText3" onClick="equipArmor('medium', 'Shoes')" onMouseOver="equipsArmorText('mediumShoes')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips16" class="fadedText3" onClick="equipArmor('medium', 'Shield')" onMouseOver="equipsArmorText('mediumShield')" onMouseout="equipsTextClear()">---</span>
+
+<span id="textEquips17" class="fadedText3" onClick="equipWeapon('Sword')" onMouseOver="equipsWeaponText('sword')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips26" class="fadedText3" onClick="equipWeapon('Mace')" onMouseOver="equipsWeaponText('mace')" onMouseout="equipsTextClear()">---</span>
+			</div>
+		</td>
+		<td id="equipsTable" class="textAlignCenter">
+			<div class="ascii">
+<span id="textEquips19" class="fadedText3" onClick="equipArmor('heavy', 'HeadArmor')" onMouseOver="equipsArmorText('heavyHeadArmor')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips20" class="fadedText3" onClick="equipArmor('heavy', 'ShoulderArmor')" onMouseOver="equipsArmorText('heavyShoulderArmor')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips21" class="fadedText3" onClick="equipArmor('heavy', 'Gloves')" onMouseOver="equipsArmorText('heavyGloves')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips22" class="fadedText3" onClick="equipArmor('heavy', 'BodyArmor')" onMouseOver="equipsArmorText('heavyBodyArmor')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips23" class="fadedText3" onClick="equipArmor('heavy', 'Pants')" onMouseOver="equipsArmorText('heavyPants')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips24" class="fadedText3" onClick="equipArmor('heavy', 'Shoes')" onMouseOver="equipsArmorText('heavyShoes')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips25" class="fadedText3" onClick="equipArmor('heavy', 'Shield')" onMouseOver="equipsArmorText('heavyShield')" onMouseout="equipsTextClear()">---</span>
+
+<span id="textEquips27" class="fadedText3" onClick="equipWeapon('Spear')" onMouseOver="equipsWeaponText('spear')" onMouseout="equipsTextClear()">---</span>
+<span id="textEquips18" class="fadedText3" onClick="equipWeapon('Axe')" onMouseOver="equipsWeaponText('axe')" onMouseout="equipsTextClear()">---</span>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<br><br><br>
+<div id="equipsStatText" class="textAlignCenter"><br></div>
+<div class="textAlignCenter">
+	<!--Total AC: -->总护甲: 
+<span id="textEquipTabAC"></span>
+	 | 
+	<!-- DMG: -->伤害: <span id="textEquipTabMinDMG">1</span> - <span id="textEquipTabMaxDMG">1</span></div>
+</div>
+
+
+
+
+
+
+
+
+						<! -- Key Items Tab -- !>
+<div id="keyItemsTab" class="invisible"><br><br>
+
+<br>
+<table class="alignCenter">
+	<tr>
+		<td id="keyItemsTable" class="textAlignCenter">
+			<div class="ascii">
+<span id="textKeyItem8" class="fadedText3" onMouseOver="keyItemText(8)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem6" class="fadedText3" onMouseOver="keyItemText(6)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem3" class="fadedText3" onMouseOver="keyItemText(3)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem1" class="fadedText3" onMouseOver="keyItemText(1)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem5" class="fadedText3" onMouseOver="keyItemText(5)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem4" class="fadedText3" onMouseOver="keyItemText(4)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem7" class="fadedText3" onMouseOver="keyItemText(7)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem2" class="fadedText3" onMouseOver="keyItemText(2)" onMouseout="keyItemTextClear()">---</span>
+			</div>
+		</td>
+		<td id="keyItemsTable" class="textAlignCenter">
+			<div class="ascii">
+<span id="textKeyItem11" class="fadedText3" onMouseOver="keyItemText(11)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem9"  class="fadedText3" onMouseOver="keyItemText(9)"  onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem14" class="fadedText3" onMouseOver="keyItemText(14)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem12" class="fadedText3" onMouseOver="keyItemText(12)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem16" class="fadedText3" onMouseOver="keyItemText(16)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem13" class="fadedText3" onMouseOver="keyItemText(13)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem15" class="fadedText3" onMouseOver="keyItemText(15)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem19" class="fadedText3" onMouseOver="keyItemText(19)" onMouseout="keyItemTextClear()">---</span>
+			</div>
+		</td>
+		<td id="keyItemsTable" class="textAlignCenter">
+			<div class="ascii">
+<span id="textKeyItem21" class="fadedText3" onMouseOver="keyItemText(21)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem18" class="fadedText3" onMouseOver="keyItemText(18)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem22" class="fadedText3" onMouseOver="keyItemText(22)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem17" class="fadedText3" onMouseOver="keyItemText(17)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem24" class="fadedText3" onMouseOver="keyItemText(24)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem23" class="fadedText3" onMouseOver="keyItemText(23)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem20" class="fadedText3" onMouseOver="keyItemText(20)" onMouseout="keyItemTextClear()">---</span>
+<span id="textKeyItem10" class="fadedText3" onMouseOver="keyItemText(10)" onMouseout="keyItemTextClear()">---</span>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<table class="alignCenter">
+	<tr>
+		<td id="keyItemsTable" class="textAlignCenter fadedText3">
+			<span id="textMapItem1" onMouseOver="mapItemText(1)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textMapItem2" onMouseOver="mapItemText(2)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textMapItem3" onMouseOver="mapItemText(3)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textMapItem4" onMouseOver="mapItemText(4)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textMapItem5" onMouseOver="mapItemText(5)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textMapItem6" onMouseOver="mapItemText(6)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textMapItem7" onMouseOver="mapItemText(7)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textMapItem8" onMouseOver="mapItemText(8)" onMouseout="keyItemTextClear()">-</span>
+		</td>
+		
+		<td id="keyItemsTable" class="textAlignCenter fadedText3">
+			<span id="textSeal1" onMouseOver="sealItemText(1)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textSeal2" onMouseOver="sealItemText(2)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textSeal3" onMouseOver="sealItemText(3)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textSeal4" onMouseOver="sealItemText(4)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textSeal5" onMouseOver="sealItemText(5)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textSeal6" onMouseOver="sealItemText(6)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textSeal7" onMouseOver="sealItemText(7)" onMouseout="keyItemTextClear()">-</span>
+			<span id="textSeal8" onMouseOver="sealItemText(8)" onMouseout="keyItemTextClear()">-</span>
+		</td>
+	</tr>
+</table>
+
+<br><br><br><br>
+<div id="keyItemDescriptionText" class="textAlignCenter"></div>
+
+</div>
+
+
+
+
+
+
+
+
+						<! -- World Map Tab -- !>
+
+
+<! -- Map -- !>
+<div id="mapTab" class="invisible">
+<span class="fadedText3 ascii extraChromeTextWidth">
+                 .<span id="map4" class="fullBrightText clickable" onMouseOver="mapText(4)" onMouseout="mapTextClear()" onClick="gotoArea(4);">O</span>.                                                            
+                ..<span id="map10" class="fullBrightText clickable" onMouseOver="mapText(10)" onMouseout="mapTextClear()" onClick="gotoArea(10);">O</span><span id="map5" class="fullBrightText clickable" onMouseOver="mapText(5)" onMouseout="mapTextClear()" onClick="gotoArea(5);">O</span>.     ....                           <span id="map16" class="fullBrightText clickable" onMouseOver="mapText(16)" onMouseout="mapTextClear()" onClick="gotoArea(16);">⁔</span>⁔⁔⁔⁔,       ;.`,⁔,    
+               ................                 ⁔⁔⁔⁔⁔⁔.⁔⁔⁔`⁔⁔⁔',`.:,`.;`.:<span id="map21" class="fullBrightText clickable forceCorrectASCII" onMouseOver="mapText(21)" onMouseout="mapTextClear()" onClick="gotoArea(21);">п</span>,:   
+               ................              ⁔⁔⁔⁔⁔⁔⁔⁔,',⁔⁔⁔⁔⁔⁔⁔.,`'.;⁔,;`.;',.  
+           ..................<span id="map7" class="fullBrightText clickable" onMouseOver="mapText(7)" onMouseout="mapTextClear()" onClick="gotoArea(7);">o</span>.            ⁔⁔⁔⁔⁔.....⁔⁔;⁔⁔⁔⁔⁔⁔;`:.,;,.:,;',`,;  
+          ......................          .........<span class="forceCorrectASCII">ᴧ</span>........⁔⁔⁔⁔,;`.`:,.,;`:.,  
+           ...............^,:.^...        ....<span id="map11" class="fullBrightText clickable" onMouseOver="mapText(11)" onMouseout="mapTextClear()" onClick="gotoArea(11);">.</span>...............⁔'<span class="forceCorrectASCII">ᴧ</span><span id="map24" onMouseOver="mapText(24)" onMouseout="mapTextClear()" onClick="gotoArea(24);">,</span>`,',;`.';,    
+              <span id="map6" class="fullBrightText clickable" onMouseOver="mapText(6)" onMouseout="mapTextClear()" onClick="gotoArea(6);">~</span>..........^<span id="map3" class="fullBrightText clickable" onMouseOver="mapText(3)" onMouseout="mapTextClear()" onClick="gotoArea(3);">;</span>:<span id="map2" class="fullBrightText clickable" onMouseOver="mapText(2)" onMouseout="mapTextClear()" onClick="gotoArea(2);">.</span>,....        .....................<span class="forceCorrectASCII">ᴧᴧᴧ</span>;';...<span id="map12" class="fullBrightText clickable" onMouseOver="mapText(12)" onMouseout="mapTextClear()" onClick="gotoArea(12);">#</span>...    
+               ~........:.;.,..         ........................<span class="forceCorrectASCII">ᴧᴧᴧ</span>,........    
+                .......    ..<span id="map1" class="fullBrightText clickable" onMouseOver="mapText(1)" onMouseout="mapTextClear()" onClick="gotoArea(1);">O</span>        .<span id="map17" class="fullBrightText clickable" onMouseOver="mapText(17)" onMouseout="mapTextClear()" onClick="gotoArea(17);">O</span>......................<span id="map15" class="fullBrightText clickable forceCorrectASCII" onMouseOver="mapText(15)" onMouseout="mapTextClear()" onClick="gotoArea(15);">ᴒ</span><span class="forceCorrectASCII">ᴧᴧᴧᴧ</span>.......      
+        ...      ..                       ....   ............<span class="forceCorrectASCII">ᴧᴧᴧ</span><span id="map20" class="fullBrightText clickable forceCorrectASCII" onMouseOver="mapText(20)" onMouseout="mapTextClear()" onClick="gotoArea(20);">ᴧ</span><span class="forceCorrectASCII">ᴧᴧᴧ</span>.....       
+     .......                                      ..........<span class="forceCorrectASCII">ᴧ</span>.<span class="forceCorrectASCII">ᴧᴧᴧᴧ</span>.<span class="forceCorrectASCII">ᴧ</span>......      
+  .....<span id="map9" class="fullBrightText clickable forceCorrectASCII" onMouseOver="mapText(9)" onMouseout="mapTextClear()" onClick="gotoArea(9);">п</span>...                                     ..............<span class="forceCorrectASCII">ᴧ</span>...........      
+ ........                  .:                 <span id="map8" class="fullBrightText clickable" onMouseOver="mapText(8)" onMouseout="mapTextClear()" onClick="gotoArea(8);">o</span>..................<span class="forceCorrectASCII">ᴧ</span>........      
+  .......                 .^<span id="map23" class="fullBrightText clickable" onMouseOver="mapText(23)" onMouseout="mapTextClear()" onClick="gotoArea(23);">;</span>%              .....................<span class="forceCorrectASCII">ᴧ</span>.......       
+   <span id="map14" class="fullBrightText clickable" onMouseOver="mapText(14)" onMouseout="mapTextClear()" onClick="gotoArea(14);">o</span>....                   %% <span id="map13" class="fullBrightText clickable" onMouseOver="mapText(13)" onMouseout="mapTextClear()" onClick="gotoArea(13);">%</span>              .....    ..~.~~......<span id="map19" class="fullBrightText clickable" onMouseOver="mapText(19)" onMouseout="mapTextClear()" onClick="gotoArea(19);">o</span>.......      
+  ....                      %                            <span id="map18" class="fullBrightText clickable" onMouseOver="mapText(18)" onMouseout="mapTextClear()" onClick="gotoArea(18);">~</span>~...............      
+                                                            .............       
+                                                               ......<span id="map22" class="fullBrightText clickable" onMouseOver="mapText(22)" onMouseout="mapTextClear()" onClick="gotoArea(22);">.</span>..     </span>
+
+
+
+<! -- Map text, bottom line of map -- !>   
+&nbsp&nbsp
+<span id="mapText"></span>
+<span class="alignRightAndMarginX extraChromeTextWidth fadedText3">....;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div>
+
+
+
+
+
+
+
+
+						<! -- Options Tab -- !>
+<div id="optionsTab" class="invisible">
+
+<div class="textAlignCenter fadedText3">
+
+<br><br><br><br>
+<span id="BlackThemeText" class="clickable" onClick="changeTheme('Black');">
+	<!--Black -->黑色</span>
+<span id="WhiteThemeText" class="clickable" onClick="changeTheme('White');">
+	<!--White -->白色</span>
+<span id="PurpleThemeText" class="clickable" onClick="changeTheme('Purple');">
+	<!--Purple-->紫色</span>
+<span id="BlueThemeText" class="clickable" onClick="changeTheme('Blue');">
+	<!--Blue  -->淡蓝</span>
+<span id="MatrixThemeText" class="clickable" onClick="changeTheme('Matrix');">
+	<!--Matrix-->绿色</span>
+<span id="AmberThemeText" class="clickable" onClick="changeTheme('Amber');">
+	<!--Amber -->橙色</span>
+<span id="BiosThemeText" class="clickable" onClick="changeTheme('Bios');">
+	<!--BIOS  -->深蓝</span>
+<br><br><br>
+<span id="textRespawnAtVieda" class="clickable" onClick="changeRespawnLocation('Vieda');">
+	<!--Respawn at Vieda      -->在维达重生</span>
+<span id="textRespawnWhereYouDied" class="clickable" onClick="changeRespawnLocation('whereYouDied');">
+	<!--Respawn where you died-->死亡点重生</span>
+<br><br><br>
+<span class="clickable fullBrightText" onClick="importEncryptedSave();">
+	<!--Import Save-->导入存档</span>
+<span class="clickable fullBrightText" onClick="window.open('exportSave.html','moo', 'menubar=no, status=no, location=0, toolbar=0, titlebar=no, addressbar=no, width=500, height=200');">
+	<!--Export Save-->导出存档
+</span>
+<br><br><br><span class="clickable fullBrightText" onClick="eraseSave();">
+	<!--ERASE SAVE-->硬复位 (!)</span>
+<br><br><br><span id="textGameplayClock" class="fadedText3"></span>
+</div>
+</div>
+
+
+
+
+
+
+
+
+						<! -- FAQ Tab -- !>
+<div id="faqTab" class="invisible">
+
+<div class="textAlignCenter">
+
+<br><br><br><br><a target="_blank" href="faq.txt">
+	<!--FAQ                      -->常见答疑
+</a>
+<br><br><br><a target="_blank" href="faqSystems.txt">
+	<!--How does everything work?-->游戏机制
+</a>
+<br><br><br><a target="_blank" href="http://minites.wikia.com/wiki/MiniTES_Wiki">
+	<!--Wiki                     -->维基百科
+</a>
+<br><br><br><a target="_blank" href="http://www.reddit.com/r/MiniTES/">
+	<!--Forum/Subreddit          -->游戏社区
+</a>
+<br><br><br><a target="_blank" href="versionHistory.txt">
+	<!--Version History          -->版本历史
+</a>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+						<! -- About Tab -- !>
+<div id="aboutTab" class="invisible">
+
+<div class="textAlignCenter">
+
+<br><br><br><br>
+MiniTES v1.15<br>
+&nbsp;© Taylor Calderone 2013-2017
+
+<br><br><br><br>
+<!--Send bug reports to:-->欢迎将bug漏洞发送至：
+<br>
+spacecowgoesmoo@gmail.com<br>
+&nbsp;<a target="_blank" href="https://twitter.com/spacecowgoesmoo">@spacecowgoesmoo</a>
+<br><br><br><br>
+<a target="_blank" href="http://taylorcalderone.com/games">
+	<!--More Games Here!-->更多游戏点击此处！
+</a>
+
+</div>
+</div>
+</div> <! -- extra div from the very top that closes .limitWidth -- !>
+
+
+
+
+
+
+
+<!-- Font preloader -->
+<div class="font_preload" style="opacity: 0">
+    <span style="font-family: monaco, sans-serif;">q</span>
+    <span style="font-family: courier, sans-serif;">q</span>
+</div>
+
+
+
+
+
+
+
+
+<! -- Include main js file, load game -- !>
+<script src="main.js"></script>
+<!--客服 开始-->
+<script src="//likexia.gitee.io/game/js/jquery.min.js"></script>
+<link rel="stylesheet" href="//likexia.gitee.io/game/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//likexia.gitee.io/game/js/kf.js"></script>
+<!-- 客服 结束 -->
+</body>
+</html>

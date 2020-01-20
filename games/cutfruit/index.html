@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>切水果</title>
+	
+	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, target-densitydpi=device-dpi" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="HandheldFriendly" content="true" />
+
+    <link type="text/css" href='./assets/softgames.css' rel="stylesheet">
+	
+	
+	
+    <script type="text/javascript">
+        window.gameLangs = ['en', 'es'];
+        window.gameJS = ['js/jquery-2.0.0.min.js', 'js/c2runtime.js'];
+        window.gameOnLoadScript = "startCutting();";
+		// updateShare(0);
+    </script>
+    <script type="text/javascript" src='./assets/softgames-1.1.js'></script>
+    <script type="text/javascript" src='./assets/sg.hooks.js'></script>
+	
+	<!--Analytics-->
+
+</head> 
+ 
+<body> 
+    <style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		body {
+			background: #000;
+			color: #fff;
+			overflow: hidden;
+			-ms-touch-action: none;
+		}
+		canvas {
+			-ms-touch-action: none;
+			max-width:100%;
+			max-height:100%;
+			
+		}
+		
+		#rotation {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -64px;
+			margin-top: -64px;
+		}
+    </style>
+	<div id="fb-root"></div>
+	<img id="rotation" src="images/rotate.png" />
+	
+	<!-- The canvas must be inside a div called c2canvasdiv -->
+	<div id="c2canvasdiv">
+	
+		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
+		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
+		<canvas id="c2canvas" width="320" height="480">
+			<!-- This text is displayed if the visitor's browser does not support HTML5.
+			You can change it, but it is a good idea to link to a description of a browser
+			and provide some links to download some popular HTML5-compatible browsers. -->
+			<h1>Your browser does not appear to support HTML5.  Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
+			<br/><br/><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br/>
+			<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br/>
+			<a href="http://www.google.com/chrome/">Google Chrome</a><br/>
+			<a href="http://www.apple.com/safari/download/">Apple Safari</a><br/>
+			<a href="http://www.google.com/chromeframe">Google Chrome Frame for Internet Explorer</a><br/></h1>
+		</canvas>
+		
+	</div>
+<script>
+		document.getElementById("c2canvasdiv").addEventListener("touchmove",function(e){
+			e.preventDefault()
+		},false);
+</script>
+</body> 
+</html> 

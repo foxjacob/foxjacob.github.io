@@ -1,0 +1,72 @@
+body {
+	background: #202020;
+	color:#F9F9F9;
+	font-family: Courier, monospace;
+}
+
+
+
+
+
+
+
+
+button {									/* Colored manually */
+	background: #444444;
+	border:1px solid #888888;
+	color:#DDDDDD;
+}
+
+button:hover {
+	color:#F9F9F9;
+	background: #666666;
+}
+
+button:disabled {
+	color:#323232;
+	background: #202020;
+	border: 1px solid #303030;
+}
+ 
+button:disabled:hover {
+	background: #222222;
+}
+
+
+
+
+
+
+
+
+.fadedText4 {
+	color:#333333;
+}
+
+.fadedText3 {
+	color:#555555;
+}
+
+.fadedText2 {
+	color:#777777;
+}
+
+.fadedText1 {
+	color:#AAAAAA;
+}
+
+.fullBrightText {
+	color:#F9F9F9;
+}
+
+
+
+
+
+
+
+
+a:link    { color:#F9F9F9 }  /* unvisited links */
+a:visited { color:#F9F9F9 }  /* visited links   */
+a:hover   { color:#F9F9F9 }  /* user hovers     */
+a:active  { color:#F9F9F9 }  /* active links    */

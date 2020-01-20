@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+	<title>脆皮 5.1.3</title>
+	<meta name="description" content="Trimps">
+	<meta name="author" content="Brownprobe">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css?20" />
+<!--
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64748869-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+-->
+</head>
+<!-- 		Trimps
+		Copyright (C) 2019 Zach Hood
+
+		This program is free software: you can redistribute it and/or modify
+		it under the terms of the GNU General Public License as published by
+		the Free Software Foundation, either version 3 of the License, or
+		(at your option) any later version.
+
+		This program is distributed in the hope that it will be useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+		GNU General Public License for more details.
+
+		You should have received a copy of the GNU General Public License
+		along with this program (if you are reading this on the original
+		author's website, you can find a copy at
+		<trimps.github.io/license.txt>). If not, see
+		<http://www.gnu.org/licenses/>. -->
+<body>
+<script src="zh.js"></script>
+	<noscript>
+	<div id="checkJavascript" style="position: absolute; height: 100%; width: 100%; font-size: 2vw; padding: 10%; color: white; background-color: black; z-index: 1000000;">
+		For some reason, your browser is having trouble loading this game. This game runs on javascript, and if you have an addon such as noscript, you may need to tell it to allow scripts from http://trimps.github.io, which is where this game is hosted.<br/><br/>
+		If you are not using any addons that might interfere with javascript, try using the latest versions of Chrome or Firefox. 
+	</div>
+	</noscript>
+	<div id="offlineWrapper">
+		<div id="offlineInnerWrapper">
+			<div id="offlineTitle">
+				弥补失去的时间......
+			</div>
+			<div id="offlineProgressWrapper" class='progress'>
+				<span id='offlineProgressText'>开始...</span>
+				<div class="progress-bar" role="progressbar" id="offlineProgress">&nbsp;</div>
+			</div>
+			<div class='row'>
+				<div class='col-xs-3'>
+					<div id='offlineZoneNumber'>区域</div>
+					<div id='offlineCellNumber'>格子 </div>
+				</div>
+				<div class='col-xs-9'>
+					<div id='offlineExtraInfo'></div>
+				</div>
+			</div>
+			<div class='row'>
+				<div id='offlineMapBtns' class='col-xs-6'>
+					<div id='offlineMapText' style='text-align: center;'>想运行一张地图吗？</div>
+					<div id='offlineMapBtnsInner'>
+						<span id="offlineMapBtn0" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(0);">世界等级地图</span>
+						<span id="offlineMapBtn1" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(-1);">-1 级地图</span>
+						<span id="offlineMapBtn2" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(-2);">-2 级地图</span>
+						<span id="offlineMapBtn3" class="offlineMapBtn btn btn-md btn-success" onclick="offlineProgress.runFirstMap(-3);">-3 级地图</span>
+					</div>
+				</div>
+				<div id='offlineZoneBtns' class='col-xs-6'>
+					<div id='offlineInMapDescription' style='text-align: center;'></div>
+					<span id='offlineZoneBtn' onclick="offlineProgress.leaveMap();" class="offlineExtraBtn btn btn-md btn-primary">返回世界</span>
+				</div>
+				<div id='offlineExtraBtnsContainer' class='col-xs-6' style='position: absolute; left: 50%; width: 25%;'>
+					<div id='offlineTimeOffline'></div>
+					<div class='btn btn-lg btn-info offlineExtraBtn' onclick="tooltip('Lost Time', null, 'update');">这是什么?!</div>
+					<div class='btn btn-lg btn-danger offlineExtraBtn' onclick='usingRealTimeOffline = false'>点这里停止</div>
+					<div id='offlineSettingContainer'></div>
+					<div id='offlineEffective'></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div id="boneWrapper" style="display: none">
+		<div id="boneWrapper0">
+			<div class="row">
+				<div class="col-xs-2">			
+				</div>
+				<div class="col-xs-8">
+					<div id="boneTitleContainer">
+						骨法商人
+					</div>
+					<div id="boneOwnedContainer">
+						你拥有 <span id="bonesOwned">0</span>
+					</div>
+					<div id="mainBoneHowTo">
+						通过杀死Skeletimps和Megaskeletimps，您可以通过世界进步，获得骨骼。
+					</div>
+					<div id="boneFlavorRow">
+						和骨法商人交易骨头可以得到...奖励
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="boneBtn dangerColor pointer noselect" onclick="hideBones()">
+						关闭
+					</div>
+				</div>
+			</div>
+			<div id="boneBuyRow" class="row">
+				<div id="boneBoostsColumn" class="col-xs-4 boneBuyColumn">
+					<div class="boneBuyTitle">提升</div>
+					<div class="boostSpacer">
+					<div class="boneBuyDesc">立即获得下一个12或36小时的资源!如果您没有足够的储存，则会自动购买(和扣除成本)。</div>
+					<div id="boostSelectContainer">
+						<div id="boost0" class="thingSmall pointer noselect boneBtnStateTeal" onclick="selectBoost(0)">
+							12 小时
+						</div>
+						<div id="boost1" class="thingSmall pointer noselect boneBtnStateOff" onclick="selectBoost(1)">
+							36 小时
+						</div>
+					</div>
+					<div id="boostPreviewContainer">
+						<table id="boostPreview" class="table table-striped">
+							<tbody>
+							<tr>
+								<td>+ <span class="glyphicon glyphicon-apple" title="food"></span> <span id="foodBoostPreview">0</span></td>
+								<td><span class="glyphicon glyphicon-home" title="storage added"></span> <span id="BarnAdded">0</span>谷仓自动购买</td>
+							</tr>
+							<tr>
+								<td>+ <span class="glyphicon glyphicon-tree-deciduous" title="wood"></span> <span id="woodBoostPreview">0</span></td>
+								<td><span class="glyphicon glyphicon-home" title="storage added"></span> <span id="ShedAdded">0</span> 棚子自动购买</td>
+							</tr>
+							<tr>
+								<td>+ <span class="icomoon icon-cubes" title="metal"></span> <span id="metalBoostPreview">0</span></td>
+								<td><span class="glyphicon glyphicon-home" title="storage added"></span> <span id="ForgeAdded"></span> 锻造自动购买</td>
+							</tr>
+							<tr>
+								<td colspan="2">+ <span class="icomoon icon-diamond" title="gems"></span> <span id="gemsBoostPreview">0</span></td>
+							</tr>
+							<tr>
+								<td colspan="2">+ <Span class="glyphicon glyphicon-th" title="fragments"></span> <span id="fragmentsBoostPreview">0</span></td>
+							</tr>
+							</tbody>
+						</table>
+						<div id="minusRes" style="display: none">
+							你的一个存储结构会比你从这个提升中获得的金额更贵。先花些资源来获得最大的利益！
+						</div>
+					</div>
+					</div>
+					<div id="purchaseContainerBoost">
+						<div class="boneBtn boneBtnStateOn pointer noselect buyBoostBtn" id="boostPurchaseBtn0" onclick="tooltip('Confirm Purchase', null, 'update', 'You are about to purchase 12 hours of instant production for 20 bones. Is this what you wanted to do?', 'purchaseBoost(0)', 20)">
+							购买12小时 (20 骨头)
+						</div>
+						<div class="boneBtn boneBtnStateOn pointer noselect buyBoostBtn" id="boostPurchaseBtn1" onclick="tooltip('Confirm Purchase', null, 'update', 'You are about to purchase 36 hours of instant production for 40 bones. Is this what you wanted to do?', 'purchaseBoost(1)', 40)">
+							购买36小时 (40 骨头)
+						</div>
+					</div>
+				</div>
+				<div id="boneImportsColumn" class="col-xs-4 boneBuyColumn">
+					<div class="boneBuyTitle">外来物种</div>
+					<div class="boostSpacerImports boostSpacer">
+					<div class="boneBuyDesc">外来物种将被永久解锁，并将在传送门附近逗留。每一个房间都有3%的几率产生，比普通的敌人有更好的奖励。把它们都收集起来!</div>
+					<div class="importsPreview">
+						<div class="importLocation">在世界上出现</div>
+						<table class="table importsTable" id="importsTableWorld0">						
+						</table>
+						<div class="importLocation table-hover">在地图中产生</div>
+						<table class="table importsTable" id="importsTableMaps0">					
+						</table>
+					</div>
+					<div id="purchaseContainerImports">
+						<div class="boneBtn boneBtnStateOff pointer noselect" id="importPurchaseBtn" onclick="tooltip('Confirm Purchase', null, 'update', '你将要花费50骨头来购买一个外来物种。这种新物种将会在你的下一个区域或地图开始出现，平均每100格出现3次。这是你想要的吗？', 'purchaseImport()', 50)"></div>
+					</div>
+				</div>
+
+				</div>
+				<div id="boneMiscColumn" class="col-xs-4 boneBuyColumn">
+					<div class="boneBuyTitle">其他好东西</div>
+						<div class="boostSpacer">
+						<div id="buyHeliumArea">
+							<div class="boneBtn boneBtnStateOn pointer noselect" id="heliumPurchaseBtn" onclick="tooltip('Confirm Purchase', null, 'update', 'You are about to purchase one Instant Portal for 100 bones. Your new helium will appear in the View Perks menu at the bottom of the screen. Is this what you wanted to do?', 'purchaseMisc(\'helium\')', 100)"> 
+								购买骨头传送门 (100 骨头)
+							</div>
+							<div class="miscDesc">
+								<b><span id="heliumGainedMisc"></span></b><br/>
+								<span id="bonePortalDescription">自动获得氦等于你在最佳运行时所获得的量</span>
+							</div>
+						</div>
+						<div id="singleRunBonuses">
+
+						</div>
+						<div id="buyHeirloomArea">
+							<div class="boneBtn boneBtnStateOn pointer noselect" id="heirloomPurchaseBtn" onclick="tooltip('Confirm Purchase', null, 'update', 'You are about to purchase one Heirloom for 30 bones. This will be created at a random rarity, and will be just like completing a Void Map at your highest ever Zone reached. Are you sure?', 'purchaseMisc(\'heirloom\')', 30)"> 
+								购买传家宝 (30 骨头)
+							</div>
+							<div class="miscDesc">
+								<div id="heirloomRarityMisc"></div>
+								在上面的机会中，根据最高区域得到一个传家宝
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper" style="background: url(css/bg2.png) center repeat-x;">
+	<div id="innerWrapper">
+		<div id="warnings"></div>
+		<div class="row" id="topRow">
+			<div class="col-xs-4" id="resourceColumn">
+				<div class="row resourceRow">
+					<div class="col-xs-6 maxH">
+						<div id="food" class="playerGather">
+							<span class="title">食物</span>
+							<br/>
+							<span class="ownedArea bdHover" onclick="getMaxResources('Food')"><span id="foodOwned">0</span> / <span id="foodMax"></span></span>
+							<br/>
+							<div class="progress resProgress">
+								<div class="progress-bar percentColorBlue" id="foodBar" role="progressbar">
+									<span id="foodTimeToFill"></span>
+								</div>
+							</div>
+							<div class="row collectRow">
+								<div class="col-xs-6">
+									<div id="foodCollectBtn" class="workBtn workColorOff pointer noselect" onclick="setGather('food')">采集</div>
+								</div>
+								<div class="col-xs-6">
+									<span class="psText sizeSecRegular pointer noselect" id="foodPs" onclick="getPsString('food')">+0/秒</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 maxH">
+						<div id="wood" class="playerGather" style="visibility: hidden;">
+							<span class="title">木头</span>
+							<br/>
+							<span class="ownedArea bdHover" onclick="getMaxResources('Wood')"><span id="woodOwned">0</span> / <span id="woodMax"></span></span>
+							<br/>
+							<div class="progress resProgress">
+								<div class="progress-bar percentColorBlue" id="woodBar" role="progressbar">
+									<span id="woodTimeToFill"></span>
+								</div>
+							</div>
+
+							<div class="row collectRow">
+								<div class="col-xs-6">
+									<div id="woodCollectBtn" class="workBtn workColorOff pointer noselect" onclick="setGather('wood')">伐木</div>
+								</div>
+								<div class="col-xs-6">
+									<span class="psText sizeSecRegular pointer noselect" id="woodPs" onclick="getPsString('wood')">+0/秒</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row resourceRow">
+					<div class="col-xs-6 maxH">
+						<div id="metal" class="playerGather" style="visibility: hidden;">
+							<span class="title">金属</span>
+							<br/>
+							<span class="ownedArea bdHover" onclick="getMaxResources('Metal')"><span id="metalOwned">0</span> / <span id="metalMax"></span></span>
+							<br/>
+							<div class="progress resProgress">
+								<div class="progress-bar percentColorBlue" id="metalBar" role="progressbar">
+									<span id="metalTimeToFill"></span>
+								</div>
+							</div>
+							<div class="row collectRow">
+								<div class="col-xs-6">
+									<div id="metalCollectBtn" class="workBtn workColorOff pointer noselect" onclick="setGather('metal')">采矿</div>
+								</div>
+								<div class="col-xs-6">
+									<span class="psText sizeSecRegular pointer noselect" id="metalPs" onclick="getPsString('metal')">+0/秒</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 maxH">
+						<div id="science" class="playerGather" style="visibility: hidden;">
+							<span class="title">科学</span>
+							<br/>
+							<span class="ownedArea"><span id="scienceOwned">0</span></span>
+							<br/>
+							<div class="row collectRow">
+								<div class="col-xs-6">
+									<div id="scienceCollectBtn" class="workBtn workColorOff pointer noselect" onclick="setGather('science')">研究</div>
+								</div>
+								<div class="col-xs-6">
+									<span class="psText sizeSecRegular pointer noselect" id="sciencePs" onclick="getPsString('science')">+0/秒</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-1" id="miscColumn">
+				<div id="fragments" class="playerGather playerGatherSm" style="visibility: hidden;">
+					<span class="title">碎片</span>
+					<br/>
+					<span class="ownedArea"><span id="fragmentsOwned">0</span></span>
+					<br/>
+					<span class="psText sizeSecRegular pointer noselect" id="fragmentsPs" style="display: none" onclick="getPsString('fragments')">+0/秒</span>
+				</div>
+				<div id="gems" class="playerGather playerGatherSm" style="visibility: hidden;">
+					<span class="title">宝石</span>
+					<br/>
+					<span class="ownedArea"><span id="gemsOwned">0</span></span>
+					<br/>
+					<span class="psText sizeSecRegular pointer noselect" id="gemsPs" style="display: none" onclick="getPsString('gems')">+0/秒</span>
+				</div>
+				<div id="helium" class="playerGather playerGatherSm" style="display: none">
+					<span id="heliumName" class="title">氦</span>
+					<br/>
+					<span class="ownedArea"><span id="heliumOwned">0</span></span>
+					<br/>
+					<span id="heliumPh" class="heliumPh hePhColorNormal"></span>
+					
+				</div>
+			</div>
+			<div class="col-xs-2" id="trimpsColumn">
+				<div id="trimps" class="playerGather" style="visibility: hidden;">
+					<div class="row">
+						<div class="col-xs-3" style="padding-right: 0">
+							<div id="turkimpBuff" style="display: none" onmouseover="tooltip('Well Fed', null, event)" onmouseout="tooltip('hide')">
+								<span class="icomoon icon-spoon-knife"></span><br/><span id="turkimpTime"></span>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="maxCenter">
+								<span id="trimpTitle" class="title">???</span>													
+							</div>
+						</div>
+						<div class="col-xs-3" style="padding-left: 0">
+							<div id="fluffyBox" style="display: none" onmouseover="tooltip('Fluffy', null, event)" onmouseout="tooltip('hide')" onclick="tooltip('Fluffy', null, 'update')">
+								<span class="fluffyIcon glyphicon glyphicon-user"></span>&nbsp;Lv<span id='fluffyLevel'></span><br/><div class="progress" id="fluffyExpContainer"><span class="progress-bar noTransition" id="fluffyExp">&nbsp;</span></div>
+							</div>
+						</div>
+					</div>
+					<span class="ownedArea pointer noselect bdHover" onclick="getMaxTrimps()"><span id="trimpsOwned">0</span> / <span id="trimpsMax">10</span></span>
+					<br/>
+					<div class="progress resProgress">
+						<div class="progress-bar percentColorBlue" id="trimpsBar" role="progressbar"><span id="trimpsTimeToFill"></span></div>
+						
+					</div>
+					<div id="unempHide" style="visibility: hidden">
+						<span id="trimpsUnemployed">0</span>&nbsp;<span id='trimpsBreedingTitle'>选育</span>
+						<br/><span id="trimpsPs" class="pointer sizeSecRegular noselect bdHover psColorWhite" onclick="getTrimpPs()">+0/秒</span>
+						<br/>
+					</div>
+					<div id="empHide" style="visibility: hidden">
+						<span id="trimpsEmployed">0</span>/<span id="maxEmployed">0</span> 雇佣
+					</div>
+					<div id="trapArea">
+						<div id="trimpsCollectBtn" class="workBtn workColorOff pointer noSelect" onclick="setGather('trimps')">Check&nbsp;Traps&nbsp;(<span id="trimpTrapText">1</span>)</div>
+						<div id="trimpsCollecting" class="collecting" style="display: none">诱捕中 (<span id="trimpTrapText2">1</span>)</div>
+						<div class="progress" id="trappingProgress">
+							<div class="progress-bar" id="trappingBar" role="progressbar"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-5" id="logColumn">
+				<div id="logContainer">
+					<div class="btn-group btn-group-justified" id="logBtnGroup" role="group">
+						<div class="btn-group" role="group">
+							<button id="StoryFilter" onclick="filterMessage('Story')" type="button" class="btn btn-success logFlt">故事</button>
+						</div>
+						<div class="btn-group" role="group">
+							<button id="LootFilter" onclick="filterMessage('Loot')" type="button" class="btn btn-success logFlt">战利品</button>
+						</div>
+						<div class="btn-group" role="group">
+							<button id="UnlocksFilter" onclick="filterMessage('Unlocks')" type="button" class="btn btn-success logFlt">解锁</button>
+						</div>
+						<div class="btn-group" role="group">
+							<button id="CombatFilter" type="button" onclick="filterMessage('Combat')" class="btn btn-success logFlt">战斗</button>
+						</div>
+						<div id="logConfigHolder" class="btn-group" role="group">
+							<button id="logConfigBtn" type="button" onclick="tooltip('Message Config', null, 'update')" class="btn btn-default logFlt"><span class='glyphicon glyphicon-cog'></span></button>
+						</div>						
+					</div>
+					<div id="log" class="niceScroll">
+						<span class="storyMessage message"><span class='glyphicon glyphicon-star'></span>一道绿色光芒闪现后消失，你坠落到了地面，你看起来是如此的饥饿...</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="bottomRow">
+			<div id="buyCol" class="col-xs-5" style="visibility: hidden;">
+				<div id="queueContainer">
+					<div class="row" id="queueRow">
+						<div class="col-xs-4 lowPad">
+							<span id="foremenCount"></span>
+						</div>
+						<div class="col-xs-2 lowPad">
+							<span id="buildSpeed"></span>
+						</div>
+						<div class="col-xs-3 lowPad">
+							<div id="autoTrapBtn" style="display: none" onclick="toggleAutoTrap()" class="pointer noselect colorDanger autoUpgradeBtn">关闭自动陷阱</div>
+						</div>
+						<div class="col-xs-3">
+							<div id="buildingsCollectBtn" onclick="setGather('buildings')" class="workBtn workColorOff pointer noselect">建造</div>
+						</div>
+					</div>
+					<div class="queue niceScroll" id="buildingsQueue">
+						<span id='noQueue'>队列空闲中...</span><div id="queueItemsHere"></div>
+					</div>
+				</div>
+				<div id="outerBuyContainer">	
+				<div id="buyTabs">
+					<ul id="buyTabsUl" class="nav nav-tabs nav-justified buyTabsUl">
+						<li role="presentation" id="allTab" onclick="filterTabs('all')" class="tabNotSelected buyTab"><a id="allA">全部</a></li>
+						<li role="presentation" id="buildingsTab" onclick="filterTabs('buildings')" class="tabNotSelected buyTab"><a id="buildingsA"><span id="buildingsAlert" class="alert badge"></span>建筑</a></li>
+						<li role="presentation" id="jobsTab" style="visibility: hidden" onclick="filterTabs('jobs')" class="tabNotSelected buyTab"><a id="jobsA"><span id="jobsAlert" class="alert badge"></span>工作</a></li>
+						<li role="presentation" id="upgradesTab" style="visibility: hidden" onclick="filterTabs('upgrades')" class="tabNotSelected buyTab"><a id="upgradesA"><span id="upgradesAlert" class="alert badge"></span>升级</a></li>
+						<li role="presentation" id="equipmentTab" style="visibility: hidden" onclick="filterTabs('equipment')" class="tabNotSelected buyTab"><a id="equipmentA"><span id="equipmentAlert" class="alert badge"></span>装备</a></li>		
+					</ul>
+					<ul id="buyTabsUl2" class="nav nav-tabs nav-justified buyTabsUl">
+						<li role="presentation" id="talentsTab" style='display: none' onclick="filterTabs('talents')" class="tabNotSelected buyTab" onmouseover="tooltip('Mastery', null, event)" onmouseout="tooltip('hide')"><a id="talentA"><span id="talentsAlert" class="alert badge"></span>专精<span id="talentsEssenceTotal"></span></a></li>		
+						<li role="presentation" id="natureTab" style='display: none'  onclick="filterTabs('nature')" class="tabNotSelected buyTab empowerTabNone" onmouseover="tooltip('Empowerments of Nature', null, event)" onmouseout="tooltip('hide')"><a id="natureA">自然</a></li>		
+						<li role="presentation" id="playerSpireTab" style='display: none' onclick="playerSpire.openPopup()" class="tabNotSelected buyTab pausedSpireNo"><a id="spireA">尖塔</a></li>		
+					</ul>
+				</div>
+
+					<div id="numTabs" class="numTabs">
+						<ul class="nav nav-tabs nav-justified">
+							<li role="presentation" class="tabNotSelected" id="tab1" onclick="numTab(1)">
+								<a id="tab1Text">+1</a>
+							</li>
+							<li role="presentation" class="tabNotSelected" id="tab2" onclick="numTab(2)">
+								<a id="tab2Text">+10</a>
+							</li>
+							<li role="presentation" class="tabNotSelected" id="tab3" onclick="numTab(3)">
+								<a id="tab3Text">+25</a>
+							</li>
+							<li role="presentation" class="tabNotSelected" id="tab4" onclick="numTab(4)">
+								<a id="tab4Text">+100</a>
+							</li>
+							<li role="presentation" class="tabNotSelected" id="tab5">
+								<a id="tab5Text" onclick="numTab(5)">+1</a>
+								<a id="tab5Text2" onclick="tooltip('Custom', null, 'update')">自定义</a>
+							</li>
+							<li role="presentation" class="tabNotSelected" id="tab6" onclick="numTab(6)" onmouseover="tooltip('购买最大', 'customText', event, '切换到这个选项后，每次购买都将花费你的大部分资源。<b>双击可以自定义数量</b>')" onmouseout="tooltip('hide')" >
+								<a id="tab6Text">最大</a>
+							</li>
+						</ul>
+					</div>
+					<div id="buyContainer" class="niceScroll">
+
+
+						<div id="buyHere" class="niceScroll buttonSizeLarge">
+
+							<div id="buildingsContainer">
+								<div id="buildingsTitleDiv" class="titleDiv">
+									<div class="row">
+										<div class="col-xs-3" style="padding-right: 5px">
+											<span id="buildingsTitleSpan" class="titleSpan">房屋</span>
+										</div>
+										<div class="col-xs-3 lowPad">&nbsp;</div>
+										<div class="col-xs-3 lowPad">
+											<div id="autoStructureBtn" onmouseover='tooltip("AutoStructure", null, event)' onmouseout='tooltip("hide")' class="toggleConfigBtn pointer noselect colorDanger autoUpgradeBtn">
+												<div id='autoStructureText' onclick="toggleAutoStructure()">自动建造</div><div onclick="tooltip('Configure AutoStructure', null, 'update')">
+													<span class='glyphicon glyphicon-cog'></span></div>
+											</div>
+										</div>
+										<div class="col-xs-3" style="padding-left: 5px">
+											<div id="autoStorageBtn" class="pointer noselect colorDanger autoUpgradeBtn" onmouseover="tooltip('AutoStorage', 'customText', event, '启用此功能将使您的脆皮在资源达到最大容量时自动建造存储类建筑。如果启用，该功能在离线和在线时都能正常工作。')" onmouseout="tooltip('hide')" onclick="toggleAutoStorage()">自动存储</div>
+										</div>
+									</div>
+								</div>
+								<div class="buyBox" id="buildingsHere">
+								</div>
+							</div>
+							<div id="jobsContainer">
+								<div id="jobsTitleDiv" class="titleDiv" style="display: none">
+									<div class="row">
+										<div class="col-xs-3" style="padding-right: 5px">
+											<span id="jobsTitleSpan" class="titleSpan">工作</span>
+										</div>
+										<div class="col-xs-3 lowPad">
+											<span id="jobsTitleUnemployed" class="titleSpan"></span>
+										</div>
+										<div class="col-xs-3 lowPad">
+											<div id="autoJobsBtn" onmouseover='tooltip("AutoJobs", null, event)' onmouseout='tooltip("hide")' class="toggleConfigBtn pointer noselect colorDanger autoUpgradeBtn">
+												<div id='autoJobsText' onclick="toggleAutoJobs()">AutoJobs</div><div onclick="tooltip('Configure AutoJobs', null, 'update')">
+													<span class='glyphicon glyphicon-cog'></span></div>
+											</div>
+										</div>
+										<div class="col-xs-3" style="padding-left: 5px">
+											<div id="fireBtn" class="pointer noselect fireBtnNotFiring" onclick="fireMode()" onmouseover="tooltip('Fire Trimps',null,event)" onmouseout="tooltip('hide')">解雇</div>
+										</div>
+									</div>
+								</div>
+								<div class="buyBox" id="jobsHere">
+								</div>
+							</div>
+							<div id="upgradesContainer">
+								<div id="upgradesTitleDiv" style="display: none" class="titleDiv">
+									<div class="row">
+										<div class="col-xs-3" style="padding-right: 5px">
+											<span id="upgradesTitleSpan" class="titleSpan">升级<br/>(需要研究)</span>
+										</div>
+										<div class="col-xs-3 lowPad">								
+											<div id="autoGoldenBtn" onmouseover="tooltip('AutoGold', null, event)" onmouseout="tooltip('hide')" class="pointer noselect settingBtn0 autoUpgradeBtn">
+												<div id='autoGoldenText' onclick="toggleAutoGolden()">AutoGold</div>
+											</div>
+										</div>
+										<div class="col-xs-3 lowPad">
+											<div id="autoPrestigeBtn" class="pointer noselect autoUpgradeBtn settingBtn0" onmouseover="tooltip('AutoPrestige', null, event)" onmouseout="tooltip('hide')" onclick="toggleAutoPrestiges()">AutoPrestige</div>
+										</div>
+										<div class="col-xs-3" style="padding-left: 5px">
+											<div id="autoUpgradeBtn" class="pointer noselect colorDanger autoUpgradeBtn" onmouseover="tooltip('AutoUpgrade', null, event)" onmouseout="tooltip('hide')" onclick="toggleAutoUpgrades()">自动升级</div>
+										</div>
+									</div>
+								</div>
+								<div class="buyBox" id="upgradesHere">
+								</div>
+							</div>
+							<div id="equipmentContainer">
+								<div id="equipmentTitleDiv" style="display: none" class="titleDiv">
+									<div class="row">
+										<div class="col-xs-3">
+											<span id="equipmentTitleSpan" class="titleSpan">装备</span>
+										</div>
+										<div class="col-xs-3 lowPad">&nbsp;</div>
+										<div class="col-xs-3 lowPad">&nbsp;</div>
+										<div class="col-xs-3" style="padding-left: 5px">
+											<div id="autoEquipBtn" onmouseover='tooltip("AutoEquip", null, event)' onmouseout='tooltip("hide")' class="toggleConfigBtn pointer noselect colorDanger autoUpgradeBtn">
+												<div id='autoEquipText' onclick="toggleAutoEquip()">AutoEquip</div><div onclick="tooltip('Configure AutoEquip', null, 'update')">
+													<span class='glyphicon glyphicon-cog'></span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+								<div class="buyBox" id="equipmentHere"></div>
+							</div>
+							<div id="talentsContainer" style="display: none">
+								<div class='row noMarg'>
+									<div class='col-xs-3 lowPad'><div id='talentsAffordable'></div></div>
+									<div class='col-xs-6 lowPad'>
+										<div id="talentsTitle">
+											<span id='essenceOwned'>0</span>黑暗精华
+										</div>
+									</div>
+									<div class='col-xs-3 lowPad'>
+										<div class='pointer noselect colorDanger' onmouseover='tooltip("Respec Masteries", null, event)' onmouseout='tooltip("hide")' onclick='respecTalents()' id='talentRespecBtn'>洗点 (20 点)</div>
+									</div>
+								</div>
+								<div id="talentsCost">你的下一个掌握成本 <span id='talentsNextCost'>0</span>.</div>
+								<div id="talentsHere" onload="preventZoom(this)"></div>
+							</div>
+							<div id="natureContainer" style="display: none; height: 100%;">
+								<div class='row noMarg' style="height: 100%;">
+									<div id='tabColPoison' class='col-xs-4 tabColPoison tabColNature noPad'>
+										<div class='natureTop'>
+											<div class='natureTitle'>
+												<span id='infoSpanPoison' class='infoSpanNature' onmouseover="natureTooltip(event, 'description', 'Poison')" onmouseout="tooltip('hide')"><span class='icomoon icon-info2'></span></span>
+												毒									
+											</div>
+											符记: <span id="tokenCountPoison">0</span>
+										</div>
+										<span class='natureBuyIcon noselect' onmouseover="natureTooltip(event, 'upgrade', 'Poison')" onmouseout="tooltip('hide');" onclick="naturePurchase('upgrade', 'Poison')">
+											<span class='natureUpgradeLevel' id='natureUpgradePoisonLevel'></span>
+											<span class='natureUpgradeCost' id='natureUpgradePoisonCost'></span>
+											<span class='natureBigIcon icomoon icon-plus'></span>
+										</span>
+										<span class='natureBuyIcon noselect' onmouseover="natureTooltip(event, 'stackTransfer', 'Poison')" onmouseout="tooltip('hide');" onclick="naturePurchase('stackTransfer', 'Poison')">
+											<span class='natureUpgradeLevel' id='natureStackTransferPoisonLevel'></span>
+											<span class='natureUpgradeCost' id='natureStackTransferPoisonCost'></span>
+											<span class='natureBigIcon icomoon icon-rotate-left'></span>
+										</span>
+										<span id='uberPoisonContainer' class='natureBuyIcon natureUberContainer noselect' onmouseover="natureTooltip(event, 'uberEmpower', 'Poison')" onmouseout="tooltip('hide');" onclick="naturePurchase('uberEmpower', 'Poison')">
+											<span class='natureUpgradeLevel natureUberName' id='uberPoisonName'></span>
+											<span class='natureUpgradeCost' id='natureUberEmpowerPoisonCost'></span>
+											<span class='natureBigIcon glyphicon glyphicon-king'></span>
+										</span>
+										<div class="transferButtons">
+											<span class='natureBuyIcon noselect natureBuyIconMini' onmouseover="natureTooltip(event, 'convert', 'Poison', 'Wind')" onmouseout="tooltip('hide');" onclick="naturePurchase('convert', 'Poison', 'Wind')">
+												<span class='natureUpgradeCost' id='naturePoisonWindCost'></span>
+												<span class='natureSmallIcon icomoon icon-shuffle3'></span>
+												<span class='natureSmallIcon icomoon icon-air'></span>
+											</span>
+											<span class='natureBuyIcon noselect natureBuyIconMini' onmouseover="natureTooltip(event, 'convert', 'Poison', 'Ice')" onmouseout="tooltip('hide');" onclick="naturePurchase('convert', 'Poison', 'Ice')">
+												<span class='natureUpgradeCost' id='naturePoisonIceCost'></span>
+												<span class='natureSmallIcon icomoon icon-shuffle3'></span>
+												<span class='natureSmallIcon glyphicon glyphicon-certificate'></span>
+											</span>
+										</div>
+										<span class='natureBackgroundIcon icomoon icon-flask'></span>
+									</div>
+									<div id='tabColWind' class='col-xs-4 tabColWind tabColNature noPad'>
+										<div class='natureTop'>
+											<div class='natureTitle'>
+												<span id='infoSpanWind' class='infoSpanNature' onmouseover="natureTooltip(event, 'description', 'Wind')" onmouseout="tooltip('hide')"><span class='icomoon icon-info2'></span></span>
+													风
+											</div>
+											符记: <span id="tokenCountWind">0</span>
+										</div>
+										<span class='natureBuyIcon noselect' onmouseover="natureTooltip(event, 'upgrade', 'Wind')" onmouseout="tooltip('hide');" onclick="naturePurchase('upgrade', 'Wind')">
+											<span class='natureUpgradeLevel' id='natureUpgradeWindLevel'></span>
+											<span class='natureUpgradeCost' id='natureUpgradeWindCost'></span>
+											<span class='natureBigIcon icomoon icon-plus'></span>
+										</span>
+										<span class='natureBuyIcon noselect' onmouseover="natureTooltip(event, 'stackTransfer', 'Wind')" onmouseout="tooltip('hide');" onclick="naturePurchase('stackTransfer', 'Wind')">
+											<span class='natureUpgradeLevel' id='natureStackTransferWindLevel'></span>
+											<span class='natureUpgradeCost' id='natureStackTransferWindCost'></span>
+											<span class='natureBigIcon icomoon icon-rotate-left'></span>
+										</span>
+										<span id='uberWindContainer' class='natureBuyIcon natureUberContainer noselect' onmouseover="natureTooltip(event, 'uberEmpower', 'Wind')" onmouseout="tooltip('hide');" onclick="naturePurchase('uberEmpower', 'Wind')">
+											<span class='natureUpgradeLevel natureUberName' id='uberWindName'></span>
+											<span class='natureUpgradeCost' id='natureUberEmpowerWindCost'></span>
+											<span class='natureBigIcon glyphicon glyphicon-king'></span>
+										</span>
+										<div class='transferButtons'>
+											<span class='natureBuyIcon noselect natureBuyIconMini' onmouseover="natureTooltip(event, 'convert', 'Wind', 'Ice')" onmouseout="tooltip('hide');" onclick="naturePurchase('convert', 'Wind', 'Ice')">
+												<span class='natureUpgradeCost' id='natureWindIceCost'></span>
+												<span class='natureSmallIcon icomoon icon-shuffle3'></span>
+												<span class='natureSmallIcon glyphicon glyphicon-certificate'></span>
+											</span>
+											<span class='natureBuyIcon noselect natureBuyIconMini' onmouseover="natureTooltip(event, 'convert', 'Wind', 'Poison')" onmouseout="tooltip('hide');" onclick="naturePurchase('convert', 'Wind', 'Poison')">
+												<span class='natureUpgradeCost' id='natureWindPoisonCost'></span>
+												<span class='natureSmallIcon icomoon icon-shuffle3'></span>
+												<span class='natureSmallIcon icomoon icon-flask'></span>
+											</span>
+										</div>
+										<span class='natureBackgroundIcon icomoon icon-air'></span>
+									</div>
+									<div id='tabColIce' class='col-xs-4 tabColIce tabColNature noPad'>
+										<div class='natureTop'>
+											<div class='natureTitle'>
+												<span id='infoSpanIce' class='infoSpanNature' onmouseover="natureTooltip(event, 'description', 'Ice')" onmouseout="tooltip('hide')"></span>
+												冰
+											</div>
+											符记: <span id="tokenCountIce">0</span>
+										</div>
+										<span class='natureBuyIcon noselect' onmouseover="natureTooltip(event, 'upgrade', 'Ice')" onmouseout="tooltip('hide');" onclick="naturePurchase('upgrade', 'Ice')">
+											<span class='natureUpgradeLevel' id='natureUpgradeIceLevel'></span>
+											<span class='natureUpgradeCost' id='natureUpgradeIceCost'></span>
+											<span class='natureBigIcon icomoon icon-plus'></span>
+										</span>
+										<span class='natureBuyIcon noselect' onmouseover="natureTooltip(event, 'stackTransfer', 'Ice')" onmouseout="tooltip('hide');" onclick="naturePurchase('stackTransfer', 'Ice')">
+											<span class='natureUpgradeLevel' id='natureStackTransferIceLevel'></span>
+											<span class='natureUpgradeCost' id='natureStackTransferIceCost'></span>
+											<span class='natureBigIcon icomoon icon-rotate-left'></span>
+										</span>
+										<span id='uberIceContainer' class='natureBuyIcon noselect natureUberContainer' onmouseover="natureTooltip(event, 'uberEmpower', 'Ice')" onmouseout="tooltip('hide');" onclick="naturePurchase('uberEmpower', 'Ice')">
+											<span class='natureUpgradeLevel natureUberName' id='uberIceName'></span>
+											<span class='natureUpgradeCost' id='natureUberEmpowerIceCost'></span>
+											<span class='natureBigIcon glyphicon glyphicon-king'></span>
+										</span>
+										<div class="transferButtons">
+											<span class='natureBuyIcon noselect natureBuyIconMini' onmouseover="natureTooltip(event, 'convert', 'Ice', 'Poison')" onmouseout="tooltip('hide');" onclick="naturePurchase('convert', 'Ice', 'Poison')">
+												<span class='natureUpgradeCost' id='natureIcePoisonCost'></span>
+												<span class='natureSmallIcon icomoon icon-shuffle3'></span>
+												<span class='natureSmallIcon icomoon icon-flask'></span>
+											</span>
+											<span class='natureBuyIcon noselect natureBuyIconMini' onmouseover="natureTooltip(event, 'convert', 'Ice', 'Wind')" onmouseout="tooltip('hide');" onclick="naturePurchase('convert', 'Ice', 'Wind')">
+												<span class='natureUpgradeCost' id='natureIceWindCost'></span>
+												<span class='natureSmallIcon icomoon icon-shuffle3'></span>
+												<span class='natureSmallIcon icomoon icon-air'></span>
+											</span>
+										</div>
+										<span class='natureBackgroundIcon icomoon icon-certificate'></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-7" id="rightCol">
+				<div id="battleContainer" style="visibility: hidden">
+					<div id="battleHeadContainer">
+						<div class="row" id="battleStatsRow">
+							<div class="col-xs-6" id="goodGuyCol">
+								<div class="row">
+									<div class="col-xs-9" style="padding-right: 5px">
+									<!-- Update in resetGame if adding to name -->
+										<div class="battleStatsTitle" id="goodGuyName"><span id='realTrimpName'>脆皮</span>&nbsp;(<span id="trimpsFighting">1</span>) <span id="anticipationSpan"></span> <span id="titimpBuff"></span> <span id="debuffSpan"></span></div>
+									</div>
+									<div class="col-xs-3" style="padding-left: 5px;">
+										<div class="row noPad" style="padding-right: 15px;">
+											<div id='form0Container' class="formFifth noPad">
+												<div class="formationBtn pointer formationStateDisabled" onclick="setFormation('0')" id="formation0" onmouseover="tooltip('无编队', 'customText', event, '清除你的阵型，回归正常状态，并清除战场周围的人员。 (热键: X 或 1)')" onmouseout="tooltip('hide')">
+													X
+												</div>
+											</div>
+											<div id='form1Container' class="formFifth noPad">
+												<div class="formationBtn pointer formationStateDisabled" onclick="setFormation('1')" id="formation1" onmouseover="tooltip('肉山阵型', 'customText', event, '脆皮增加了4倍的生命，但却失去了一半的攻击和格挡。 (热键: H 或 2)')" onmouseout="tooltip('hide')">
+													H
+												</div>
+											</div>
+											<div id='form2Container' class="formFifth noPad">
+												<div class="formationBtn pointer formationStateDisabled" onclick="setFormation('2')" id="formation2" onmouseover="tooltip('攻击阵型', 'customText', event, '脆皮增加了4倍的攻击，但却失去了一半的生命和格挡。 (热键: D 或 3)')" onmouseout="tooltip('hide')">
+													D
+												</div>										
+											</div>
+											<div id='form3Container' class="formFifth noPad">
+												<div class="formationBtn pointer formationStateDisabled" onclick="setFormation('3')" id="formation3" onmouseover="tooltip('防守阵型', 'customText', event, '脆皮增加了4倍格挡和减少50%受到的穿刺伤害，但失去了一半的生命和攻击。 (热键: B 或 4)')" onmouseout="tooltip('hide')">
+													B
+												</div>											
+											</div>
+											<div id='form4Container' class="formFifth noPad">
+												<div class="formationBtn pointer formationStateDisabled" onclick="setFormation('4')" id="formation4" onmouseover="tooltip('Scryer Formation', null, event)" onmouseout="tooltip('hide')">
+													S
+												</div>											
+											</div>
+											<div id='form5Container' class="formSixth noPad">
+												<div class="formationBtn pointer formationStateDisabled" onclick="setFormation('5')" id="formation5" onmouseover="natureTooltip(event, 'formation')" onmouseout="tooltip('hide')">
+													N
+												</div>											
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row guyRow" id="goodGuyStatsRow">
+									<div id='damageDiv' class="col-xs-6 lbdHover pointer noselect bdHover" style="padding-right: 0" onclick="getBattleStatBd('attack')">
+										<span id="goodGuyAttack" class='attackColorNormal'></span> 攻击 <span id="critSpan"></span>
+									</div>
+									<div class="col-xs-4 noPad pointer noselect bdHover" id="blockDiv" style="visibility: hidden" onclick="getBattleStatBd('block')">
+										<span id="goodGuyBlock">0</span> <span id='goodGuyBlockName'>防御</span>
+									</div>
+									<div class="col-xs-2 pointer noselect" style="padding-left: 0" id="roboTrimpBtn" onclick="magnetoShriek()">
+										<span id="chainHolder" class="shriekStateCooldown" style='visibility: hidden' onmouseover="tooltip('MagnetoShriek', null, event)" onmouseout="tooltip('hide')"><span id="roboTrimpTurnsLeft"></span> <span class="icomoon icon-chain" style="color: white"></span></span>
+									</div>
+								</div>
+								<div class="progress fightBar">
+									<div class="progress-bar percentColorBlue" id="goodGuyBar" role="progressbar">
+										<span class="bdHover pointer noselect innerFightBar" onclick="getBattleStatBd('health')">
+											<span id="goodGuyHealth">0</span>/<span id="goodGuyHealthMax">0</span>
+										</span>
+									</div>
+									<div class="progress-bar" role="progressbar" id="energyShield">&nbsp;</div>
+								</div>
+							</div>
+							<div class="col-xs-6" id="badGuyCol" style="visibility: hidden">
+							<div>
+								<div class="row">
+									<div class="col-xs-11">
+									<span class="battleStatsTitle"><span id="badGuyName"></span> <span id="corruptionBuff"></span><span id="voidBuff"></span><span id="badCanCrit" style="display: none" class="badge" onmouseover="tooltip('致命打击', 'customText', event, '你当前的最大生命高于你的防御，使你易受敌人的暴击，最好解决一下这个问题……')" onmouseout="tooltip('hide')"><span class="icomoon icon-hair-cross"></span></span><span id='badDebuffSpan'></span></span><br/>
+									<div class="guyRow" id="badGuyRow">
+									<div>
+										<span id="badGuyAttack" class="dmgColorWhite"></span> 攻击 <span id="badCrit"></span>
+									</div>
+								</div>
+									</div>
+									<div class="col-xs-1" style="font-size: 1.5em; padding: 0;">
+										<div id="lootBdContainer">
+										<span id="lootBdBtn" class="icomoon icon-gift2 pointer" onclick="getLootBd('Food/Wood/Metal')"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+								<div class="progress fightBar">
+									<div class="progress-bar percentColorBlue" id="badGuyBar" role="progressbar">
+										<span class="innerFightBar">
+											<span id="badGuyHealth">0</span>/<span id="badGuyHealthMax">0</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="row" id="gridRow">
+						<div class="col-xs-2" id="battleBtnsColumn">
+							<div id="battleSideTitle" onmouseover="getZoneStats(event)" onmouseout="tooltip('hide')">
+									<span id="worldName">区域</span> <span id="worldNumber">1</span><br/><span id="mapBonus"></span>
+							</div>
+							<div class="battleSideBtnContainer">
+								<span class="btn btn-primary fightBtn" id="fightBtn" onmouseover="tooltip('战斗',null,event)" onmouseout="tooltip('hide')" onclick="fightManual()">
+									战斗
+								</span>
+							</div>
+							<div class="battleSideBtnContainer">
+								<span class="btn btn-danger fightBtn" id="pauseFight" onmouseover="tooltip('自动战斗',null,event)" onmouseout="tooltip('hide')" onclick="pauseFight()" style="display: none">
+									自动战斗 关闭
+								</span>
+							</div>
+							<div class="battleSideBtnContainer">
+								<div id="mapsBtn" onmouseover="tooltip('Maps', null, event)" onmouseout="tooltip('hide')" style="display: none">
+									<div id='mapsBtnText' onclick="mapsClicked()">地图</div><div onclick="tooltip('Configure Maps', null, 'update')">
+										<span class='glyphicon glyphicon-cog'></span></div>
+								</div>
+							</div>
+							<div class="battleSideBtnContainer">
+								<span class="btn voidMessage fightBtn" id="voidMapsBtn" onclick="toggleVoidMaps()" style="display: none">
+									虚空地图
+								</span>
+							</div>
+							<div class="battleSideBtnContainer">
+								<span class="btn btn-info fightBtn" id="portalBtn" onmouseover="tooltip('Portal', null, event)" onmouseout="tooltip('hide')" onclick="portalClicked()" style="display: none">
+									传送门
+								</span>
+							</div>
+							<div class="battleSideBtnContainer">
+								<span class="btn btn-danger fightBtn" id="repeatBtn" onmouseover="tooltip('Repeat Map', null, event)" onmouseout="tooltip('hide')" onclick = "repeatClicked()" style="display: none">
+									副本扫荡 关闭
+								</span>
+							</div>
+							<div class="battleSideBtnContainer" style="display: none" id="heirloomBtnContainer">
+								<span id="heirloomsBtn" class="btn fightBtn heirloomsBtnColor" onclick="toggleHeirlooms()">传家宝</span>
+							</div>
+							<div class="battleSideBtnContainer" style="display: none" id="boneBtnContainer">
+								<span class="btn btn-default fightBtn" id="boneBtnMain" onclick="showBones()">
+									<span id="boneBtnText">骨法商人</span>
+								</span>
+							</div>							
+							<div class="battleSideBtnContainer" style="display: none" id="finishDailyBtnContainer">
+								<span class="btn btn-success fightBtn" id="finishDailyBtn" onclick="tooltip('Finish Daily', null, 'update')">
+									完成每日
+								</span>
+							</div>
+							<div class="battleSideBtnContainer" style="display: none" id="exitSpireBtnContainer">
+								<span class="btn btn-danger fightBtn" id="exitSpireBtn" onclick="tooltip('Exit Spire', null, 'update')">
+									退出尖塔
+								</span>
+							</div>
+						</div>
+						<div class="col-xs-10" id="gridContainer">
+							<div id="grid"></div>
+							<div id="preMaps" style="display: none">
+							<div style="display: none" id="mapsCreateRow" class="row">
+								<div id='advMapsControlBtns'>
+									<span id='advMapsHideBtn' class='icomoon icon-minus-circle pointer' onclick='hideAdvMaps()' onmouseover="tooltip('Show/Hide Map Config', 'advMaps', event)" onmouseout="tooltip('hide')"></span>
+									<span id='advMapsPreset1' class='pointer mapPreset presetSelectionOff' onclick='selectAdvMapsPreset(1)' onmouseover="tooltip('Map Preset', 'advMaps', event)" onmouseout="tooltip('hide')">1</span>
+									<span id='advMapsPreset2' class='pointer mapPreset presetSelectionOff' onclick='selectAdvMapsPreset(2)' onmouseover="tooltip('Map Preset', 'advMaps', event)" onmouseout="tooltip('hide')">2</span>
+									<span id='advMapsPreset3' class='pointer mapPreset presetSelectionOff' onclick='selectAdvMapsPreset(3)' onmouseover="tooltip('Map Preset', 'advMaps', event)" onmouseout="tooltip('hide')">3</span>
+									<span id='advMapsSaveBtn' class='icomoon icon-save pointer' onclick='saveAdvMaps()' onmouseover="tooltip('Save Map Settings', 'advMaps', event)" onmouseout="tooltip('hide')"></span>	
+									<span id='advMapsResetBtn' class='icomoon icon-refresh pointer' onclick='resetAdvMaps(true)' onmouseover="tooltip('Reset Map Settings', 'advMaps', event)" onmouseout="tooltip('hide')"></span>											
+									<span id='advMapsRecycleBtn' class="icomoon icon-trash-o pointer iconStateBad" onmouseover="tooltip('Recycle All', null, event)" onmouseout="tooltip('hide')" onclick="recycleBelow(false)"></span>
+								</div>
+								<div id="mapLevelContainer" class="col-xs-4">
+									等级 <span class="pointer noselect incrementBtn" onclick="incrementMapLevel(-1)"><span class="glyphicon glyphicon-download"></span></span><input onkeyup="updateMapCost()" type="number" id="mapLevelInput" onfocusout="checkMapLevelInput(this)"><span class="pointer noselect incrementBtn" onclick="incrementMapLevel(1)"><span class="glyphicon glyphicon-upload"></span></span>
+								</div>
+								<div id="mapCostContainer" class="col-xs-4 lowPad">
+									<span id="mapCostFragmentCost"></span><span id="mapCostFragmentText"> 碎片</span>
+								</div>
+								<div id="mapCreateBtn" onclick='buyMap()' class="workBtn primaryColor pointer noselect col-xs-4">
+									制作
+								</div>
+							</div>
+							<div id="advMapsRow" class="row">
+								<div id="advLootContainer" class="col-xs-3 mapConfigContainer lowPad">
+									<div class="advMapsTitle" onmouseover="tooltip('Loot', 'advMaps', event)" onmouseout="tooltip('hide')">
+										劫掠
+									</div>
+									<br/>
+									<input value="0" id="lootAdvMapsRange" class="mapSelector mapInput" type="range" min="0" max="9" oninput="updateMapNumbers()" onchange="updateMapNumbers()">
+									<div id="lootAdvMapsText"></div>
+								</div>
+								<div id="advSizeContainer" class="col-xs-3 mapConfigContainer lowPad">
+									<div class="advMapsTitle" onmouseover="tooltip('Size', 'advMaps', event)" onmouseout="tooltip('hide')">
+										尺寸
+									</div>
+									<br/>
+									<input value="0" id="sizeAdvMapsRange" class="mapSelector mapInput" type="range" min="0" max="9" oninput="updateMapNumbers()" onchange="updateMapNumbers()">
+									<div id="sizeAdvMapsText"></div>
+								</div>
+								<div id="advDifficultyContainer" class="col-xs-3 mapConfigContainer lowPad">
+									<div class="advMapsTitle" onmouseover="tooltip('Difficulty', 'advMaps', event)" onmouseout="tooltip('hide')">
+										难度
+									</div>
+									<br/>
+									<input value="0" id="difficultyAdvMapsRange" class="mapSelector mapInput" type="range" min="0" max="9" oninput="updateMapNumbers()" onchange="updateMapNumbers()">
+									<div id="difficultyAdvMapsText"></div>
+								</div>
+								<div id="advBiomeContainer" class="col-xs-3 mapConfigContainer lowPad" onmouseover="tooltip('Biome', 'advMaps', event)" onmouseout="tooltip('hide')">
+									<div class="advMapsTitle">
+										生物群落
+									</div>
+									<br/>
+									<select id="biomeAdvMapsSelect" class="advSelect" onchange="updateMapCost()">
+										<option value="Random">随机</option>
+										<option value="Mountain">山地</option>
+										<option value="Forest">森林</option>
+										<option value="Sea">海洋</option>
+										<option value="Depths">深渊</option>
+									</select>
+								</div>
+							</div>
+							<div id="advMapsRow2" class="row">
+								<div class="col-xs-2 mapConfigContainer lowPad"></div>
+								<div class="col-xs-3 mapConfigContainer lowPad">
+									<div class="advMapsTitle" onmouseover="tooltip('Special Modifier', 'advMaps', event)" onmouseout="tooltip('hide')">
+										特殊修饰符
+									</div>
+									<br/>
+									<select id="advSpecialSelect" class="advSelect" onchange="updateMapCost()">
+									</select>
+								</div>
+								<div class="col-xs-2 mapConfigContainer lowPad">
+									<div id="advPerfectLocked" style="border: 1px solid white">
+										<div class="advMapsTitle" id='advPerfectLockedText'>
+											在Z110解锁
+										</div>
+										<span class="icomoon icon-lock3"></span>
+									</div>
+									<div id="advPerfectUnlocked" style="display: none">
+										<div class="advMapsTitle" onmouseover="tooltip('Perfect Sliders', 'advMaps', event)" onmouseout="tooltip('hide')">
+											完美的滑块
+										</div>
+										<br/>
+										<span id="advPerfectCheckbox" class="icomoon icon-checkbox-unchecked niceCheckbox" data-checked="false" onclick="swapNiceCheckbox(this); updateMapNumbers()"></span>
+									</div>
+								</div>
+								<div class="col-xs-3 mapConfigContainer lowPad">
+									<div id="advExtraLevelLocked" style="border: 1px solid white">
+										<div class="advMapsTitle" id='advExtraLockedText'>
+											在Z210解锁
+										</div>
+										<span class="icomoon icon-lock3"></span>
+									</div>
+									<div id="advExtraLevelUnlocked" style="display: none">
+										<div class="advMapsTitle" onmouseover="tooltip('Extra Zones', 'advMaps', event)" onmouseout="tooltip('hide')">
+											额外的区域
+										</div>
+										<br/>
+										<select id="advExtraLevelSelect" class="advSelect" onchange="updateMapCost()"></select>
+									</div>
+								</div>
+								<div class="col-xs-2 mapConfigContainer lowPad"></div>
+							</div>
+							<div id="heirRare" style="display: none">
+									
+							</div>
+							<div id="selectedMapContainer" class="row">
+								<div id="selectedMapCol" class="col-xs-3 lowPad">
+									<div id="selectedMapName"></div><br/>
+									<div id="mapCreditsLeft" title="Earn 1 Credit for each zone you clear while on this challenge"></div>
+								</div>
+
+								<div id="mapStatsCol3" class="col-xs-5 lowPad">
+								<div class="row">
+									<div class="col-xs-7 mapStatsCol">
+										<div class="mapStatsTitle">项目</div>
+										<div class="mapStatsTitle">资源</div>
+									</div>
+									<div id="mapStatsCol4" class="col-xs-5 mapStatsCol">
+										<div class="mapStatsValue" id="mapStatsItems"></div>
+										<div class="mapStatsValue" id="mapStatsResource"></div>
+									</div>
+								</div>
+								<div id="selectMapBtns">
+									<span id="selectMapBtn" class="workBtn pointer noselect infoColor selectMapBtn" style="visibility: hidden" onclick="runMap()">
+										运行地图
+									</span>
+									<span id="recycleMapBtn" class="workBtn pointer noselect dangerColor selectMapBtn" style="visibility: hidden" onclick="recycleMap()">
+										回收地图
+									</span>
+								</div>
+								</div>
+								<div id="mapStatsCol1" class="col-xs-2 mapStatsCol">
+									<div class="mapStatsTitle">大小</div>
+									<div class="mapStatsTitle">难度</div>
+									<div class="mapStatsTitle">战利品</div>
+								</div>
+								<div id="mapStatsCol2" class="col-xs-2 mapStatsCol">
+									<div class="mapStatsValue" id="mapStatsSize"></div>
+									<div class="mapStatsValue" id="mapStatsDifficulty"></div>
+									<div class="mapStatsValue" id="mapStatsLoot"></div>
+								</div>	
+							</div>
+							<div id="mapsHere" class="mapSize1 niceScroll">
+							</div>
+							<div id="voidMapsHere" class="niceScroll">
+							</div>
+							</div>
+							<div id="mapGrid" class="gridShrunk" style="display: none;"></div>
+							<div id="extraGridInfo" style="display: none;">
+								<div id="extraGridInfoTitle"></div>
+								<div id="extraGridInfoSummary"></div>
+								<div id="extraGridInfoSub"></div>
+								<div id="extraGridInfoBtns">
+									<span class="btn btn-info" onclick="restoreGrid()">Continue</span>
+								</div> 
+							</div>
+						</div>
+						<div id="extraMapBtns" class="col-xs-off">
+							<div class="battleSideBtnContainer">
+								<span class="btn settingBtn1 fightBtn" id="togglemapLoot2" onmouseout="tooltip('hide')" onclick="toggleSetting('mapLoot')">
+								</span>
+							</div>									
+							<div class="battleSideBtnContainer">
+								<span class="btn settingBtn1 fightBtn" id="togglerepeatUntil" onmouseout="tooltip('hide')" onclick="toggleSetting('repeatUntil')">
+								</span>
+							</div>								
+							<div class="battleSideBtnContainer">
+								<span class="btn settingBtn1 fightBtn" id="toggleexitTo" onmouseout="tooltip('hide')" onclick="toggleSetting('exitTo')">
+								</span>
+							</div>
+							<div class="battleSideBtnContainer">
+								<span class="btn settingBtn1 fightBtn" id="togglemapAtZone2" onmouseout="tooltip('hide')" onclick="toggleSetting('mapAtZone')">
+								</span>
+							</div>							
+							<div class="battleSideBtnContainer" style="display: none" id="repeatVoidsContainer">
+								<span class="btn settingBtn1 fightBtn" id="togglerepeatVoids" onmouseout="tooltip('hide')" onclick="toggleSetting('repeatVoids')">
+								</span>
+							</div>
+							<div class="battleSideBtnContainer" style="display: none" id="climbBwContainer">
+								<span class="btn settingBtn1 fightBtn" id="toggleclimbBw2" onmouseout="tooltip('hide')" onclick="toggleSetting('climbBw')">
+								</span>
+							</div>				
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="settingsRow">
+			<table id="settingsTable">
+				<tr>
+					<td class="btn btn-info" onclick="save(false, true)">
+						保存 <span id="saveIndicator"></span><span id="playFabIndicator"></span>
+					</td>
+					<td class="btn btn-info" onclick="tooltip('导出', null, 'update')">
+						<div>导出</div>
+					</td>
+					<td class="btn btn-info" onclick="tooltip('导入', null, 'update')">
+						<div>导入</div>
+					</td>
+					<td class="btn btn-success" onclick="toggleStats()">
+						<div>统计</div>
+					</td>
+					<td class="btn tealColor" onclick="toggleAchievementWindow()">
+						<div>成就</div>
+					</td>
+					<td class="btn btn-default" onclick="toggleSettingsMenu()">
+						<div id='settingsText'>设置</div>
+					</td>
+					<td class="btn" id="pastUpgradesBtn" onclick="viewPortalUpgrades()">
+						
+					</td>
+					<td class="btn btn-new" onclick="window.open('changelog.html', '_blank')">
+							版本号 <span id="versionNumber"></span> | 更新日志
+					</td>
+					<td id="portalTimer" class="timerNotPaused" onclick="toggleSetting('pauseGame')" onmouseover="tooltip('暂停游戏', 'customText', event, game.options.menu['pauseGame'].description)" onmouseout="tooltip('hide')">
+						<span id="portalTime">&nbsp;</span>&nbsp;&nbsp;<span style='font-size: 0.85em; line-height: 0.85em;' class='icomoon icon-pause3'></span>&nbsp;
+					</td>
+					<td class="btn btn-default" id="autoCuipi" onclick="importAuto();" title="旧自动脆皮脚本1~如果想切换/停止脚本，请点击保存游戏，然后刷新游戏~">
+							脚本1
+					</td>
+					<td class="btn btn-default" id="autoCuipi2" onclick="importAuto2();" title="新自动脆皮脚本2~如果想切换/停止脚本，请点击保存游戏，然后刷新游戏~">
+							脚本2
+					</td>
+					<td class="btn btn-default" id="autoCuipi3" onclick="importAuto3();" title="新自动脆皮脚本3~如果想切换/停止脚本，请点击保存游戏，然后刷新游戏~">
+							脚本3
+					</td>
+				</tr>
+			</table>
+			<div id="settingsHere" style="display: none">
+				<div id='searchSettingsWindow'>
+					<div id='settingTitleBar'>
+						<div class='noselect optionContainer settingsBtn tealColor settingTypeBtn' onclick='toggleSettingSection(false)'>查看所有</div>
+						<span id='searchSettingsTitle'>选择下面的类别，或搜索设置/关键字：</span>&nbsp;
+						<input id='searchSettings' onkeyup='searchSettings(this)' /><br/>
+						<div id='settingsTabs'>
+							<ul class="nav nav-tabs nav-justified">
+								<li role="presentation" style='display: none' id='NewTab' onclick="settingTab('New')" class="tabNotSelected settingTab"><a>New</a></li>
+								<li role="presentation" id='GeneralTab' onclick="settingTab('General')" class="tabNotSelected settingTab"><a>常用</a></li>
+								<li role="presentation" id='PerformanceTab' onclick="settingTab('Performance')" class="tabNotSelected settingTab"><a>性能</a></li>
+								<li role="presentation"  id='QOLTab' onclick="settingTab('QOL')" class="tabNotSelected settingTab"><a>生活质量</a></li>
+								<li role="presentation"  id='AlertsTab' onclick="settingTab('Alerts')" class="tabNotSelected settingTab"><a>弹出窗口和通知</a></li>
+								<li role="presentation"  id='LayoutTab' onclick="settingTab('Layout')" class="tabNotSelected settingTab"><a>布局</a></li>
+								<li role="presentation"  id='OtherTab' onclick="settingTab('Other')" class="tabNotSelected settingTab"><a>其它</a></li>
+							</ul>
+						</div>
+					</div>					
+					<div id='settingSearchResults'></div>
+				</div>
+				<div id="allSettings" style="display: none">
+					<div class='noselect optionContainer settingsBtn tealColor' onclick='toggleSettingSection(true)'>返回搜索</div>
+					<div id="allSettingsHere"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div id="portalWrapper" style="display: none" class="portalMk0">
+		<div id='swapPortalUniverseBtn' onmouseover="tooltip('Change Universe', null, event)" onmouseout="tooltip('hide')" onclick="swapPortalUniverse()">Change Universe</div>
+		<div id='titleRow'>
+			<div id='titleCol1' class='titleCol'>
+				<div>
+					<div id="portalTitle"></div>
+					<div id="portalError" style="display: none"></div>
+				</div>
+			</div>
+			<div id='titleCol2' class='titleCol'>
+				<div>
+					<div id="portalHelium"><span id="portalHeliumOwned">0</span> 氦气罐</div>
+					<div id="portalTotalHelium"><span id="totalHeliumEarned">0</span> 获得所有时间</div>
+					<div id="portalTotalSpent"><span id="totalHeliumSpent">0</span> 能力花费</div>
+					<div id="portalTotalPortals"><span id="totalPortals">0</span> 使用的传送门</div>		
+				</div>
+			</div>
+		</div>
+		<div class="row" id="portalRow">
+			<div id="perkCol" class="col-xs-7">
+			<div class="challengeTitle">过滤</div>
+			<div id="portalStory"></div>
+			<div id="portalPresets" class="numTabs">
+				<ul class="nav nav-tabs nav-justified" id="portalPresetsTabs">
+						<li role="presentation" class="tabNotSelected" id="presetTab1" onclick="presetTab(1, true)" onmouseover="tooltip('Perk Preset', null, event, 1)" onmouseout="tooltip('hide')">
+							<a id="presetTab1Text">预设 1</a>
+						</li>
+						<li role="presentation" class="tabNotSelected" id="presetTab2" onclick="presetTab(2, true)" onmouseover="tooltip('Perk Preset', null, event, 2)" onmouseout="tooltip('hide')">
+							<a id="presetTab2Text">预设 2</a>
+						</li>
+						<li role="presentation" class="tabNotSelected" id="presetTab3" onclick="presetTab(3, true)" onmouseover="tooltip('Perk Preset', null, event, 3)" onmouseout="tooltip('hide')">
+							<a id="presetTab3Text">预设 3</a>
+						</li>
+						<li role="presentation" class="tabNotEnabled" id="presetTabSave" onclick="savePerkPreset()" onmouseover="tooltip('Perk Preset', null, event, 'Save')" onmouseout="tooltip('hide')">
+							<a>保存</a>
+						</li>
+						<li role="presentation" class="tabNotEnabled" id="presetTabLoad" onclick="loadPerkPreset()" onmouseover="tooltip('Perk Preset', null, event, 'Load')" onmouseout="tooltip('hide')">							
+							<a>加载</a>
+						</li>
+						<li role="presentation" class="tabNotEnabled" id="presetTabRename" onclick="renamePerkPreset(true)" onmouseover="tooltip('Perk Preset', null, event, 'Rename')" onmouseout="tooltip('hide')">
+							<a>重命名</a>
+						</li>
+						<li role="presentation" class="tabNotEnabled" id="presetTabExport" onclick="tooltip('Export Perks', null, 'update')" onmouseover="tooltip('Perk Preset', null, event, 'Export')" onmouseout="tooltip('hide')">
+							<a>导出</a>
+						</li>
+						<li role="presentation" class="tabNotEnabled" id="presetTabImport" onclick="tooltip('Import Perks', null, 'update')" onmouseover="tooltip('Perk Preset', null, event, 'Import')" onmouseout="tooltip('hide')">
+							<a>导入</a>
+						</li>
+				</ul>
+			</div>
+				<div id="pnumTabs" class="numTabs">
+					<ul class="nav nav-tabs nav-justified" id="portalTabs">
+						<li role="presentation" class="tabNotSelected" id="ptab1" onclick="numTab(1, true)">
+							<a id="ptab1Text">+1</a>
+						</li>
+						<li role="presentation"  class="tabNotSelected" id="ptab2" onclick="numTab(2, true)">
+							<a id="ptab2Text">+10</a>
+						</li>
+						<li role="presentation"  class="tabNotSelected" id="ptab3" onclick="numTab(3, true)">
+							<a id="ptab3Text">+25</a>
+						</li>
+						<li role="presentation"  class="tabNotSelected" id="ptab4" onclick="numTab(4, true)">
+							<a id="ptab4Text">+100</a>
+						</li>
+						<li role="presentation"  class="tabNotSelected" id="ptab5" onclick="tooltip('Custom', null, 'update', true)">
+							<a id="ptab5Text">自定义</a>
+						</li>
+						<li role="presentation" class="tabNotSelected" id="ptab6" onclick="numTab(6, true)" onmouseover="tooltip('Buy Max', 'customText', event, 'Switching to this option will spend the majority of your Helium with each purchase. <b>Click twice to customize.</b>')" onmouseout="tooltip('hide')">
+							<a id="ptab6Text">Max</a>
+						</li>
+						<li role="presentation" class="tabNotSelected pointer" id="ptabInfo" onclick="toggleSetting('detailedPerks', null, true)">
+							<a id="ptabInfoText">更多信息</a>
+						</li>
+						<li role="presentation" id="ptabRemove" style="display: none" onclick="toggleRemovePerks()">
+							<a id="ptabRemoveText">清除</a>
+						</li>
+					</ul>
+				</div>		
+				<div id="portalUpgradesHere" class="niceScroll"></div>
+			</div>
+			<div id="challengeCol" class="col-xs-5">
+				<div id="viewChallenge" style="display: none">
+				<div style='text-align: center'><span class="thing thingColorSquared pointer" style='width: 50%; display: inline-block;'  onmouseover="tooltip('Challenge2', null, event, true)" onmouseout="tooltip('hide')" id='challengeSquaredViewBtn'>挑战<sup><span id='challengeSquaredName'>2</span></sup> - <span id='challengeSquaredBonusAmtView'>0</span>% 奖励</span></div>
+					<span id="viewChallengeText">您目前不具备有效的挑战.</span>
+				<br/><br/>
+				<div class="btn btn-warning inPortalBtn" style="display: none" id="cancelChallengeBtn" onclick="confirmAbandonChallenge()">放弃挑战</div>
+				<span id="extraChallengeStuff"></span>
+				</div>
+				<div id="challenges"  style="display: none">
+					<div id='challengeTitleNoSquared'>
+						<div class="challengeTitle">挑战</div>
+					</div>
+					<div id='challengeTitleSquared' style='display: none'>
+						<div class="challengeTitle" style='display: inline-block; width: 50%; padding: 0; margin: 0;'>挑战</div><div style='display: inline-block; width: 50%; padding: 0; margin: 0;'><span id='inPortalC2Button' class="thing thingColorSquared pointer" style='width: 75%; display: inline-block;' onclick="toggleChallengeSquared()"  onmouseover="tooltip('Challenge2', null, event)" onmouseout="tooltip('hide')">挑战<sup><span id='inPortalC2Name'>2</span></sup> - <span id='challengeSquaredBonusAmt'>0</span>% 奖励</span></div>
+					</div>
+					
+					<div id="challengeDescription">
+						<span id="challengeDescriptionPre">您也可以选择在使用传送门之前激活挑战。 完成挑战将为您带来永久的回报。 您可以随时点击“查看奖励”按钮放弃或查看积极的挑战。</span>
+						<span id="flagMustRestart" style="display: none;"><b>如果你放弃这个挑战，传送门将变得不稳定，世界将重新启动（你将保留永久的奖金，如氦）。</b></span>
+
+						<div id="specificChallengeDescription" class="challengeDescriptionLg">
+							
+						</div>
+					</div>
+					<div id="challengesHere">
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="portalBtnContainer">
+			<div class="btn btn-primary inPortalBtn" id="activatePortalBtn" onclick="activateClicked()">激活传送门</div>
+			<div class="btn btn-danger inPortalBtn" id="cancelPortalBtn" onclick="cancelTooltip(); cancelPortal()">取消</div>
+			<div class="btn btn-warning inPortalBtn" style="display: none" id="respecPortalBtn" onclick="respecPerks()" onmouseover="tooltip('Respec', null, event)" onmouseout="tooltip('hide')"></div>
+			<div class="btn btn-success inPortalBtn" style='display: none' id="swapToCurrentChallengeBtn" onclick="swapToCurrentChallenge()" onmouseover="tooltip('查看当前的挑战', 'customText', event, '将选择挑战窗口切换为当前挑战窗口, 反之亦然')" onmouseout="tooltip('hide')">View Current Challenge</div>
+			<div class="btn btn-warning inPortalBtn" style="display: none" id="clearPerksBtn" onclick="clearPerks()">清除所有</div>
+		</div>
+	</div>
+	<div id="achievementWrapper" style="display: none">
+		<div id="achievementMainButtons">
+			<span id="achievementHelp" onclick="toggleAchievementHelp()" class="icomoon icon-question-circle"></span>
+			<span id="achievementMainClose" onclick="toggleAchievementWindow()" class="icomoon icon-close"></span>
+		</div>
+		<div class="row" id="achievementTopRow">
+			<div class="col-xs-6">
+				<div id="achievementHover" style="display: none">
+					<div class="row">
+						<div id="achievementHoverIconContainer" class="col-xs-3 lowPad">
+						</div>
+						<div class="col-xs-8">
+							<div id="achievementHoverTitle"></div>
+							<div id="achievementHoverDescription"></div>
+							<div id="achievementHoverProgress"></div>
+							<div id="achievementHoverReward"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="maxCenter" id="achievementHeader">
+					<span class="achievementMainTitle">成就</span><br/>
+					<span class="achievementTotals">你造成了<span id="achievementTotalPercent"></span>% 的额外伤害<span id="achievementFluff"></span>.</span>
+					<div id="achievementGoldenBonusContainer">
+					</div>
+				</div>
+				<div id="achievementHelpContainer" style="display: none">
+					你可以通过做东西来获得成就。 每个成就将会提高您的脆皮可以造成的伤害数量，以后的成就会给予更大的奖励。 您可以通过将鼠标悬停在其上来了解有关成就的更多信息。
+				</div>
+			</div>
+			<div class="col-xs-1">
+			</div>
+		</div>
+		<div id="achievementsHere" class="niceScroll"></div>
+		<div style='text-align: center;'><span id="achievementClose2" onclick="toggleAchievementWindow()" class="icomoon icon-close"></span></div>
+	</div>
+	<div id="statsWrapper" style="display: none">
+		<span id="statsTitle">统计!</span><br/>
+		<div class="row" id="statsBtnRow">
+			<div class="col-xs-3">
+			</div>
+			<div class="col-xs-3 btn btn-info statToggleBtn" id='totalSelectBtn' onclick='toggleStats("total")'>
+				累计
+			</div>
+			<div class="col-xs-3 btn btn-success statToggleBtn" id="currentSelectBtn" onclick="toggleStats('current')">
+				当前运行
+			</div>
+		</div>
+		<br/>
+		<div class="row" id="statsRow">
+			<div class="col-xs-4" id="statCol1">
+			</div>
+			<div class="col-xs-4" id="statCol2">		
+			</div>
+			<div class="col-xs-4" id="statCol3">
+			</div>			
+		</div>
+		<div class="btn btn-danger inPortalBtn" id="closeStatsBtn" onclick="toggleStats()">关闭</div>&nbsp;<div class="btn btn-info inPortalBtn" id="closeStatsBtn" onclick="tooltip('脆皮信息', null, 'update')">脆皮信息</div>
+	</div>
+	<div id="heirloomWrapper" style="display: none">
+		<div id="heirloomTitleBar" class="row"><div class="col-xs-5">传家宝-未来送给过去的你的礼物</div><div class="col-xs-5" id="nullifiumContainer">你有 <span id="nullifiumCount"></span> 虚空物质<span id="heirloomSpirestoneCount"></span></div><div class="col-xs-1"><div onclick="toggleHeirloomHelp()" class="pointer noselect colorPrimary heirBtn heirInfo">帮助</div></div><div class="col-xs-1"><div class="pointer noselect colorDanger heirBtn heirInfo" onclick="toggleHeirlooms()">关闭</div></div></div>
+		<div id="heirloomHelp" style="display: none">
+			Heirlooms are powerful items that can drop with a variety of bonuses and a variety of rarities. You will earn one Heirloom every time a Void Map is completed, and you have a better chance to get higher rarities if you complete the Void Map at higher zones. Once you have an Heirloom, you can click the icon below to select it.<br/><br/>
+			Once you've selected an Heirloom, you can see all of its stats on the right side of this screen. <b style='color: red'>You can click a stat to upgrade or replace it.</b> The currency to upgrade and replace stats, <b style='color: red'>Nullifium, or Nu,</b> can only be gathered by recycling an Heirloom. <b style='color: rgb(75, 41, 197)'>You can also click on the Heirloom's name on this menu to rename it, or click on the icon to change it!</b> <b style='color: red'>You can upgrade any Staff and Shield to HALF the value of your total earned Nu. Nu is not spent, but dictates how powerful your Heirlooms can be!</b><br/><br/>
+			You can only carry a few Heirlooms (other than the two you have equipped) back through the Portal with you when you use it. <b style='color: red'>Any Heirlooms in the "Temporary" section will be recycled for Nullifium on portal.</b>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">
+				<div id="equippedHeirlooms">
+					<div class="row">
+						<div id='ShieldEquippedContainer' class="col-xs-6 heirloomEquippedContainer">
+							已装备盾牌<br/>
+							<div id="ShieldEquipped"></div><br/>
+							<span id="ShieldEquippedName"></span>
+						</div>
+						<div id='CoreEquippedContainer' class="col-xs-4 heirloomEquippedContainer" style='display: none;'>
+							已装备核心<br/>
+							<div id="CoreEquipped"></div><br/>
+							<span id="CoreEquippedName"></span>
+						</div>
+						<div id='StaffEquippedContainer' class="col-xs-6 heirloomEquippedContainer">
+							已装备人员<br/>
+							<div id="StaffEquipped"></div><br/>
+							<span id="StaffEquippedName"></span>
+						</div>
+					</div>
+					<div id="equippedHeirloomsBtnGroup" class="heirloomBtnGroup" style="visibility: hidden">
+						<div id="unequipHeirloomBtn" class="noselect heirloomBtnActive heirBtn"  onclick="unequipHeirloom()">卸下</div>
+					</div>
+				</div>
+				<div id="carriedHeirlooms">
+					携带 <span id="carriedHeirloomsText"></span> <div id="addCarriedBtn" onclick="addCarried()" class="heirloomBtnActive heirBtn noselect"></div>
+					<div id="carriedHeirloomsHere"></div>
+					<div id="carriedHeirloomsBtnGroup" class="heirloomBtnGroup" style="visibility: hidden">
+						<div id="equipHeirloomBtn" class="noselect heirloomBtnActive heirBtn"  onclick="equipHeirloom()">装备</div>
+						<div id="stopCarryHeirloomBtn" class="noselect heirloomBtnActive heirBtn"  onclick="stopCarryHeirloom()">停止携带</div>
+					</div>
+				</div>
+				<div id="extraHeirlooms">
+					临时 <span id="extraHeirloomsText"></span> <div id="recycleAllHeirloomsBtn" onclick="recycleAllHeirloomsClicked()" class="heirloomBtnActive heirBtn noselect">全部回收</div>
+					<div id="extraHeirloomsHere"></div>
+					<div id="extraHeirloomsBtnGroup" class="heirloomBtnGroup" style="visibility: hidden">
+						<div id="equipHeirloomBtn2" class="noselect heirloomBtnActive heirBtn"  onclick="equipHeirloom()">装备</div>
+						<div id="carryHeirloomBtn" class="noselect heirloomBtnActive heirBtn"  onclick="carryHeirloom()">携带</div>
+						<div id="recycleHeirloomBtn" class="noselect heirloomBtnActive heirBtn"  onclick="recycleHeirloom()">回收</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div id="selectedHeirloom"></div>
+				<div id="modBreakdown" style="display: none">
+					<div id="specialModDescription" style="display: none"></div>
+					<div class="row">
+						<div class="col-xs-6" id="modReplaceBox">
+							<div id="modCantReplace" style="display: none"></div>
+							<select id="modReplaceSelect"></select><br/>
+							<div id="modReplaceBtn" class="heirloomBtnActive heirBtn noselect" onclick="replaceMod()">替换</div>
+						</div>
+						<div class="col-xs-6" id="modUpgradeBox">
+							<div id="modUpgradeCost"></div>
+							<div id="modUpgradeBtn" class="heirloomBtnActive heirBtn noselect modUpgradeBtn" onclick="upgradeMod()">升级 x1<br/>&nbsp;</div>
+							<div id="modUpgradeBtn10" class="heirloomBtnActive heirBtn noselect modUpgradeBtn" onclick="upgradeMod(false, 10)">升级 x10<br/>&nbsp;</div>
+						</div>
+					</div>			
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="achievementPopup" style="display: none">
+		<span class="achievementBtns">
+			<span class="achievementBtnGo icomoon icon-newspaper-o" onclick="toggleAchievementWindow()"></span>
+			<span class="achievementBtnClose icomoon icon-close" onclick="closeAchievementPopup()"></span>	
+		</span>
+		<div class="row">
+			<div id="achievementPopupIconContainer" class="col-xs-3 lowPad">
+			</div>
+			<div class="col-xs-8">
+				<div id="achievementPopupTitle"></div>
+				<div id="achievementPopupDescription"></div>
+				<div id="achievementPopupReward"></div>
+			</div>
+		</div>
+	</div>
+	<div id="heirloomsPopup" style="display: none">
+		<div id="heirloomsPopupBtns">
+			你找到了传家宝！
+
+			<span class="heirloomPopupBtn icomoon icon-close" onclick="closeHeirPopup()"></span>
+			<span class="heirloomPopupBtn icomoon icon-archive" onclick="toggleHeirlooms(); closeHeirPopup();"></span>
+		</div>
+		<div id="heirloomsPopupHere">
+		
+		</div>
+	</div>
+	<div id="tooltipDiv" class="tooltipExtraNone" style="display: none">
+		<div id="tipTitle"></div>
+		<hr/>
+		<div id="tipText"></div>
+		<hr/>
+		<div id="tipCost"></div>
+	</div>
+	<div id="tooltipDiv2" class="tooltipExtraNone" style="display: none">
+		<div id="tipTitle2"></div>
+		<hr/>
+		<div id="tipText2"></div>
+		<hr/>
+		<div id="tipCost2"></div>
+	</div>
+	<div id='playerSpirePopout' style='display: none'>
+		<div id='playerSpireSpirePanel'>
+			<div id='playerSpireSpireSpirePanel' class='noselect'>
+				&nbsp;
+			</div><div id='floatingCombatText'>
+			</div>
+			&nbsp;
+		</div><div id='playerSpireSmallPanel' class='niceScroll'>
+			&nbsp;
+		</div><div id='playerSpireInfoPanel' class='niceScroll'>
+			&nbsp;
+		</div>
+	</div>
+	<script type="text/javascript" src="Playfab/PlayFabSDK/PlayFabClientApi.js"></script>
+	<script type="text/javascript" src="lz-string.js"></script>
+	<script type="text/javascript" src="decimal.min.js"></script>
+<!--	<script src="https://zhaolinxu.github.io/AutoTrimps/AutoTrimps2.js" type="text/javascript" charset="utf-8"></script>-->
+<!--    <script src="../AutoTrimps/AutoTrimps2.js"></script>-->
+	<!--document.body.appendChild(document.createElement('script')).src='https://zhaolinxu.github.io/cuipi/AutoTrimps2.js';-->
+	
+	<script type="text/javascript" src="config.js?29"></script>
+	<script type="text/javascript" src="updates.js?29"></script>
+	<script type="text/javascript" src="playerSpire.js?29"></script>
+	<script type="text/javascript" src="main.js?29"></script>
+	<!--客服 开始-->
+<script src="https://likexia.gitee.io/game/js/jquery.min.js"></script>
+<link rel="stylesheet" href="https://likexia.gitee.io/game/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="https://likexia.gitee.io/game/js/kf.js"></script>
+<!-- 客服 结束 -->
+	
+</body>
+
+</html>

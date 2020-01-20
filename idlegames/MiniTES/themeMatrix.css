@@ -1,0 +1,73 @@
+body {
+	background: #000000;
+	color:#00CC00;
+	font-family: Courier, monospace;
+}
+
+
+
+
+
+
+
+
+button {									/* On a scale of Body#background to Body#color, ranges from 0-14 */
+	background: #000000;					/* 0 */
+	border:1px solid #009900;				/* 10 */
+	color:#00CC00;							/* 14 */
+}
+
+button:hover {
+	color:#00CC00;							/* 14 */
+	background: #004400;					/* 5 */
+}
+
+button:disabled {
+	color:#003300;							/* 4 */
+	background: #000000;					/* 0 */
+	border: 1px solid #003300;				/* 4 */
+}
+ 
+button:disabled:hover {
+	background: #000000;					/* 0 */
+	border: 1px solid #003B00;				/* 4.5 */
+}
+
+
+
+
+
+
+
+
+.fadedText4 {
+	color:#002F00;
+}
+
+.fadedText3 {
+	color:#004300;
+}
+
+.fadedText2 {
+	color:#006A00;
+}
+
+.fadedText1 {
+	color:#00A500;
+}
+
+.fullBrightText {
+	color:#00CC00;
+}
+
+
+
+
+
+
+
+
+a:link    { color:#00CC00 }  /* unvisited links */
+a:visited { color:#00CC00 }  /* visited links   */
+a:hover   { color:#00CC00 }  /* user hovers     */
+a:active  { color:#00CC00 }  /* active links    */

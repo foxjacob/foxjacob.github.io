@@ -1,0 +1,42 @@
+/* Game9G 公用 CSS */
+#spns { position: fixed; left: 50% !important; margin-left: -160px; width: 320px; height: 50px; top: 0; z-index: 100; }
+#spnx { position: fixed; left: 50% !important; margin-left: -160px; width: 320px; height: 50px; bottom: 0; z-index: 100; }
+.gamelebiloading { position: fixed; z-index: 9999; width: 100%; height: 100%; left: 0; top: 0; background: #fff; }
+.gamelebiloading img.gamelebilogo { display: block; margin: 25% auto 0 auto; width: 70%; }
+.gamelebiloading img.gamelebilogo_up { display: block; margin: 10% auto 0 auto; width: 70%; margin-bottom: 15px; }
+.gamelebiloading img.cplogo { display: block; margin: 0 auto; max-width: 50%; }
+
+img.gamelebiad { position: fixed; z-index: 9995; left: 0; top: 0; width: 100%; cursor: pointer; }
+img.gamelebiadbottom { position: fixed; z-index: 9995; left: 0; bottom: 0; width: 100%; cursor: pointer; }
+img.gamelebizhongsoutip { position: fixed; z-index: 9999; top: 0; right: 5%; width: 50%; }
+
+img.gamelebishare { position: fixed; width: 100%; left: 0; top: 0; z-index: 9999; }
+img.gamelebiucicon { position: absolute; left: 0; top: 0; width: 64px; height: 64px; z-index: 9999; background-color: #FFF; }
+
+.gamelebidialog { color: #000; background-color: #FFF; text-align: center; font-size: medium; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; line-height: 150%; font-weight: normal; width: 90%; z-index: 9991; top: 20%; left: 5%; position: fixed; }
+.gamelebidialog header { font-weight: bold; margin: 10px 0; text-align: center; height: auto; width:auto; }
+.gamelebidialog h2 { font-size: 1em; font-weight: bold; }
+.gamelebidialog section { padding: 0px 20px 20px 20px; text-align: center; font-weight: normal; height: auto; width: auto; box-shadow: rgb(178, 178, 178) 0px -1px 1px -1px inset; }
+.gamelebidialog footer { padding: 5px 0px; width: auto; }
+.gamelebidialog footer a { display: inline-block; color: #FFF; text-align: center; line-height: 40px; text-decoration: none; cursor: pointer; width:43%; margin: 8px; background-color: #2D9916; border-radius: 5px; }
+.gamelebimask { z-index: 9990; background-color: rgb(0, 0, 0); position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0.5 }
+
+.gamelebisharetip { position: fixed; z-index: 9999; width: 100%; height: 100%; left: 0; top: 0; background: #000; opacity: 0.9; font-size: medium; font-family: SimHei; }
+.gamelebisharetip img.goup { position: absolute; top: 1%; right: 5%; height: 11%; }
+
+
+.gamelebisharetip div.title { position: absolute; top: 18%; right: 20%; color: #FFF; }
+.gamelebisharetip div.content { position: absolute; top: 10%; right: 5%; width: 100%; text-align: center; font-size: 1.3em; color: #FFF; }
+.gamelebisharetip div.ignore { position: absolute; left: 10%; bottom: 20%; padding-left: 50px; color: #777; }
+.gamelebisharetip img.godown { position: absolute; left: 10%; bottom: 10%; height: 10%; }
+.gamelebisharetip a { position: absolute; cursor: pointer; left: 5%; bottom: 4%; color: #777; }
+.gamelebisharetip img.pm { position: absolute; left: 0; top: 35%; width: 100%; cursor: pointer; }
+
+.gamelebisharemask { position: fixed; z-index: 9996; left: 0; top: 0; width: 100%; height: 100%; opacity: 0.5; background: #000; }
+@-webkit-keyframes gamelebishareeventmove { from { top: 0; } to { top: 5px; } }
+		@keyframes gamelebishareeventmove { from { top: 0; } to { top: 5px; } }
+img.gamelebishareevent { position: fixed; z-index: 9997; left: 0; top: 0; width: 100%;
+	-webkit-animation: gamelebishareeventmove 0.4s ease-in-out infinite alternate;
+			animation: gamelebishareeventmove 0.4s ease-in-out infinite alternate;
+}
+img.gamelebigohome { position: fixed; z-index: 9997; left: 3%; top: 2%; width: 18%; }

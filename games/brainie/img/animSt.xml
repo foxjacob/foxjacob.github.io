@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="animSt.png">
+	<!--
+	Created with ShoeBox
+	http://renderhjs.net/shoebox/
+	-->
+	<SubTexture name="bAnim_clean_01.png"	x="413"	y="795"	width="1"	height="1" frameX="--2" frameY="--2" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="bAnim_clean_02.png"	x="413"	y="795"	width="1"	height="1" frameX="--2" frameY="--2" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="bAnim_clean_03.png"	x="413"	y="795"	width="1"	height="1" frameX="--2" frameY="--2" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="bAnim_clean_04.png"	x="413"	y="795"	width="1"	height="1" frameX="--2" frameY="--2" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="bAnim_clean_05.png"	x="413"	y="795"	width="1"	height="1" frameX="--2" frameY="--2" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="bAnim_clean_06.png"	x="413"	y="795"	width="1"	height="1" frameX="--2" frameY="--2" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="bAnim_clean_07.png"	x="413"	y="795"	width="1"	height="1" frameX="--2" frameY="--2" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="bAnim_clean_08.png"	x="413"	y="795"	width="1"	height="1" frameX="--2" frameY="--2" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="bAnim_clean_09.png"	x="414"	y="696"	width="391"	height="46" frameX="-17" frameY="-40" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_10.png"	x="0"	y="696"	width="412"	height="59" frameX="-10" frameY="-26" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_11.png"	x="0"	y="430"	width="422"	height="68" frameX="-6" frameY="-10" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_12.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_13.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_14.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_15.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_16.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_17.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_18.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_19.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_20.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_21.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_22.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_23.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_24.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_25.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_26.png"	x="0"	y="71"	width="433"	height="75" frameX="-0" frameY="-0" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_27.png"	x="0"	y="148"	width="432"	height="76" frameX="-0" frameY="-1" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_28.png"	x="0"	y="226"	width="432"	height="69" frameX="-0" frameY="-9" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_clean_29.png"	x="0"	y="297"	width="431"	height="61" frameX="-3" frameY="-16" frameWidth="434" frameHeight="86"/>
+	<SubTexture name="bAnim_color_01.png"	x="413"	y="757"	width="393"	height="36" frameX="-14" frameY="-35" frameWidth="434" frameHeight="72"/>
+	<SubTexture name="bAnim_color_02.png"	x="0"	y="757"	width="411"	height="49" frameX="-5" frameY="-21" frameWidth="434" frameHeight="72"/>
+	<SubTexture name="bAnim_color_03.png"	x="0"	y="635"	width="414"	height="59" frameX="-6" frameY="-8" frameWidth="434" frameHeight="72"/>
+	<SubTexture name="bAnim_color_04.png"	x="0"	y="567"	width="420"	height="66" frameX="-4" frameY="-1" frameWidth="434" frameHeight="72"/>
+	<SubTexture name="bAnim_color_05.png"	x="0"	y="567"	width="420"	height="66" frameX="-4" frameY="-1" frameWidth="434" frameHeight="72"/>
+	<SubTexture name="bAnim_color_06.png"	x="0"	y="567"	width="420"	height="66" frameX="-4" frameY="-1" frameWidth="434" frameHeight="72"/>
+	<SubTexture name="bAnim_color_07.png"	x="0"	y="567"	width="420"	height="66" frameX="-4" frameY="-1" frameWidth="434" frameHeight="72"/>
+	<SubTexture name="bAnim_color_08.png"	x="0"	y="567"	width="420"	height="66" frameX="-4" frameY="-1" frameWidth="434" frameHeight="72"/>
+	<SubTexture name="bAnim_color_09.png"	x="0"	y="500"	width="420"	height="65" frameX="-5" frameY="-5" frameWidth="434" frameHeight="72"/>
+	<SubTexture name="bAnim_color_10.png"	x="0"	y="360"	width="426"	height="68" frameX="-3" frameY="-4" frameWidth="434" frameHeight="72"/>
+	<SubTexture name="bAnim_color_11.png"	x="0"	y="0"	width="434"	height="69" frameX="-0" frameY="-0" frameWidth="434" frameHeight="72"/>
+</TextureAtlas>
