@@ -21,8 +21,8 @@
     <script language=javascript>
 		var mebtnopenurl = 'http://foxjacob.wicp.vip:6688/res/plugins/games/GameStation';
 		window.shareData = {
-		        "imgUrl": "https://foxjacob.github.io/gamestation/icon/sqs.png",
-		        "timeLineLink": "https://foxjacob.github.io/gamestation/games/sqs",
+		        "imgUrl": "https://foxjacob.github.io/icon/sqs.png",
+		        "timeLineLink": "https://foxjacob.github.io/games/sqs",
 		        "tTitle": "神枪手-悠狐阁",
 		        "tContent": "瞄准后发射，看你能打中几环，考验你的眼明手快！"
 		};
@@ -32,7 +32,7 @@
 		}
 		function clickMore(){
 			 if((window.location+"").indexOf("zf",1)>0){
-			 	window.location = "https://foxjacob.github.io/gamestation/games/sqs";
+			 	window.location = "https://foxjacob.github.io/games/sqs";
 			  }
 			  else{
 			 	goHome();
@@ -75,7 +75,7 @@
 		}, false);
 		</script>
 		<div id=share style="display: none">
-			<img width=100% src="https://foxjacob.github.io/gamestation/games/sqs/share.png"
+			<img width=100% src="https://foxjacob.github.io/games/sqs/share.png"
 				style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
 				ontouchstart="document.getElementById('share').style.display='none';" />
 		</div>
@@ -83,7 +83,7 @@
 			<script type="text/javascript">
             var myData = { gameid: "sqs" };
 			var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
-			window.shareData.timeLineLink = "https://foxjacob.github.io/gamestation/";
+			window.shareData.timeLineLink = "https://foxjacob.github.io/";
 			function dp_submitScore(score,maxscore){
 				myData.score =parseInt(score*100);
 				myData.maxscore =maxscore;
@@ -98,7 +98,7 @@
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到悠狐阁排行榜吗？")) {
-                            window.location = "https://foxjacob.github.io/gamestation/" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
+                            window.location = "https://foxjacob.github.io/" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
                         }
                         else {
                             document.location.href = mebtnopenurl;

@@ -56,8 +56,8 @@
  <script language=javascript>
 		var mebtnopenurl = 'http://foxjacob.wicp.vip:6688/res/plugins/games/GameStation';
 		window.shareData = {
-		        "imgUrl": "https://foxjacob.github.io/gamestation/icon/ymhddzc.png",
-		        "timeLineLink": "https://foxjacob.github.io/gamestation/games/ymhddzc",
+		        "imgUrl": "https://foxjacob.github.io/icon/ymhddzc.png",
+		        "timeLineLink": "https://foxjacob.github.io/games/ymhddzc",
 		        "tTitle": "樱木花道的主场-悠狐阁",
 		        "tContent": "樱木花道的主场-悠狐阁"
 		};
@@ -67,7 +67,7 @@
 		}
 		function clickMore(){
 			if((window.location+"").indexOf("zf",1)>0){
-				window.location = "https://foxjacob.github.io/gamestation/games/ymhddzc";
+				window.location = "https://foxjacob.github.io/games/ymhddzc";
 			 }
 			 else{
 				goHome();
@@ -110,7 +110,7 @@
 		}, false);
 		</script>
 		<div id=share style="display: none">
-			<img width=100% src="https://foxjacob.github.io/gamestation/games/ymhddzc/share.png"
+			<img width=100% src="https://foxjacob.github.io/games/ymhddzc/share.png"
 				style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
 				ontouchstart="document.getElementById('share').style.display='none';" />
 		</div>
@@ -118,7 +118,7 @@
 			<script type="text/javascript">
             var myData = { gameid: "ymhddzc" };
             var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
-			window.shareData.timeLineLink ="https://foxjacob.github.io/gamestation/games/ymhddzc";
+			window.shareData.timeLineLink ="https://foxjacob.github.io/games/ymhddzc";
 			function dp_submitScore(score){
 				myData.score = parseInt(score);
 				myData.scoreName ="投进"+score+"球";
@@ -132,7 +132,7 @@
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到悠狐阁排行榜吗？")) {
-                            window.location = "https://foxjacob.github.io/gamestation/";
+                            window.location = "https://foxjacob.github.io/";
                         }
                         else {
                             document.location.href = mebtnopenurl;

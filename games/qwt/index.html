@@ -128,8 +128,8 @@ var dsp=new Array("=0",
 <script language=javascript>
 		var mebtnopenurl = 'http://foxjacob.wicp.vip:6688/res/plugins/games/GameStation';
 		window.shareData = {
-		        "imgUrl": "https://foxjacob.github.io/gamestation/icon/qwt.png",
-		        "timeLineLink": "https://foxjacob.github.io/gamestation/games/qwt/",
+		        "imgUrl": "https://foxjacob.github.io/icon/qwt.png",
+		        "timeLineLink": "https://foxjacob.github.io/games/qwt/",
 		        "tTitle": "青蛙跳",
 		        "tContent": "青蛙跳"
 		};
@@ -189,7 +189,7 @@ var dsp=new Array("=0",
 		<div style="display: none;">
 			<script type="text/javascript">
             var myData = { gameid: "qwt" };
-			//window.shareData.timeLineLink = "https://foxjacob.github.io/gamestation/gamecenter.html?gameid=" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
+			//window.shareData.timeLineLink = "https://foxjacob.github.io/gamecenter.html?gameid=" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
 			function dp_submitScore(score){
 				myData.score = score;
 				myData.scoreName = score+"米";
@@ -203,7 +203,7 @@ var dsp=new Array("=0",
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到游戏排行榜吗？")) {
-                            window.location = "https://foxjacob.github.io/gamestation/games/qwt/index.html" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
+                            window.location = "https://foxjacob.github.io/games/qwt/index.html" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
                         }
                         else {
                             document.location.href = mebtnopenurl;

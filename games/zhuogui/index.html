@@ -120,25 +120,25 @@
           document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
                 WeixinJSBridge.on('menu:share:appmessage', function(argv) {
                     WeixinJSBridge.invoke('sendAppMessage', {
-                        "img_url": "https://foxjacob.github.io/gamestation/games/zhuogui/logo.png",
-                        "link": "https://foxjacob.github.io/gamestation/games/zhuogui/index.html",
+                        "img_url": "https://foxjacob.github.io/games/zhuogui/logo.png",
+                        "link": "https://foxjacob.github.io/games/zhuogui/index.html",
                         "desc": "鬼节到了，我的手机见鬼了！！胆大的快来帮忙抓鬼啊！！",
                         "title": title
                     }, function(res) {
-                        document.location.href = "https://foxjacob.github.io/gamestation/";
+                        document.location.href = "https://foxjacob.github.io/";
                     })
                 });
 
                 WeixinJSBridge.on('menu:share:timeline', function(argv) {
                     WeixinJSBridge.invoke('shareTimeline', {
-                        "img_url": "https://foxjacob.github.io/gamestation/games/zhuogui/logo.png",
+                        "img_url": "https://foxjacob.github.io/games/zhuogui/logo.png",
                         "img_width": "120",
                         "img_height": "120",
-                        "link": "https://foxjacob.github.io/gamestation/games/zhuogui/index.html",
+                        "link": "https://foxjacob.github.io/games/zhuogui/index.html",
                         "desc": "鬼节到了，我的手机见鬼了！！胆大的快来帮忙抓鬼啊！！",
                         "title": title
                     }, function(res) {
-                        document.location.href = "https://foxjacob.github.io/gamestation/";
+                        document.location.href = "https://foxjacob.github.io/";
                     });
                 });
             }, false);
